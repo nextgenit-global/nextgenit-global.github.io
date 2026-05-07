@@ -1,4 +1,4 @@
-# robots.txt for NextGen IT
+# robots.txt for NextGenIT
 # https://nextgenit-global.github.io/
 # Generated for Google Search Console verified property
 
