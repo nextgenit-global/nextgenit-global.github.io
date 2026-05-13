@@ -39,7 +39,6 @@ body{
     margin-left:14px;
     font-size:13px;
     cursor:pointer;
-    /* no transition */
 }
 .social-icons i:hover{
     color:#bff7f3;
@@ -100,11 +99,9 @@ body{
     font-weight:600;
     display:inline-block;
     text-align:center;
-    /* no transition, no hover transform */
 }
 .quote-btn:hover{
     background:linear-gradient(135deg,#008b8b,#006060);
-    /* no translateY */
 }
 
 /* ================= NAVBAR ================= */
@@ -132,7 +129,6 @@ body{
     font-weight:600;
     position:relative;
     border-radius:30px;
-    /* no transition */
 }
 .nav-menu li a::after{
     content:'';
@@ -143,7 +139,7 @@ body{
     width:0%;
     height:2px;
     background:#00a3a3;
-    transition:width 0.2s ease; /* only width changes, no movement */
+    transition:width 0.2s ease;
 }
 .nav-menu li a:hover{
     color:#00a3a3;
@@ -256,7 +252,6 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    /* absolutely no animation or transform */
 }
 .image-box img{
     width:70%;
@@ -290,152 +285,9 @@ body{
     left:5px;
 }
 
-/* ================= ABOUT PAGE SECTION ================= */
-.about-page{
-    padding:60px 8% 80px;
-    background:#fff;
-}
-.about-page .hero{
-    padding:0 0 40px 0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:50px;
-    flex-wrap:wrap;
-    margin-bottom:40px;
-}
-.about-page .left{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-.tag{
-    font-size:12px;
-    letter-spacing:2px;
-    color:#00a3a3;
-    text-transform:uppercase;
-    font-weight:700;
-}
-.about-page h1{
-    font-size:38px;
-    line-height:1.2;
-    font-weight:800;
-    color:#0b2b3b;
-}
-.about-page h1 span{
-    color:#00a3a3;
-}
-.about-page p{
-    font-size:16px;
-    color:#4a5568;
-    line-height:1.6;
-    max-width:550px;
-}
-.about-page .right{
-    flex:1;
-    display:flex;
-    justify-content:center;
-}
-.circle{
-    width:300px;
-    height:300px;
-    border-radius:50%;
-    background:linear-gradient(135deg,#e9fafa,#ffffff);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    box-shadow:0 15px 30px rgba(0,163,163,0.1);
-    /* no animation */
-}
-.circle img{
-    width:65%;
-}
-.experience{
-    margin-top:20px;
-    margin-bottom:40px;
-}
-.title{
-    font-size:26px;
-    font-weight:700;
-    margin-bottom:20px;
-    color:#0b2b3b;
-}
-.exp-boxes{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-.box{
-    background:#f8fafc;
-    padding:14px 24px;
-    border-radius:40px;
-    font-size:14px;
-    font-weight:500;
-    color:#0b5f5f;
-    border:1px solid #e0edef;
-}
-.section{
-    margin-top:50px;
-}
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:25px;
-}
-.card{
-    background:#fff;
-    padding:24px;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.04);
-    border:1px solid #eef2f5;
-}
-.card h3{
-    font-size:18px;
-    margin-bottom:10px;
-    color:#0b2b3b;
-}
-.card p{
-    font-size:14px;
-    color:#5a6b7c;
-    max-width:100%;
-}
-.cta{
-    margin-top:60px;
-    background:linear-gradient(135deg,#00a3a3,#007070);
-    color:#fff;
-    padding:50px 30px;
-    border-radius:30px;
-    text-align:center;
-}
-.cta h2{
-    font-size:28px;
-    margin-bottom:12px;
-}
-.cta p{
-    color:#eaffff;
-    max-width:500px;
-    margin:0 auto;
-}
-.cta a{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 32px;
-    background:#fff;
-    color:#00a3a3;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:700;
-}
-.cta a:hover{
-    background:#f0fdfd;
-    /* no transform */
-}
-
 /* ================= RESPONSIVE FIXES ================= */
 @media(max-width:1024px){
     .hero h1{ font-size:36px; }
-    .about-page h1{ font-size:32px; }
     .navbar{ width:92%; border-radius:30px; }
 }
 
@@ -484,22 +336,6 @@ body{
     .trust{
         justify-content:center;
     }
-    .about-page .hero{
-        flex-direction:column;
-        text-align:center;
-    }
-    .about-page .left{
-        align-items:center;
-    }
-    .about-page p{
-        max-width:100%;
-    }
-    .exp-boxes{
-        justify-content:center;
-    }
-    .grid{
-        grid-template-columns:1fr;
-    }
 }
 
 @media(max-width:550px){
@@ -512,10 +348,7 @@ body{
         gap:15px;
     }
     .hero h1{ font-size:30px; }
-    .about-page h1{ font-size:28px; }
-    .cta h2{ font-size:24px; }
-    .cta{ padding:40px 20px; }
-    .image-box, .circle{ width:260px; height:260px; }
+    .image-box{ width:260px; height:260px; }
 }
 </style>
 </head>
@@ -601,61 +434,6 @@ body{
         </div>
     </div>
 </section>
-
-<!-- ABOUT PAGE SECTION -->
-<div class="about-page">
-    <section class="hero">
-        <div class="left">
-            <div class="tag">Who We Are</div>
-            <h1>
-                A Growing Digital Agency<br>
-                Focused on <span>Real Business Growth</span>
-            </h1>
-            <p>
-                NextGenIT is a Nepal-based digital agency focused on web development, SEO, and digital marketing.
-                We are currently in the early stage of building client experience and helping businesses grow online with modern digital solutions.
-            </p>
-        </div>
-        <div class="right">
-            <div class="circle">
-                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="agency">
-            </div>
-        </div>
-    </section>
-
-    <section class="experience">
-        <div class="title">Experience & Focus</div>
-        <div class="exp-boxes">
-            <div class="box">Web Development Projects (Modern UI Websites)</div>
-            <div class="box">SEO Optimization (Basic Ranking Strategies)</div>
-            <div class="box">Digital Marketing (Brand Awareness & Ads)</div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="title">What We Do</div>
-        <div class="grid">
-            <div class="card">
-                <h3>Web Development</h3>
-                <p>Responsive, modern websites designed for performance and business growth.</p>
-            </div>
-            <div class="card">
-                <h3>SEO Optimization</h3>
-                <p>Improving visibility and helping businesses appear in search results.</p>
-            </div>
-            <div class="card">
-                <h3>Digital Marketing</h3>
-                <p>Building online presence and helping brands reach the right audience.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="cta">
-        <h2>Let’s Grow Your Business Together</h2>
-        <p>We are ready to build your digital presence step by step with you.</p>
-        <a href="#">Contact Us</a>
-    </section>
-</div>
 
 <script>
 const toggle = document.querySelector('.menu-toggle');
