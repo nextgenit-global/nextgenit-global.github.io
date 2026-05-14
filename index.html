@@ -1,447 +1,845 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="NextGenIT - Professional Web Design, SEO, and Digital Marketing systems built for business growth.">
+    <title>NextGenIT - Digital Growth Agency</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        /* ---------- COLOR VARIABLES ---------- */
+        :root {
+            --primary-blue: #4f70ff;
+            --primary-dark: #3b5bdb;
+            --navy-dark: #111b33;
+            --navy-light: #1e293b;
+            --bg-light: #f6f8fb;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --white: #ffffff;
+            --success-green: #10b981;
+            --error-red: #ef4444;
+        }
 
-<title>NextGenIT - Professional Header + Hero</title>
+        /* ---------- RESET & BASE ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+        }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+        html {
+            scroll-behavior: smooth;
+        }
 
-<style>
+        body {
+            background: var(--bg-light);
+            overflow-x: hidden;
+            color: var(--text-main);
+        }
 
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:"Segoe UI", Roboto, Arial, sans-serif;
-}
+        /* ---------- TOP BAR ---------- */
+        .top-bar {
+            background: var(--navy-dark);
+            color: var(--white);
+            padding: 8px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 12px;
+        }
+        .social-icons i {
+            margin-left: 14px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            color: white;
+        }
+        .social-icons i:hover {
+            color: var(--primary-blue);
+        }
+        .social-icons a {
+            text-decoration: none;
+        }
 
-body{
-    background:#f6f8fb;
-    overflow-x:hidden;
-}
+        /* ---------- HEADER ---------- */
+        .header {
+            background: var(--white);
+            padding: 16px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 750;
+            color: var(--navy-dark);
+            text-decoration: none;
+        }
+        .logo span {
+            color: var(--primary-blue);
+        }
+        .contact-area {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .contact-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .contact-box i {
+            font-size: 20px;
+            color: var(--primary-blue);
+        }
+        .contact-box h4 {
+            font-size: 11px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .contact-box p {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--navy-dark);
+        }
+        .quote-btn {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .quote-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 112, 255, 0.3);
+        }
 
-/* ================= TOP BAR ================= */
-.top-bar{
-    background:#0b5f5f;
-    color:#fff;
-    padding:8px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:10px;
-    font-size:12px;
-}
-.social-icons i{
-    margin-left:14px;
-    font-size:13px;
-    cursor:pointer;
-}
-.social-icons i:hover{
-    color:#bff7f3;
-}
+        /* ---------- NAVBAR (STICKY) ---------- */
+        .navbar {
+            width: 86%;
+            max-width: 1200px;
+            margin: 12px auto 0;
+            background: var(--white);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border-radius: 50px;
+            padding: 0 20px;
+            position: sticky;
+            top: 15px;
+            z-index: 1000;
+        }
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+        }
+        .nav-menu li a {
+            display: inline-block;
+            padding: 12px 18px;
+            text-decoration: none;
+            color: var(--navy-dark);
+            font-size: 14px;
+            font-weight: 600;
+            position: relative;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .nav-menu li a::after {
+            content: '';
+            position: absolute;
+            bottom: 6px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0%;
+            height: 2px;
+            background: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+        .nav-menu li a:hover {
+            color: var(--primary-blue);
+        }
+        .nav-menu li a:hover::after {
+            width: 40%;
+        }
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            padding: 12px;
+            cursor: pointer;
+            text-align: center;
+            color: var(--navy-dark);
+        }
 
-/* ================= HEADER ================= */
-.header{
-    background:#fff;
-    padding:16px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:20px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.06);
-}
-.logo{
-    font-size:28px;
-    font-weight:750;
-    color:#111;
-}
-.logo span{
-    color:#00a3a3;
-}
-.contact-area{
-    display:flex;
-    gap:30px;
-    flex-wrap:wrap;
-    align-items:center;
-}
-.contact-box{
-    display:flex;
-    align-items:center;
-    gap:10px;
-}
-.contact-box i{
-    font-size:20px;
-    color:#00a3a3;
-}
-.contact-box h4{
-    font-size:11px;
-    color:#777;
-    text-transform:uppercase;
-    letter-spacing:0.5px;
-}
-.contact-box p{
-    font-size:14px;
-    font-weight:600;
-    color:#1f2a44;
-}
-.quote-btn{
-    background:linear-gradient(135deg,#00a3a3,#007070);
-    color:#fff;
-    padding:10px 20px;
-    border-radius:40px;
-    text-decoration:none;
-    font-size:13px;
-    font-weight:600;
-    display:inline-block;
-    text-align:center;
-}
-.quote-btn:hover{
-    background:linear-gradient(135deg,#008b8b,#006060);
-}
+        /* ---------- HERO SECTION ---------- */
+        .hero {
+            padding: 70px 8% 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+        .hero-left {
+            flex: 1.2;
+            min-width: 280px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        .tagline {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: var(--primary-blue);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-size: 48px;
+            line-height: 1.2;
+            color: var(--navy-dark);
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 span {
+            color: var(--primary-blue);
+        }
+        .desc {
+            font-size: 17px;
+            color: var(--text-muted);
+            line-height: 1.6;
+            max-width: 550px;
+        }
+        .hero-btns {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .primary-btn {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(79, 112, 255, 0.3);
+        }
+        .secondary-btn {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 1.5px solid var(--primary-blue);
+            padding: 14px 28px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        .secondary-btn:hover {
+            background: #f0f4ff;
+            transform: translateY(-3px);
+        }
+        .trust {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-main);
+            margin-top: 15px;
+        }
+        .trust div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .trust i {
+            color: var(--primary-blue);
+            font-size: 16px;
+        }
+        .hero-right {
+            flex: 0.9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-box {
+            position: relative;
+            width: 350px;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-box img {
+            width: 80%;
+            z-index: 2;
+            position: relative;
+            animation: float 5s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.15;
+        }
+        .c1 {
+            width: 150px;
+            height: 150px;
+            background: var(--primary-blue);
+            top: 0;
+            left: 0;
+        }
+        .c2 {
+            width: 110px;
+            height: 110px;
+            background: var(--navy-dark);
+            bottom: 10px;
+            right: 0;
+        }
+        .c3 {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-dark);
+            top: 60%;
+            left: -10px;
+        }
 
-/* ================= NAVBAR ================= */
-.navbar{
-    width:86%;
-    max-width:1200px;
-    margin:12px auto 0;
-    background:#fff;
-    box-shadow:0 8px 20px rgba(0,0,0,0.06);
-    border-radius:50px;
-    padding:0 20px;
-}
-.nav-menu{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    list-style:none;
-}
-.nav-menu li a{
-    display:inline-block;
-    padding:12px 18px;
-    text-decoration:none;
-    color:#222;
-    font-size:14px;
-    font-weight:600;
-    position:relative;
-    border-radius:30px;
-}
-.nav-menu li a::after{
-    content:'';
-    position:absolute;
-    bottom:6px;
-    left:50%;
-    transform:translateX(-50%);
-    width:0%;
-    height:2px;
-    background:#00a3a3;
-    transition:width 0.2s ease;
-}
-.nav-menu li a:hover{
-    color:#00a3a3;
-}
-.nav-menu li a:hover::after{
-    width:40%;
-}
-.menu-toggle{
-    display:none;
-    font-size:24px;
-    padding:12px;
-    cursor:pointer;
-    text-align:center;
-}
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: var(--navy-dark);
+            color: #cbd5e1;
+            padding: 80px 8% 20px;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        .footer-col h3 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--primary-blue);
+        }
+        .footer-col p {
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+            list-style: none;
+        }
+        .footer-links li a {
+            color: #cbd5e1;
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .footer-links li a:hover {
+            color: var(--primary-blue);
+            padding-left: 5px;
+        }
+        .contact-info li {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            list-style: none;
+        }
+        .contact-info i {
+            color: var(--primary-blue);
+            font-size: 18px;
+        }
+        .newsletter-box p {
+            font-size: 13px;
+            color: #94a3b8;
+        }
+        .subscribe-form {
+            display: flex;
+            margin-top: 15px;
+            background: var(--navy-light);
+            padding: 5px;
+            border-radius: 40px;
+            width: 100%;
+        }
+        .subscribe-form input {
+            background: transparent;
+            border: none;
+            padding: 10px 15px;
+            color: #fff;
+            outline: none;
+            width: 100%;
+            font-size: 13px;
+        }
+        .subscribe-form input::placeholder {
+            color: #94a3b8;
+        }
+        .subscribe-form button {
+            background: var(--primary-blue);
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .subscribe-form button:hover:not(:disabled) {
+            background: var(--primary-dark);
+        }
+        .subscribe-form button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .newsletter-success {
+            color: var(--success-green);
+            font-size: 13px;
+            margin-top: 10px;
+            display: none;
+            align-items: center;
+            gap: 6px;
+        }
+        .newsletter-error {
+            color: var(--error-red);
+            font-size: 13px;
+            margin-top: 10px;
+            display: none;
+            align-items: center;
+            gap: 6px;
+        }
+        .clients-count {
+            font-size: 12px;
+            color: var(--primary-blue);
+            font-weight: 700;
+            margin-top: 10px;
+        }
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .footer-socials a {
+            width: 35px;
+            height: 35px;
+            background: var(--navy-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: var(--white);
+            font-size: 14px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .footer-socials a:hover {
+            background: var(--primary-blue);
+        }
+        .bottom-bar {
+            border-top: 1px solid var(--navy-light);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 13px;
+        }
+        .legal-links a {
+            color: #94a3b8;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+        .legal-links a:hover {
+            color: #fff;
+        }
 
-/* ================= HERO SECTION (HOME) ================= */
-.hero{
-    padding:70px 8% 60px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:50px;
-    flex-wrap:wrap;
-}
-.hero-left{
-    flex:1.2;
-    min-width:280px;
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-.tagline{
-    font-size:13px;
-    letter-spacing:2px;
-    color:#00a3a3;
-    font-weight:700;
-    text-transform:uppercase;
-}
-.hero h1{
-    font-size:42px;
-    line-height:1.2;
-    color:#0b2b3b;
-    font-weight:800;
-    letter-spacing:-0.5px;
-}
-.hero h1 span{
-    color:#00a3a3;
-}
-.desc{
-    font-size:16px;
-    color:#4a5568;
-    line-height:1.6;
-    max-width:550px;
-}
-.hero-btns{
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-}
-.primary-btn{
-    background:linear-gradient(135deg,#00a3a3,#007070);
-    color:#fff;
-    padding:12px 24px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:600;
-    font-size:14px;
-    display:inline-block;
-}
-.primary-btn:hover{
-    background:linear-gradient(135deg,#008b8b,#006060);
-}
-.secondary-btn{
-    background:#fff;
-    color:#00a3a3;
-    border:1.5px solid #00a3a3;
-    padding:12px 24px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:600;
-    font-size:14px;
-    display:inline-block;
-}
-.secondary-btn:hover{
-    background:#e6f7f7;
-}
-.trust{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    font-size:14px;
-    color:#2d3748;
-    margin-top:8px;
-}
-.trust div{
-    display:flex;
-    align-items:center;
-    gap:8px;
-}
-.hero-right{
-    flex:0.9;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.image-box{
-    position:relative;
-    width:320px;
-    height:320px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.image-box img{
-    width:70%;
-    z-index:2;
-    position:relative;
-}
-.floating-circle{
-    position:absolute;
-    border-radius:50%;
-    opacity:0.25;
-}
-.c1{
-    width:130px;
-    height:130px;
-    background:#00a3a3;
-    top:10px;
-    left:10px;
-}
-.c2{
-    width:90px;
-    height:90px;
-    background:#007070;
-    bottom:20px;
-    right:10px;
-}
-.c3{
-    width:70px;
-    height:70px;
-    background:#00c2c2;
-    top:65%;
-    left:5px;
-}
-
-/* ================= RESPONSIVE FIXES ================= */
-@media(max-width:1024px){
-    .hero h1{ font-size:36px; }
-    .navbar{ width:92%; border-radius:30px; }
-}
-
-@media(max-width:900px){
-    .header{
-        flex-direction:column;
-        text-align:center;
-    }
-    .contact-area{
-        justify-content:center;
-    }
-    .navbar{
-        width:95%;
-        border-radius:20px;
-    }
-    .nav-menu{
-        display:none;
-        flex-direction:column;
-        width:100%;
-    }
-    .nav-menu.active{
-        display:flex;
-    }
-    .nav-menu li a{
-        text-align:center;
-        padding:12px;
-    }
-    .menu-toggle{
-        display:block;
-    }
-    .hero{
-        flex-direction:column;
-        text-align:center;
-        padding:50px 6%;
-    }
-    .hero-left{
-        align-items:center;
-    }
-    .desc{
-        max-width:100%;
-    }
-    .trust{
-        align-items:center;
-    }
-    .hero-btns,
-    .trust{
-        justify-content:center;
-    }
-}
-
-@media(max-width:550px){
-    .top-bar{
-        flex-direction:column;
-        text-align:center;
-    }
-    .contact-area{
-        flex-direction:column;
-        gap:15px;
-    }
-    .hero h1{ font-size:30px; }
-    .image-box{ width:260px; height:260px; }
-}
-</style>
+        /* ---------- RESPONSIVE ---------- */
+        @media(max-width:1024px) {
+            .hero h1 { font-size: 38px; }
+            .navbar { width: 92%; border-radius: 30px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .footer-col-brand { grid-column: span 2; }
+        }
+        @media(max-width:900px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 5%;
+            }
+            .contact-area {
+                justify-content: center;
+                gap: 20px;
+            }
+            .navbar {
+                width: 95%;
+                border-radius: 20px;
+                top: 10px;
+            }
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+            }
+            .nav-menu.active {
+                display: flex;
+            }
+            .nav-menu li a {
+                text-align: center;
+                padding: 15px;
+                width: 100%;
+            }
+            .nav-menu li a::after { display: none; }
+            .menu-toggle {
+                display: block;
+            }
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 50px 6%;
+            }
+            .hero-left {
+                align-items: center;
+            }
+        }
+        @media(max-width:550px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
+            .contact-area {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .hero h1 { font-size: 32px; }
+            .image-box { width: 280px; height: 280px; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-col-brand { grid-column: span 1; }
+            .bottom-bar { justify-content: center; text-align: center; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- TOP BAR -->
-<div class="top-bar">
-    <div>building digital success for modern businesses</div>
-    <div class="social-icons">
-        <i class="fab fa-youtube"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-facebook-f"></i>
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div>🚀 Building digital success for modern businesses</div>
+        <div class="social-icons">
+            <a href="https://www.youtube.com/@NextGenIT2026" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
     </div>
-</div>
 
-<!-- HEADER -->
-<header class="header">
-    <div class="logo">NextGen<span>IT</span></div>
-    <div class="contact-area">
-        <div class="contact-box">
-            <i class="fa-solid fa-phone"></i>
-            <div>
-                <h4>Call</h4>
-                <p>+977 9816004622</p>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#" class="logo">NextGen<span>IT</span></a>
+        <div class="contact-area">
+            <div class="contact-box">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                    <h4>Call Us</h4>
+                    <p>+977 9816004622</p>
+                </div>
+            </div>
+            <div class="contact-box">
+                <i class="fa-regular fa-envelope"></i>
+                <div>
+                    <h4>Email Us</h4>
+                    <p>nextgenit2030@gmail.com</p>
+                </div>
             </div>
         </div>
-        <div class="contact-box">
-            <i class="fa-regular fa-envelope"></i>
-            <div>
-                <h4>Email</h4>
-                <p>nextgenit2030@gmail.com</p>
+        <a href="#contact" class="quote-btn">Get Free Quote</a>
+    </header>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="navbar">
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#cases">Case Studies</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-left">
+            <p class="tagline">Web • SEO • Digital Marketing • Growth</p>
+            <h1>
+                We design digital systems<br>
+                that grow your <span>business</span>
+            </h1>
+            <p class="desc">
+                We build high-performance websites, SEO systems, and digital marketing strategies that power sustainable business growth and maximize your ROI.
+            </p>
+            <div class="hero-btns">
+                <a href="#" class="primary-btn">Request Your Proposal</a>
+                <a href="#" class="secondary-btn">View Our Work</a>
+            </div>
+            <div class="trust">
+                <div><i class="fa-solid fa-circle-check"></i> Digital Systems Built for Business Growth</div>
+                <div><i class="fa-solid fa-circle-check"></i> SEO & Marketing Focused on Real Results</div>
+                <div><i class="fa-solid fa-circle-check"></i> Websites Designed for Performance & Conversions</div>
             </div>
         </div>
-    </div>
-    <a href="#" class="quote-btn">Get Quote</a>
-</header>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
-    <ul class="nav-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Case Studies</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Insights</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
-
-<!-- HERO (HOME) -->
-<section class="hero">
-    <div class="hero-left">
-        <p class="tagline">Web • SEO • Digital Marketing • Growth</p>
-        <h1>
-            We design digital systems<br>
-            that grow your <span>business</span>
-        </h1>
-        <p class="desc">
-            We build high-performance websites, SEO systems, and digital marketing strategies that power sustainable business growth.
-        </p>
-        <div class="hero-btns">
-            <a href="#" class="primary-btn">Request Your Proposal</a>
-            <a href="#" class="secondary-btn">View Our Work</a>
+        <div class="hero-right">
+            <div class="image-box">
+                <div class="floating-circle c1"></div>
+                <div class="floating-circle c2"></div>
+                <div class="floating-circle c3"></div>
+                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Digital growth illustration">
+            </div>
         </div>
-        <div class="trust">
-            <div>✔ Digital Systems Built for Business Growth</div>
-            <div>✔ SEO & Marketing Focused on Real Results</div>
-            <div>✔ Websites Designed for Performance & Conversions</div>
-        </div>
-    </div>
-    <div class="hero-right">
-        <div class="image-box">
-            <div class="floating-circle c1"></div>
-            <div class="floating-circle c2"></div>
-            <div class="floating-circle c3"></div>
-            <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="growth">
-        </div>
-    </div>
-</section>
+    </section>
 
-<script>
-const toggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.nav-menu');
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-</script>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col footer-col-brand">
+                <div class="logo" style="color: #fff; margin-bottom: 20px;">NextGen<span>IT</span></div>
+                <p>NextGenIT is a global digital marketing and IT solutions company helping businesses grow through powerful websites, SEO, and data-driven marketing strategies.</p>
+                <div class="clients-count">✨ Long-term partnerships with growing businesses</div>
+            </div>
+
+            <div class="footer-col">
+                <h3>Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">SEO Optimization</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                    <li><a href="#">Social Media Ads</a></li>
+                    <li><a href="#">PPC Management</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Support</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Our Process</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Career</a></li>
+                    <li><a href="#">Consultation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Get In Touch</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li>
+                    <li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li>
+                    <li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li>
+                </ul>
+            </div>
+
+            <!-- WORKING NEWSLETTER with EmailJS - FIXED! -->
+            <div class="footer-col">
+                <h3>Newsletter</h3>
+                <div class="newsletter-box">
+                    <p>📧 Get marketing tips & growth strategies directly in your inbox.</p>
+                    <form class="subscribe-form" id="newsletterForm">
+                        <input type="email" id="subscriberEmail" name="email" placeholder="Your email address" required>
+                        <button type="submit" id="subscribeBtn">Join</button>
+                    </form>
+                    <div id="successMsg" class="newsletter-success">
+                        <i class="fas fa-check-circle"></i> <span id="successText">Thanks! You're now subscribed.</span>
+                    </div>
+                    <div id="errorMsg" class="newsletter-error">
+                        <i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again.</span>
+                    </div>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-bar">
+            <div class="copyright">© 2026 <strong>NextGenIT</strong>. All rights reserved.</div>
+            <div class="legal-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div class="designer">Designed & Developed by NextGenIT 🚀</div>
+        </div>
+    </footer>
+
+    <!-- MOBILE MENU TOGGLE -->
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.nav-menu');
+        const icon = toggle.querySelector('i');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                if (icon.classList.contains('fa-times')) {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+        });
+    </script>
+
+    <!-- EMAILJS INTEGRATION - NOW FULLY WORKING! -->
+    <script>
+        // ✅ YOUR CORRECT EMAILJS CREDENTIALS
+        const EMAILJS_CONFIG = {
+            PUBLIC_KEY: "k0-JMxq9DMByW7fzf",
+            SERVICE_ID: "service_sgnt3z9",  
+            TEMPLATE_ID: "template_566697h"
+        };
+        
+        // Initialize EmailJS with your public key
+        emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+        
+        const form = document.getElementById('newsletterForm');
+        const emailInput = document.getElementById('subscriberEmail');
+        const submitBtn = document.getElementById('subscribeBtn');
+        const successMsg = document.getElementById('successMsg');
+        const errorMsg = document.getElementById('errorMsg');
+        const successText = document.getElementById('successText');
+        const errorText = document.getElementById('errorText');
+        
+        function hideMessages() {
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+        }
+        
+        function showSuccess(message) {
+            successText.textContent = message;
+            successMsg.style.display = 'flex';
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 5000);
+        }
+        
+        function showError(message) {
+            errorText.textContent = message;
+            errorMsg.style.display = 'flex';
+            setTimeout(() => {
+                errorMsg.style.display = 'none';
+            }, 5000);
+        }
+        
+        // ✅ THIS IS THE FIXED WORKING CODE - EMAIL SENDING IS NOW ACTIVE!
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            hideMessages();
+            
+            const email = emailInput.value.trim();
+            
+            if (!email) {
+                showError('Please enter your email address.');
+                return;
+            }
+            
+            if (!email.includes('@') || !email.includes('.')) {
+                showError('Please enter a valid email address.');
+                return;
+            }
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Subscribing...';
+            
+            try {
+                // ✅ EMAIL SENDING CODE IS NOW UNCOMMENTED AND WORKING!
+                const templateParams = {
+                    to_email: 'nextgenit2030@gmail.com',
+                    from_email: email,
+                    email: email,
+                    subject: '🎉 New Newsletter Subscriber - NextGenIT',
+                    message: `New subscriber email: ${email}\n\nSubscribed via NextGenIT website newsletter form.`,
+                    name: email.split('@')[0]
+                };
+                
+                // Send the email using EmailJS
+                const response = await emailjs.send(
+                    EMAILJS_CONFIG.SERVICE_ID,
+                    EMAILJS_CONFIG.TEMPLATE_ID,
+                    templateParams
+                );
+                
+                console.log('Email sent successfully!', response);
+                showSuccess(`Thanks ${email}! You're now subscribed to NextGenIT newsletter.`);
+                emailInput.value = '';
+                
+            } catch (error) {
+                console.error('EmailJS Error:', error);
+                showError('Failed to subscribe. Please try again later or contact us directly.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Join';
+            }
+        });
+    </script>
+
+    <!-- Anchor divs for smooth scrolling -->
+    <div id="about" style="position: relative; top: -80px; height: 0;"></div>
+    <div id="services" style="position: relative; top: -80px; height: 0;"></div>
+    <div id="portfolio" style="position: relative; top: -80px; height: 0;"></div>
+    <div id="cases" style="position: relative; top: -80px; height: 0;"></div>
+    <div id="pricing" style="position: relative; top: -80px; height: 0;"></div>
+    <div id="insights" style="position: relative; top: -80px; height: 0;"></div>
+    <div id="contact" style="position: relative; top: -80px; height: 0;"></div>
 
 </body>
 </html>
