@@ -615,7 +615,7 @@
         text-decoration: none;
     }
 
-    /* ===== RESPONSIVE: MOBILE HEADER FIX (compact & aligned) ===== */
+    /* ===== RESPONSIVE: FIX MOBILE HEADER (compact & aligned) ===== */
     @media (max-width: 900px) {
         .navbar {
             width: 92%;
@@ -666,52 +666,57 @@
         }
     }
 
-    /* Mobile header refinement: stacked, compact, centered */
+    /* Mobile header - critical fix: keep horizontal row, not huge stacked */
     @media (max-width: 768px) {
         .header {
-            flex-direction: column;
-            text-align: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
             gap: 10px;
-            padding: 12px 5%;
         }
         .logo-group {
             order: 0;
         }
         .logo {
-            font-size: 26px;
+            font-size: 24px;
         }
         .header-right {
-            flex-direction: column;
-            width: 100%;
-            gap: 10px;
+            flex-direction: row;
+            width: auto;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
         .contact-area {
-            justify-content: center;
+            flex-direction: row;
+            gap: 8px;
             flex-wrap: wrap;
-            gap: 10px;
+            justify-content: flex-end;
         }
         .contact-box {
-            padding: 5px 12px;
+            padding: 4px 10px;
         }
         .contact-box i {
-            font-size: 14px;
+            font-size: 13px;
         }
         .contact-box .contact-details h4 {
             font-size: 8px;
         }
         .contact-box .contact-details p {
-            font-size: 10px;
+            font-size: 9px;
         }
         .header-social {
             border-left: none;
             padding-left: 0;
-            justify-content: center;
-            margin-top: 4px;
+            gap: 5px;
         }
         .header-social a {
-            width: 32px;
-            height: 32px;
-            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            font-size: 13px;
         }
         .hero h1 {
             font-size: 34px;
@@ -721,7 +726,44 @@
         }
     }
 
-    /* Services & Support side by side on small devices */
+    @media (max-width: 550px) {
+        .hero h1 {
+            font-size: 30px;
+        }
+        .slider-container {
+            height: 280px;
+        }
+        .hero-btns .primary-btn, .hero-btns .secondary-btn {
+            padding: 8px 18px;
+            font-size: 12px;
+        }
+        .trust div {
+            font-size: 11px;
+        }
+        .stats-section {
+            padding: 20px 16px;
+        }
+        .navbar {
+            width: 95%;
+        }
+        /* Further header tightening */
+        .contact-box {
+            padding: 3px 8px;
+        }
+        .contact-box .contact-details p {
+            font-size: 8px;
+        }
+        .header-social a {
+            width: 28px;
+            height: 28px;
+            font-size: 12px;
+        }
+        .logo {
+            font-size: 22px;
+        }
+    }
+
+    /* Services & Support side by side on mobile devices */
     @media (max-width: 640px) {
         .footer-grid {
             grid-template-columns: 1fr 1fr;
@@ -743,40 +785,11 @@
             flex-direction: row;
         }
     }
-
-    @media (max-width: 550px) {
-        .hero h1 {
-            font-size: 30px;
-        }
-        .slider-container {
-            height: 280px;
-        }
-        .contact-box {
-            padding: 4px 10px;
-        }
-        .hero-btns .primary-btn, .hero-btns .secondary-btn {
-            padding: 8px 18px;
-            font-size: 12px;
-        }
-        .trust div {
-            font-size: 11px;
-        }
-        .stats-section {
-            padding: 20px 16px;
-        }
-        .bottom-bar {
-            justify-content: center;
-            text-align: center;
-        }
-        .navbar {
-            width: 95%;
-        }
-    }
 </style>
 </head>
 <body>
 
-<!-- HEADER (COMPACT & MOBILE-FRIENDLY) -->
+<!-- HEADER (COMPACT & MOBILE-FRIENDLY: horizontal alignment) -->
 <header class="header">
     <div class="logo-group">
         <a href="#" class="logo">NextGen<span>IT</span></a>
@@ -870,7 +883,7 @@
         </div>
     </section>
 
-    <!-- STATS SECTION (adds content to push footer below fold) -->
+    <!-- STATS SECTION (adds content, footer below fold) -->
     <div class="stats-section">
         <div class="stat-item">
             <div class="stat-number">500+</div>
