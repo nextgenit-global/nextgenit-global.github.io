@@ -69,7 +69,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
-    /* ---------- MODERN RESET & VARIABLES ---------- */
+    /* ---------- COLOR VARIABLES ---------- */
     :root {
         --primary-blue: #4f70ff;
         --primary-dark: #3b5bdb;
@@ -105,13 +105,14 @@
         min-height: 100vh;
     }
 
+    /* main content wrapper */
     .main-content {
         flex: 1;
         display: flex;
         flex-direction: column;
     }
 
-    /* ---------- HEADER (desktop first) ---------- */
+    /* ---------- HEADER (original desktop style, mobile compact fix) ---------- */
     .header {
         background: var(--white);
         padding: 12px 8%;
@@ -150,6 +151,7 @@
         display: flex;
         gap: 12px;
         align-items: center;
+        flex-wrap: wrap;
     }
     .contact-box {
         display: flex;
@@ -159,6 +161,7 @@
         padding: 6px 14px;
         border-radius: 100px;
         transition: all 0.2s ease;
+        white-space: nowrap;
     }
     .contact-box:hover {
         background: #e9edf2;
@@ -209,7 +212,7 @@
         transform: translateY(-2px);
     }
 
-    /* ---------- STICKY NAVBAR ---------- */
+    /* ---------- STICKY NAVBAR (unchanged original design) ---------- */
     .navbar {
         width: 86%;
         max-width: 1200px;
@@ -282,9 +285,17 @@
         border-radius: 50%;
     }
 
-    /* ---------- HERO SECTION (optimized height) ---------- */
+    /* ---------- CONTENT CONTAINER (fixes background spreading, centers content) ---------- */
+    .content-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 5%;
+        width: 100%;
+    }
+
+    /* ---------- HERO SECTION ---------- */
     .hero {
-        padding: 18px 8% 20px;
+        padding: 18px 0 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -339,6 +350,10 @@
         display: inline-block;
         transition: all 0.25s ease;
     }
+    .primary-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(79, 112, 255, 0.3);
+    }
     .secondary-btn {
         background: var(--white);
         color: var(--primary-blue);
@@ -350,6 +365,10 @@
         font-size: 13px;
         display: inline-block;
         transition: all 0.25s ease;
+    }
+    .secondary-btn:hover {
+        background: #f0f4ff;
+        transform: translateY(-2px);
     }
     .trust {
         display: flex;
@@ -424,8 +443,18 @@
         color: white;
         z-index: 5;
     }
-    .slide-info h3 { font-size: 1rem; margin: 0 0 2px; font-weight: 700; }
-    .slide-info p { margin: 0; opacity: 0.75; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; }
+    .slide-info h3 { 
+        font-size: 1rem; 
+        margin: 0 0 2px 0;
+        font-weight: 700;
+    }
+    .slide-info p { 
+        margin: 0;
+        opacity: 0.75; 
+        font-size: 0.7rem; 
+        text-transform: uppercase; 
+        letter-spacing: 1px; 
+    }
     .glow-effect {
         position: absolute;
         width: 120%;
@@ -446,8 +475,10 @@
 
     /* STATS SECTION */
     .stats-section {
+        margin: 12px 0 20px;
+    }
+    .stats-grid {
         background: linear-gradient(145deg, var(--white), #fefefe);
-        margin: 12px 8% 20px;
         border-radius: 40px;
         padding: 30px 24px;
         display: flex;
@@ -563,6 +594,9 @@
         font-size: 12px;
         transition: 0.2s;
     }
+    .subscribe-form button:hover:not(:disabled) {
+        background: var(--primary-dark);
+    }
     .newsletter-success, .newsletter-error {
         font-size: 12px;
         margin-top: 8px;
@@ -614,38 +648,25 @@
         margin-left: 18px;
         text-decoration: none;
     }
+    .legal-links a:hover {
+        color: #fff;
+    }
 
-    /* ---------- RESPONSIVE: FIX MOBILE HEADER (compact & aligned) ---------- */
+    /* ===== RESPONSIVE: ONLY FIX HEADER COMPACT + KEEP NAV ORIGINAL ===== */
     @media (max-width: 900px) {
-        /* header becomes row with wrap, better spacing */
+        /* Header - make compact horizontal row with proper spacing */
         .header {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
             padding: 10px 5%;
             gap: 12px;
-        }
-        .logo-group {
-            order: 1;
         }
         .logo {
             font-size: 24px;
         }
         .header-right {
-            order: 2;
-            flex-direction: row;
-            width: auto;
             gap: 12px;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-end;
         }
         .contact-area {
-            flex-direction: row;
             gap: 8px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
         }
         .contact-box {
             padding: 5px 10px;
@@ -669,7 +690,7 @@
             height: 32px;
             font-size: 14px;
         }
-        /* navbar adjustments */
+        /* Navbar remains original but adjust width for mobile */
         .navbar {
             width: 92%;
             border-radius: 40px;
@@ -697,10 +718,10 @@
             text-align: center;
             padding: 10px;
         }
+        /* Hero responsive */
         .hero {
             flex-direction: column;
             text-align: center;
-            padding: 22px 6% 20px;
         }
         .hero-left {
             align-items: center;
@@ -713,7 +734,7 @@
             clip-path: none;
             border-radius: 28px;
         }
-        .stats-section {
+        .stats-grid {
             flex-direction: column;
             align-items: center;
             gap: 24px;
@@ -721,10 +742,9 @@
     }
 
     @media (max-width: 640px) {
-        /* further tweak header for very narrow screens */
-        .header {
-            padding: 8px 4%;
-            gap: 8px;
+        /* Extra small: prevent contact boxes from stacking */
+        .contact-area {
+            justify-content: center;
         }
         .contact-box {
             padding: 4px 8px;
@@ -737,7 +757,7 @@
             height: 28px;
             font-size: 12px;
         }
-        /* Footer grid: Services & Support side by side, brand full width */
+        /* Footer: Services & Support side by side */
         .footer-grid {
             grid-template-columns: 1fr 1fr;
             gap: 30px 20px;
@@ -751,9 +771,6 @@
         .footer-col:nth-child(5) {
             grid-column: span 1;
         }
-        .footer-col h3 {
-            font-size: 16px;
-        }
         .subscribe-form {
             flex-direction: row;
         }
@@ -766,15 +783,6 @@
         .slider-container {
             height: 280px;
         }
-        .contact-area {
-            gap: 6px;
-        }
-        .contact-box {
-            padding: 3px 8px;
-        }
-        .contact-box .contact-details p {
-            font-size: 8px;
-        }
         .hero-btns .primary-btn, .hero-btns .secondary-btn {
             padding: 8px 18px;
             font-size: 12px;
@@ -782,7 +790,7 @@
         .trust div {
             font-size: 11px;
         }
-        .stats-section {
+        .stats-grid {
             padding: 20px 16px;
         }
         .bottom-bar {
@@ -806,7 +814,7 @@
 </head>
 <body>
 
-<!-- HEADER (compact & mobile-friendly) -->
+<!-- HEADER (compact & mobile-friendly, original structure) -->
 <header class="header">
     <div class="logo-group">
         <a href="#" class="logo">NextGen<span>IT</span></a>
@@ -837,7 +845,7 @@
     </div>
 </header>
 
-<!-- STICKY NAVBAR -->
+<!-- STICKY NAVBAR (unchanged design) -->
 <nav class="navbar">
     <div class="menu-toggle">
         <i class="fas fa-bars"></i>
@@ -858,69 +866,74 @@
 </nav>
 
 <main class="main-content">
-    <!-- HERO SECTION (fully visible) -->
-    <section class="hero">
-        <div class="hero-left">
-            <p class="tagline">Web Design • SEO • Digital Marketing • Business Growth</p>
-            <h1>Professional Web Design & SEO Services That Grow <br> Your <span>Business</span></h1>
-            <p class="desc">NextGenIT builds high-performance business websites, SEO systems, and digital marketing strategies designed to increase traffic, generate qualified leads, improve Google rankings, and maximize long-term business growth.</p>
-            <div class="hero-btns">
-                <a href="#" class="primary-btn">Request Your Proposal</a>
-                <a href="#" class="secondary-btn">View Our Portfolio</a>
+    <!-- Centered content container -->
+    <div class="content-container">
+        <!-- HERO SECTION (fully visible) -->
+        <section class="hero">
+            <div class="hero-left">
+                <p class="tagline">Web Design • SEO • Digital Marketing • Business Growth</p>
+                <h1>Professional Web Design & SEO Services That Grow <br> Your <span>Business</span></h1>
+                <p class="desc">NextGenIT builds high-performance business websites, SEO systems, and digital marketing strategies designed to increase traffic, generate qualified leads, improve Google rankings, and maximize long-term business growth.</p>
+                <div class="hero-btns">
+                    <a href="#" class="primary-btn">Request Your Proposal</a>
+                    <a href="#" class="secondary-btn">View Our Portfolio</a>
+                </div>
+                <div class="trust">
+                    <div><i class="fa-solid fa-circle-check"></i>SEO-Optimized Business Websites</div>
+                    <div><i class="fa-solid fa-circle-check"></i>Conversion-Focused Digital Marketing</div>
+                    <div><i class="fa-solid fa-circle-check"></i>Fast, Mobile-Friendly & High-Performance Design</div>
+                    <div><i class="fa-solid fa-circle-check"></i>Lead Generation & Brand Growth Strategies</div>
+                </div>
             </div>
-            <div class="trust">
-                <div><i class="fa-solid fa-circle-check"></i>SEO-Optimized Business Websites</div>
-                <div><i class="fa-solid fa-circle-check"></i>Conversion-Focused Digital Marketing</div>
-                <div><i class="fa-solid fa-circle-check"></i>Fast, Mobile-Friendly & High-Performance Design</div>
-                <div><i class="fa-solid fa-circle-check"></i>Lead Generation & Brand Growth Strategies</div>
-            </div>
-        </div>
-        <div class="hero-right">
-            <div class="glow-effect"></div>
-            <div class="slider-container">
-                <div class="slider-track">
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="UI Design dashboard">
-                        <div class="slide-info"><h3>Digital Identity</h3><p>Design Systems</p></div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=800&q=80" alt="Full stack development">
-                        <div class="slide-info"><h3>Full-Stack Dev</h3><p>Scale Ready</p></div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="SEO analytics">
-                        <div class="slide-info"><h3>Search Growth</h3><p>SEO Strategy</p></div>
-                    </div>
-                    <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Mobile responsive">
-                        <div class="slide-info"><h3>Mobile First</h3><p>Responsive UX</p></div>
+            <div class="hero-right">
+                <div class="glow-effect"></div>
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="UI Design dashboard">
+                            <div class="slide-info"><h3>Digital Identity</h3><p>Design Systems</p></div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=800&q=80" alt="Full stack development">
+                            <div class="slide-info"><h3>Full-Stack Dev</h3><p>Scale Ready</p></div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="SEO analytics">
+                            <div class="slide-info"><h3>Search Growth</h3><p>SEO Strategy</p></div>
+                        </div>
+                        <div class="slide">
+                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Mobile responsive">
+                            <div class="slide-info"><h3>Mobile First</h3><p>Responsive UX</p></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- STATS SECTION (adds spacing, footer below fold) -->
-    <div class="stats-section">
-        <div class="stat-item">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Projects Delivered</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Client Retention</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">4.9★</div>
-            <div class="stat-label">Google Rating</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-number">24/7</div>
-            <div class="stat-label">Support Access</div>
+        <!-- STATS SECTION -->
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Client Retention</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.9★</div>
+                    <div class="stat-label">Google Rating</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Support Access</div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- ANCHOR DIVS -->
+    <!-- ANCHOR DIVS FOR SMOOTH SCROLLING -->
     <div id="about" style="position: relative; top: -70px; height: 0;"></div>
     <div id="services" style="position: relative; top: -70px; height: 0;"></div>
     <div id="portfolio" style="position: relative; top: -70px; height: 0;"></div>
@@ -930,7 +943,7 @@
     <div id="contact" style="position: relative; top: -70px; height: 0;"></div>
 </main>
 
-<!-- FOOTER (Services & Support side-by-side on mobile) -->
+<!-- FOOTER (Services & Support side by side on mobile) -->
 <footer>
     <div class="footer-grid">
         <div class="footer-col footer-col-brand">
