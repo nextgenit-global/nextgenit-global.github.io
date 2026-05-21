@@ -102,7 +102,7 @@
         color: var(--text-main);
     }
 
-    /* ---------- PREMIUM HEADER STYLES (REFINED ALIGNMENT) ---------- */
+    /* ---------- PREMIUM HEADER (FLAWLESS LEFT ALIGNMENT) ---------- */
     .header {
         background: var(--white);
         padding: 16px 8%;
@@ -112,10 +112,9 @@
         flex-wrap: wrap;
         gap: 20px;
         box-shadow: 0 4px 20px rgba(0,0,0,0.02), 0 1px 0 var(--border-light);
-        backdrop-filter: blur(0px);
     }
 
-    /* Logo + tagline */
+    /* Logo + tagline – perfectly aligned */
     .logo-group {
         display: flex;
         flex-direction: column;
@@ -128,7 +127,7 @@
         color: var(--navy-dark);
         text-decoration: none;
         line-height: 1.1;
-        letter-spacing: -0.3px;
+        letter-spacing: 0.02em;       /* increased breathing room */
     }
     .logo span {
         color: var(--primary-blue);
@@ -136,13 +135,13 @@
     }
     .logo-tagline {
         font-size: 11px;
-        font-weight: 500;
+        font-weight: 600;             /* stronger weight, no blur */
         color: var(--text-muted);
-        border-left: 2px solid var(--primary-blue);
-        padding-left: 8px;
-        letter-spacing: 0.2px;
+        letter-spacing: 0.8px;        /* premium tracked look */
         line-height: 1.3;
         white-space: nowrap;
+        margin-left: -1px;            /* 👈 perfect left flush with the logo’s "N" */
+        /* no border, no padding – clean and intentional */
     }
 
     /* Right side: contact chips + social icons */
@@ -152,7 +151,6 @@
         gap: 24px;
         flex-wrap: wrap;
     }
-    /* Modern contact chips */
     .contact-area {
         display: flex;
         gap: 16px;
@@ -195,7 +193,6 @@
         line-height: 1.2;
     }
 
-    /* Social icons - refined */
     .header-social {
         display: flex;
         gap: 12px;
@@ -223,7 +220,7 @@
         transform: translateY(-2px);
     }
 
-    /* ---------- STICKY NAVBAR (Get Free Quote button on RIGHT) ---------- */
+    /* ---------- STICKY NAVBAR ---------- */
     .navbar {
         width: 86%;
         max-width: 1200px;
@@ -260,7 +257,7 @@
     }
     .nav-quote-right .quote-btn:hover {
         transform: translateY(-2px);
-        box-shadow: 0 12px 22px rgba(79, 112, 255, 0.35);
+        box-shadow: 0 12px 22px rgba(79,112,255,0.35);
         background: linear-gradient(135deg, #3b60ff, #2a48c7);
     }
 
@@ -304,7 +301,6 @@
     }
 
     /* ---------- HERO SECTION (modern slider) ---------- */
-    /* 👇 PUSHED UP: reduced top padding from 70px to 30px to sit closer to navbar */
     .hero {
         padding: 30px 8% 80px;
         display: flex;
@@ -639,7 +635,7 @@
         color: #fff;
     }
 
-    /* RESPONSIVE (ENHANCED FOR HEADER) */
+    /* RESPONSIVE (ADJUSTED FOR NEW LOGO/TAGLINE) */
     @media(max-width:1024px) {
         .hero h1 { font-size: 38px; }
         .navbar { width: 92%; border-radius: 40px; }
@@ -659,10 +655,7 @@
         .logo-tagline {
             white-space: normal;
             text-align: center;
-            border-left: none;
-            border-top: 1px solid var(--border-light);
-            padding-top: 6px;
-            padding-left: 0;
+            margin-left: 0;   /* reset micro‑shift when centered */
         }
         .header-right {
             justify-content: center;
@@ -745,15 +738,13 @@
 </head>
 <body>
 
-<!-- ========== PREMIUM HEADER (CLEAN, MODERN, PROFESSIONAL) ========== -->
+<!-- ========== PREMIUM HEADER (PERFECT LEFT ALIGNMENT) ========== -->
 <header class="header">
-    <!-- Logo + Tagline (adjusts to logo length) -->
     <div class="logo-group">
         <a href="#" class="logo">NextGen<span>IT</span></a>
         <div class="logo-tagline">Building digital success for modern businesses</div>
     </div>
 
-    <!-- Right side: contact chips + social icons (perfect alignment) -->
     <div class="header-right">
         <div class="contact-area">
             <div class="contact-box">
@@ -780,7 +771,7 @@
     </div>
 </header>
 
-<!-- ========== STICKY NAVBAR (Get Free Quote button on RIGHT SIDE) ========== -->
+<!-- ========== STICKY NAVBAR ========== -->
 <nav class="navbar">
     <div class="menu-toggle">
         <i class="fas fa-bars"></i>
@@ -800,7 +791,7 @@
     </div>
 </nav>
 
-<!-- HERO SECTION (modern curve slider) – top padding reduced to be closer to navbar -->
+<!-- HERO SECTION (modern curve slider) – unchanged -->
 <section class="hero">
     <div class="hero-left">
         <p class="tagline">Web Design • SEO • Digital Marketing • Business Growth</p>
