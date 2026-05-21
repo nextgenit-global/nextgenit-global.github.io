@@ -111,7 +111,7 @@
         flex-direction: column;
     }
 
-    /* ---------- HEADER (DESKTOP) ---------- */
+    /* ---------- HEADER (desktop first) ---------- */
     .header {
         background: var(--white);
         padding: 12px 8%;
@@ -282,7 +282,7 @@
         border-radius: 50%;
     }
 
-    /* ---------- HERO SECTION (fully visible, compact) ---------- */
+    /* ---------- HERO SECTION (optimized height) ---------- */
     .hero {
         padding: 18px 8% 20px;
         display: flex;
@@ -368,7 +368,7 @@
         font-size: 14px;
     }
     
-    /* Modern Curve Slider (reduced height) */
+    /* Modern Curve Slider */
     .hero-right {
         flex: 0.9;
         position: relative;
@@ -477,7 +477,7 @@
         margin-top: 6px;
     }
 
-    /* Footer Styles */
+    /* Footer */
     footer {
         background: var(--navy-dark);
         color: #cbd5e1;
@@ -615,11 +615,65 @@
         text-decoration: none;
     }
 
-    /* ===== RESPONSIVE: FIX MOBILE HEADER (compact & aligned) ===== */
+    /* ---------- RESPONSIVE: FIX MOBILE HEADER (compact & aligned) ---------- */
     @media (max-width: 900px) {
+        /* header becomes row with wrap, better spacing */
+        .header {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            gap: 12px;
+        }
+        .logo-group {
+            order: 1;
+        }
+        .logo {
+            font-size: 24px;
+        }
+        .header-right {
+            order: 2;
+            flex-direction: row;
+            width: auto;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .contact-area {
+            flex-direction: row;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .contact-box {
+            padding: 5px 10px;
+        }
+        .contact-box i {
+            font-size: 14px;
+        }
+        .contact-box .contact-details h4 {
+            font-size: 8px;
+        }
+        .contact-box .contact-details p {
+            font-size: 10px;
+        }
+        .header-social {
+            border-left: none;
+            padding-left: 0;
+            gap: 6px;
+        }
+        .header-social a {
+            width: 32px;
+            height: 32px;
+            font-size: 14px;
+        }
+        /* navbar adjustments */
         .navbar {
             width: 92%;
             border-radius: 40px;
+            padding: 5px 14px;
         }
         .nav-menu {
             display: none;
@@ -666,105 +720,24 @@
         }
     }
 
-    /* Mobile header - critical fix: keep horizontal row, not huge stacked */
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
+        /* further tweak header for very narrow screens */
         .header {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 5%;
-            gap: 10px;
-        }
-        .logo-group {
-            order: 0;
-        }
-        .logo {
-            font-size: 24px;
-        }
-        .header-right {
-            flex-direction: row;
-            width: auto;
-            gap: 12px;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-        }
-        .contact-area {
-            flex-direction: row;
+            padding: 8px 4%;
             gap: 8px;
-            flex-wrap: wrap;
-            justify-content: flex-end;
         }
         .contact-box {
-            padding: 4px 10px;
-        }
-        .contact-box i {
-            font-size: 13px;
-        }
-        .contact-box .contact-details h4 {
-            font-size: 8px;
+            padding: 4px 8px;
         }
         .contact-box .contact-details p {
             font-size: 9px;
-        }
-        .header-social {
-            border-left: none;
-            padding-left: 0;
-            gap: 5px;
-        }
-        .header-social a {
-            width: 30px;
-            height: 30px;
-            font-size: 13px;
-        }
-        .hero h1 {
-            font-size: 34px;
-        }
-        .slider-container {
-            height: 320px;
-        }
-    }
-
-    @media (max-width: 550px) {
-        .hero h1 {
-            font-size: 30px;
-        }
-        .slider-container {
-            height: 280px;
-        }
-        .hero-btns .primary-btn, .hero-btns .secondary-btn {
-            padding: 8px 18px;
-            font-size: 12px;
-        }
-        .trust div {
-            font-size: 11px;
-        }
-        .stats-section {
-            padding: 20px 16px;
-        }
-        .navbar {
-            width: 95%;
-        }
-        /* Further header tightening */
-        .contact-box {
-            padding: 3px 8px;
-        }
-        .contact-box .contact-details p {
-            font-size: 8px;
         }
         .header-social a {
             width: 28px;
             height: 28px;
             font-size: 12px;
         }
-        .logo {
-            font-size: 22px;
-        }
-    }
-
-    /* Services & Support side by side on mobile devices */
-    @media (max-width: 640px) {
+        /* Footer grid: Services & Support side by side, brand full width */
         .footer-grid {
             grid-template-columns: 1fr 1fr;
             gap: 30px 20px;
@@ -785,11 +758,55 @@
             flex-direction: row;
         }
     }
+
+    @media (max-width: 550px) {
+        .hero h1 {
+            font-size: 30px;
+        }
+        .slider-container {
+            height: 280px;
+        }
+        .contact-area {
+            gap: 6px;
+        }
+        .contact-box {
+            padding: 3px 8px;
+        }
+        .contact-box .contact-details p {
+            font-size: 8px;
+        }
+        .hero-btns .primary-btn, .hero-btns .secondary-btn {
+            padding: 8px 18px;
+            font-size: 12px;
+        }
+        .trust div {
+            font-size: 11px;
+        }
+        .stats-section {
+            padding: 20px 16px;
+        }
+        .bottom-bar {
+            justify-content: center;
+            text-align: center;
+        }
+        .navbar {
+            width: 95%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .slider-container {
+            height: 320px;
+        }
+        .hero h1 {
+            font-size: 34px;
+        }
+    }
 </style>
 </head>
 <body>
 
-<!-- HEADER (COMPACT & MOBILE-FRIENDLY: horizontal alignment) -->
+<!-- HEADER (compact & mobile-friendly) -->
 <header class="header">
     <div class="logo-group">
         <a href="#" class="logo">NextGen<span>IT</span></a>
@@ -883,7 +900,7 @@
         </div>
     </section>
 
-    <!-- STATS SECTION (adds content, footer below fold) -->
+    <!-- STATS SECTION (adds spacing, footer below fold) -->
     <div class="stats-section">
         <div class="stat-item">
             <div class="stat-number">500+</div>
@@ -903,7 +920,7 @@
         </div>
     </div>
 
-    <!-- ANCHOR DIVS FOR SMOOTH SCROLLING -->
+    <!-- ANCHOR DIVS -->
     <div id="about" style="position: relative; top: -70px; height: 0;"></div>
     <div id="services" style="position: relative; top: -70px; height: 0;"></div>
     <div id="portfolio" style="position: relative; top: -70px; height: 0;"></div>
@@ -913,7 +930,7 @@
     <div id="contact" style="position: relative; top: -70px; height: 0;"></div>
 </main>
 
-<!-- FOOTER (Services & Support side by side on mobile) -->
+<!-- FOOTER (Services & Support side-by-side on mobile) -->
 <footer>
     <div class="footer-grid">
         <div class="footer-col footer-col-brand">
@@ -923,31 +940,15 @@
         </div>
         <div class="footer-col">
             <h3>Services</h3>
-            <ul class="footer-links">
-                <li><a href="#">Web Development</a></li>
-                <li><a href="#">SEO Optimization</a></li>
-                <li><a href="#">Digital Marketing</a></li>
-                <li><a href="#">Social Media Ads</a></li>
-                <li><a href="#">PPC Management</a></li>
-            </ul>
+            <ul class="footer-links"><li><a href="#">Web Development</a></li><li><a href="#">SEO Optimization</a></li><li><a href="#">Digital Marketing</a></li><li><a href="#">Social Media Ads</a></li><li><a href="#">PPC Management</a></li></ul>
         </div>
         <div class="footer-col">
             <h3>Support</h3>
-            <ul class="footer-links">
-                <li><a href="#">Our Process</a></li>
-                <li><a href="#">Case Studies</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Consultation</a></li>
-            </ul>
+            <ul class="footer-links"><li><a href="#">Our Process</a></li><li><a href="#">Case Studies</a></li><li><a href="#">FAQs</a></li><li><a href="#">Career</a></li><li><a href="#">Consultation</a></li></ul>
         </div>
         <div class="footer-col">
             <h3>Get In Touch</h3>
-            <ul class="contact-info">
-                <li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li>
-                <li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li>
-                <li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li>
-            </ul>
+            <ul class="contact-info"><li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li><li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li><li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li></ul>
         </div>
         <div class="footer-col">
             <h3>Newsletter</h3>
