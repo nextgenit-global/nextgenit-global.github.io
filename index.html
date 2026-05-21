@@ -745,7 +745,7 @@
     }
 
     @media (max-width: 640px) {
-        /* Keep header compact: everything in one or two rows max */
+        /* Keep header compact */
         .header {
             flex-direction: row;
             justify-content: space-between;
@@ -772,7 +772,8 @@
             height: 28px;
             font-size: 12px;
         }
-        /* Footer: Services & Support side by side, no overflow */
+        /* Footer: brand full width, Services & Support side by side,
+           Get In Touch full width, Newsletter full width below Get In Touch */
         .footer-grid {
             grid-template-columns: 1fr 1fr;
             gap: 30px 20px;
@@ -780,11 +781,20 @@
         .footer-col-brand {
             grid-column: span 2;
         }
-        .footer-col:nth-child(2),
-        .footer-col:nth-child(3),
-        .footer-col:nth-child(4),
-        .footer-col:nth-child(5) {
+        /* Services and Support side by side */
+        .footer-col:nth-child(2) {
             grid-column: span 1;
+        }
+        .footer-col:nth-child(3) {
+            grid-column: span 1;
+        }
+        /* Get In Touch - full width */
+        .footer-col:nth-child(4) {
+            grid-column: span 2;
+        }
+        /* Newsletter - full width below Get In Touch */
+        .footer-col:nth-child(5) {
+            grid-column: span 2;
         }
         .subscribe-form {
             flex-direction: row;
@@ -961,7 +971,7 @@
     <div id="contact" style="position: relative; top: -70px; height: 0;"></div>
 </main>
 
-<!-- FOOTER (Services & Support side by side on mobile) -->
+<!-- FOOTER (Services & Support side by side, Newsletter below Get In Touch on mobile) -->
 <footer>
     <div class="footer-grid">
         <div class="footer-col footer-col-brand">
