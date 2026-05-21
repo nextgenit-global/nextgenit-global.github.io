@@ -112,7 +112,7 @@
         flex-direction: column;
     }
 
-    /* ---------- HEADER (original desktop style, mobile compact fix) ---------- */
+    /* ---------- HEADER (desktop first) ---------- */
     .header {
         background: var(--white);
         padding: 12px 8%;
@@ -285,7 +285,7 @@
         border-radius: 50%;
     }
 
-    /* ---------- CONTENT CONTAINER (fixes background spreading, centers content) ---------- */
+    /* ---------- CONTENT CONTAINER (centers content, fixes empty sides) ---------- */
     .content-container {
         max-width: 1280px;
         margin: 0 auto;
@@ -652,27 +652,30 @@
         color: #fff;
     }
 
-    /* ===== RESPONSIVE: ONLY FIX HEADER COMPACT + KEEP NAV ORIGINAL ===== */
+    /* ===== RESPONSIVE: FIX MOBILE HEADER & FOOTER ===== */
     @media (max-width: 900px) {
-        /* Header - make compact horizontal row with proper spacing */
+        /* Header - make compact horizontal row */
         .header {
-            padding: 10px 5%;
-            gap: 12px;
+            padding: 8px 5%;
+            gap: 10px;
         }
         .logo {
             font-size: 24px;
         }
         .header-right {
             gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
         }
         .contact-area {
             gap: 8px;
+            justify-content: flex-end;
         }
         .contact-box {
-            padding: 5px 10px;
+            padding: 4px 10px;
         }
         .contact-box i {
-            font-size: 14px;
+            font-size: 13px;
         }
         .contact-box .contact-details h4 {
             font-size: 8px;
@@ -683,14 +686,14 @@
         .header-social {
             border-left: none;
             padding-left: 0;
-            gap: 6px;
+            gap: 5px;
         }
         .header-social a {
-            width: 32px;
-            height: 32px;
-            font-size: 14px;
+            width: 30px;
+            height: 30px;
+            font-size: 13px;
         }
-        /* Navbar remains original but adjust width for mobile */
+        /* Navbar remains original */
         .navbar {
             width: 92%;
             border-radius: 40px;
@@ -742,12 +745,24 @@
     }
 
     @media (max-width: 640px) {
-        /* Extra small: prevent contact boxes from stacking */
+        /* Keep header compact: everything in one or two rows max */
+        .header {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 8px 4%;
+        }
+        .logo {
+            font-size: 22px;
+        }
+        .header-right {
+            flex-direction: row;
+            gap: 8px;
+        }
         .contact-area {
-            justify-content: center;
+            gap: 6px;
         }
         .contact-box {
-            padding: 4px 8px;
+            padding: 3px 8px;
         }
         .contact-box .contact-details p {
             font-size: 9px;
@@ -757,7 +772,7 @@
             height: 28px;
             font-size: 12px;
         }
-        /* Footer: Services & Support side by side */
+        /* Footer: Services & Support side by side, no overflow */
         .footer-grid {
             grid-template-columns: 1fr 1fr;
             gap: 30px 20px;
@@ -773,6 +788,9 @@
         }
         .subscribe-form {
             flex-direction: row;
+        }
+        .footer-socials {
+            justify-content: flex-start;
         }
     }
 
