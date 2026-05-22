@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NextGenIT | Social Media Ads – Data-Driven Campaigns That Convert</title>
+<meta name="description" content="NextGenIT delivers high-performance social media advertising: Meta, TikTok, LinkedIn, Snapchat. Increase ROAS, acquire customers, scale your brand." />
+<meta name="keywords" content="social media ads, Facebook Ads, TikTok Ads, LinkedIn Ads, Instagram advertising, PPC social, digital marketing agency Nepal, NextGenIT" />
+<meta name="author" content="NextGenIT" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.nextgenit-global.github.io/social-media-ads" />
+<meta name="google-site-verification" content="BxhbFRVpY1ii7bI8GbXyMUznPzs5gOfeQDJVJLd2Cx0" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="NextGenIT | Social Media Advertising Experts" />
+<meta property="og:description" content="High-ROI social ads on Meta, TikTok, LinkedIn. Creative, targeting & analytics – we scale your brand." />
+<meta property="og:url" content="https://www.nextgenit-global.github.io/social-media-ads" />
+<meta property="og:site_name" content="NextGenIT" />
+<meta property="og:image" content="https://www.nextgenit-global.github.io/assets/og-social.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NextGenIT | Social Media Ads Agency" />
+<meta name="twitter:description" content="We manage Facebook, Instagram, TikTok, LinkedIn ads for maximum ROAS." />
+<meta name="twitter:image" content="https://www.nextgenit-global.github.io/assets/og-social.jpg" />
+<meta name="twitter:site" content="@nextgenit" />
+
+<!-- JSON-LD Schema (Organization) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NextGenIT",
+  "url": "https://www.nextgenit-global.github.io/",
+  "logo": "https://www.nextgenit-global.github.io/logo.png",
+  "description": "NextGenIT is a result-driven digital marketing, SEO, PPC, and web development agency helping businesses grow with high-performance websites and digital strategies.",
+  "foundingDate": "2024",
+  "areaServed": "Worldwide",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+977-9816004622",
+    "contactType": "customer support",
+    "areaServed": "Worldwide",
+    "availableLanguage": ["English"]
+  },
+  "sameAs": [
+    "https://www.youtube.com/@NextGenIT2026",
+    "https://www.instagram.com/nextgenit2026/",
+    "https://www.facebook.com/profile.php?id=61576378432368",
+    "https://www.linkedin.com/in/sujit-tudu-661281212/"
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+    /* ---------- GLOBAL VARIABLES (from new header/footer) ---------- */
+    :root {
+        --primary-blue: #4f70ff;
+        --primary-dark: #3b5bdb;
+        --navy-dark: #111b33;
+        --navy-light: #1e293b;
+        --bg-light: #f6f8fb;
+        --text-main: #2d3748;
+        --text-muted: #5a6e8a;
+        --white: #ffffff;
+        --success-green: #10b981;
+        --error-red: #ef4444;
+        --gray-soft: #f1f5f9;
+        --border-light: #e2e8f0;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, 'Inter', system-ui, Arial, sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: var(--bg-light);
+        overflow-x: hidden;
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* ----- HEADER (exact from new HTML) ----- */
+    .header {
+        background: var(--white);
+        padding: 12px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.02), 0 1px 0 var(--border-light);
+    }
+    .logo-group { display: flex; align-items: center; }
+    .logo { font-size: 28px; font-weight: 700; color: var(--navy-dark); text-decoration: none; letter-spacing: -0.3px; }
+    .logo span { color: var(--primary-blue); }
+    .header-right { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+    .contact-area { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .contact-box { display: flex; align-items: center; gap: 10px; background: var(--gray-soft); padding: 6px 14px; border-radius: 100px; transition: 0.2s; white-space: nowrap; }
+    .contact-box:hover { background: #e9edf2; transform: translateY(-1px); }
+    .contact-box i { font-size: 16px; color: var(--primary-blue); }
+    .contact-box .contact-details h4 { font-size: 9px; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px; }
+    .contact-box .contact-details p { font-size: 12px; font-weight: 600; color: var(--navy-dark); }
+    .header-social { display: flex; gap: 8px; align-items: center; background: var(--white); padding-left: 8px; border-left: 1px solid var(--border-light); }
+    .header-social a { color: #4a5a72; font-size: 16px; transition: 0.2s; text-decoration: none; display: inline-flex; width: 34px; height: 34px; border-radius: 50%; align-items: center; justify-content: center; }
+    .header-social a:hover { color: var(--primary-blue); background: rgba(79,112,255,0.08); transform: translateY(-2px); }
+
+    /* ----- STICKY NAVBAR (exact from new HTML) ----- */
+    .navbar {
+        width: 86%;
+        max-width: 1200px;
+        margin: 6px auto 0;
+        background: var(--white);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+        border-radius: 50px;
+        padding: 5px 18px;
+        position: sticky;
+        top: 12px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .nav-quote-right { flex-shrink: 0; margin-left: 10px; }
+    .nav-quote-right .quote-btn { background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark)); color: var(--white); padding: 8px 20px; border-radius: 40px; text-decoration: none; font-size: 12px; font-weight: 700; display: inline-block; transition: 0.25s; box-shadow: 0 3px 8px rgba(79,112,255,0.2); }
+    .nav-quote-right .quote-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(79,112,255,0.3); }
+    .nav-menu { display: flex; justify-content: center; flex-wrap: wrap; list-style: none; flex: 1; gap: 2px; }
+    .nav-menu li a { display: inline-block; padding: 8px 16px; text-decoration: none; color: var(--navy-dark); font-size: 13px; font-weight: 600; border-radius: 40px; transition: 0.2s; }
+    .nav-menu li a:hover { color: var(--primary-blue); background: rgba(79,112,255,0.05); }
+    .menu-toggle { display: none; font-size: 24px; cursor: pointer; color: var(--navy-dark); background: transparent; padding: 6px; border-radius: 50%; }
+
+    /* ----- FOOTER (exact from new HTML with grid) ----- */
+    footer {
+        background: var(--navy-dark);
+        color: #cbd5e1;
+        padding: 70px 8% 20px;
+        margin-top: 20px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
+        gap: 40px;
+        margin-bottom: 45px;
+    }
+    .footer-col h3 {
+        color: var(--white);
+        font-size: 17px;
+        margin-bottom: 22px;
+        position: relative;
+        padding-bottom: 8px;
+    }
+    .footer-col h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        height: 2px;
+        background: var(--primary-blue);
+    }
+    .footer-links li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+    .footer-links li a {
+        color: #cbd5e1;
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-links li a:hover {
+        color: var(--primary-blue);
+        padding-left: 5px;
+    }
+    .contact-info li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+        font-size: 13px;
+        list-style: none;
+    }
+    .contact-info i {
+        color: var(--primary-blue);
+        font-size: 16px;
+    }
+    .newsletter-box p {
+        font-size: 12px;
+        color: #94a3b8;
+    }
+    .subscribe-form {
+        display: flex;
+        margin-top: 14px;
+        background: var(--navy-light);
+        padding: 4px;
+        border-radius: 40px;
+        width: 100%;
+    }
+    .subscribe-form input {
+        background: transparent;
+        border: none;
+        padding: 8px 14px;
+        color: #fff;
+        outline: none;
+        width: 100%;
+        font-size: 12px;
+    }
+    .subscribe-form button {
+        background: var(--primary-blue);
+        border: none;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 40px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+        transition: 0.2s;
+    }
+    .subscribe-form button:hover:not(:disabled) {
+        background: var(--primary-dark);
+    }
+    .newsletter-success, .newsletter-error {
+        font-size: 12px;
+        margin-top: 8px;
+        display: none;
+        align-items: center;
+        gap: 5px;
+    }
+    .newsletter-success { color: var(--success-green); }
+    .newsletter-error { color: var(--error-red); }
+    .clients-count {
+        font-size: 11px;
+        color: var(--primary-blue);
+        font-weight: 700;
+        margin-top: 8px;
+    }
+    .footer-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+    }
+    .footer-socials a {
+        width: 32px;
+        height: 32px;
+        background: var(--navy-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-socials a:hover {
+        background: var(--primary-blue);
+    }
+    .bottom-bar {
+        border-top: 1px solid var(--navy-light);
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+    }
+    .legal-links a {
+        color: #94a3b8;
+        margin-left: 18px;
+        text-decoration: none;
+    }
+    .legal-links a:hover {
+        color: #fff;
+    }
+
+    /* ----- RESPONSIVE (header, navbar, footer from new HTML) ----- */
+    @media (max-width: 900px) {
+        .header { padding: 8px 5%; gap: 10px; }
+        .logo { font-size: 24px; }
+        .header-right { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+        .contact-area { gap: 8px; justify-content: flex-end; }
+        .contact-box { padding: 4px 10px; }
+        .contact-box i { font-size: 13px; }
+        .contact-box .contact-details h4 { font-size: 8px; }
+        .contact-box .contact-details p { font-size: 10px; }
+        .header-social { border-left: none; padding-left: 0; gap: 5px; }
+        .header-social a { width: 30px; height: 30px; font-size: 13px; }
+        .navbar { width: 92%; border-radius: 40px; padding: 5px 14px; }
+        .nav-menu { display: none; width: 100%; flex-direction: column; padding: 16px 0 12px; gap: 6px; }
+        .nav-menu.active { display: flex; }
+        .menu-toggle { display: block; order: 1; }
+        .nav-quote-right { order: 2; margin-left: auto; }
+        .nav-menu li a { text-align: center; padding: 10px; }
+    }
+    @media (max-width: 640px) {
+        .header { flex-direction: row; justify-content: space-between; padding: 8px 4%; }
+        .logo { font-size: 22px; }
+        .header-right { flex-direction: row; gap: 8px; }
+        .contact-area { gap: 6px; }
+        .contact-box { padding: 3px 8px; }
+        .contact-box .contact-details p { font-size: 9px; }
+        .header-social a { width: 28px; height: 28px; font-size: 12px; }
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 20px;
+        }
+        .footer-col-brand { grid-column: span 2; }
+        .footer-col:nth-child(2), .footer-col:nth-child(3) { grid-column: span 1; }
+        .footer-col:nth-child(4) { grid-column: span 2; }
+        .footer-col:nth-child(5) { grid-column: span 2; }
+        .subscribe-form { flex-direction: row; }
+        .footer-socials { justify-content: flex-start; }
+    }
+    @media (max-width: 550px) {
+        .navbar { width: 95%; }
+        .bottom-bar { justify-content: center; text-align: center; }
+    }
+
+    /* ---------- SOCIAL MEDIA ADS LANDING PAGE STYLES (content from previous page) ---------- */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+    section {
+        background: var(--white);
+        padding: 80px 0;
+        border-bottom: 1px solid var(--border-light);
+    }
+    .section-title {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--navy-dark);
+        margin-bottom: 16px;
+    }
+    .section-sub {
+        text-align: center;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto 48px;
+        font-size: 1rem;
+    }
+    .btn-primary {
+        background: var(--primary-blue);
+        color: white;
+        padding: 12px 28px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        transition: 0.3s;
+        box-shadow: 0 4px 8px rgba(79,112,255,0.2);
+        border: none;
+        cursor: pointer;
+    }
+    .btn-primary:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+    }
+    .btn-outline {
+        border: 1px solid var(--border-light);
+        background: white;
+        padding: 12px 28px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+        color: var(--navy-dark);
+        transition: 0.2s;
+        display: inline-block;
+    }
+    .btn-outline:hover {
+        border-color: var(--primary-blue);
+        color: var(--primary-blue);
+    }
+    .hero {
+        padding: 60px 0 70px;
+        background: linear-gradient(135deg, #fff 0%, #f8faff 100%);
+    }
+    .hero-grid {
+        display: flex;
+        align-items: center;
+        gap: 48px;
+        flex-wrap: wrap;
+    }
+    .hero-content {
+        flex: 1.2;
+    }
+    .hero-badge {
+        background: rgba(79,112,255,0.1);
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 40px;
+        font-size: 13px;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 20px;
+    }
+    .hero-content h1 {
+        font-size: 3.2rem;
+        font-weight: 800;
+        line-height: 1.2;
+        color: var(--navy-dark);
+        margin-bottom: 20px;
+    }
+    .hero-content p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        margin-bottom: 32px;
+    }
+    .stats-mini {
+        display: flex;
+        gap: 24px;
+        margin-top: 32px;
+        flex-wrap: wrap;
+    }
+    .stat-mini {
+        background: white;
+        padding: 12px 20px;
+        border-radius: 60px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        border: 1px solid var(--border-light);
+    }
+    .stat-mini strong {
+        font-size: 1.8rem;
+        color: var(--primary-blue);
+    }
+    .platform-card {
+        background: linear-gradient(145deg,#fff, #f5f7ff);
+        border-radius: 28px;
+        padding: 28px 24px;
+        text-align: center;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+        border: 1px solid rgba(79,112,255,0.2);
+    }
+    .platform-icon {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin: 0 6px;
+    }
+    .service-grid, .case-grid, .pricing-grid, .insight-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        margin-top: 20px;
+    }
+    .service-card, .case-card, .pricing-card, .insight-card {
+        background: white;
+        border-radius: 28px;
+        padding: 28px 24px;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+        border: 1px solid var(--border-light);
+        transition: all 0.3s;
+        text-align: center;
+    }
+    .service-card:hover, .case-card:hover, .pricing-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--primary-blue);
+    }
+    .service-icon {
+        font-size: 2.5rem;
+        color: var(--primary-blue);
+        margin-bottom: 20px;
+    }
+    .results-stats {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        background: #f8fafc;
+        border-radius: 40px;
+        padding: 40px 24px;
+        margin: 40px 0;
+        text-align: center;
+    }
+    .result-item {
+        flex: 1;
+    }
+    .result-number {
+        font-size: 2.6rem;
+        font-weight: 800;
+        color: var(--primary-blue);
+    }
+    .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    .testimonial-card {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 28px;
+        border: 1px solid var(--border-light);
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    }
+    .testimonial-text {
+        font-style: italic;
+        margin-bottom: 20px;
+        color: #334155;
+    }
+    .contact-two-col {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+    .contact-form {
+        flex: 1;
+        background: var(--white);
+        padding: 30px;
+        border-radius: 28px;
+        box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid var(--border-light);
+        border-radius: 60px;
+        font-size: 0.9rem;
+    }
+    .form-group textarea {
+        border-radius: 24px;
+        resize: vertical;
+    }
+    .contact-submit {
+        background: var(--primary-blue);
+        color: white;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 40px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .fade-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    @media (max-width: 768px) {
+        .hero-content h1 { font-size: 2.2rem; }
+        .section-title { font-size: 1.8rem; }
+        .hero-grid { flex-direction: column; }
+    }
+</style>
+</head>
+<body>
+
+<!-- HEADER (exactly as provided) -->
+<header class="header">
+    <div class="logo-group">
+        <a href="index.html" class="logo">NextGen<span>IT</span></a>
+    </div>
+    <div class="header-right">
+        <div class="contact-area">
+            <div class="contact-box">
+                <i class="fa-solid fa-phone-alt"></i>
+                <div class="contact-details">
+                    <h4>Call Us</h4>
+                    <p>+977 9816004622</p>
+                </div>
+            </div>
+            <div class="contact-box">
+                <i class="fa-regular fa-envelope"></i>
+                <div class="contact-details">
+                    <h4>Email Us</h4>
+                    <p>nextgenit2030@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-social">
+            <a href="https://www.youtube.com/@NextGenIT2026" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- STICKY NAVBAR (exact from new HTML, "free" removed from quote button) -->
+<nav class="navbar">
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cases-studies.html">Case Studies</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-quote-right">
+        <a href="contact.html" class="quote-btn">Get Quote</a>
+    </div>
+</nav>
+
+<!-- MAIN LANDING PAGE – SOCIAL MEDIA ADS CONTENT (free offers removed) -->
+<main>
+    <!-- Hero Section with Social Media Ads focus -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content fade-up">
+                    <span class="hero-badge"><i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i> <i class="fab fa-tiktok"></i> Social Media Experts</span>
+                    <h1>Turn Clicks Into Customers With <span style="color:var(--primary-blue)">High-ROI Social Ads</span></h1>
+                    <p>Data-driven Facebook, Instagram, TikTok & LinkedIn campaigns that skyrocket brand awareness, leads, and sales. We manage creative, targeting, and analytics – you watch revenue grow.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn-primary">Start Your Campaign <i class="fas fa-arrow-right"></i></a>
+                        <a href="services.html" class="btn-outline">View Platforms</a>
+                    </div>
+                    <div class="stats-mini">
+                        <div class="stat-mini"><strong>+340%</strong> Avg. ROAS</div>
+                        <div class="stat-mini"><strong>2.5M+</strong> Ad Impressions /mo</div>
+                        <div class="stat-mini"><strong>120+</strong> Brands Scaled</div>
+                    </div>
+                </div>
+                <div class="hero-content fade-up" style="text-align:center;">
+                    <div class="platform-card">
+                        <i class="fab fa-facebook-f platform-icon"></i>
+                        <i class="fab fa-instagram platform-icon"></i>
+                        <i class="fab fa-linkedin platform-icon"></i>
+                        <i class="fab fa-tiktok platform-icon"></i>
+                        <h3>Multi-Platform Mastery</h3>
+                        <p>Target Gen Z, Millennials or B2B decision-makers with precision. Our AI-powered bid strategies reduce CPA by up to 45%.</p>
+                        <!-- removed "Free Ad Audit" and "Limited slots" lines -->
+                        <div class="promo-offer" style="font-size: 1.8rem; font-weight:800; margin-top:15px;">🔥 Performance Review</div>
+                        <p style="font-size:13px;">Get a detailed analysis of your current campaigns</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About: Our Social Ads Edge -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title fade-up">Next‑Gen Social Media Advertising</h2>
+            <p class="section-sub fade-up">We blend creative storytelling with machine learning to deliver measurable results across all major platforms.</p>
+            <div class="results-stats">
+                <div class="result-item fade-up"><div class="result-number" data-target="98">0</div><p>Client Retention Rate</p></div>
+                <div class="result-item fade-up"><div class="result-number" data-target="4.8">0</div><p>Avg. Facebook ROAS (x)</p></div>
+                <div class="result-item fade-up"><div class="result-number" data-target="156">0</div><p>Million Ad Reach /year</p></div>
+                <div class="result-item fade-up"><div class="result-number" data-target="24">0</div><p>Hours Launch Time</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platforms & Services -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title fade-up">Full-Funnel Social Media Solutions</h2>
+            <p class="section-sub fade-up">From awareness to conversion – we manage everything.</p>
+            <div class="service-grid">
+                <div class="service-card fade-up"><i class="fab fa-facebook-f service-icon"></i><h3>Meta Ads (FB/IG)</h3><p>Dynamic creative, retargeting, lookalike audiences & advantage+ shopping campaigns.</p></div>
+                <div class="service-card fade-up"><i class="fab fa-tiktok service-icon"></i><h3>TikTok Ads</h3><p>Spark ads, influencer collabs, and viral trend-based campaigns for explosive growth.</p></div>
+                <div class="service-card fade-up"><i class="fab fa-linkedin service-icon"></i><h3>LinkedIn Ads</h3><p>B2B lead gen, account-based marketing, sponsored InMail & thought leadership.</p></div>
+                <div class="service-card fade-up"><i class="fab fa-pinterest service-icon"></i><h3>Pinterest & Snapchat</h3><p>Visual discovery and Gen-Z engagement with low CPC & high intent.</p></div>
+                <div class="service-card fade-up"><i class="fas fa-chart-line service-icon"></i><h3>Ad Creative Studio</h3><p>High-converting video, UGC-style ads, copywriting & A/B testing lab.</p></div>
+                <div class="service-card fade-up"><i class="fas fa-chart-simple service-icon"></i><h3>Analytics & CRO</h3><p>Pixel setup, custom dashboards, and conversion rate optimization.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Success Stories -->
+    <section id="portfolio">
+        <div class="container">
+            <h2 class="section-title fade-up">Real Results From Social Ads</h2>
+            <p class="section-sub fade-up">Discover how we helped brands dominate their niche.</p>
+            <div class="case-grid">
+                <div class="case-card fade-up"><i class="fas fa-chart-line service-icon"></i><h3>Fashion E‑commerce</h3><p>Meta Advantage+ campaigns → +280% ROAS, 63% lower CPA in 90 days.</p><span style="color:var(--primary-blue);">→ View case</span></div>
+                <div class="case-card fade-up"><i class="fas fa-robot service-icon"></i><h3>SaaS Startup</h3><p>LinkedIn & TikTok retargeting → 320% increase in qualified demos.</p><span style="color:var(--primary-blue);">→ View case</span></div>
+                <div class="case-card fade-up"><i class="fas fa-store service-icon"></i><h3>DTC Beauty Brand</h3><p>UGC creative + TikTok Spark Ads → 1.2M reach & 300% revenue lift.</p><span style="color:var(--primary-blue);">→ View case</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- In-depth Case Studies Section -->
+    <section id="cases">
+        <div class="container">
+            <h2 class="section-title fade-up">Data-Backed Social Media Wins</h2>
+            <p class="section-sub fade-up">Full-funnel strategies that delivered exceptional ROI.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-up"><i class="fas fa-quote-left" style="color:var(--primary-blue); font-size: 1.8rem;"></i><p class="testimonial-text">"NextGenIT turned our Instagram campaigns around – 400% more sales with the same budget. Their creative testing is unmatched."</p><p class="client-name">— Sarah J., CMO of LuxeCart</p></div>
+                <div class="testimonial-card fade-up"><i class="fas fa-quote-left" style="color:var(--primary-blue); font-size: 1.8rem;"></i><p class="testimonial-text">"We scaled from $10k to $80k monthly ad spend profitably thanks to their TikTok & Meta automation. Real experts!"</p><p class="client-name">— Mike R., Founder of PeakFitness</p></div>
+                <div class="testimonial-card fade-up"><i class="fas fa-quote-left" style="color:var(--primary-blue); font-size: 1.8rem;"></i><p class="testimonial-text">"Their LinkedIn ABM strategy generated 50+ enterprise leads in 2 months. Highly recommend their social ads team."</p><p class="client-name">— Elena K., VP Sales at Cloudly</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <h2 class="section-title fade-up">Transparent Social Ads Pricing</h2>
+            <p class="section-sub fade-up">Choose a plan that aligns with your growth goals.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-up"><h3>Starter Social</h3><div class="result-number" style="font-size:2rem;">$1,299/mo</div><p>1 platform (Meta), ad creative set up to 5 ads, weekly reporting, ad spend $3k–$10k.</p><a href="#contact" class="btn-outline" style="margin-top:20px; display:inline-block;">Select Plan</a></div>
+                <div class="pricing-card fade-up"><h3>Pro Scale</h3><div class="result-number" style="font-size:2rem;">$2,499/mo</div><p>2 platforms (Meta+TikTok), custom creative, CRO, daily optimization, ad spend up to $30k.</p><a href="#contact" class="btn-primary" style="margin-top:20px; display:inline-block;">Get Proposal</a></div>
+                <div class="pricing-card fade-up"><h3>Enterprise</h3><div class="result-number" style="font-size:2rem;">Custom</div><p>Full-funnel (3+ platforms), dedicated team, API integration, unlimited ad spend.</p><a href="#contact" class="btn-outline" style="margin-top:20px; display:inline-block;">Contact Sales</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights / Blog -->
+    <section id="insights">
+        <div class="container">
+            <h2 class="section-title fade-up">Social Media Ad Insights</h2>
+            <p class="section-sub fade-up">Latest trends, algorithm updates & growth tactics.</p>
+            <div class="insight-grid">
+                <div class="insight-card fade-up"><i class="fas fa-chart-pie service-icon"></i><h3>Meta Advantage+ 2026</h3><p>How to leverage AI-driven campaigns for 2x ROAS.</p><a href="#" style="color:var(--primary-blue);">Read more →</a></div>
+                <div class="insight-card fade-up"><i class="fab fa-tiktok service-icon"></i><h3>TikTok Creative Secrets</h3><p>Viral hooks and ad formats that dominate the algorithm.</p><a href="#" style="color:var(--primary-blue);">Read more →</a></div>
+                <div class="insight-card fade-up"><i class="fas fa-chart-line service-icon"></i><h3>LinkedIn Retargeting</h3><p>Turn cold B2B traffic into high-quality leads.</p><a href="#" style="color:var(--primary-blue);">Read more →</a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (removed free offers) -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title fade-up">Ready to Scale With Social Ads?</h2>
+            <p class="section-sub fade-up">Get a tailored media plan & custom quote from our social advertising specialists.</p>
+            <div class="contact-two-col">
+                <div class="contact-form fade-up">
+                    <form id="socialContactForm">
+                        <div class="form-group"><input type="text" placeholder="Full Name" required id="contactName"></div>
+                        <div class="form-group"><input type="email" placeholder="Business Email" required id="contactEmail"></div>
+                        <div class="form-group"><input type="text" placeholder="Ad Platform Interest (e.g., Meta, TikTok)"></div>
+                        <div class="form-group"><textarea rows="4" placeholder="Monthly ad budget? Goals?" required id="contactMsg"></textarea></div>
+                        <button type="submit" class="contact-submit">Request Audit →</button>
+                        <div id="formFeedback" style="margin-top:14px; font-size:13px;"></div>
+                    </form>
+                </div>
+                <div class="contact-info-panel fade-up">
+                    <div style="background:#f8fafc; border-radius:28px; padding:28px;">
+                        <i class="fas fa-chart-line" style="font-size:24px; color:var(--primary-blue);"></i>
+                        <h3>Social Ads Concierge</h3>
+                        <p>Get personalized strategy from ex-Meta & TikTok campaign managers.</p>
+                        <hr style="margin:20px 0;">
+                        <i class="fas fa-clock"></i> <strong>Response Time:</strong> Under 6 hours<br>
+                        <i class="fas fa-gem"></i> <strong>Bonus:</strong> Creative mockups with first contract.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER (exactly as provided) -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+            <div class="logo" style="color: #fff; margin-bottom: 18px;">NextGen<span>IT</span></div>
+            <p>NextGenIT is a global digital marketing and IT solutions company helping businesses grow through powerful websites, SEO, and data-driven marketing strategies.</p>
+            <div class="clients-count">Long-term partnerships with growing businesses</div>
+        </div>
+        <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links"><li><a href="web-development.html">Web Development</a></li><li><a href="seo-optimization.html">SEO Optimization</a></li><li><a href="digital-marketing.html">Digital Marketing</a></li><li><a href="social-midia-ads.html">Social Media Ads</a></li><li><a href="ppc-management.html">PPC Management</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul class="footer-links"><li><a href="our-process.html">Our Process</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="career.html">Career</a></li><li><a href="consulation.html">Consultation</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Get In Touch</h3>
+            <ul class="contact-info"><li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li><li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li><li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <div class="newsletter-box">
+                <p>Get marketing tips & growth strategies directly in your inbox.</p>
+                <form class="subscribe-form" id="newsletterForm">
+                    <input type="email" id="subscriberEmail" placeholder="Your email address" required>
+                    <button type="submit" id="subscribeBtn">Join</button>
+                </form>
+                <div id="successMsg" class="newsletter-success"><i class="fas fa-check-circle"></i> <span id="successText">Thanks! You're now subscribed.</span></div>
+                <div id="errorMsg" class="newsletter-error"><i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again.</span></div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@sujittudu2020" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <div class="copyright">© 2026 <strong>NextGenIT</strong>. All rights reserved.</div>
+        <div class="legal-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-&-conditions.html">Terms & Conditions</a></div>
+        <div class="designer">Designed & Developed by NextGenIT</div>
+    </div>
+</footer>
+
+<!-- MOBILE MENU TOGGLE (from new HTML) -->
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if (toggle) {
+        const icon = toggle.querySelector('i');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
+            else icon.classList.replace('fa-times', 'fa-bars');
+        });
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                if (icon.classList.contains('fa-times')) icon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    }
+</script>
+
+<!-- EMAILJS NEWSLETTER (from new HTML) & additional scripts for stats, contact, animations -->
+<script>
+    // EmailJS initialization for newsletter
+    const EMAILJS_CONFIG = { PUBLIC_KEY: "k0-JMxq9DMByW7fzf", SERVICE_ID: "service_sgnt3z9", TEMPLATE_ID: "template_566697h" };
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    const formNews = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('subscriberEmail');
+    const submitBtn = document.getElementById('subscribeBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+    const successText = document.getElementById('successText');
+    const errorText = document.getElementById('errorText');
+    function hideMessages() { if(successMsg) successMsg.style.display = 'none'; if(errorMsg) errorMsg.style.display = 'none'; }
+    function showSuccess(message) { if(successText) successText.textContent = message; if(successMsg) successMsg.style.display = 'flex'; setTimeout(() => { if(successMsg) successMsg.style.display = 'none'; }, 5000); }
+    function showError(message) { if(errorText) errorText.textContent = message; if(errorMsg) errorMsg.style.display = 'flex'; setTimeout(() => { if(errorMsg) errorMsg.style.display = 'none'; }, 5000); }
+    if(formNews) {
+        formNews.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            hideMessages();
+            const email = emailInput.value.trim();
+            if (!email || !email.includes('@') || !email.includes('.')) { showError('Please enter a valid email address.'); return; }
+            submitBtn.disabled = true; submitBtn.textContent = 'Subscribing...';
+            try {
+                await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, { to_email: 'nextgenit2030@gmail.com', from_email: email, email: email, subject: 'Newsletter Subscription', message: `New subscriber: ${email}`, name: email.split('@')[0] });
+                showSuccess(`Thanks ${email}! You're now subscribed.`);
+                emailInput.value = '';
+            } catch (error) { console.error(error); showError('Subscription failed. Please try again.'); } 
+            finally { submitBtn.disabled = false; submitBtn.textContent = 'Join'; }
+        });
+    }
+
+    // Scroll animations + stats counter (for .result-number elements)
+    const fadeElements = document.querySelectorAll('.fade-up');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    fadeElements.forEach(el => observer.observe(el));
+
+    function animateNumbers() {
+        const statNumbers = document.querySelectorAll('.result-number');
+        statNumbers.forEach(el => {
+            const target = parseFloat(el.getAttribute('data-target'));
+            if(isNaN(target)) return;
+            let current = 0;
+            const step = target / 50;
+            const update = () => {
+                current += step;
+                if(current < target) { el.innerText = Math.ceil(current); requestAnimationFrame(update); }
+                else { el.innerText = target; }
+            };
+            update();
+        });
+    }
+    const statsSection = document.querySelector('#about .results-stats');
+    if(statsSection) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            if(entries[0].isIntersecting) { animateNumbers(); statsObserver.unobserve(statsSection); }
+        }, { threshold: 0.3 });
+        statsObserver.observe(statsSection);
+    }
+
+    // Contact form handler (removed "free" from success message)
+    const socialForm = document.getElementById('socialContactForm');
+    if(socialForm) {
+        socialForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('contactName').value;
+            const email = document.getElementById('contactEmail').value;
+            const msg = document.getElementById('contactMsg').value;
+            const feedback = document.getElementById('formFeedback');
+            if(name && email && msg) {
+                feedback.innerHTML = '<span style="color:green;">✔️ Thanks, ' + name + '! Our social ads team will contact you within 6 hours with an audit proposal.</span>';
+                socialForm.reset();
+                setTimeout(() => feedback.innerHTML = '', 5000);
+            } else { feedback.innerHTML = '<span style="color:red;">Please fill all required fields.</span>'; }
+        });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const targetId = this.getAttribute('href');
+            if(targetId === "#" || targetId === "") return;
+            const targetElem = document.querySelector(targetId);
+            if(targetElem) { e.preventDefault(); targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+    });
+</script>
+</body>
+</html>
