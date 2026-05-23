@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NextGenIT - Case Studies | Fresh Results</title>
+<meta name="description" content="NextGenIT case studies – real client stories from a new, hungry agency." />
+
+<!-- Font Awesome & EmailJS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+    /* ---------- YOUR ORIGINAL STYLES (UNCHANGED) ---------- */
+    :root {
+        --primary-blue: #4f70ff;
+        --primary-dark: #3b5bdb;
+        --navy-dark: #111b33;
+        --navy-light: #1e293b;
+        --bg-light: #f6f8fb;
+        --text-main: #2d3748;
+        --text-muted: #5a6e8a;
+        --white: #ffffff;
+        --success-green: #10b981;
+        --error-red: #ef4444;
+        --gray-soft: #f1f5f9;
+        --border-light: #e2e8f0;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, 'Inter', system-ui, Arial, sans-serif;
+    }
+
+    body {
+        background: var(--bg-light);
+        overflow-x: hidden;
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* HEADER */
+    .header {
+        background: var(--white);
+        padding: 12px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.02), 0 1px 0 var(--border-light);
+    }
+
+    .logo-group {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--navy-dark);
+        text-decoration: none;
+        line-height: 1.1;
+        letter-spacing: -0.3px;
+    }
+    .logo span {
+        color: var(--primary-blue);
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .contact-area {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .contact-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--gray-soft);
+        padding: 6px 14px;
+        border-radius: 100px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+    .contact-box i {
+        font-size: 16px;
+        color: var(--primary-blue);
+    }
+    .contact-box .contact-details h4 {
+        font-size: 9px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+        margin-bottom: 2px;
+    }
+    .contact-box .contact-details p {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--navy-dark);
+    }
+
+    .header-social {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        background: var(--white);
+        padding-left: 8px;
+        border-left: 1px solid var(--border-light);
+    }
+    .header-social a {
+        color: #4a5a72;
+        font-size: 16px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+    }
+    .header-social a:hover {
+        color: var(--primary-blue);
+        background: rgba(79,112,255,0.08);
+        transform: translateY(-2px);
+    }
+
+    /* STICKY NAVBAR */
+    .navbar {
+        width: 86%;
+        max-width: 1200px;
+        margin: 6px auto 0;
+        background: var(--white);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+        border-radius: 50px;
+        padding: 5px 18px;
+        position: sticky;
+        top: 12px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .nav-quote-right {
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+    .nav-quote-right .quote-btn {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+        transition: all 0.25s ease;
+        box-shadow: 0 3px 8px rgba(79,112,255,0.2);
+    }
+    .nav-quote-right .quote-btn:hover {
+        transform: translateY(-2px);
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        gap: 2px;
+    }
+    .nav-menu li a {
+        display: inline-block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: var(--navy-dark);
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 40px;
+        transition: all 0.2s ease;
+    }
+    .nav-menu li a:hover {
+        color: var(--primary-blue);
+        background: rgba(79,112,255,0.05);
+    }
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--navy-dark);
+        background: transparent;
+        padding: 6px;
+        border-radius: 50%;
+    }
+
+    /* FOOTER */
+    footer {
+        background: var(--navy-dark);
+        color: #cbd5e1;
+        padding: 70px 8% 20px;
+        margin-top: 20px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
+        gap: 40px;
+        margin-bottom: 45px;
+    }
+    .footer-col h3 {
+        color: var(--white);
+        font-size: 17px;
+        margin-bottom: 22px;
+        position: relative;
+        padding-bottom: 8px;
+    }
+    .footer-col h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        height: 2px;
+        background: var(--primary-blue);
+    }
+    .footer-links li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+    .footer-links li a {
+        color: #cbd5e1;
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-links li a:hover {
+        color: var(--primary-blue);
+        padding-left: 5px;
+    }
+    .contact-info li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+        font-size: 13px;
+        list-style: none;
+    }
+    .contact-info i {
+        color: var(--primary-blue);
+        font-size: 16px;
+    }
+    .newsletter-box p {
+        font-size: 12px;
+        color: #94a3b8;
+    }
+    .subscribe-form {
+        display: flex;
+        margin-top: 14px;
+        background: var(--navy-light);
+        padding: 4px;
+        border-radius: 40px;
+        width: 100%;
+    }
+    .subscribe-form input {
+        background: transparent;
+        border: none;
+        padding: 8px 14px;
+        color: #fff;
+        outline: none;
+        width: 100%;
+        font-size: 12px;
+    }
+    .subscribe-form button {
+        background: var(--primary-blue);
+        border: none;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 40px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+    }
+    .subscribe-form button:hover:not(:disabled) {
+        background: var(--primary-dark);
+    }
+    .newsletter-success, .newsletter-error {
+        font-size: 12px;
+        margin-top: 8px;
+        display: none;
+        align-items: center;
+        gap: 5px;
+    }
+    .newsletter-success { color: var(--success-green); }
+    .newsletter-error { color: var(--error-red); }
+    .clients-count {
+        font-size: 11px;
+        color: var(--primary-blue);
+        font-weight: 700;
+        margin-top: 8px;
+    }
+    .footer-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+    }
+    .footer-socials a {
+        width: 32px;
+        height: 32px;
+        background: var(--navy-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-socials a:hover {
+        background: var(--primary-blue);
+    }
+    .bottom-bar {
+        border-top: 1px solid var(--navy-light);
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+    }
+    .legal-links a {
+        color: #94a3b8;
+        margin-left: 18px;
+        text-decoration: none;
+    }
+    .legal-links a:hover {
+        color: #fff;
+    }
+
+    /* ----- RESPONSIVE (EXACTLY AS GIVEN) ----- */
+    @media (max-width: 900px) {
+        .header {
+            padding: 8px 5%;
+            gap: 10px;
+        }
+        .logo {
+            font-size: 24px;
+        }
+        .header-right {
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .contact-area {
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        .contact-box {
+            padding: 4px 10px;
+        }
+        .contact-box i {
+            font-size: 13px;
+        }
+        .contact-box .contact-details h4 {
+            font-size: 8px;
+        }
+        .contact-box .contact-details p {
+            font-size: 10px;
+        }
+        .header-social {
+            border-left: none;
+            padding-left: 0;
+            gap: 5px;
+        }
+        .header-social a {
+            width: 30px;
+            height: 30px;
+            font-size: 13px;
+        }
+        .navbar {
+            width: 92%;
+            border-radius: 40px;
+            padding: 5px 14px;
+        }
+        .nav-menu {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            padding: 16px 0 12px;
+            gap: 6px;
+        }
+        .nav-menu.active {
+            display: flex;
+        }
+        .menu-toggle {
+            display: block;
+            order: 1;
+        }
+        .nav-quote-right {
+            order: 2;
+            margin-left: auto;
+        }
+        .nav-menu li a {
+            text-align: center;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .header {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 8px 4%;
+        }
+        .logo {
+            font-size: 22px;
+        }
+        .header-right {
+            flex-direction: row;
+            gap: 8px;
+        }
+        .contact-area {
+            gap: 6px;
+        }
+        .contact-box {
+            padding: 3px 8px;
+        }
+        .contact-box .contact-details p {
+            font-size: 9px;
+        }
+        .header-social a {
+            width: 28px;
+            height: 28px;
+            font-size: 12px;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 20px;
+        }
+        .footer-col-brand {
+            grid-column: span 2;
+        }
+        .footer-col:nth-child(2),
+        .footer-col:nth-child(3) {
+            grid-column: span 1;
+        }
+        .footer-col:nth-child(4) {
+            grid-column: span 2;
+        }
+        .footer-col:nth-child(5) {
+            grid-column: span 2;
+        }
+        .subscribe-form {
+            flex-direction: row;
+        }
+        .footer-socials {
+            justify-content: flex-start;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .navbar {
+            width: 95%;
+        }
+        .bottom-bar {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+
+    /* ========== CASE STUDIES SECTION (STARTUP STYLE) ========== */
+    .case-studies-main {
+        max-width: 1300px;
+        margin: 30px auto 60px;
+        padding: 0 5%;
+        width: 100%;
+    }
+    .cs-hero {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .cs-hero h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--navy-dark), var(--primary-blue));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        margin-bottom: 18px;
+    }
+    .cs-hero p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .cs-stats {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 24px;
+        background: var(--white);
+        border-radius: 48px;
+        padding: 30px 40px;
+        margin-bottom: 70px;
+        box-shadow: 0 20px 35px -12px rgba(0,0,0,0.08);
+        border: 1px solid var(--border-light);
+    }
+    .stat-item {
+        flex: 1;
+        text-align: center;
+    }
+    .stat-number {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: var(--primary-blue);
+    }
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .section-title h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--navy-dark);
+    }
+    .case-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 35px;
+        margin-bottom: 70px;
+    }
+    .case-card {
+        background: var(--white);
+        border-radius: 28px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 25px -8px rgba(0,0,0,0.05);
+        border: 1px solid var(--border-light);
+    }
+    .case-card:hover {
+        transform: translateY(-6px);
+    }
+    .card-img {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .card-category {
+        position: absolute;
+        top: 18px;
+        left: 18px;
+        background: rgba(17,27,51,0.85);
+        backdrop-filter: blur(4px);
+        color: white;
+        padding: 4px 14px;
+        border-radius: 40px;
+        font-size: 0.7rem;
+        font-weight: 700;
+    }
+    .card-content {
+        padding: 24px 22px 26px;
+    }
+    .card-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--navy-dark);
+        margin-bottom: 12px;
+    }
+    .result-badge {
+        background: #eef2ff;
+        padding: 5px 14px;
+        border-radius: 40px;
+        display: inline-block;
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+    }
+    .case-link {
+        font-weight: 700;
+        color: var(--primary-blue);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .cs-cta {
+        background: linear-gradient(125deg, var(--navy-dark) 0%, #162242 100%);
+        border-radius: 48px;
+        padding: 55px 40px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .cs-cta h3 {
+        font-size: 2rem;
+        color: white;
+        margin-bottom: 14px;
+    }
+    .cs-cta p {
+        color: #cbd5f0;
+        max-width: 550px;
+        margin: 0 auto 28px;
+    }
+    .cta-btn {
+        background: var(--primary-blue);
+        color: white;
+        padding: 14px 36px;
+        border-radius: 60px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        transition: 0.25s;
+    }
+    .cta-btn:hover {
+        background: white;
+        color: var(--primary-blue);
+    }
+    @media (max-width: 900px) {
+        .cs-hero h1 { font-size: 2.2rem; }
+        .cs-stats { flex-direction: column; padding: 24px 20px; gap: 28px; }
+        .section-title h2 { font-size: 1.8rem; }
+        .cs-cta h3 { font-size: 1.6rem; }
+    }
+    @media (max-width: 640px) {
+        .case-grid { grid-template-columns: 1fr; }
+        .cs-hero h1 { font-size: 1.9rem; }
+        .cs-cta { padding: 40px 20px; }
+    }
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER (EXACT ORIGINAL) ========== -->
+<header class="header">
+    <div class="logo-group">
+        <a href="index.html" class="logo">NextGen<span>IT</span></a>
+    </div>
+    <div class="header-right">
+        <div class="contact-area">
+            <div class="contact-box">
+                <i class="fa-solid fa-phone-alt"></i>
+                <div class="contact-details">
+                    <h4>Call Us</h4>
+                    <p>+977 9816004622</p>
+                </div>
+            </div>
+            <div class="contact-box">
+                <i class="fa-regular fa-envelope"></i>
+                <div class="contact-details">
+                    <h4>Email Us</h4>
+                    <p>nextgenit2030@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-social">
+            <a href="https://www.youtube.com/@NextGenIT2026" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- ========== NAVBAR (EXACT ORIGINAL) ========== -->
+<nav class="navbar">
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cases-studies.html" style="color: var(--primary-blue); background: rgba(79,112,255,0.08);">Case Studies</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-quote-right">
+        <a href="contact.html" class="quote-btn">Get Free Quote</a>
+    </div>
+</nav>
+
+<!-- ========== CASE STUDIES CONTENT ========== -->
+<main class="case-studies-main">
+    <div class="cs-hero">
+        <h1>Fresh perspective. <br>Early wins for bold partners.</h1>
+        <p>We're a new agency, but our hunger, skills, and client-first mindset already deliver results. Here are our first success stories.</p>
+    </div>
+
+    <div class="cs-stats">
+        <div class="stat-item"><div class="stat-number">5+</div><div class="stat-label">Happy early clients</div></div>
+        <div class="stat-item"><div class="stat-number">100%</div><div class="stat-label">Client satisfaction</div></div>
+        <div class="stat-item"><div class="stat-number">50%+</div><div class="stat-label">Avg. growth in 3 months</div></div>
+    </div>
+
+    <div class="section-title">
+        <h2>📌 Our first client stories</h2>
+        <p>Real projects, real impact — built from scratch with dedication.</p>
+    </div>
+
+    <div class="case-grid">
+        <div class="case-card">
+            <div class="card-img" style="background-image: url('https://picsum.photos/id/104/600/400');"></div>
+            <div class="card-content">
+                <h3 class="card-title">Brew & Bean Cafe: Local SEO</h3>
+                <div class="result-badge">☕ +40% foot traffic</div>
+                <a href="#" class="case-link">Read story <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="case-card">
+            <div class="card-img" style="background-image: url('https://picsum.photos/id/133/600/400');"></div>
+            <div class="card-content">
+                <h3 class="card-title">EcoGoods: First sales in 30 days</h3>
+                <div class="result-badge">📦 6x ROAS</div>
+                <a href="#" class="case-link">See numbers <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="case-card">
+            <div class="card-img" style="background-image: url('https://picsum.photos/id/26/600/400');"></div>
+            <div class="card-content">
+                <h3 class="card-title">TaskFlow MVP Development</h3>
+                <div class="result-badge">🚀 100+ beta users</div>
+                <a href="#" class="case-link">Learn more <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="cs-cta">
+        <h3>We're building our portfolio — and we'd love you to be part of it.</h3>
+        <p>As a new company, we offer exceptional value, dedicated attention, and zero bureaucracy.</p>
+        <a href="contact.html" class="cta-btn">Work with us →</a>
+    </div>
+</main>
+
+<!-- ========== FOOTER (EXACT ORIGINAL) ========== -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+            <div class="logo" style="color: #fff; margin-bottom: 18px;">NextGen<span>IT</span></div>
+            <p>NextGenIT is a global digital marketing and IT solutions company helping businesses grow through powerful websites, SEO, and data-driven marketing strategies.</p>
+            <div class="clients-count">Long-term partnerships with growing businesses</div>
+        </div>
+        <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links"><li><a href="web-development.html">Web Development</a></li><li><a href="seo-optimization.html">SEO Optimization</a></li><li><a href="digital-marketing.html">Digital Marketing</a></li><li><a href="social-media-ads.html">Social Media Ads</a></li><li><a href="ppc-management.html">PPC Management</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul class="footer-links"><li><a href="our-process.html">Our Process</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="career.html">Career</a></li><li><a href="consulation.html">Consultation</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Get In Touch</h3>
+            <ul class="contact-info"><li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li><li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li><li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <div class="newsletter-box">
+                <p>Get marketing tips & growth strategies directly in your inbox.</p>
+                <form class="subscribe-form" id="newsletterForm">
+                    <input type="email" id="subscriberEmail" placeholder="Your email address" required>
+                    <button type="submit" id="subscribeBtn">Join</button>
+                </form>
+                <div id="successMsg" class="newsletter-success"><i class="fas fa-check-circle"></i> <span id="successText">Thanks! You're now subscribed.</span></div>
+                <div id="errorMsg" class="newsletter-error"><i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again.</span></div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@sujittudu2020" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <div class="copyright">© 2026 <strong>NextGenIT</strong>. All rights reserved.</div>
+        <div class="legal-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-&-conditions.html">Terms & Conditions</a></div>
+        <div class="designer">Designed & Developed by NextGenIT</div>
+    </div>
+</footer>
+
+<!-- MOBILE MENU TOGGLE (EXACT ORIGINAL) -->
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if (toggle) {
+        const icon = toggle.querySelector('i');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
+            else icon.classList.replace('fa-times', 'fa-bars');
+        });
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                if (icon.classList.contains('fa-times')) icon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    }
+</script>
+
+<!-- EMAILJS NEWSLETTER (EXACT ORIGINAL) -->
+<script>
+    const EMAILJS_CONFIG = { PUBLIC_KEY: "k0-JMxq9DMByW7fzf", SERVICE_ID: "service_sgnt3z9", TEMPLATE_ID: "template_566697h" };
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    const form = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('subscriberEmail');
+    const submitBtn = document.getElementById('subscribeBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+    const successText = document.getElementById('successText');
+    const errorText = document.getElementById('errorText');
+    function hideMessages() { if(successMsg) successMsg.style.display = 'none'; if(errorMsg) errorMsg.style.display = 'none'; }
+    function showSuccess(message) { if(successText) successText.textContent = message; if(successMsg) successMsg.style.display = 'flex'; setTimeout(() => { if(successMsg) successMsg.style.display = 'none'; }, 5000); }
+    function showError(message) { if(errorText) errorText.textContent = message; if(errorMsg) errorMsg.style.display = 'flex'; setTimeout(() => { if(errorMsg) errorMsg.style.display = 'none'; }, 5000); }
+    if(form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            hideMessages();
+            const email = emailInput.value.trim();
+            if (!email || !email.includes('@') || !email.includes('.')) { showError('Please enter a valid email address.'); return; }
+            submitBtn.disabled = true; submitBtn.textContent = 'Subscribing...';
+            try {
+                await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, { to_email: 'nextgenit2030@gmail.com', from_email: email, email: email, subject: 'Newsletter Subscription', message: `New subscriber: ${email}`, name: email.split('@')[0] });
+                showSuccess(`Thanks ${email}! You're now subscribed.`);
+                emailInput.value = '';
+            } catch (error) { console.error(error); showError('Subscription failed. Please try again.'); } 
+            finally { submitBtn.disabled = false; submitBtn.textContent = 'Join'; }
+        });
+    }
+</script>
+</body>
+</html>
