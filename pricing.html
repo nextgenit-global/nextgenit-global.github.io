@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NextGenIT - Pricing Plans | Transparent & Flexible Pricing</title>
+<meta name="description" content="NextGenIT pricing: Website development, SEO, digital marketing, graphic design, video editing. Simple plans for every budget.">
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="NextGenIT | Pricing – Simple & Transparent">
+<meta property="og:description" content="Choose a plan that fits your business. Monthly/yearly options, custom quotes available.">
+
+<!-- Font Awesome & EmailJS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+    /* ---------- ORIGINAL COLOR VARIABLES (exactly as provided) ---------- */
+    :root {
+        --primary-blue: #4f70ff;
+        --primary-dark: #3b5bdb;
+        --navy-dark: #111b33;
+        --navy-light: #1e293b;
+        --bg-light: #f6f8fb;
+        --text-main: #2d3748;
+        --text-muted: #5a6e8a;
+        --white: #ffffff;
+        --success-green: #10b981;
+        --error-red: #ef4444;
+        --gray-soft: #f1f5f9;
+        --border-light: #e2e8f0;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, 'Inter', system-ui, Arial, sans-serif;
+    }
+
+    body {
+        background: var(--bg-light);
+        overflow-x: hidden;
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* ----- HEADER (desktop first) - EXACT ORIGINAL ----- */
+    .header {
+        background: var(--white);
+        padding: 12px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.02), 0 1px 0 var(--border-light);
+    }
+
+    .logo-group {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--navy-dark);
+        text-decoration: none;
+        line-height: 1.1;
+        letter-spacing: -0.3px;
+    }
+    .logo span {
+        color: var(--primary-blue);
+        font-weight: 700;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .contact-area {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .contact-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--gray-soft);
+        padding: 6px 14px;
+        border-radius: 100px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+    .contact-box:hover {
+        background: #e9edf2;
+        transform: translateY(-1px);
+    }
+    .contact-box i {
+        font-size: 16px;
+        color: var(--primary-blue);
+    }
+    .contact-box .contact-details h4 {
+        font-size: 9px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+        margin-bottom: 2px;
+    }
+    .contact-box .contact-details p {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--navy-dark);
+        line-height: 1.2;
+    }
+
+    .header-social {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        background: var(--white);
+        padding-left: 8px;
+        border-left: 1px solid var(--border-light);
+    }
+    .header-social a {
+        color: #4a5a72;
+        font-size: 16px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+    }
+    .header-social a:hover {
+        color: var(--primary-blue);
+        background: rgba(79, 112, 255, 0.08);
+        transform: translateY(-2px);
+    }
+
+    /* ----- STICKY NAVBAR (exact original) ----- */
+    .navbar {
+        width: 86%;
+        max-width: 1200px;
+        margin: 6px auto 0;
+        background: var(--white);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+        border-radius: 50px;
+        padding: 5px 18px;
+        position: sticky;
+        top: 12px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .nav-quote-right {
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+    .nav-quote-right .quote-btn {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+        transition: all 0.25s ease;
+        box-shadow: 0 3px 8px rgba(79,112,255,0.2);
+        letter-spacing: 0.2px;
+    }
+    .nav-quote-right .quote-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(79,112,255,0.3);
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        gap: 2px;
+    }
+    .nav-menu li a {
+        display: inline-block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: var(--navy-dark);
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 40px;
+        transition: all 0.2s ease;
+    }
+    .nav-menu li a:hover {
+        color: var(--primary-blue);
+        background: rgba(79,112,255,0.05);
+    }
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--navy-dark);
+        background: transparent;
+        padding: 6px;
+        border-radius: 50%;
+    }
+
+    /* ---------- PRICING PAGE ADDITIONAL STYLES ---------- */
+    .pricing-container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 5%;
+    }
+    .page-header {
+        text-align: center;
+        padding: 50px 0 20px;
+    }
+    .page-header .badge {
+        background: rgba(79,112,255,0.12);
+        display: inline-block;
+        padding: 5px 14px;
+        border-radius: 40px;
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--primary-blue);
+        margin-bottom: 12px;
+    }
+    .page-header h1 {
+        font-size: 48px;
+        color: var(--navy-dark);
+        margin-bottom: 16px;
+    }
+    .page-header p {
+        font-size: 18px;
+        color: var(--text-muted);
+        max-width: 650px;
+        margin: 0 auto;
+    }
+    .intro-text {
+        text-align: center;
+        background: var(--white);
+        padding: 30px;
+        border-radius: 48px;
+        margin: 20px 0 30px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .billing-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin: 30px 0;
+    }
+    .toggle-btn {
+        background: var(--white);
+        border: 1px solid var(--border-light);
+        padding: 10px 24px;
+        border-radius: 40px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .toggle-btn.active {
+        background: var(--primary-blue);
+        color: white;
+        border-color: var(--primary-blue);
+    }
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin: 40px 0;
+    }
+    .pricing-card {
+        background: var(--white);
+        border-radius: 32px;
+        padding: 32px;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.03);
+        transition: 0.3s;
+        border: 1px solid var(--border-light);
+    }
+    .pricing-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+        border-color: var(--primary-blue);
+    }
+    .plan-name {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+    .plan-price {
+        font-size: 42px;
+        font-weight: 800;
+        color: var(--primary-blue);
+        margin: 16px 0 8px;
+    }
+    .plan-price span {
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--text-muted);
+    }
+    .plan-desc {
+        color: var(--text-muted);
+        margin-bottom: 24px;
+        border-bottom: 1px solid var(--border-light);
+        padding-bottom: 16px;
+    }
+    .feature-list {
+        list-style: none;
+        margin: 20px 0;
+    }
+    .feature-list li {
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .feature-list li i.fa-check {
+        color: var(--success-green);
+        width: 18px;
+    }
+    .feature-list li i.fa-times {
+        color: var(--error-red);
+    }
+    .btn-plan {
+        display: block;
+        text-align: center;
+        background: var(--primary-blue);
+        color: white;
+        padding: 12px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 20px;
+        transition: 0.2s;
+    }
+    .btn-plan:hover {
+        background: var(--primary-dark);
+    }
+    .service-pricing {
+        background: var(--white);
+        border-radius: 48px;
+        padding: 40px;
+        margin: 50px 0;
+    }
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+        margin-top: 30px;
+    }
+    .service-item {
+        background: var(--bg-light);
+        border-radius: 28px;
+        padding: 24px;
+    }
+    .service-item h3 {
+        margin-bottom: 16px;
+    }
+    .price-tag {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--primary-blue);
+    }
+    .custom-section {
+        background: linear-gradient(135deg, var(--navy-dark), #0f1a2f);
+        border-radius: 48px;
+        padding: 48px;
+        text-align: center;
+        margin: 40px 0;
+        color: white;
+    }
+    .custom-section h2 {
+        margin-bottom: 16px;
+    }
+    .btn-outline-light {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 12px 32px;
+        border-radius: 40px;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .comparison-table {
+        background: var(--white);
+        border-radius: 48px;
+        padding: 40px;
+        overflow-x: auto;
+        margin: 40px 0;
+    }
+    .comparison-table table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    .comparison-table th, .comparison-table td {
+        padding: 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-light);
+    }
+    .comparison-table th {
+        background: var(--gray-soft);
+        font-weight: 700;
+    }
+    .addons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+    }
+    .addon-card {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 20px;
+        text-align: center;
+    }
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        margin: 30px 0;
+    }
+    .faq-item {
+        background: var(--white);
+        border-radius: 24px;
+        padding: 20px;
+    }
+    .payment-methods {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        margin: 30px 0;
+        padding: 30px;
+        background: var(--white);
+        border-radius: 48px;
+    }
+    .payment-method {
+        text-align: center;
+        font-size: 14px;
+    }
+    .payment-method i {
+        font-size: 32px;
+        color: var(--primary-blue);
+        margin-bottom: 8px;
+        display: block;
+    }
+    .terms-note {
+        background: var(--gray-soft);
+        padding: 24px;
+        border-radius: 28px;
+        margin: 30px 0;
+        font-size: 14px;
+    }
+    .cta-pricing {
+        background: linear-gradient(115deg, var(--primary-blue), var(--primary-dark));
+        border-radius: 48px;
+        padding: 56px 40px;
+        text-align: center;
+        margin: 40px 0 60px;
+        color: white;
+    }
+    .cta-pricing .btn-white {
+        background: white;
+        color: var(--primary-blue);
+        padding: 12px 32px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .cta-pricing .btn-outline-white {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        padding: 12px 32px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 700;
+        display: inline-block;
+        margin: 0 10px;
+    }
+
+    /* ----- FOOTER (exact original) ----- */
+    footer {
+        background: var(--navy-dark);
+        color: #cbd5e1;
+        padding: 70px 8% 20px;
+        margin-top: 20px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
+        gap: 40px;
+        margin-bottom: 45px;
+    }
+    .footer-col h3 {
+        color: var(--white);
+        font-size: 17px;
+        margin-bottom: 22px;
+        position: relative;
+        padding-bottom: 8px;
+    }
+    .footer-col h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        height: 2px;
+        background: var(--primary-blue);
+    }
+    .footer-links li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+    .footer-links li a {
+        color: #cbd5e1;
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-links li a:hover {
+        color: var(--primary-blue);
+        padding-left: 5px;
+    }
+    .contact-info li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+        font-size: 13px;
+        list-style: none;
+    }
+    .contact-info i {
+        color: var(--primary-blue);
+        font-size: 16px;
+    }
+    .newsletter-box p {
+        font-size: 12px;
+        color: #94a3b8;
+    }
+    .subscribe-form {
+        display: flex;
+        margin-top: 14px;
+        background: var(--navy-light);
+        padding: 4px;
+        border-radius: 40px;
+        width: 100%;
+    }
+    .subscribe-form input {
+        background: transparent;
+        border: none;
+        padding: 8px 14px;
+        color: #fff;
+        outline: none;
+        width: 100%;
+        font-size: 12px;
+    }
+    .subscribe-form button {
+        background: var(--primary-blue);
+        border: none;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 40px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+        transition: 0.2s;
+    }
+    .subscribe-form button:hover:not(:disabled) {
+        background: var(--primary-dark);
+    }
+    .newsletter-success, .newsletter-error {
+        font-size: 12px;
+        margin-top: 8px;
+        display: none;
+        align-items: center;
+        gap: 5px;
+    }
+    .newsletter-success { color: var(--success-green); }
+    .newsletter-error { color: var(--error-red); }
+    .clients-count {
+        font-size: 11px;
+        color: var(--primary-blue);
+        font-weight: 700;
+        margin-top: 8px;
+    }
+    .footer-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+    }
+    .footer-socials a {
+        width: 32px;
+        height: 32px;
+        background: var(--navy-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-socials a:hover {
+        background: var(--primary-blue);
+    }
+    .bottom-bar {
+        border-top: 1px solid var(--navy-light);
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+    }
+    .legal-links a {
+        color: #94a3b8;
+        margin-left: 18px;
+        text-decoration: none;
+    }
+    .legal-links a:hover {
+        color: #fff;
+    }
+
+    /* ----- ORIGINAL RESPONSIVE (header & footer) - UNCHANGED ----- */
+    @media (max-width: 900px) {
+        .header { padding: 8px 5%; gap: 10px; }
+        .logo { font-size: 24px; }
+        .header-right { gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+        .contact-area { gap: 8px; justify-content: flex-end; }
+        .contact-box { padding: 4px 10px; }
+        .contact-box i { font-size: 13px; }
+        .contact-box .contact-details h4 { font-size: 8px; }
+        .contact-box .contact-details p { font-size: 10px; }
+        .header-social { border-left: none; padding-left: 0; gap: 5px; }
+        .header-social a { width: 30px; height: 30px; font-size: 13px; }
+        .navbar { width: 92%; border-radius: 40px; padding: 5px 14px; }
+        .nav-menu { display: none; width: 100%; flex-direction: column; padding: 16px 0 12px; gap: 6px; }
+        .nav-menu.active { display: flex; }
+        .menu-toggle { display: block; order: 1; }
+        .nav-quote-right { order: 2; margin-left: auto; }
+        .nav-menu li a { text-align: center; padding: 10px; }
+    }
+    @media (max-width: 640px) {
+        .header { flex-direction: row; justify-content: space-between; padding: 8px 4%; }
+        .logo { font-size: 22px; }
+        .header-right { flex-direction: row; gap: 8px; }
+        .contact-area { gap: 6px; }
+        .contact-box { padding: 3px 8px; }
+        .contact-box .contact-details p { font-size: 9px; }
+        .header-social a { width: 28px; height: 28px; font-size: 12px; }
+        .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 20px; }
+        .footer-col-brand { grid-column: span 2; }
+        .subscribe-form { flex-direction: row; }
+        .footer-socials { justify-content: flex-start; }
+    }
+    @media (max-width: 550px) {
+        .navbar { width: 95%; }
+        .bottom-bar { justify-content: center; text-align: center; }
+    }
+</style>
+</head>
+<body>
+
+<!-- ========== HEADER (EXACT ORIGINAL) ========== -->
+<header class="header">
+    <div class="logo-group">
+        <a href="index.html" class="logo">NextGen<span>IT</span></a>
+    </div>
+    <div class="header-right">
+        <div class="contact-area">
+            <div class="contact-box">
+                <i class="fa-solid fa-phone-alt"></i>
+                <div class="contact-details">
+                    <h4>Call Us</h4>
+                    <p>+977 9816004622</p>
+                </div>
+            </div>
+            <div class="contact-box">
+                <i class="fa-regular fa-envelope"></i>
+                <div class="contact-details">
+                    <h4>Email Us</h4>
+                    <p>nextgenit2030@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-social">
+            <a href="https://www.youtube.com/@NextGenIT2026" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/nextgenit2026/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- ========== STICKY NAVBAR (EXACT ORIGINAL) ========== -->
+<nav class="navbar">
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cases-studies.html">Case Studies</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-quote-right">
+        <a href="contact.html" class="quote-btn">Get Free Quote</a>
+    </div>
+</nav>
+
+<!-- ========== PRICING CONTENT (INSERTED BETWEEN NAV AND FOOTER) ========== -->
+<main>
+<div class="pricing-container">
+    <!-- Pricing Header -->
+    <div class="page-header">
+        <div class="badge"><i class="fas fa-tag"></i> Simple & Transparent</div>
+        <h1>Pricing Plans</h1>
+        <p>Simple and transparent pricing for your digital needs. Choose a plan that fits your business size and goals.</p>
+    </div>
+
+    <!-- Pricing Introduction -->
+    <div class="intro-text">
+        <h3>Choose a plan that fits your business size and goals.</h3>
+        <p style="margin-top: 12px;">All plans include essential features, with the flexibility to upgrade or add services as you grow.</p>
+    </div>
+
+    <!-- Pricing Toggle (Monthly/Yearly) -->
+    <div class="billing-toggle">
+        <button class="toggle-btn active" id="monthlyBtn">Monthly</button>
+        <button class="toggle-btn" id="yearlyBtn">Yearly <span style="font-size: 12px;">(Save 20%)</span></button>
+    </div>
+
+    <!-- Pricing Plans Section (dynamic via JS) -->
+    <div class="pricing-grid" id="pricingGrid"></div>
+
+    <!-- Service-Based Pricing -->
+    <div class="service-pricing">
+        <h2 style="text-align: center;">Service-Based Pricing</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Need a specific service? Choose from our popular offerings.</p>
+        <div class="service-grid">
+            <div class="service-item"><h3><i class="fas fa-globe"></i> Basic Website</h3><p>5 pages, responsive design, contact form.</p><div class="price-tag">$499</div><a href="contact.html" class="btn-plan" style="margin-top: 12px;">Get Started</a></div>
+            <div class="service-item"><h3><i class="fas fa-store"></i> E‑commerce Website</h3><p>Full online store, payment integration, 20 products.</p><div class="price-tag">$1,299</div><a href="contact.html" class="btn-plan" style="margin-top: 12px;">Get Started</a></div>
+            <div class="service-item"><h3><i class="fas fa-chart-line"></i> SEO Optimization</h3><p>On-page SEO, keyword research, 3 months tracking.</p><div class="price-tag">$299/mo</div><a href="contact.html" class="btn-plan" style="margin-top: 12px;">Get Started</a></div>
+            <div class="service-item"><h3><i class="fas fa-bullhorn"></i> Digital Marketing</h3><p>Social media ads, campaign management, monthly report.</p><div class="price-tag">$599/mo</div><a href="contact.html" class="btn-plan" style="margin-top: 12px;">Get Started</a></div>
+            <div class="service-item"><h3><i class="fas fa-palette"></i> Logo Design</h3><p>Custom logo, 3 concepts, 2 revisions, source files.</p><div class="price-tag">$149</div><a href="contact.html" class="btn-plan" style="margin-top: 12px;">Get Started</a></div>
+            <div class="service-item"><h3><i class="fas fa-video"></i> Video Editing</h3><p>1 min promo video, basic editing, transitions.</p><div class="price-tag">$199</div><a href="contact.html" class="btn-plan" style="margin-top: 12px;">Get Started</a></div>
+        </div>
+    </div>
+
+    <!-- Custom Pricing Section -->
+    <div class="custom-section">
+        <h2>Need something custom?</h2>
+        <p>Tell us your requirements and we'll build a tailored solution with a personalized quote.</p>
+        <a href="contact.html" class="btn-outline-light">Request a Quote →</a>
+        <p style="margin-top: 20px;">📞 Call us: +977 9816004622 | ✉️ nextgenit2030@gmail.com</p>
+    </div>
+
+    <!-- Feature Comparison Table -->
+    <div class="comparison-table">
+        <h3 style="margin-bottom: 24px;">Compare Features Across Plans</h3>
+        <table>
+            <thead>
+                <tr><th>Features</th><th>Basic</th><th>Standard</th><th>Premium</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Responsive Design</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td>SEO Setup</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td>Revisions</td><td>2</td><td>5</td><td>Unlimited</td></tr>
+                <tr><td>Support Duration</td><td>7 days</td><td>30 days</td><td>90 days</td></tr>
+                <tr><td>Hosting Included</td><td>✗</td><td>✓ (1 year)</td><td>✓ (2 years)</td></tr>
+                <tr><td>Source Files</td><td>✗</td><td>✓</td><td>✓</td></tr>
+                <tr><td>Custom Features</td><td>✗</td><td>✓ (up to 3)</td><td>✓ (unlimited)</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add-ons / Extra Services -->
+    <h2 style="text-align: center; margin: 40px 0 20px;">Add‑ons & Extra Services</h2>
+    <div class="addons-grid">
+        <div class="addon-card"><i class="fas fa-file-alt" style="font-size: 32px; color: var(--primary-blue);"></i><h4>Extra Page</h4><p>$50/page</p></div>
+        <div class="addon-card"><i class="fas fa-sync-alt"></i><h4>Additional Revisions</h4><p>$30/revision</p></div>
+        <div class="addon-card"><i class="fas fa-tachometer-alt"></i><h4>Speed Optimization</h4><p>$120</p></div>
+        <div class="addon-card"><i class="fas fa-pen-fancy"></i><h4>Content Writing</h4><p>$40/page</p></div>
+        <div class="addon-card"><i class="fas fa-chalkboard"></i><h4>Maintenance (monthly)</h4><p>$49/mo</p></div>
+        <div class="addon-card"><i class="fas fa-cloud-upload-alt"></i><h4>Hosting Setup</h4><p>$99</p></div>
+    </div>
+
+    <!-- FAQ Section -->
+    <h2 style="text-align: center; margin: 50px 0 20px;">Frequently Asked Questions</h2>
+    <div class="faq-grid">
+        <div class="faq-item"><h4>Can I upgrade later?</h4><p>Yes, you can upgrade your plan at any time. We'll pro-rate the difference.</p></div>
+        <div class="faq-item"><h4>Do you provide refunds?</h4><p>We offer a 7-day money-back guarantee for all plans (except custom projects).</p></div>
+        <div class="faq-item"><h4>What payment methods do you accept?</h4><p>eSewa, Khalti, Bank Transfer, Card, and PayPal (international).</p></div>
+        <div class="faq-item"><h4>Is support included?</h4><p>Support varies by plan: Basic (7 days), Standard (30 days), Premium (90 days).</p></div>
+        <div class="faq-item"><h4>Are revisions included?</h4><p>Yes, each plan includes a set number of revisions (2/5/unlimited).</p></div>
+        <div class="faq-item"><h4>How long does delivery take?</h4><p>Typical delivery: Basic (7-10 days), Standard (14-21 days), Premium (custom).</p></div>
+    </div>
+
+    <!-- Payment Methods -->
+    <div class="payment-methods">
+        <div class="payment-method"><i class="fas fa-mobile-alt"></i><span>eSewa</span></div>
+        <div class="payment-method"><i class="fas fa-wallet"></i><span>Khalti</span></div>
+        <div class="payment-method"><i class="fas fa-university"></i><span>Bank Transfer</span></div>
+        <div class="payment-method"><i class="fab fa-cc-visa"></i><span>Card</span></div>
+        <div class="payment-method"><i class="fab fa-paypal"></i><span>PayPal</span></div>
+    </div>
+
+    <!-- Terms & Notes -->
+    <div class="terms-note">
+        <strong>📝 Terms & Notes:</strong><br>
+        • All prices are in USD and exclude applicable taxes (VAT 13% for Nepal).<br>
+        • Refund policy: 7-day money-back guarantee for standard plans.<br>
+        • Delivery conditions: Timelines start after receiving all assets and down payment (50%).<br>
+        • Renewal details: Monthly plans auto-renew; you can cancel anytime.<br>
+        • Hosting & domain not included unless specified.
+    </div>
+
+    <!-- Call To Action -->
+    <div class="cta-pricing">
+        <h2>Need a custom solution for your business?</h2>
+        <p>Let’s discuss your requirements and build a tailored package.</p>
+        <div>
+            <a href="contact.html" class="btn-white">Get Free Consultation</a>
+            <a href="contact.html" class="btn-outline-white">Contact Us</a>
+        </div>
+    </div>
+</div>
+</main>
+
+<!-- ========== FOOTER (EXACT ORIGINAL) ========== -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+            <div class="logo" style="color: #fff; margin-bottom: 18px;">NextGen<span>IT</span></div>
+            <p>NextGenIT is a global digital marketing and IT solutions company helping businesses grow through powerful websites, SEO, and data-driven marketing strategies.</p>
+            <div class="clients-count">Long-term partnerships with growing businesses</div>
+        </div>
+        <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links"><li><a href="web-development.html">Web Development</a></li><li><a href="seo-optimization.html">SEO Optimization</a></li><li><a href="digital-marketing.html">Digital Marketing</a></li><li><a href="social-media-ads.html">Social Media Ads</a></li><li><a href="ppc-management.html">PPC Management</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul class="footer-links"><li><a href="our-process.html">Our Process</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="career.html">Career</a></li><li><a href="consultation.html">Consultation</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Get In Touch</h3>
+            <ul class="contact-info"><li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li><li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li><li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <div class="newsletter-box">
+                <p>Get marketing tips & growth strategies directly in your inbox.</p>
+                <form class="subscribe-form" id="newsletterForm">
+                    <input type="email" id="subscriberEmail" placeholder="Your email address" required>
+                    <button type="submit" id="subscribeBtn">Join</button>
+                </form>
+                <div id="successMsg" class="newsletter-success"><i class="fas fa-check-circle"></i> <span id="successText">Thanks! You're now subscribed.</span></div>
+                <div id="errorMsg" class="newsletter-error"><i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again.</span></div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@sujittudu2020" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <div class="copyright">© 2026 <strong>NextGenIT</strong>. All rights reserved.</div>
+        <div class="legal-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-&-conditions.html">Terms & Conditions</a></div>
+        <div class="designer">Designed & Developed by NextGenIT</div>
+    </div>
+</footer>
+
+<!-- ========== ORIGINAL MOBILE MENU TOGGLE SCRIPT ========== -->
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if (toggle) {
+        const icon = toggle.querySelector('i');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
+            else icon.classList.replace('fa-times', 'fa-bars');
+        });
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                if (icon.classList.contains('fa-times')) icon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    }
+</script>
+
+<!-- ========== ORIGINAL EMAILJS NEWSLETTER INTEGRATION ========== -->
+<script>
+    const EMAILJS_CONFIG = { PUBLIC_KEY: "k0-JMxq9DMByW7fzf", SERVICE_ID: "service_sgnt3z9", TEMPLATE_ID: "template_566697h" };
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    const form = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('subscriberEmail');
+    const submitBtn = document.getElementById('subscribeBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+    const successText = document.getElementById('successText');
+    const errorText = document.getElementById('errorText');
+    function hideMessages() { if(successMsg) successMsg.style.display = 'none'; if(errorMsg) errorMsg.style.display = 'none'; }
+    function showSuccess(message) { if(successText) successText.textContent = message; if(successMsg) successMsg.style.display = 'flex'; setTimeout(() => { if(successMsg) successMsg.style.display = 'none'; }, 5000); }
+    function showError(message) { if(errorText) errorText.textContent = message; if(errorMsg) errorMsg.style.display = 'flex'; setTimeout(() => { if(errorMsg) errorMsg.style.display = 'none'; }, 5000); }
+    if(form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            hideMessages();
+            const email = emailInput.value.trim();
+            if (!email || !email.includes('@') || !email.includes('.')) { showError('Please enter a valid email address.'); return; }
+            submitBtn.disabled = true; submitBtn.textContent = 'Subscribing...';
+            try {
+                await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, { to_email: 'nextgenit2030@gmail.com', from_email: email, email: email, subject: 'Newsletter Subscription', message: `New subscriber: ${email}`, name: email.split('@')[0] });
+                showSuccess(`Thanks ${email}! You're now subscribed.`);
+                emailInput.value = '';
+            } catch (error) { console.error(error); showError('Subscription failed. Please try again.'); } 
+            finally { submitBtn.disabled = false; submitBtn.textContent = 'Join'; }
+        });
+    }
+</script>
+
+<!-- ========== PRICING TOGGLE SCRIPT (Monthly/Yearly) ========== -->
+<script>
+    const plans = {
+        monthly: [
+            { name: "Basic", price: 199, desc: "Perfect for startups and small businesses.", features: ["5 pages", "Responsive design", "Basic SEO setup", "2 revisions", "7 days support"] },
+            { name: "Standard", price: 399, desc: "Ideal for growing companies.", features: ["15 pages", "Responsive design", "Advanced SEO", "5 revisions", "30 days support", "1 year hosting"] },
+            { name: "Premium", price: 699, desc: "Full-scale solution for established brands.", features: ["Unlimited pages", "Custom design", "Premium SEO", "Unlimited revisions", "90 days support", "2 years hosting", "Source files included"] }
+        ],
+        yearly: [
+            { name: "Basic", price: 1910, desc: "Save 20% with annual billing.", features: ["5 pages", "Responsive design", "Basic SEO setup", "2 revisions", "7 days support"] },
+            { name: "Standard", price: 3830, desc: "Best value for growing businesses.", features: ["15 pages", "Responsive design", "Advanced SEO", "5 revisions", "30 days support", "1 year hosting"] },
+            { name: "Premium", price: 6710, desc: "Ultimate package with maximum savings.", features: ["Unlimited pages", "Custom design", "Premium SEO", "Unlimited revisions", "90 days support", "2 years hosting", "Source files included"] }
+        ]
+    };
+
+    function renderPricing(billingType) {
+        const container = document.getElementById('pricingGrid');
+        const currentPlans = billingType === 'monthly' ? plans.monthly : plans.yearly;
+        const priceSuffix = billingType === 'monthly' ? '/month' : '/year';
+        container.innerHTML = currentPlans.map(plan => `
+            <div class="pricing-card">
+                <div class="plan-name">${plan.name}</div>
+                <div class="plan-price">$${plan.price}<span> ${priceSuffix}</span></div>
+                <div class="plan-desc">${plan.desc}</div>
+                <ul class="feature-list">
+                    ${plan.features.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('')}
+                </ul>
+                <a href="contact.html" class="btn-plan">Get Started →</a>
+            </div>
+        `).join('');
+    }
+
+    const monthlyBtn = document.getElementById('monthlyBtn');
+    const yearlyBtn = document.getElementById('yearlyBtn');
+    monthlyBtn.addEventListener('click', () => {
+        monthlyBtn.classList.add('active');
+        yearlyBtn.classList.remove('active');
+        renderPricing('monthly');
+    });
+    yearlyBtn.addEventListener('click', () => {
+        yearlyBtn.classList.add('active');
+        monthlyBtn.classList.remove('active');
+        renderPricing('yearly');
+    });
+    renderPricing('monthly');
+</script>
+</body>
+</html>
