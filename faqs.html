@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>NextGenIT | Frequently Asked Questions — Expert IT Solutions</title>
+<meta name="description" content="Find clear answers about NextGenIT services: web development, digital marketing, SEO, pricing, support, and more. Professional IT solutions FAQ page.">
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="NextGenIT | Frequently Asked Questions">
+<meta property="og:description" content="Everything you need to know about our web development, SEO, marketing strategies & support.">
+
+<!-- Font Awesome & EmailJS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<style>
+    /* ---------- COLOR VARIABLES (preserve original) ---------- */
+    :root {
+        --primary-blue: #4f70ff;
+        --primary-dark: #3b5bdb;
+        --navy-dark: #111b33;
+        --navy-light: #1e293b;
+        --bg-light: #f6f8fb;
+        --text-main: #2d3748;
+        --text-muted: #5a6e8a;
+        --white: #ffffff;
+        --success-green: #10b981;
+        --error-red: #ef4444;
+        --gray-soft: #f1f5f9;
+        --border-light: #e2e8f0;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Roboto, 'Inter', system-ui, Arial, sans-serif;
+    }
+
+    body {
+        background: var(--bg-light);
+        overflow-x: hidden;
+        color: var(--text-main);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* ----- HEADER (desktop first) ----- */
+    .header {
+        background: var(--white);
+        padding: 12px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.02), 0 1px 0 var(--border-light);
+    }
+
+    .logo-group {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--navy-dark);
+        text-decoration: none;
+        line-height: 1.1;
+        letter-spacing: -0.3px;
+    }
+    .logo span {
+        color: var(--primary-blue);
+        font-weight: 700;
+    }
+
+    .header-right {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .contact-area {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .contact-box {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: var(--gray-soft);
+        padding: 6px 14px;
+        border-radius: 100px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+    }
+    .contact-box:hover {
+        background: #e9edf2;
+        transform: translateY(-1px);
+    }
+    .contact-box i {
+        font-size: 16px;
+        color: var(--primary-blue);
+    }
+    .contact-box .contact-details h4 {
+        font-size: 9px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-muted);
+        margin-bottom: 2px;
+    }
+    .contact-box .contact-details p {
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--navy-dark);
+        line-height: 1.2;
+    }
+
+    .header-social {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        background: var(--white);
+        padding-left: 8px;
+        border-left: 1px solid var(--border-light);
+    }
+    .header-social a {
+        color: #4a5a72;
+        font-size: 16px;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+    }
+    .header-social a:hover {
+        color: var(--primary-blue);
+        background: rgba(79, 112, 255, 0.08);
+        transform: translateY(-2px);
+    }
+
+    /* ----- STICKY NAVBAR ----- */
+    .navbar {
+        width: 86%;
+        max-width: 1200px;
+        margin: 6px auto 0;
+        background: var(--white);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+        border-radius: 50px;
+        padding: 5px 18px;
+        position: sticky;
+        top: 12px;
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .nav-quote-right {
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+    .nav-quote-right .quote-btn {
+        background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+        color: var(--white);
+        padding: 8px 20px;
+        border-radius: 40px;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 700;
+        display: inline-block;
+        transition: all 0.25s ease;
+        box-shadow: 0 3px 8px rgba(79,112,255,0.2);
+        letter-spacing: 0.2px;
+    }
+    .nav-quote-right .quote-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(79,112,255,0.3);
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        gap: 2px;
+    }
+    .nav-menu li a {
+        display: inline-block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: var(--navy-dark);
+        font-size: 13px;
+        font-weight: 600;
+        border-radius: 40px;
+        transition: all 0.2s ease;
+    }
+    .nav-menu li a:hover {
+        color: var(--primary-blue);
+        background: rgba(79,112,255,0.05);
+    }
+    .menu-toggle {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--navy-dark);
+        background: transparent;
+        padding: 6px;
+        border-radius: 50%;
+    }
+
+    /* ----- ADDITIONAL FAQ STYLES (professional, responsive, no conflict) ----- */
+    .faq-main {
+        max-width: 1300px;
+        margin: 50px auto 70px;
+        padding: 0 6%;
+        flex: 1;
+    }
+    .faq-header {
+        text-align: center;
+        margin-bottom: 48px;
+    }
+    .faq-badge {
+        display: inline-block;
+        background: rgba(79,112,255,0.1);
+        padding: 6px 18px;
+        border-radius: 40px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--primary-blue);
+        margin-bottom: 16px;
+    }
+    .faq-header h1 {
+        font-size: 2.5rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--navy-dark), var(--primary-blue));
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        letter-spacing: -0.02em;
+        margin-bottom: 16px;
+    }
+    .faq-header p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        max-width: 680px;
+        margin: 0 auto;
+        line-height: 1.5;
+    }
+
+    .faq-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+        margin-bottom: 55px;
+    }
+    .faq-card {
+        background: var(--white);
+        border-radius: 28px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(226, 232, 240, 0.7);
+        overflow: hidden;
+    }
+    .faq-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 20px 35px rgba(79, 112, 255, 0.08);
+        border-color: rgba(79,112,255,0.2);
+    }
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 22px 26px;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    .faq-question:hover {
+        background: #fafcff;
+    }
+    .question-content {
+        flex: 1;
+    }
+    .category-tag {
+        display: inline-block;
+        background: var(--gray-soft);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.3px;
+        padding: 4px 12px;
+        border-radius: 30px;
+        color: var(--primary-blue);
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+    .faq-question h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: var(--navy-dark);
+        line-height: 1.4;
+        margin: 0;
+        padding-right: 10px;
+    }
+    .faq-icon {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        background: var(--gray-soft);
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+    }
+    .faq-icon i {
+        font-size: 14px;
+        color: var(--primary-blue);
+        transition: transform 0.2s;
+    }
+    .faq-card.expanded .faq-icon i {
+        transform: rotate(90deg);
+    }
+    .faq-answer {
+        display: none;
+        padding: 0 26px 24px 26px;
+        border-top: 1px solid rgba(226, 232, 240, 0.7);
+        background: var(--white);
+        animation: fadeSlide 0.25s ease-out;
+    }
+    .faq-card.expanded .faq-answer {
+        display: block;
+    }
+    @keyframes fadeSlide {
+        from { opacity: 0; transform: translateY(-8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .faq-answer p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+        color: var(--text-muted);
+        margin-top: 16px;
+    }
+    .faq-answer a {
+        color: var(--primary-blue);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    .faq-answer a:hover {
+        text-decoration: underline;
+    }
+
+    .support-cta {
+        background: linear-gradient(115deg, var(--white) 0%, #f8faff 100%);
+        border-radius: 48px;
+        padding: 44px 36px;
+        text-align: center;
+        border: 1px solid var(--border-light);
+        box-shadow: 0 10px 25px -12px rgba(0,0,0,0.05);
+    }
+    .support-cta h3 {
+        font-size: 1.7rem;
+        font-weight: 700;
+        color: var(--navy-dark);
+        margin-bottom: 12px;
+    }
+    .support-cta p {
+        color: var(--text-muted);
+        max-width: 550px;
+        margin: 0 auto 24px;
+    }
+    .cta-btn {
+        background: var(--primary-blue);
+        color: white;
+        padding: 12px 34px;
+        border-radius: 60px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        transition: 0.2s;
+        box-shadow: 0 6px 14px rgba(79,112,255,0.25);
+    }
+    .cta-btn i {
+        font-size: 14px;
+    }
+    .cta-btn:hover {
+        background: var(--primary-dark);
+        transform: translateY(-2px);
+    }
+
+    /* Responsive FAQ grid and typography (A to Z mobile/tablet) */
+    @media (max-width: 900px) {
+        .faq-main {
+            padding: 0 5%;
+            margin: 40px auto 60px;
+        }
+        .faq-grid {
+            gap: 20px;
+        }
+        .faq-question {
+            padding: 18px 20px;
+        }
+        .faq-question h3 {
+            font-size: 1rem;
+        }
+    }
+    @media (max-width: 768px) {
+        .faq-grid {
+            grid-template-columns: 1fr;
+        }
+        .faq-header h1 {
+            font-size: 2rem;
+        }
+        .support-cta h3 {
+            font-size: 1.5rem;
+        }
+        .support-cta {
+            padding: 32px 20px;
+        }
+    }
+    @media (max-width: 550px) {
+        .faq-question h3 {
+            font-size: 0.95rem;
+        }
+        .category-tag {
+            font-size: 9px;
+        }
+    }
+
+    /* ----- FOOTER (unchanged original) ----- */
+    footer {
+        background: var(--navy-dark);
+        color: #cbd5e1;
+        padding: 70px 8% 20px;
+        margin-top: 20px;
+    }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
+        gap: 40px;
+        margin-bottom: 45px;
+    }
+    .footer-col h3 {
+        color: var(--white);
+        font-size: 17px;
+        margin-bottom: 22px;
+        position: relative;
+        padding-bottom: 8px;
+    }
+    .footer-col h3::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        height: 2px;
+        background: var(--primary-blue);
+    }
+    .footer-links li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+    .footer-links li a {
+        color: #cbd5e1;
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-links li a:hover {
+        color: var(--primary-blue);
+        padding-left: 5px;
+    }
+    .contact-info li {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+        font-size: 13px;
+        list-style: none;
+    }
+    .contact-info i {
+        color: var(--primary-blue);
+        font-size: 16px;
+    }
+    .newsletter-box p {
+        font-size: 12px;
+        color: #94a3b8;
+    }
+    .subscribe-form {
+        display: flex;
+        margin-top: 14px;
+        background: var(--navy-light);
+        padding: 4px;
+        border-radius: 40px;
+        width: 100%;
+    }
+    .subscribe-form input {
+        background: transparent;
+        border: none;
+        padding: 8px 14px;
+        color: #fff;
+        outline: none;
+        width: 100%;
+        font-size: 12px;
+    }
+    .subscribe-form button {
+        background: var(--primary-blue);
+        border: none;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 40px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+        transition: 0.2s;
+    }
+    .subscribe-form button:hover:not(:disabled) {
+        background: var(--primary-dark);
+    }
+    .newsletter-success, .newsletter-error {
+        font-size: 12px;
+        margin-top: 8px;
+        display: none;
+        align-items: center;
+        gap: 5px;
+    }
+    .newsletter-success { color: var(--success-green); }
+    .newsletter-error { color: var(--error-red); }
+    .clients-count {
+        font-size: 11px;
+        color: var(--primary-blue);
+        font-weight: 700;
+        margin-top: 8px;
+    }
+    .footer-socials {
+        display: flex;
+        gap: 12px;
+        margin-top: 18px;
+    }
+    .footer-socials a {
+        width: 32px;
+        height: 32px;
+        background: var(--navy-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--white);
+        font-size: 13px;
+        text-decoration: none;
+        transition: 0.25s;
+    }
+    .footer-socials a:hover {
+        background: var(--primary-blue);
+    }
+    .bottom-bar {
+        border-top: 1px solid var(--navy-light);
+        padding-top: 22px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 12px;
+    }
+    .legal-links a {
+        color: #94a3b8;
+        margin-left: 18px;
+        text-decoration: none;
+    }
+    .legal-links a:hover {
+        color: #fff;
+    }
+
+    /* ----- RESPONSIVE (header & footer adjustments from original) ----- */
+    @media (max-width: 900px) {
+        .header {
+            padding: 8px 5%;
+            gap: 10px;
+        }
+        .logo {
+            font-size: 24px;
+        }
+        .header-right {
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
+        .contact-area {
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        .contact-box {
+            padding: 4px 10px;
+        }
+        .contact-box i {
+            font-size: 13px;
+        }
+        .contact-box .contact-details h4 {
+            font-size: 8px;
+        }
+        .contact-box .contact-details p {
+            font-size: 10px;
+        }
+        .header-social {
+            border-left: none;
+            padding-left: 0;
+            gap: 5px;
+        }
+        .header-social a {
+            width: 30px;
+            height: 30px;
+            font-size: 13px;
+        }
+        .navbar {
+            width: 92%;
+            border-radius: 40px;
+            padding: 5px 14px;
+        }
+        .nav-menu {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            padding: 16px 0 12px;
+            gap: 6px;
+        }
+        .nav-menu.active {
+            display: flex;
+        }
+        .menu-toggle {
+            display: block;
+            order: 1;
+        }
+        .nav-quote-right {
+            order: 2;
+            margin-left: auto;
+        }
+        .nav-menu li a {
+            text-align: center;
+            padding: 10px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .header {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 8px 4%;
+        }
+        .logo {
+            font-size: 22px;
+        }
+        .header-right {
+            flex-direction: row;
+            gap: 8px;
+        }
+        .contact-area {
+            gap: 6px;
+        }
+        .contact-box {
+            padding: 3px 8px;
+        }
+        .contact-box .contact-details p {
+            font-size: 9px;
+        }
+        .header-social a {
+            width: 28px;
+            height: 28px;
+            font-size: 12px;
+        }
+        .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px 20px;
+        }
+        .footer-col-brand {
+            grid-column: span 2;
+        }
+        .footer-col:nth-child(2),
+        .footer-col:nth-child(3) {
+            grid-column: span 1;
+        }
+        .footer-col:nth-child(4) {
+            grid-column: span 2;
+        }
+        .footer-col:nth-child(5) {
+            grid-column: span 2;
+        }
+        .subscribe-form {
+            flex-direction: row;
+        }
+        .footer-socials {
+            justify-content: flex-start;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .navbar {
+            width: 95%;
+        }
+        .bottom-bar {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- HEADER (EXACT ORIGINAL) -->
+<header class="header">
+    <div class="logo-group">
+        <a href="index.html" class="logo">NextGen<span>IT</span></a>
+    </div>
+    <div class="header-right">
+        <div class="contact-area">
+            <div class="contact-box">
+                <i class="fa-solid fa-phone-alt"></i>
+                <div class="contact-details">
+                    <h4>Call Us</h4>
+                    <p>+977 9816004622</p>
+                </div>
+            </div>
+            <div class="contact-box">
+                <i class="fa-regular fa-envelope"></i>
+                <div class="contact-details">
+                    <h4>Email Us</h4>
+                    <p>nextgenit2030@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="header-social">
+            <a href="https://www.youtube.com/@NextGenIT2026" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/nextgenit2026/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+</header>
+
+<!-- STICKY NAVBAR (EXACT ORIGINAL) -->
+<nav class="navbar">
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cases-studies.html">Case Studies</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="insights.html">Insights</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-quote-right">
+        <a href="contact.html" class="quote-btn">Get Free Quote</a>
+    </div>
+</nav>
+
+<!-- PROFESSIONAL FAQ LANDING PAGE SECTION (inserted between nav and footer) -->
+<main class="faq-main">
+    <div class="faq-header">
+        <div class="faq-badge"><i class="fas fa-comments"></i> knowledge base</div>
+        <h1>Answers to your questions <span style="color:var(--primary-blue);">simplified.</span></h1>
+        <p>Everything you need to know about our services, pricing, process and support — find instant, transparent answers below.</p>
+    </div>
+
+    <div class="faq-grid">
+        <!-- FAQ 1 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">General</span>
+                    <h3>What digital & IT solutions does NextGenIT offer?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>NextGenIT provides full-cycle web development, advanced SEO strategies, data-driven digital marketing, social media management, PPC campaigns, eCommerce solutions, and IT consulting. We tailor each solution to your business goals.</p></div>
+        </div>
+        <!-- FAQ 2 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Web Development</span>
+                    <h3>Which technologies do you use for website projects?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>We leverage modern stacks: React, Vue.js, Laravel, WordPress, Shopify, and headless solutions. Our priority is performance, security, and mobile-first responsive design.</p></div>
+        </div>
+        <!-- FAQ 3 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Web Development</span>
+                    <h3>How long does a typical website project take?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>Standard corporate websites take 4–6 weeks, while complex eCommerce or custom platforms may take 8–12 weeks. We follow agile sprints to keep you updated.</p></div>
+        </div>
+        <!-- FAQ 4 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">SEO & Marketing</span>
+                    <h3>How do you measure SEO success? What results can I expect?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>We track organic traffic growth, keyword rankings, conversion rates, and ROI. Most clients see significant ranking improvement within 3–6 months, with continuous optimization.</p></div>
+        </div>
+        <!-- FAQ 5 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Pricing & Plans</span>
+                    <h3>What’s your pricing model for ongoing support & marketing?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>We offer transparent monthly retainers, project-based quotes, and hourly support. All plans are customized depending on scope — no hidden fees. <a href="pricing.html">View pricing overview →</a></p></div>
+        </div>
+        <!-- FAQ 6 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Pricing & Plans</span>
+                    <h3>Do you require long-term contracts?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>No, we believe in flexibility. Most services are month-to-month. For larger development projects we request a simple agreement, but you’re never locked in unnecessarily.</p></div>
+        </div>
+        <!-- FAQ 7 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Support & Maintenance</span>
+                    <h3>Do you provide website maintenance after launch?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>Absolutely! We offer maintenance packages including security updates, backups, bug fixes, content edits and performance monitoring to keep your website fast and secure.</p></div>
+        </div>
+        <!-- FAQ 8 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Support & Maintenance</span>
+                    <h3>How can I contact your support team for urgent issues?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>We provide priority email & WhatsApp support for all clients. You can also raise tickets via client portal. Response time: under 24 hours for standard queries.</p></div>
+        </div>
+        <!-- FAQ 9 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">General</span>
+                    <h3>How can I request a free quote for my project?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>Click "Get Free Quote" in the navbar or <a href="contact.html">contact us</a> directly. Tell us about your requirements and we’ll send a detailed proposal within 24 hours.</p></div>
+        </div>
+        <!-- FAQ 10 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Digital Marketing</span>
+                    <h3>Do you manage social media advertising campaigns?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>Yes! We run data-driven Facebook, Instagram, LinkedIn, and TikTok campaigns, including ad creative, targeting, A/B testing and monthly performance reports.</p></div>
+        </div>
+        <!-- FAQ 11 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Security & Privacy</span>
+                    <h3>How do you ensure data protection and GDPR compliance?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>We follow strict data security protocols, SSL encryption, and GDPR/CCPA best practices. Your business & user data is never shared with third parties without consent.</p></div>
+        </div>
+        <!-- FAQ 12 -->
+        <div class="faq-card">
+            <div class="faq-question">
+                <div class="question-content">
+                    <span class="category-tag">Billing</span>
+                    <h3>What's your refund or cancellation policy?</h3>
+                </div>
+                <div class="faq-icon"><i class="fas fa-plus"></i></div>
+            </div>
+            <div class="faq-answer"><p>For monthly services, you can cancel anytime with 7 days notice. Development projects have milestone-based payments; we ensure satisfaction before final delivery.</p></div>
+        </div>
+    </div>
+
+    <div class="support-cta">
+        <h3>Still have questions? <i class="fas fa-regular fa-message"></i></h3>
+        <p>Our experts are ready to clarify any doubt and help you choose the right IT strategy.</p>
+        <a href="contact.html" class="cta-btn">Get in touch <i class="fas fa-arrow-right"></i></a>
+    </div>
+</main>
+
+<!-- FOOTER (EXACT ORIGINAL) -->
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col footer-col-brand">
+            <div class="logo" style="color: #fff; margin-bottom: 18px;">NextGen<span>IT</span></div>
+            <p>NextGenIT is a global digital marketing and IT solutions company helping businesses grow through powerful websites, SEO, and data-driven marketing strategies.</p>
+            <div class="clients-count">Long-term partnerships with growing businesses</div>
+        </div>
+        <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links"><li><a href="web-development.html">Web Development</a></li><li><a href="seo-optimization.html">SEO Optimization</a></li><li><a href="digital-marketing.html">Digital Marketing</a></li><li><a href="social-media-ads.html">Social Media Ads</a></li><li><a href="ppc-management.html">PPC Management</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Support</h3>
+            <ul class="footer-links"><li><a href="our-process.html">Our Process</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="career.html">Career</a></li><li><a href="consulation.html">Consultation</a></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Get In Touch</h3>
+            <ul class="contact-info"><li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li><li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li><li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li></ul>
+        </div>
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <div class="newsletter-box">
+                <p>Get marketing tips & growth strategies directly in your inbox.</p>
+                <form class="subscribe-form" id="newsletterForm">
+                    <input type="email" id="subscriberEmail" placeholder="Your email address" required>
+                    <button type="submit" id="subscribeBtn">Join</button>
+                </form>
+                <div id="successMsg" class="newsletter-success"><i class="fas fa-check-circle"></i> <span id="successText">Thanks! You're now subscribed.</span></div>
+                <div id="errorMsg" class="newsletter-error"><i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again.</span></div>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@sujittudu2020" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <div class="copyright">© 2026 <strong>NextGenIT</strong>. All rights reserved.</div>
+        <div class="legal-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-&-conditions.html">Terms & Conditions</a></div>
+        <div class="designer">Designed & Developed by NextGenIT</div>
+    </div>
+</footer>
+
+<!-- MOBILE MENU TOGGLE (original script) -->
+<script>
+    const toggle = document.querySelector('.menu-toggle');
+    const menu = document.querySelector('.nav-menu');
+    if (toggle) {
+        const icon = toggle.querySelector('i');
+        toggle.addEventListener('click', () => {
+            menu.classList.toggle('active');
+            if (menu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
+            else icon.classList.replace('fa-times', 'fa-bars');
+        });
+        document.querySelectorAll('.nav-menu li a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.remove('active');
+                if (icon.classList.contains('fa-times')) icon.classList.replace('fa-times', 'fa-bars');
+            });
+        });
+    }
+</script>
+
+<!-- FAQ ACCORDION SCRIPT (plus/minus toggle) -->
+<script>
+    (function() {
+        const faqCards = document.querySelectorAll('.faq-card');
+        faqCards.forEach(card => {
+            const questionDiv = card.querySelector('.faq-question');
+            const iconElem = card.querySelector('.faq-icon i');
+            function toggleFAQ(expand) {
+                if (expand === undefined) {
+                    const currentlyExpanded = card.classList.contains('expanded');
+                    if (currentlyExpanded) {
+                        card.classList.remove('expanded');
+                        if (iconElem) iconElem.className = 'fas fa-plus';
+                    } else {
+                        card.classList.add('expanded');
+                        if (iconElem) iconElem.className = 'fas fa-minus';
+                    }
+                } else {
+                    if (expand) {
+                        card.classList.add('expanded');
+                        if (iconElem) iconElem.className = 'fas fa-minus';
+                    } else {
+                        card.classList.remove('expanded');
+                        if (iconElem) iconElem.className = 'fas fa-plus';
+                    }
+                }
+            }
+            questionDiv.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleFAQ();
+            });
+            // initial collapsed state
+            card.classList.remove('expanded');
+            if (iconElem) iconElem.className = 'fas fa-plus';
+        });
+    })();
+</script>
+
+<!-- EMAILJS NEWSLETTER INTEGRATION (original) -->
+<script>
+    const EMAILJS_CONFIG = { PUBLIC_KEY: "k0-JMxq9DMByW7fzf", SERVICE_ID: "service_sgnt3z9", TEMPLATE_ID: "template_566697h" };
+    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
+    const form = document.getElementById('newsletterForm');
+    const emailInput = document.getElementById('subscriberEmail');
+    const submitBtn = document.getElementById('subscribeBtn');
+    const successMsg = document.getElementById('successMsg');
+    const errorMsg = document.getElementById('errorMsg');
+    const successText = document.getElementById('successText');
+    const errorText = document.getElementById('errorText');
+    function hideMessages() { if(successMsg) successMsg.style.display = 'none'; if(errorMsg) errorMsg.style.display = 'none'; }
+    function showSuccess(message) { if(successText) successText.textContent = message; if(successMsg) successMsg.style.display = 'flex'; setTimeout(() => { if(successMsg) successMsg.style.display = 'none'; }, 5000); }
+    function showError(message) { if(errorText) errorText.textContent = message; if(errorMsg) errorMsg.style.display = 'flex'; setTimeout(() => { if(errorMsg) errorMsg.style.display = 'none'; }, 5000); }
+    if(form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            hideMessages();
+            const email = emailInput.value.trim();
+            if (!email || !email.includes('@') || !email.includes('.')) { showError('Please enter a valid email address.'); return; }
+            submitBtn.disabled = true; submitBtn.textContent = 'Subscribing...';
+            try {
+                await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, { to_email: 'nextgenit2030@gmail.com', from_email: email, email: email, subject: 'Newsletter Subscription', message: `New subscriber: ${email}`, name: email.split('@')[0] });
+                showSuccess(`Thanks ${email}! You're now subscribed.`);
+                emailInput.value = '';
+            } catch (error) { console.error(error); showError('Subscription failed. Please try again.'); } 
+            finally { submitBtn.disabled = false; submitBtn.textContent = 'Join'; }
+        });
+    }
+</script>
+</body>
+</html>
