@@ -1,1071 +1,1635 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>NextGenIT - Web Design, SEO & Digital Marketing Agency</title>
-<meta name="description" content="NextGenIT offers web design, SEO, and digital marketing services to help businesses grow online worldwide.">
-<meta name="keywords" content="digital marketing company, SEO agency Nepal, web development company, PPC services, social media marketing, online marketing agency, website development Nepal, NextGenIT">
-<meta name="author" content="NextGenIT">
-<meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.nextgenit-global.github.io/">
-<meta name="google-site-verification" content="BxhbFRVpY1ii7bI8GbXyMUznPzs5gOfeQDJVJLd2Cx0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGenIT | Premium Digital Marketing & Growth Agency</title>
+    <style>
+        :root {
+            --primary-blue: #041738;
+            --accent-teal: #069db2;
+            --bg-dark: #ffffff;
+            --bg-light: #ffffff;
+            --text-dark: #041738;
+            --text-light: #041738;
+            --text-muted: #4a5d6e;
+            --card-dark: #f8fbfc;
+            --card-light: #ffffff;
+            --border-light: #eef3f6;
+            --font-main: 'Nexa', 'Sofia Pro', 'Codec Pro', 'Montserrat', 'Poppins', 'Segoe UI', system-ui, sans-serif;
+            --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+            --shadow-sm: 0 4px 6px rgba(6, 157, 178, 0.08);
+            --shadow-md: 0 10px 25px rgba(4, 23, 56, 0.06);
+            --shadow-lg: 0 15px 35px rgba(4, 23, 56, 0.1);
+        }
 
-<!-- Open Graph / Social -->
-<meta property="og:type" content="website">
-<meta property="og:title" content="NextGenIT | Digital Marketing & SEO Experts">
-<meta property="og:description" content="Grow your business with SEO, PPC ads, web development, and digital marketing services by NextGenIT. Trusted worldwide.">
-<meta property="og:url" content="https://www.nextgenit-global.github.io/">
-<meta property="og:site_name" content="NextGenIT">
-<meta property="og:image" content="https://www.nextgenit-global.github.io/assets/og-image.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="NextGenIT | Digital Marketing Company">
-<meta name="twitter:description" content="SEO, PPC, web development & branding services for global business growth.">
-<meta name="twitter:image" content="https://www.nextgenit-global.github.io/assets/og-image.jpg">
-<meta name="twitter:site" content="@nextgenit">
-<meta name="application-name" content="NextGenIT">
-<meta name="contact" content="info@nextgenit.com">
-<meta name="reply-to" content="info@nextgenit.com">
-<meta name="owner" content="NextGenIT">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
-<meta name="format-detection" content="telephone=no">
-<meta name="mobile-web-app-capable" content="yes">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="theme-color" content="#0A0A0A">
-<meta name="copyright" content="NextGenIT">
-<meta name="publisher" content="NextGenIT">
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<!-- JSON-LD Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "NextGenIT",
-  "url": "https://www.nextgenit-global.github.io/",
-  "logo": "https://www.nextgenit-global.github.io/logo.png",
-  "description": "NextGenIT is a result-driven digital marketing, SEO, PPC, and web development agency helping businesses in Nepal and worldwide grow with high-performance websites and digital strategies.",
-  "foundingDate": "2024",
-  "areaServed": "Worldwide",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+977-9816004622",
-    "contactType": "customer support",
-    "areaServed": "Worldwide",
-    "availableLanguage": ["English"]
-  },
-  "sameAs": [
-    "https://www.youtube.com/@NextGenIT2026",
-    "https://www.instagram.com/nextgenit2026/",
-    "https://www.facebook.com/profile.php?id=61576378432368",
-    "https://www.linkedin.com/in/sujit-tudu-661281212/"
-  ]
-}
-</script>
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-<style>
-    /* ---------- COLOR VARIABLES ---------- */
-    :root {
-        --primary-blue: #4f70ff;
-        --primary-dark: #3b5bdb;
-        --navy-dark: #111b33;
-        --navy-light: #1e293b;
-        --bg-light: #f6f8fb;
-        --text-main: #2d3748;
-        --text-muted: #5a6e8a;
-        --white: #ffffff;
-        --success-green: #10b981;
-        --error-red: #ef4444;
-        --gray-soft: #f1f5f9;
-        --border-light: #e2e8f0;
-    }
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-weight: 400;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            min-height: 100vh;
+        }
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', Roboto, 'Inter', system-ui, Arial, sans-serif;
-    }
+        .container {
+            width: 92%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 0;
+        }
 
-    html {
-        scroll-behavior: smooth;
-    }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
 
-    body {
-        background: var(--bg-light);
-        overflow-x: hidden;
-        color: var(--text-main);
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    }
+        /* --- PAGE LOADER --- */
+        #page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.4s var(--transition-smooth), visibility 0.4s;
+            pointer-events: all;
+        }
+        #page-loader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .loader-spinner {
+            width: 44px;
+            height: 44px;
+            border: 3px solid #f0f0f0;
+            border-top: 3px solid var(--accent-teal);
+            border-radius: 50%;
+            animation: spin 0.75s linear infinite;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
 
-    /* main content wrapper */
-    .main-content {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-    }
+        /* --- REVEAL ANIMATIONS --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s var(--transition-smooth), transform 0.6s var(--transition-smooth);
+            will-change: transform, opacity;
+        }
+        .reveal.reveal-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
 
-    /* ---------- HEADER (desktop first) ---------- */
-    .header {
-        background: var(--white);
-        padding: 12px 8%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 16px;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.02), 0 1px 0 var(--border-light);
-    }
+        /* --- BUTTONS --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-teal);
+            color: #ffffff;
+            padding: 14px 30px;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s var(--transition-smooth), background-color 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            font-family: var(--font-main);
+            white-space: nowrap;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: var(--primary-blue);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(4, 23, 56, 0.2);
+        }
+        .btn:active {
+            transform: translateY(1px);
+            box-shadow: var(--shadow-sm);
+        }
 
-    .logo-group {
-        display: flex;
-        align-items: center;
-    }
-    .logo {
-        font-size: 28px;
-        font-weight: 700;
-        color: var(--navy-dark);
-        text-decoration: none;
-        line-height: 1.1;
-        letter-spacing: -0.3px;
-    }
-    .logo span {
-        color: var(--primary-blue);
-        font-weight: 700;
-    }
+        /* --- SECTION TITLES --- */
+        .section-title {
+            text-align: center;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: -0.3px;
+            color: var(--primary-blue);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        .section-title span {
+            color: var(--accent-teal);
+        }
 
-    .header-right {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-    }
-    .contact-area {
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .contact-box {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        background: var(--gray-soft);
-        padding: 6px 14px;
-        border-radius: 100px;
-        transition: all 0.2s ease;
-        white-space: nowrap;
-    }
-    .contact-box:hover {
-        background: #e9edf2;
-        transform: translateY(-1px);
-    }
-    .contact-box i {
-        font-size: 16px;
-        color: var(--primary-blue);
-    }
-    .contact-box .contact-details h4 {
-        font-size: 9px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: var(--text-muted);
-        margin-bottom: 2px;
-    }
-    .contact-box .contact-details p {
-        font-size: 12px;
-        font-weight: 600;
-        color: var(--navy-dark);
-        line-height: 1.2;
-    }
-
-    .header-social {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        background: var(--white);
-        padding-left: 8px;
-        border-left: 1px solid var(--border-light);
-    }
-    .header-social a {
-        color: #4a5a72;
-        font-size: 16px;
-        transition: all 0.2s ease;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-    }
-    .header-social a:hover {
-        color: var(--primary-blue);
-        background: rgba(79, 112, 255, 0.08);
-        transform: translateY(-2px);
-    }
-
-    /* ---------- STICKY NAVBAR (unchanged original design) ---------- */
-    .navbar {
-        width: 86%;
-        max-width: 1200px;
-        margin: 6px auto 0;
-        background: var(--white);
-        box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-        border-radius: 50px;
-        padding: 5px 18px;
-        position: sticky;
-        top: 12px;
-        z-index: 1000;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-    .nav-quote-right {
-        flex-shrink: 0;
-        margin-left: 10px;
-    }
-    .nav-quote-right .quote-btn {
-        background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
-        color: var(--white);
-        padding: 8px 20px;
-        border-radius: 40px;
-        text-decoration: none;
-        font-size: 12px;
-        font-weight: 700;
-        display: inline-block;
-        transition: all 0.25s ease;
-        box-shadow: 0 3px 8px rgba(79,112,255,0.2);
-        letter-spacing: 0.2px;
-    }
-    .nav-quote-right .quote-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 18px rgba(79,112,255,0.3);
-    }
-
-    .nav-menu {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        flex: 1;
-        gap: 2px;
-    }
-    .nav-menu li a {
-        display: inline-block;
-        padding: 8px 16px;
-        text-decoration: none;
-        color: var(--navy-dark);
-        font-size: 13px;
-        font-weight: 600;
-        border-radius: 40px;
-        transition: all 0.2s ease;
-    }
-    .nav-menu li a:hover {
-        color: var(--primary-blue);
-        background: rgba(79,112,255,0.05);
-    }
-    .menu-toggle {
-        display: none;
-        font-size: 24px;
-        cursor: pointer;
-        color: var(--navy-dark);
-        background: transparent;
-        padding: 6px;
-        border-radius: 50%;
-    }
-
-    /* ---------- CONTENT CONTAINER (centers content, fixes empty sides) ---------- */
-    .content-container {
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 0 5%;
-        width: 100%;
-    }
-
-    /* ---------- HERO SECTION ---------- */
-    .hero {
-        padding: 18px 0 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 40px;
-        flex-wrap: wrap;
-    }
-    .hero-left {
-        flex: 1.2;
-        min-width: 270px;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-    .tagline {
-        font-size: 12px;
-        letter-spacing: 1.8px;
-        color: var(--primary-blue);
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 2px;
-    }
-    .hero h1 {
-        font-size: 42px;
-        line-height: 1.2;
-        color: var(--navy-dark);
-        font-weight: 700;
-        letter-spacing: -0.4px;
-    }
-    .hero h1 span {
-        color: var(--primary-blue);
-    }
-    .desc {
-        font-size: 16px;
-        color: var(--text-muted);
-        line-height: 1.5;
-        max-width: 550px;
-    }
-    .hero-btns {
-        display: flex;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 6px;
-    }
-    .primary-btn {
-        background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
-        color: var(--white);
-        padding: 10px 22px;
-        border-radius: 40px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 13px;
-        display: inline-block;
-        transition: all 0.25s ease;
-    }
-    .primary-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 18px rgba(79, 112, 255, 0.3);
-    }
-    .secondary-btn {
-        background: var(--white);
-        color: var(--primary-blue);
-        border: 1.5px solid var(--primary-blue);
-        padding: 10px 22px;
-        border-radius: 40px;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 13px;
-        display: inline-block;
-        transition: all 0.25s ease;
-    }
-    .secondary-btn:hover {
-        background: #f0f4ff;
-        transform: translateY(-2px);
-    }
-    .trust {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        font-size: 13px;
-        margin-top: 8px;
-    }
-    .trust div {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    .trust i {
-        color: var(--primary-blue);
-        font-size: 14px;
-    }
-    
-    /* Modern Curve Slider */
-    .hero-right {
-        flex: 0.9;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 520px;
-    }
-    .slider-container {
-        width: 100%;
-        height: 380px;
-        position: relative;
-        overflow: hidden;
-        clip-path: perspective(1000px) rotateY(-4deg);
-        border-radius: 48px 16px 80px 16px;
-        box-shadow: 18px 30px 48px rgba(15, 23, 42, 0.18);
-        background: #0f172a;
-        transition: all 0.4s ease;
-    }
-    .slider-container:hover {
-        clip-path: perspective(1000px) rotateY(0deg);
-        transform: scale(1.01);
-    }
-    .slider-track {
-        display: flex;
-        width: 400%;
-        height: 100%;
-        animation: modernSlide 16s infinite cubic-bezier(0.8, 0, 0.2, 1);
-        will-change: transform;
-    }
-    .slide {
-        width: 25%;
-        height: 100%;
-        position: relative;
-    }
-    .slide img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-        filter: brightness(0.85);
-    }
-    .slide-info {
-        position: absolute;
-        bottom: 18px;
-        left: 18px;
-        right: 18px;
-        padding: 12px 16px;
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 18px;
-        color: white;
-        z-index: 5;
-    }
-    .slide-info h3 { 
-        font-size: 1rem; 
-        margin: 0 0 2px 0;
-        font-weight: 700;
-    }
-    .slide-info p { 
-        margin: 0;
-        opacity: 0.75; 
-        font-size: 0.7rem; 
-        text-transform: uppercase; 
-        letter-spacing: 1px; 
-    }
-    .glow-effect {
-        position: absolute;
-        width: 120%;
-        height: 120%;
-        background: radial-gradient(circle, rgba(79,112,255,0.12) 0%, transparent 70%);
-        top: -10%;
-        left: -10%;
-        z-index: -1;
-        pointer-events: none;
-    }
-    @keyframes modernSlide {
-        0%, 20% { transform: translateX(0); }
-        25%, 45% { transform: translateX(-25%); }
-        50%, 70% { transform: translateX(-50%); }
-        75%, 95% { transform: translateX(-75%); }
-        100% { transform: translateX(0); }
-    }
-
-    /* STATS SECTION */
-    .stats-section {
-        margin: 12px 0 20px;
-    }
-    .stats-grid {
-        background: linear-gradient(145deg, var(--white), #fefefe);
-        border-radius: 40px;
-        padding: 30px 24px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 28px;
-        text-align: center;
-        box-shadow: 0 12px 24px rgba(0,0,0,0.03);
-        border: 1px solid var(--border-light);
-    }
-    .stat-item {
-        flex: 1;
-        min-width: 140px;
-    }
-    .stat-number {
-        font-size: 32px;
-        font-weight: 800;
-        color: var(--primary-blue);
-        letter-spacing: -0.5px;
-        line-height: 1.2;
-    }
-    .stat-label {
-        font-size: 13px;
-        text-transform: uppercase;
-        font-weight: 600;
-        color: var(--text-muted);
-        margin-top: 6px;
-    }
-
-    /* Footer */
-    footer {
-        background: var(--navy-dark);
-        color: #cbd5e1;
-        padding: 70px 8% 20px;
-        margin-top: 20px;
-    }
-    .footer-grid {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1.5fr 1.5fr;
-        gap: 40px;
-        margin-bottom: 45px;
-    }
-    .footer-col h3 {
-        color: var(--white);
-        font-size: 17px;
-        margin-bottom: 22px;
-        position: relative;
-        padding-bottom: 8px;
-    }
-    .footer-col h3::after {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 30px;
-        height: 2px;
-        background: var(--primary-blue);
-    }
-    .footer-links li {
-        margin-bottom: 10px;
-        list-style: none;
-    }
-    .footer-links li a {
-        color: #cbd5e1;
-        font-size: 13px;
-        text-decoration: none;
-        transition: 0.25s;
-    }
-    .footer-links li a:hover {
-        color: var(--primary-blue);
-        padding-left: 5px;
-    }
-    .contact-info li {
-        display: flex;
-        gap: 10px;
-        margin-bottom: 14px;
-        font-size: 13px;
-        list-style: none;
-    }
-    .contact-info i {
-        color: var(--primary-blue);
-        font-size: 16px;
-    }
-    .newsletter-box p {
-        font-size: 12px;
-        color: #94a3b8;
-    }
-    .subscribe-form {
-        display: flex;
-        margin-top: 14px;
-        background: var(--navy-light);
-        padding: 4px;
-        border-radius: 40px;
-        width: 100%;
-    }
-    .subscribe-form input {
-        background: transparent;
-        border: none;
-        padding: 8px 14px;
-        color: #fff;
-        outline: none;
-        width: 100%;
-        font-size: 12px;
-    }
-    .subscribe-form button {
-        background: var(--primary-blue);
-        border: none;
-        color: #fff;
-        padding: 8px 18px;
-        border-radius: 40px;
-        cursor: pointer;
-        font-weight: 600;
-        font-size: 12px;
-        transition: 0.2s;
-    }
-    .subscribe-form button:hover:not(:disabled) {
-        background: var(--primary-dark);
-    }
-    .newsletter-success, .newsletter-error {
-        font-size: 12px;
-        margin-top: 8px;
-        display: none;
-        align-items: center;
-        gap: 5px;
-    }
-    .newsletter-success { color: var(--success-green); }
-    .newsletter-error { color: var(--error-red); }
-    .clients-count {
-        font-size: 11px;
-        color: var(--primary-blue);
-        font-weight: 700;
-        margin-top: 8px;
-    }
-    .footer-socials {
-        display: flex;
-        gap: 12px;
-        margin-top: 18px;
-    }
-    .footer-socials a {
-        width: 32px;
-        height: 32px;
-        background: var(--navy-light);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        color: var(--white);
-        font-size: 13px;
-        text-decoration: none;
-        transition: 0.25s;
-    }
-    .footer-socials a:hover {
-        background: var(--primary-blue);
-    }
-    .bottom-bar {
-        border-top: 1px solid var(--navy-light);
-        padding-top: 22px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 12px;
-        font-size: 12px;
-    }
-    .legal-links a {
-        color: #94a3b8;
-        margin-left: 18px;
-        text-decoration: none;
-    }
-    .legal-links a:hover {
-        color: #fff;
-    }
-
-    /* ===== RESPONSIVE: FIX MOBILE HEADER & FOOTER ===== */
-    @media (max-width: 900px) {
-        /* Header - make compact horizontal row */
-        .header {
-            padding: 8px 5%;
-            gap: 10px;
+        /* --- HEADER / STICKY NAV --- */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 5%;
+            border-bottom: 1px solid var(--border-light);
+            z-index: 1000;
+            box-shadow: 0 2px 18px rgba(4, 23, 56, 0.03);
+            gap: 20px;
+            flex-wrap: nowrap;
         }
         .logo {
-            font-size: 24px;
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
         }
-        .header-right {
-            gap: 12px;
+        .logo img {
+            max-height: 32px;
+            width: auto;
+            display: block;
+        }
+        .logo a {
+            display: block;
+            line-height: 0;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 6px;
             flex-wrap: wrap;
             justify-content: flex-end;
         }
-        .contact-area {
-            gap: 8px;
-            justify-content: flex-end;
+        nav a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            letter-spacing: 0.3px;
+            font-family: var(--font-main);
+            padding: 6px 10px;
+            border-radius: 4px;
+            white-space: nowrap;
         }
-        .contact-box {
-            padding: 4px 10px;
+        nav a:hover {
+            color: var(--accent-teal);
+            background-color: rgba(6, 157, 178, 0.04);
         }
-        .contact-box i {
-            font-size: 13px;
-        }
-        .contact-box .contact-details h4 {
-            font-size: 8px;
-        }
-        .contact-box .contact-details p {
-            font-size: 10px;
-        }
-        .header-social {
-            border-left: none;
-            padding-left: 0;
-            gap: 5px;
-        }
-        .header-social a {
-            width: 30px;
-            height: 30px;
-            font-size: 13px;
-        }
-        /* Navbar remains original */
-        .navbar {
-            width: 92%;
-            border-radius: 40px;
-            padding: 5px 14px;
-        }
-        .nav-menu {
+
+        /* --- HAMBURGER MENU BUTTON --- */
+        .hamburger-btn {
             display: none;
-            width: 100%;
-            flex-direction: column;
-            padding: 16px 0 12px;
-            gap: 6px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+            flex-shrink: 0;
         }
-        .nav-menu.active {
-            display: flex;
-        }
-        .menu-toggle {
+        .hamburger-btn span {
             display: block;
-            order: 1;
+            width: 26px;
+            height: 2.5px;
+            background-color: var(--primary-blue);
+            margin: 6px 0;
+            border-radius: 2px;
+            transition: all 0.3s var(--transition-smooth);
         }
-        .nav-quote-right {
-            order: 2;
-            margin-left: auto;
+        .hamburger-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
         }
-        .nav-menu li a {
-            text-align: center;
-            padding: 10px;
+        .hamburger-btn.active span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
         }
-        /* Hero responsive */
-        .hero {
-            flex-direction: column;
-            text-align: center;
+        .hamburger-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
         }
-        .hero-left {
-            align-items: center;
-        }
-        .hero-right {
-            max-width: 100%;
-        }
-        .slider-container {
-            height: 360px;
-            clip-path: none;
-            border-radius: 28px;
-        }
-        .stats-grid {
-            flex-direction: column;
-            align-items: center;
-            gap: 24px;
-        }
-    }
 
-    @media (max-width: 640px) {
-        /* Keep header compact */
-        .header {
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 8px 4%;
+        /* --- MOBILE NAV OVERLAY --- */
+        .mobile-nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(4, 23, 56, 0.5);
+            z-index: 998;
+            opacity: 0;
+            transition: opacity 0.3s ease;
         }
-        .logo {
-            font-size: 22px;
+        .mobile-nav-overlay.active {
+            opacity: 1;
         }
-        .header-right {
-            flex-direction: row;
-            gap: 8px;
-        }
-        .contact-area {
+        .mobile-nav-panel {
+            position: fixed;
+            top: 0;
+            right: -320px;
+            width: 300px;
+            max-width: 85vw;
+            height: 100%;
+            background-color: #ffffff;
+            z-index: 999;
+            padding: 80px 30px 30px;
+            box-shadow: -5px 0 30px rgba(4, 23, 56, 0.15);
+            transition: right 0.35s var(--transition-smooth);
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
             gap: 6px;
         }
-        .contact-box {
-            padding: 3px 8px;
+        .mobile-nav-panel.active {
+            right: 0;
         }
-        .contact-box .contact-details p {
-            font-size: 9px;
+        .mobile-nav-panel a {
+            display: block;
+            padding: 12px 16px;
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            font-family: var(--font-main);
         }
-        .header-social a {
-            width: 28px;
-            height: 28px;
-            font-size: 12px;
+        .mobile-nav-panel a:hover,
+        .mobile-nav-panel a:active {
+            background-color: rgba(6, 157, 178, 0.06);
+            color: var(--accent-teal);
         }
-        /* Footer: brand full width, Services & Support side by side,
-           Get In Touch full width, Newsletter full width below Get In Touch */
-        .footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 30px 20px;
+        .mobile-nav-panel .mobile-cta {
+            margin-top: 16px;
         }
-        .footer-col-brand {
-            grid-column: span 2;
+        .mobile-nav-panel .btn {
+            display: block;
+            text-align: center;
+            width: 100%;
         }
-        /* Services and Support side by side */
-        .footer-col:nth-child(2) {
-            grid-column: span 1;
-        }
-        .footer-col:nth-child(3) {
-            grid-column: span 1;
-        }
-        /* Get In Touch - full width */
-        .footer-col:nth-child(4) {
-            grid-column: span 2;
-        }
-        /* Newsletter - full width below Get In Touch */
-        .footer-col:nth-child(5) {
-            grid-column: span 2;
-        }
-        .subscribe-form {
-            flex-direction: row;
-        }
-        .footer-socials {
-            justify-content: flex-start;
-        }
-    }
 
-    @media (max-width: 550px) {
-        .hero h1 {
-            font-size: 30px;
+        /* --- HERO --- */
+        .hero-section {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+            position: relative;
         }
-        .slider-container {
-            height: 280px;
+        .hero-section .container.hero-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 50px;
         }
-        .hero-btns .primary-btn, .hero-btns .secondary-btn {
-            padding: 8px 18px;
-            font-size: 12px;
+        .hero-content h1 {
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+            margin-bottom: 20px;
+            line-height: 1.15;
+            letter-spacing: -0.8px;
+            color: var(--primary-blue);
+            font-weight: 700;
         }
-        .trust div {
-            font-size: 11px;
+        .kinetic-word-box {
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+            height: clamp(2.8rem, 6vw, 4.5rem);
+            overflow: hidden;
+            color: var(--accent-teal);
+            text-align: center;
+            width: 100%;
         }
-        .stats-grid {
-            padding: 20px 16px;
+        .kinetic-words {
+            display: inline-block;
+            animation: alternateWords 10s cubic-bezier(0.76, 0, 0.24, 1) infinite;
         }
-        .bottom-bar {
-            justify-content: center;
+        .kinetic-words span {
+            display: block;
+            white-space: nowrap;
+            line-height: clamp(2.8rem, 6vw, 4.5rem);
+            font-weight: 700;
+        }
+        @keyframes alternateWords {
+            0%,
+            15% {
+                transform: translateY(0);
+            }
+            20%,
+            35% {
+                transform: translateY(-20%);
+            }
+            40%,
+            55% {
+                transform: translateY(-40%);
+            }
+            60%,
+            75% {
+                transform: translateY(-60%);
+            }
+            80%,
+            95% {
+                transform: translateY(-80%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .hero-subtitle {
+            margin-bottom: 30px;
+            font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+            color: var(--text-muted);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            padding: 0 10px;
+        }
+
+        /* --- QUICK STATS GRID --- */
+        .quick-stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 18px;
+            text-align: left;
+        }
+        .stat-box {
+            background-color: var(--card-dark);
+            padding: 22px 18px;
+            border-radius: 6px;
+            border-bottom: 3px solid var(--accent-teal);
+            transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s var(--transition-smooth);
+        }
+        .stat-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(6, 157, 178, 0.08);
+        }
+        .stat-box h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+        }
+        .stat-box p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        /* --- SERVICES BLUEPRINT GRID --- */
+        .services-blueprint-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+        .service-blueprint-card {
+            background: var(--card-light);
+            padding: 28px 24px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s var(--transition-smooth);
+        }
+        .service-blueprint-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(4, 23, 56, 0.06);
+            border-color: #e2ecf0;
+        }
+        .service-blueprint-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .service-blueprint-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* --- GRAPHIC DESIGN / VIDEO EDITING / DATA SERVICES GRIDS --- */
+        .graphic-design-grid,
+        .video-editing-grid,
+        .data-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .design-card,
+        .video-card,
+        .data-card {
+            background: var(--card-light);
+            padding: 26px 22px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            text-align: center;
+            transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s;
+        }
+        .design-card:hover,
+        .video-card:hover,
+        .data-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(4, 23, 56, 0.08);
+            border-color: var(--accent-teal);
+        }
+        .design-card h3,
+        .video-card h3,
+        .data-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .design-card p,
+        .video-card p,
+        .data-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 0.9rem;
+        }
+        .section-intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 35px;
+            color: var(--text-muted);
+            font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+            padding: 0 10px;
+        }
+
+        /* --- CORE PILLARS --- */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .value-card {
+            background: var(--card-light);
+            padding: 26px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s var(--transition-smooth);
+        }
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(4, 23, 56, 0.04);
+        }
+        .value-card h4 {
+            font-size: 1.05rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+        }
+        .value-card h4::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: var(--accent-teal);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .value-card p {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- WHY TRADITIONAL MARKETING FAILS --- */
+        .about-agency .container {
+            max-width: 850px;
+            margin: 0 auto;
             text-align: center;
         }
-        .navbar {
-            width: 95%;
+        .about-agency h3 {
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+            margin-bottom: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--primary-blue);
         }
-    }
+        .about-agency p {
+            color: var(--text-muted);
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            font-weight: 400;
+        }
 
-    @media (max-width: 768px) {
-        .slider-container {
-            height: 320px;
+        /* --- PROCESS TABS --- */
+        .tabs-section {
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-light);
         }
-        .hero h1 {
-            font-size: 34px;
+        .tabs-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            align-items: start;
         }
-    }
-</style>
+        .tab-list div {
+            padding: 14px 18px;
+            border-left: 3px solid var(--border-light);
+            cursor: pointer;
+            margin-bottom: 6px;
+            font-weight: 600;
+            transition: all 0.2s var(--transition-smooth);
+            color: var(--text-muted);
+            font-family: var(--font-main);
+            font-size: 0.9rem;
+            border-radius: 0 4px 4px 0;
+        }
+        .tab-list div.active {
+            border-left-color: var(--accent-teal);
+            background: rgba(6, 157, 178, 0.06);
+            color: var(--primary-blue);
+            padding-left: 22px;
+        }
+        .tab-content-panel {
+            background: #f8fbfc;
+            padding: 32px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            min-height: 200px;
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+        .tab-content-panel h3 {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .tab-content-panel p {
+            font-weight: 400;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        /* --- PRICING --- */
+        .pricing-section {
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-light);
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+        .price-card {
+            background: var(--card-light);
+            padding: 32px 24px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s var(--transition-smooth);
+        }
+        .price-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(4, 23, 56, 0.05);
+        }
+        .price-card.featured {
+            border: 2px solid var(--accent-teal);
+        }
+        .featured-badge {
+            position: absolute;
+            top: -14px;
+            right: 16px;
+            background: var(--accent-teal);
+            color: white;
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            border-radius: 3px;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        .price-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+        .price span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        .price-features-list {
+            list-style: none;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
+        .price-features-list li {
+            margin-bottom: 10px;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 400;
+        }
+        .price-card .btn {
+            text-align: center;
+            width: 100%;
+        }
+
+        /* --- FLOWCHART --- */
+        .flowchart-section {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-light);
+        }
+        .flowchart-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+        .flow-step {
+            background: white;
+            padding: 22px;
+            border-radius: 6px;
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s;
+        }
+        .flow-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(6, 157, 178, 0.05);
+        }
+        .flow-step h4 {
+            font-weight: 700;
+            color: var(--accent-teal);
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        .flow-step p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* --- FAQ ACCORDION --- */
+        .faq-section {
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-light);
+        }
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+        .accordion-item {
+            background: var(--card-dark);
+            margin-bottom: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 1px solid var(--border-light);
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+        .accordion-item:hover {
+            background-color: #f0f6f9;
+        }
+        .accordion-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            color: var(--primary-blue);
+            padding: 18px 22px;
+            user-select: none;
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            gap: 15px;
+        }
+        .accordion-icon {
+            font-size: 1.3rem;
+            color: var(--accent-teal);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s var(--transition-smooth);
+            padding: 0 22px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+        .accordion-content p {
+            padding: 12px 0 16px;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-blue);
+            color: #a3b8cc;
+            font-size: 0.88rem;
+            border-top: none;
+            font-family: var(--font-main);
+        }
+        footer .container {
+            padding: 50px 0 25px 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: #ffffff;
+            margin-bottom: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .footer-col p {
+            color: #a3b8cc !important;
+            font-weight: 400;
+            line-height: 1.7;
+            font-size: 0.85rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 7px;
+        }
+        .footer-col ul li a {
+            color: #a3b8cc;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+        .footer-col ul li a:hover {
+            color: var(--accent-teal);
+        }
+        .footer-brand-name {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #ffffff;
+        }
+        .footer-brand-name span {
+            color: var(--accent-teal);
+        }
+        .footer-contact-email {
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .footer-contact-email:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 35px;
+            margin-top: 35px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.82rem;
+        }
+        .footer-bottom p {
+            color: #71899e !important;
+            font-weight: 400;
+        }
+
+        /* ========== RESPONSIVE BREAKPOINTS ========== */
+
+        /* Large tablets & small desktops (1024px and below) */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 45px 0;
+            }
+            .quick-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+            .services-blueprint-grid,
+            .graphic-design-grid,
+            .video-editing-grid,
+            .data-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+            .flowchart-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
+            .tabs-wrapper {
+                grid-template-columns: 1fr 1.5fr;
+                gap: 24px;
+            }
+            /* Show hamburger, hide desktop nav */
+            .hamburger-btn {
+                display: block;
+            }
+            nav {
+                display: none;
+            }
+            header>.btn {
+                display: none;
+            }
+            .mobile-nav-overlay {
+                display: block;
+            }
+            header {
+                justify-content: space-between;
+                padding: 10px 5%;
+            }
+        }
+
+        /* Tablets (768px and below) */
+        @media (max-width: 768px) {
+            .container {
+                padding: 38px 0;
+                width: 94%;
+            }
+            .tabs-wrapper {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .tab-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .tab-list div {
+                flex: 1 1 auto;
+                min-width: 120px;
+                text-align: center;
+                border-left: none;
+                border-bottom: 3px solid var(--border-light);
+                padding: 10px 12px;
+                font-size: 0.82rem;
+                border-radius: 4px 4px 0 0;
+                margin-bottom: 0;
+            }
+            .tab-list div.active {
+                border-left-color: transparent;
+                border-bottom-color: var(--accent-teal);
+                padding-left: 12px;
+            }
+            .hero-content h1 {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+            .kinetic-word-box {
+                height: clamp(2.2rem, 7vw, 3rem);
+            }
+            .kinetic-words span {
+                line-height: clamp(2.2rem, 7vw, 3rem);
+            }
+            .section-title {
+                margin-bottom: 30px;
+            }
+            .tab-content-panel {
+                padding: 24px;
+            }
+            .price-card {
+                padding: 24px 18px;
+            }
+            .price {
+                font-size: 1.6rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            .footer-col:first-child {
+                grid-column: 1 / -1;
+            }
+        }
+
+        /* Large phones (480px and below) */
+        @media (max-width: 600px) {
+            .quick-stats-grid,
+            .services-blueprint-grid,
+            .graphic-design-grid,
+            .video-editing-grid,
+            .data-services-grid,
+            .values-grid,
+            .pricing-grid,
+            .flowchart-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .tab-list {
+                flex-direction: column;
+            }
+            .tab-list div {
+                text-align: left;
+                border-left: 3px solid var(--border-light);
+                border-bottom: none;
+                border-radius: 0 4px 4px 0;
+            }
+            .tab-list div.active {
+                border-left-color: var(--accent-teal);
+                border-bottom-color: transparent;
+                padding-left: 22px;
+            }
+            header {
+                padding: 8px 4%;
+            }
+            .logo img {
+                max-height: 26px;
+            }
+            .hero-content h1 {
+                font-size: 1.5rem;
+                letter-spacing: -0.3px;
+            }
+            .kinetic-word-box {
+                height: 2rem;
+            }
+            .kinetic-words span {
+                line-height: 2rem;
+                font-size: 1.3rem;
+            }
+            .hero-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 22px;
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 0.82rem;
+                width: 100%;
+                max-width: 320px;
+            }
+            .hero-content .btn {
+                max-width: 300px;
+            }
+            .stat-box {
+                padding: 18px 14px;
+            }
+            .stat-box h3 {
+                font-size: 0.95rem;
+            }
+            .stat-box p {
+                font-size: 0.8rem;
+            }
+            .service-blueprint-card,
+            .design-card,
+            .video-card,
+            .data-card,
+            .value-card,
+            .flow-step {
+                padding: 20px 16px;
+            }
+            .service-blueprint-card h3,
+            .design-card h3,
+            .video-card h3,
+            .data-card h3 {
+                font-size: 1.05rem;
+            }
+            .section-title {
+                font-size: 1.35rem;
+                margin-bottom: 24px;
+            }
+            .accordion-title {
+                padding: 14px 16px;
+                font-size: 0.88rem;
+            }
+            .accordion-content {
+                padding: 0 16px;
+                font-size: 0.84rem;
+            }
+            .price {
+                font-size: 1.5rem;
+            }
+            .price-card h3 {
+                font-size: 1.1rem;
+            }
+            .featured-badge {
+                font-size: 0.65rem;
+                padding: 3px 10px;
+                top: -12px;
+                right: 10px;
+            }
+            .tab-content-panel h3 {
+                font-size: 1.1rem;
+            }
+            .mobile-nav-panel {
+                width: 280px;
+                max-width: 80vw;
+                padding: 70px 20px 25px;
+            }
+        }
+
+        /* Small phones (400px and below) */
+        @media (max-width: 400px) {
+            .hero-content h1 {
+                font-size: 1.3rem;
+            }
+            .kinetic-word-box {
+                height: 1.7rem;
+            }
+            .kinetic-words span {
+                line-height: 1.7rem;
+                font-size: 1.1rem;
+            }
+            .hero-subtitle {
+                font-size: 0.82rem;
+            }
+            .btn {
+                font-size: 0.78rem;
+                padding: 10px 16px;
+            }
+            .section-title {
+                font-size: 1.2rem;
+            }
+            .container {
+                padding: 30px 0;
+                width: 95%;
+            }
+            .logo img {
+                max-height: 22px;
+            }
+            .hamburger-btn span {
+                width: 22px;
+                height: 2px;
+                margin: 5px 0;
+            }
+            .mobile-nav-panel a {
+                font-size: 0.9rem;
+                padding: 10px 12px;
+            }
+        }
+
+        /* Large desktops (1400px+) */
+        @media (min-width: 1400px) {
+            .container {
+                max-width: 1300px;
+            }
+            .hero-content h1 {
+                font-size: 3.2rem;
+            }
+            .services-blueprint-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 28px;
+            }
+            .pricing-grid {
+                gap: 28px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- HEADER (compact & mobile-friendly, original structure) -->
-<header class="header">
-    <div class="logo-group">
-        <a href="index.html" class="logo">NextGen<span>IT</span></a>
+    <!-- PAGE LOADER -->
+    <div id="page-loader">
+        <div class="loader-spinner"></div>
     </div>
-    <div class="header-right">
-        <div class="contact-area">
-            <div class="contact-box">
-                <i class="fa-solid fa-phone-alt"></i>
-                <div class="contact-details">
-                    <h4>Call Us</h4>
-                    <p>+977 9816004622</p>
-                </div>
-            </div>
-            <div class="contact-box">
-                <i class="fa-regular fa-envelope"></i>
-                <div class="contact-details">
-                    <h4>Email Us</h4>
-                    <p>nextgenit2030@gmail.com</p>
-                </div>
-            </div>
-        </div>
-        <div class="header-social">
-            <a href="https://www.youtube.com/@NextGenIT2026" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/nextgenit2026/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </div>
-</header>
 
-<!-- STICKY NAVBAR (unchanged design) -->
-<nav class="navbar">
-    <div class="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </div>
-    <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="case-studies.html">Case Studies</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="insights.html">Insights</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="nav-quote-right">
-        <a href="contact.html" class="quote-btn">Get Free Quote</a>
-    </div>
-</nav>
+    <!-- MOBILE NAV OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
 
-<main class="main-content">
-    <!-- Centered content container -->
-    <div class="content-container">
-        <!-- HERO SECTION (fully visible) -->
-        <section class="hero">
-            <div class="hero-left">
-                <p class="tagline">Web Design • SEO • Digital Marketing • Business Growth</p>
-                <h1>Professional Web Design & SEO Services That Grow <br> Your <span>Business</span></h1>
-                <p class="desc">NextGenIT builds high-performance business websites, SEO systems, and digital marketing strategies designed to increase traffic, generate qualified leads, improve Google rankings, and maximize long-term business growth.</p>
-                <div class="hero-btns">
-                    <a href="contact.html" class="primary-btn">Request Your Proposal</a>
-                    <a href="view-our-portfolio.html" class="secondary-btn">View Our Portfolio</a>
-                </div>
-                <div class="trust">
-                    <div><i class="fa-solid fa-circle-check"></i>SEO-Optimized Business Websites</div>
-                    <div><i class="fa-solid fa-circle-check"></i>Conversion-Focused Digital Marketing</div>
-                    <div><i class="fa-solid fa-circle-check"></i>Fast, Mobile-Friendly & High-Performance Design</div>
-                    <div><i class="fa-solid fa-circle-check"></i>Lead Generation & Brand Growth Strategies</div>
-                </div>
-            </div>
-            <div class="hero-right">
-                <div class="glow-effect"></div>
-                <div class="slider-container">
-                    <div class="slider-track">
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="UI Design dashboard">
-                            <div class="slide-info"><h3>Digital Identity</h3><p>Design Systems</p></div>
-                        </div>
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&w=800&q=80" alt="Full stack development">
-                            <div class="slide-info"><h3>Full-Stack Dev</h3><p>Scale Ready</p></div>
-                        </div>
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=800&q=80" alt="SEO analytics">
-                            <div class="slide-info"><h3>Search Growth</h3><p>SEO Strategy</p></div>
-                        </div>
-                        <div class="slide">
-                            <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80" alt="Mobile responsive">
-                            <div class="slide-info"><h3>Mobile First</h3><p>Responsive UX</p></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- STATS SECTION -->
-        <div class="stats-section">
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <div class="stat-number">500+</div>
-                    <div class="stat-label">Projects Delivered</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Client Retention</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">4.9★</div>
-                    <div class="stat-label">Google Rating</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Support Access</div>
-                </div>
-            </div>
+    <!-- MOBILE NAV PANEL -->
+    <div class="mobile-nav-panel" id="mobilePanel">
+        <a href="#services">Services</a>
+        <a href="#pillars">Pillars</a>
+        <a href="#process">Process</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#graphic-design">Graphic Design</a>
+        <a href="#video-editing">Video Editing</a>
+        <a href="#data-services">Data Services</a>
+        <a href="#faqs">FAQs</a>
+        <div class="mobile-cta">
+            <a href="#pricing" class="btn">Free Consultation</a>
         </div>
     </div>
 
-    <!-- ANCHOR DIVS FOR SMOOTH SCROLLING -->
-    <div id="about" style="position: relative; top: -70px; height: 0;"></div>
-    <div id="services" style="position: relative; top: -70px; height: 0;"></div>
-    <div id="portfolio" style="position: relative; top: -70px; height: 0;"></div>
-    <div id="cases" style="position: relative; top: -70px; height: 0;"></div>
-    <div id="pricing" style="position: relative; top: -70px; height: 0;"></div>
-    <div id="insights" style="position: relative; top: -70px; height: 0;"></div>
-    <div id="contact" style="position: relative; top: -70px; height: 0;"></div>
-</main>
+    <!-- STICKY HEADER -->
+    <header>
+        <div class="logo">
+            <a href="#">
+                <img src="logo/nextgenitboldlogo.png" alt="NextGenIT Logo">
+            </a>
+        </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#pillars">Pillars</a>
+            <a href="#process">Process</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#graphic-design">Graphic Design</a>
+            <a href="#video-editing">Video Editing</a>
+            <a href="#data-services">Data Services</a>
+            <a href="#faqs">FAQs</a>
+        </nav>
+        <a href="#pricing" class="btn" style="padding: 10px 18px; font-size: 0.8rem;">Free Consultation</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
 
-<!-- FOOTER (Services & Support side by side, Newsletter below Get In Touch on mobile) -->
-<footer>
-    <div class="footer-grid">
-        <div class="footer-col footer-col-brand">
-            <div class="logo" style="color: #fff; margin-bottom: 18px;">NextGen<span>IT</span></div>
-            <p>NextGenIT is a global digital marketing and IT solutions company helping businesses grow through powerful websites, SEO, and data-driven marketing strategies.</p>
-            <div class="clients-count">Long-term partnerships with growing businesses</div>
-        </div>
-        <div class="footer-col">
-            <h3>Services</h3>
-            <ul class="footer-links"><li><a href="web-development.html">Web Development</a></li><li><a href="seo-optimization.html">SEO Optimization</a></li><li><a href="digital-marketing.html">Digital Marketing</a></li><li><a href="social-media-ads.html">Social Media Ads</a></li><li><a href="ppc-management.html">PPC Management</a></li></ul>
-        </div>
-        <div class="footer-col">
-            <h3>Support</h3>
-            <ul class="footer-links"><li><a href="our-process.html">Our Process</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="career.html">Career</a></li><li><a href="consultation.html">Consultation</a></li></ul>
-        </div>
-        <div class="footer-col">
-            <h3>Get In Touch</h3>
-            <ul class="contact-info"><li><i class="fas fa-map-marker-alt"></i><span>Kathmandu, Nepal<br><small>Serving Worldwide</small></span></li><li><i class="fas fa-phone-alt"></i><span>+977 9816004622</span></li><li><i class="fas fa-envelope"></i><span>nextgenit2030@gmail.com</span></li></ul>
-        </div>
-        <div class="footer-col">
-            <h3>Newsletter</h3>
-            <div class="newsletter-box">
-                <p>Get marketing tips & growth strategies directly in your inbox.</p>
-                <form class="subscribe-form" id="newsletterForm">
-                    <input type="email" id="subscriberEmail" placeholder="Your email address" required>
-                    <button type="submit" id="subscribeBtn">Join</button>
-                </form>
-                <div id="successMsg" class="newsletter-success"><i class="fas fa-check-circle"></i> <span id="successText">Thanks! You're now subscribed.</span></div>
-                <div id="errorMsg" class="newsletter-error"><i class="fas fa-exclamation-circle"></i> <span id="errorText">Something went wrong. Please try again.</span></div>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <h1 class="reveal">
+                Digital Marketing That Drives <br>
+                <span class="kinetic-word-box">
+                    <span class="kinetic-words">
+                        <span>Real Business Growth</span>
+                        <span>More Qualified Leads</span>
+                        <span>Higher Conversion Rates</span>
+                        <span>Stronger Online Presence</span>
+                        <span>Measurable ROI</span>
+                    </span>
+                </span>
+            </h1>
+            <p class="reveal delay-1 hero-subtitle">
+                At NextGenIT, we construct performance-driven multi-channel digital systems engineered for one purpose: Dominance. We discard vanity metrics to scale your brand through hyper-tuned infrastructure, strategic organic positioning, and high-ROI transactional growth loops.
+            </p>
+            <div class="reveal delay-2" style="margin-bottom: 16px;">
+                <a href="#pricing" class="btn">Book Your Free Growth Strategy Session</a>
             </div>
-            <div class="footer-socials">
-                <a href="https://www.facebook.com/profile.php?id=61576378432368" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/nextgenit2026/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/sujit-tudu-661281212/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.tiktok.com/@sujittudu2020" target="_blank"><i class="fab fa-tiktok"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="bottom-bar">
-        <div class="copyright">© 2026 <strong>NextGenIT</strong>. All rights reserved.</div>
-        <div class="legal-links"><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a></div>
-        <div class="designer">Designed & Developed by NextGenIT</div>
-    </div>
-</footer>
 
-<!-- MOBILE MENU TOGGLE SCRIPT -->
-<script>
-    const toggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.nav-menu');
-    if (toggle) {
-        const icon = toggle.querySelector('i');
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('active');
-            if (menu.classList.contains('active')) icon.classList.replace('fa-bars', 'fa-times');
-            else icon.classList.replace('fa-times', 'fa-bars');
-        });
-        document.querySelectorAll('.nav-menu li a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.remove('active');
-                if (icon.classList.contains('fa-times')) icon.classList.replace('fa-times', 'fa-bars');
+            <div class="quick-stats-grid">
+                <div class="stat-box reveal delay-1">
+                    <h3>Web Development</h3>
+                    <p>High-Performance, Neat Code Frameworks</p>
+                </div>
+                <div class="stat-box reveal delay-2">
+                    <h3>SEO Architecture</h3>
+                    <p>Dominate Transactional Keywords Domestically & Globally</p>
+                </div>
+                <div class="stat-box reveal delay-3">
+                    <h3>Paid Advertising</h3>
+                    <p>Aggressive, Precision-Targeted Scaling Solutions</p>
+                </div>
+                <div class="stat-box reveal delay-4">
+                    <h3>AISO / GEO Strategy</h3>
+                    <p>Engineered Optimization for Modern Generative AI Engines</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES (Growth Blueprint) -->
+    <section id="services" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <h2 class="section-title reveal">Our High-Performance <span>Growth Blueprint</span></h2>
+            <div class="services-blueprint-grid">
+                <div class="service-blueprint-card reveal delay-1"><h3>Search Engine Optimization (SEO)</h3><p>Complete execution spanning deep technical SEO modifications, intentional on-page keyword structuring, off-page link building pipelines, customized service page creation, granular local city pages, high-value blog posts, and routine performance KPI analytics loops.</p></div>
+                <div class="service-blueprint-card reveal delay-2"><h3>AI SEO / Engine Optimization</h3><p>Modern architecture tuned exclusively to target visibility inside Google AI Overviews, ChatGPT, Claude, and Gemini engines. Strategically built using custom advanced schema markup schemas, natural language semantic optimization, n-gram modeling, and systematic co-occurrence context layouts.</p></div>
+                <div class="service-blueprint-card reveal delay-3"><h3>Local SEO Management</h3><p>Establish structural hyper-local positioning with full Google Business Profile (GMB/GBP) optimization protocols, programmatic geo-tagged photographic uploads, unified external citation distribution loops across authoritative networks (Yelp, Angi, BrightLocal), and automated active review generation flows.</p></div>
+                <div class="service-blueprint-card reveal delay-1"><h3>Google Maps Pack SEO</h3><p>Hyper-targeted local signals designed exclusively to maximize raw visibility, spatial proximity weight, and search conversion parameters directly inside the competitive high-value local Google Maps 3-Pack layout.</p></div>
+                <div class="service-blueprint-card reveal delay-2"><h3>Pay Per Click Advertising (PPC)</h3><p>Aggressive high-intent transactional user acquisition engine running dedicated, hyper-segmented Google Ads and YouTube Ads networks. Maximized via custom category-specific conversion landing frameworks, continuous strict negative keyword optimization, and real-time behavioral A/B split-testing variant logic.</p></div>
+                <div class="service-blueprint-card reveal delay-3"><h3>Google Local Service Ads (LSA)</h3><p>Comprehensive setup and real-time operational maintenance of direct Google Local Service Ads channels, ensuring seamless background clearance, active brand verification tracking, and continuous trust badge authority acceleration.</p></div>
+                <div class="service-blueprint-card reveal delay-1"><h3>Social Media Marketing (SMM)</h3><p>High-affinity organic identity development and continuous native positioning workflows built precisely for custom operations across top-tier conversational platforms including Facebook and Instagram. Crafted to drive sustainable customer retention through audience community engagement protocols and deep behind-the-scenes brand documentation updates.</p></div>
+                <div class="service-blueprint-card reveal delay-2"><h3>Social Media Advertising</h3><p>Highly calculated performance advertising architecture utilizing granular geo-targeted audience parameters across Facebook and Instagram networks. Engineered through hyper-targeted demographic matrix segmentations, embedded low-friction direct lead generation forms, native server-to-server Conversions API configurations, and custom behavioral retargeting sequence flows.</p></div>
+                <div class="service-blueprint-card reveal delay-3"><h3>Website Design Frameworks</h3><p>Ultra-responsive, rapid, performance-tuned modular web layouts custom-constructed strictly by hand. Meticulously optimized to capture conversions with elite mobile loading infrastructure, fully native structural schema microdata, clear user calls-to-action (CTAs), and intuitive user-experience navigation layouts.</p></div>
+                <div class="service-blueprint-card reveal delay-1"><h3>Strategic Link Building</h3><p>Continuous authority development via contextual backlink extraction from authoritative niche digital publications and premium local directory hubs. Supported by human-crafted editorial guest posting sequences and advanced internal structural link equity architecture loops.</p></div>
+                <div class="service-blueprint-card reveal delay-2"><h3>Reddit SEO Strategy</h3><p>Isolate and control real organic brand visibility within relevant, high-intent thread discussions across specialized communities for industry-specific customer pain points, positioning your solutions naturally within high-traffic informational query pipelines.</p></div>
+                <div class="service-blueprint-card reveal delay-3"><h3>Conversion Rate Optimization (CRO)</h3><p>Continuous data-backed pipeline refinement using active visual testing patterns, interactive funnel tracking maps, structural intake booking path elimination sequences, and meticulous user call-to-action (CTA) text adjustments to convert static web visitors into bottom-line operations.</p></div>
+                <div class="service-blueprint-card reveal delay-1"><h3>Lead Analysis & Automated Tracking</h3><p>Advanced algorithmic tracking pipelines designed to process every incoming inquiry natively, passing critical interaction history data straight into automated response workflows built exclusively to engage prospects within the vital 5-minute conversion response window.</p></div>
+                <div class="service-blueprint-card reveal delay-2"><h3>Hyper-Targeted Retargeting Funnels</h3><p>Smart multi-tier remarketing loops engineered to follow up with high-intent drop-off web users across independent display networks, introducing custom contextual copy incentives based on exact visitor drop-off touchpoints.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRAPHIC DESIGN SECTION -->
+    <section id="graphic-design" class="flowchart-section" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <h2 class="section-title reveal">Precision <span>Graphic Design</span> for Bold Brands</h2>
+            <p class="reveal delay-1 section-intro-text">We don't just design — we engineer visual identities that command attention, build trust, and convert. Every pixel is human-crafted, never templated.</p>
+            <div class="graphic-design-grid">
+                <div class="design-card reveal delay-1"><h3>Brand Identity</h3><p>Complete visual language systems: logos, color palettes, typography, and brand guidelines that make your business unforgettable.</p></div>
+                <div class="design-card reveal delay-2"><h3>UI/UX Design</h3><p>User‑centric interfaces for web and mobile. Wireframes, high‑fidelity prototypes, and micro‑interactions that drive engagement.</p></div>
+                <div class="design-card reveal delay-3"><h3>Print & Collateral</h3><p>Brochures, business cards, packaging, and outdoor media — premium print design that translates digital excellence into the physical world.</p></div>
+                <div class="design-card reveal delay-1"><h3>Social Media Graphics</h3><p>Scroll‑stopping visuals for Instagram, LinkedIn, Facebook, and more. Consistent, on‑brand assets engineered for high engagement.</p></div>
+                <div class="design-card reveal delay-2"><h3>Motion Graphics</h3><p>Animated logos, explainer videos, and dynamic ads that tell your story with movement and captivate your audience.</p></div>
+                <div class="design-card reveal delay-3"><h3>Presentation Design</h3><p>Pitch decks and internal presentations that are visually powerful, clear, and persuasive — designed to win deals.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO EDITING SECTION -->
+    <section id="video-editing" style="background-color: var(--bg-dark); border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <h2 class="section-title reveal">Cinematic <span>Video Editing</span> That Captivates</h2>
+            <p class="reveal delay-1 section-intro-text">From raw footage to polished masterpieces — our editing suite transforms your vision into high-impact visual stories that drive engagement, retention, and conversions.</p>
+            <div class="video-editing-grid">
+                <div class="video-card reveal delay-1"><h3>Corporate & Brand Films</h3><p>Professional storytelling for your brand — testimonial videos, company culture films, and executive interviews that humanize your business and build trust.</p></div>
+                <div class="video-card reveal delay-2"><h3>Social Media Shorts</h3><p>Vertical, fast‑paced edits optimized for TikTok, Instagram Reels, YouTube Shorts. Captioning, transitions, and hooks engineered for virality.</p></div>
+                <div class="video-card reveal delay-3"><h3>Commercial & Ad Editing</h3><p>High-retention cuts for YouTube pre-roll, Facebook Ads, and connected TV. A/B tested pacing, sound design, and call‑to‑action integration.</p></div>
+                <div class="video-card reveal delay-1"><h3>Event & Webinar Recording</h3><p>Multi‑camera synchronization, keynote highlights, audience reaction inserts, and post‑event trailers that maximize replay value.</p></div>
+                <div class="video-card reveal delay-2"><h3>Product Demos & Explainer Videos</h3><p>Clear, engaging walkthroughs with motion graphics, screen capture polish, and narrative voiceover — perfect for landing pages and sales decks.</p></div>
+                <div class="video-card reveal delay-3"><h3>Color Grading & Audio Sweetening</h3><p>Professional DaVinci Resolve color grading, noise reduction, EQ balancing, and immersive sound design to give every frame a premium finish.</p></div>
+                <div class="video-card reveal delay-1"><h3>Documentary & Long-Form Editing</h3><p>Narrative arc construction, B‑roll integration, archival media restoration, and pacing that keeps viewers engaged for 10, 20, or 60 minutes.</p></div>
+                <div class="video-card reveal delay-2"><h3>Animation & Motion Graphics</h3><p>Custom 2D/3D animated elements, kinetic typography, lower thirds, and logo stings that elevate any video production.</p></div>
+                <div class="video-card reveal delay-3"><h3>YouTube Channel Management</h3><p>End‑to‑end editing, thumbnail design, chapters, cards, and SEO‑friendly descriptions to grow your channel organically.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DATA SERVICES SECTION -->
+    <section id="data-services" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
+        <div class="container">
+            <h2 class="section-title reveal">Precision <span>Data Services</span> for Intelligent Decisions</h2>
+            <p class="reveal delay-1 section-intro-text">From data entry to advanced analytics — we transform raw information into actionable intelligence that fuels your business growth.</p>
+            <div class="data-services-grid">
+                <div class="data-card reveal delay-1"><h3>Data Entry & Processing</h3><p>High‑accuracy manual & automated data entry, document digitization, image to text conversion, and CRM data cleansing with 99.9% quality assurance.</p></div>
+                <div class="data-card reveal delay-2"><h3>Data Mining & Scraping</h3><p>Extract structured data from websites, PDFs, and legacy systems. Custom scripts for lead generation, market research, and competitor monitoring.</p></div>
+                <div class="data-card reveal delay-3"><h3>Data Cleansing & Deduplication</h3><p>Remove inconsistencies, fix formatting errors, merge duplicate records, and standardize datasets for reliable reporting and analysis.</p></div>
+                <div class="data-card reveal delay-1"><h3>Data Analytics & Visualization</h3><p>Turn spreadsheets into dashboards. Using Power BI, Tableau, and Looker — we uncover trends, KPIs, and insights that drive strategic decisions.</p></div>
+                <div class="data-card reveal delay-2"><h3>Database Management</h3><p>Design, optimization, and maintenance of MySQL, PostgreSQL, MongoDB. Ensure data integrity, backup strategies, and query performance tuning.</p></div>
+                <div class="data-card reveal delay-3"><h3>AI Training Data Preparation</h3><p>Annotation, labeling, and structuring of datasets for machine learning models. Image bounding boxes, text classification, and audio transcription.</p></div>
+                <div class="data-card reveal delay-1"><h3>E‑commerce Product Data Services</h3><p>Product listing enrichment, category mapping, inventory synchronization, and marketplace‑ready feeds for Amazon, Shopify, WooCommerce.</p></div>
+                <div class="data-card reveal delay-2"><h3>OCR & Intelligent Document Processing</h3><p>Convert scanned invoices, receipts, and forms into searchable, editable data using advanced OCR with AI‑based field extraction.</p></div>
+                <div class="data-card reveal delay-3"><h3>Data Migration & Integration</h3><p>Smooth transfer between CRMs, ERPs, or cloud platforms (Salesforce, HubSpot, Zoho). API integrations and ETL pipelines with zero downtime.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY TRADITIONAL MARKETING TACTICS FAIL -->
+    <section class="about-agency">
+        <div class="container">
+            <div class="reveal">
+                <h3>Why Traditional Marketing Tactics Fail</h3>
+                <p>Most agencies mask underperformance with superficial metrics like impressions and clicks. At NextGenIT, we engineer native, comprehensive digital landscapes. We eliminate systemic digital noise to establish lean, aggressive, and entirely results-oriented operational growth pipelines for your enterprise.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE PILLARS -->
+    <section id="pillars" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title reveal">Our Core Pillars to <span>Maximize Market Dominance</span></h2>
+            <div class="values-grid">
+                <div class="value-card reveal delay-1"><h4>100% Measurable ROI</h4><p>Every campaign variable and deployment budget is explicitly linked to absolute bottom-line revenue goals and custom client data dashboards.</p></div>
+                <div class="value-card reveal delay-2"><h4>Human-Designed Precision</h4><p>Meticulously curated, minimalist interface designs crafted by specialized visual architects rather than lazy, automated generative templates.</p></div>
+                <div class="value-card reveal delay-3"><h4>High-Intent Focus</h4><p>We deliberately bypass vague attention metrics to isolate and capture users positioned perfectly within direct transactional and purchase-ready layers.</p></div>
+                <div class="value-card reveal delay-1"><h4>Full Stack Capability</h4><p>Seamless execution running from custom, lightweight server-side code development up to aggressive multi-channel lead acquisition operations.</p></div>
+                <div class="value-card reveal delay-2"><h4>Agile Deployments</h4><p>Rapid, continuous iteration pipelines ensuring your campaign structural components adapt faster than your market competitors can react.</p></div>
+                <div class="value-card reveal delay-3"><h4>Transparent Growth</h4><p>Zero communication barriers. We run side-by-side with your organization as a dedicated, hyper-focused technical performance partner.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW WE SCALE YOUR BUSINESS ECOSYSTEM (Process Tabs) -->
+    <section id="process" class="tabs-section">
+        <div class="container">
+            <h2 class="section-title reveal">How We Scale Your <span>Business Ecosystem</span></h2>
+            <div class="tabs-wrapper reveal">
+                <div class="tab-list">
+                    <div class="active" data-id="0">Phase 1: Market Footprint Audit</div>
+                    <div data-id="1">Phase 2: High-Intent Capture Setup</div>
+                    <div data-id="2">Phase 3: Conversion Landing Engine</div>
+                    <div data-id="3">Phase 4: Predictable Revenue Scale</div>
+                </div>
+                <div class="tab-content-panel" id="dynamic-tab-panel">
+                    <h3>Phase 1: Market Footprint Audit</h3>
+                    <p>We map out competitive digital layout footprints, audit organic search authority parameters, isolate conversion funnel leaks, and formulate exact technical benchmarks engineered for growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-section" id="pricing">
+        <div class="container">
+            <h2 class="section-title reveal">Ultra-Transparent <span>Performance Tiers</span></h2>
+            <div class="pricing-grid">
+                <div class="price-card reveal delay-1">
+                    <h3>Silver Setup</h3>
+                    <div class="price">$1,499<span>/mo</span></div>
+                    <ul class="price-features-list">
+                        <li>✔ Core Organic Search Optimization</li>
+                        <li>✔ Responsive High-Speed Landing Layout</li>
+                        <li>✔ Local Visibility Mapping & Optimization</li>
+                        <li>✔ Standard Data Tracking & Monthly Analytics</li>
+                    </ul>
+                    <a href="mailto:contact@nextgenit.com?subject=Silver%20Setup%20Inquiry" class="btn">Get Started</a>
+                </div>
+                <div class="price-card featured reveal delay-2">
+                    <div class="featured-badge">RECOMMENDED</div>
+                    <h3>Gold Domination</h3>
+                    <div class="price">$2,999<span>/mo</span></div>
+                    <ul class="price-features-list">
+                        <li>✔ Comprehensive Custom Web & SEO Framework</li>
+                        <li>✔ High-ROI Paid Advertisement Architecture</li>
+                        <li>✔ Advanced Aggressive Multi-Channel Strategy</li>
+                        <li>✔ Dynamic Event Mapping & Conversion Tracking</li>
+                    </ul>
+                    <a href="mailto:contact@nextgenit.com?subject=Gold%20Domination%20Inquiry" class="btn">Get Started</a>
+                </div>
+                <div class="price-card reveal delay-3">
+                    <h3>Platinum Enterprise</h3>
+                    <div class="price">$4,999<span>/mo</span></div>
+                    <ul class="price-features-list">
+                        <li>✔ Omnichannel Cross-Platform Funnel Engineering</li>
+                        <li>✔ Advanced Brand Preservation Systems</li>
+                        <li>✔ Automated Custom Application Integrations</li>
+                        <li>✔ On-Demand Access to Performance Engineers</li>
+                    </ul>
+                    <a href="mailto:contact@nextgenit.com?subject=Platinum%20Enterprise%20Inquiry" class="btn">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ONBOARDING FLOWCHART -->
+    <section class="flowchart-section">
+        <div class="container">
+            <h2 class="section-title reveal">Our 4-Step <span>Onboarding Blueprint</span></h2>
+            <div class="flowchart-grid">
+                <div class="flow-step reveal delay-1">
+                    <h4>01 / Strategy Alignment</h4>
+                    <p>We deeply evaluate structural market parameters to calculate exact deployment budgets balancing your transactional model metrics perfectly.</p>
+                </div>
+                <div class="flow-step reveal delay-2">
+                    <h4>02 / Architecture Lock</h4>
+                    <p>We codify campaign performance targets, strip core design noise, and refine UI elements to clear a frictionless conversion path.</p>
+                </div>
+                <div class="flow-step reveal delay-3">
+                    <h4>03 / Integration Launch</h4>
+                    <p>Our agile pipeline brings lightweight code configurations, secure server configurations, and customized assets completely live.</p>
+                </div>
+                <div class="flow-step reveal delay-4">
+                    <h4>04 / Continuous Optimization</h4>
+                    <p>We systematically monitor traffic streams, prune inefficient variables, and steadily minimize your acquisition overhead costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section" id="faqs">
+        <div class="container faq-container">
+            <h2 class="section-title reveal">Frequently Asked <span>Questions</span></h2>
+            <div class="accordion-item reveal delay-1">
+                <div class="accordion-title">How do you track true campaign ROI? <span class="accordion-icon">+</span></div>
+                <div class="accordion-content"><p>We bypass shallow stats by deploying end-to-end event mapping tokens. This tracks every customer inquiry from their first search touchpoint down to completed transactional checkouts.</p></div>
+            </div>
+            <div class="accordion-item reveal delay-1">
+                <div class="accordion-title">What digital channels do your frameworks include? <span class="accordion-icon">+</span></div>
+                <div class="accordion-content"><p>NextGenIT builds systems spanning organic search visibility (SEO), custom high-performance web development, high-intent paid ad solutions, social media channels, and tailored branding architectures.</p></div>
+            </div>
+            <div class="accordion-item reveal delay-2">
+                <div class="accordion-title">Are your growth strategies contract-independent? <span class="accordion-icon">+</span></div>
+                <div class="accordion-content"><p>Yes. We function as high-performance architectural partners. Our frameworks are built to produce measurable traction quickly, keeping partnerships entirely performance-driven.</p></div>
+            </div>
+            <div class="accordion-item reveal delay-2">
+                <div class="accordion-title">What is your design philosophy regarding AI generation vs. human precision? <span class="accordion-icon">+</span></div>
+                <div class="accordion-content"><p>We completely reject messy, automated, template-based layouts. Every element we construct is custom engineered by hand using minimalist, neat visual principles to ensure elite user experiences that establish trust and command market respect.</p></div>
+            </div>
+            <div class="accordion-item reveal delay-2">
+                <div class="accordion-title">Do you offer standalone graphic design, video editing, or data packages? <span class="accordion-icon">+</span></div>
+                <div class="accordion-content"><p>Absolutely. Whether you need a full brand identity, cinematic video editing, or high-volume data processing, our creative and data services can be purchased independently or as part of a full growth bundle.</p></div>
+            </div>
+            <div class="accordion-item reveal delay-2">
+                <div class="accordion-title">What data security measures do you take? <span class="accordion-icon">+</span></div>
+                <div class="accordion-content"><p>We follow industry best practices: encrypted transfers, NDAs for all team members, secure cloud environments, and optional on‑premise processing for sensitive projects.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4 class="footer-brand-name">NextGen<span>IT</span></h4>
+                <p>Engineering custom native digital ecosystems built exclusively for market dominance. Stripping away operational vanity noise to scale measurable multi-channel enterprise acquisition systems.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Framework</h4>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pillars">Core Pillars</a></li>
+                    <li><a href="#process">Scale Process</a></li>
+                    <li><a href="#pricing">Performance Tiers</a></li>
+                    <li><a href="#graphic-design">Graphic Design</a></li>
+                    <li><a href="#video-editing">Video Editing</a></li>
+                    <li><a href="#data-services">Data Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Core Solutions</h4>
+                <ul>
+                    <li><a href="#services">Search Engine Optimization</a></li>
+                    <li><a href="#services">AI Search Strategy</a></li>
+                    <li><a href="#services">Precision Paid PPC</a></li>
+                    <li><a href="#services">Conversion Engineering</a></li>
+                    <li><a href="#graphic-design">Visual Identity & Design</a></li>
+                    <li><a href="#video-editing">Cinematic Video Editing</a></li>
+                    <li><a href="#data-services">Data Processing & Analytics</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Partner</h4>
+                <p style="margin-bottom: 6px;">Direct Performance Engineering:</p>
+                <p><a href="mailto:nextgenit2030@gmail.com" class="footer-contact-email">nextgenit2030@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 NextGenIT. All Rights Engineered to Dominance. Crafted with Human-Designed Precision.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- PAGE LOADER ---
+            const loader = document.getElementById('page-loader');
+            if (loader) {
+                const hideLoader = () => {
+                    loader.classList.add('loaded');
+                    setTimeout(() => {
+                        loader.style.display = 'none';
+                    }, 400);
+                };
+                window.addEventListener('load', hideLoader);
+                // Fallback: hide after 2.5 seconds max
+                setTimeout(hideLoader, 2500);
+            }
+
+            // --- SCROLL REVEAL ---
+            const revealElements = document.querySelectorAll('.reveal');
+            const observerOptions = { root: null, threshold: 0.06, rootMargin: '0px 0px -30px 0px' };
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // --- PROCESS TABS ---
+            const processData = [
+                { title: "Phase 1: Market Footprint Audit",
+                    text: "We map out competitive digital layout footprints, audit organic search authority parameters, isolate conversion funnel leaks, and formulate exact technical benchmarks engineered for growth." },
+                { title: "Phase 2: High-Intent Capture Setup",
+                    text: "We construct precision architecture models across target search terms, build semantic keyword landscapes, deploy clean tracking schema marks, and launch high-intent transactional visibility loops." },
+                { title: "Phase 3: Conversion Landing Engine",
+                    text: "Our visual engineers craft custom high-speed landing configurations. We clean code frameworks, establish lightning fast loading protocols, build explicit CTAs, and eradicate drop-off structural layers." },
+                { title: "Phase 4: Predictable Revenue Scale",
+                    text: "We open programmatic ad bidding parameters, optimize allocation pipelines across high-performing cross-channel loops, prune metrics continuously, and amplify customer intake velocity." }
+            ];
+            const tabElements = document.querySelectorAll('.tab-list div');
+            const panelContainer = document.getElementById('dynamic-tab-panel');
+            if (panelContainer) {
+                tabElements.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        tabElements.forEach(t => t.classList.remove('active'));
+                        tab.classList.add('active');
+                        const dataId = parseInt(tab.getAttribute('data-id'), 10);
+                        panelContainer.style.opacity = '0';
+                        panelContainer.style.transform = 'translateY(10px)';
+                        panelContainer.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
+                        setTimeout(() => {
+                            panelContainer.innerHTML =
+                                `<h3>${processData[dataId].title}</h3><p>${processData[dataId].text}</p>`;
+                            panelContainer.style.opacity = '1';
+                            panelContainer.style.transform = 'translateY(0)';
+                        }, 200);
+                    });
+                });
+            }
+
+            // --- FAQ ACCORDION ---
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const content = item.querySelector('.accordion-content');
+                    const isActive = item.classList.contains('active');
+                    // Close all
+                    accordionItems.forEach(other => {
+                        other.classList.remove('active');
+                        const otherContent = other.querySelector('.accordion-content');
+                        if (otherContent) otherContent.style.maxHeight = null;
+                    });
+                    // Open clicked (if it wasn't already active)
+                    if (!isActive) {
+                        item.classList.add('active');
+                        if (content) content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            });
+
+            // --- HAMBURGER MENU ---
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobilePanel = document.getElementById('mobilePanel');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+            const mobileNavLinks = mobilePanel.querySelectorAll('a');
+
+            const openMobileNav = () => {
+                hamburgerBtn.classList.add('active');
+                mobilePanel.classList.add('active');
+                mobileOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            const closeMobileNav = () => {
+                hamburgerBtn.classList.remove('active');
+                mobilePanel.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            hamburgerBtn.addEventListener('click', () => {
+                if (hamburgerBtn.classList.contains('active')) {
+                    closeMobileNav();
+                } else {
+                    openMobileNav();
+                }
+            });
+            mobileOverlay.addEventListener('click', closeMobileNav);
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    // Close nav shortly after click for smooth transition
+                    setTimeout(closeMobileNav, 150);
+                });
+            });
+
+            // Close mobile nav on Escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && hamburgerBtn.classList.contains('active')) {
+                    closeMobileNav();
+                }
+            });
+
+            // Close mobile nav on window resize (if desktop nav becomes visible)
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 1024 && hamburgerBtn.classList.contains('active')) {
+                    closeMobileNav();
+                }
             });
         });
-    }
-</script>
-
-<!-- EMAILJS NEWSLETTER INTEGRATION -->
-<script>
-    const EMAILJS_CONFIG = { PUBLIC_KEY: "k0-JMxq9DMByW7fzf", SERVICE_ID: "service_sgnt3z9", TEMPLATE_ID: "template_566697h" };
-    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY);
-    const form = document.getElementById('newsletterForm');
-    const emailInput = document.getElementById('subscriberEmail');
-    const submitBtn = document.getElementById('subscribeBtn');
-    const successMsg = document.getElementById('successMsg');
-    const errorMsg = document.getElementById('errorMsg');
-    const successText = document.getElementById('successText');
-    const errorText = document.getElementById('errorText');
-    function hideMessages() { if(successMsg) successMsg.style.display = 'none'; if(errorMsg) errorMsg.style.display = 'none'; }
-    function showSuccess(message) { if(successText) successText.textContent = message; if(successMsg) successMsg.style.display = 'flex'; setTimeout(() => { if(successMsg) successMsg.style.display = 'none'; }, 5000); }
-    function showError(message) { if(errorText) errorText.textContent = message; if(errorMsg) errorMsg.style.display = 'flex'; setTimeout(() => { if(errorMsg) errorMsg.style.display = 'none'; }, 5000); }
-    if(form) {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            hideMessages();
-            const email = emailInput.value.trim();
-            if (!email || !email.includes('@') || !email.includes('.')) { showError('Please enter a valid email address.'); return; }
-            submitBtn.disabled = true; submitBtn.textContent = 'Subscribing...';
-            try {
-                await emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, { to_email: 'nextgenit2030@gmail.com', from_email: email, email: email, subject: 'Newsletter Subscription', message: `New subscriber: ${email}`, name: email.split('@')[0] });
-                showSuccess(`Thanks ${email}! You're now subscribed.`);
-                emailInput.value = '';
-            } catch (error) { console.error(error); showError('Subscription failed. Please try again.'); } 
-            finally { submitBtn.disabled = false; submitBtn.textContent = 'Join'; }
-        });
-    }
-</script>
+    </script>
 </body>
 </html>
