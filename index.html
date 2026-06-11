@@ -63,7 +63,6 @@
             display: block;
         }
 
-        /* --- PAGE LOADER --- */
         #page-loader {
             position: fixed;
             top: 0;
@@ -96,7 +95,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* --- REVEAL ANIMATIONS --- */
         .reveal {
             opacity: 0;
             transform: translateY(24px);
@@ -112,7 +110,6 @@
         .delay-3 { transition-delay: 0.3s; }
         .delay-4 { transition-delay: 0.4s; }
 
-        /* --- BUTTONS --- */
         .btn {
             display: inline-block;
             background-color: var(--accent-teal);
@@ -144,7 +141,6 @@
             box-shadow: var(--shadow-sm);
         }
 
-        /* --- SECTION TITLES --- */
         .section-title {
             text-align: center;
             font-size: clamp(1.6rem, 3.5vw, 2.2rem);
@@ -159,7 +155,6 @@
             color: var(--accent-teal);
         }
 
-        /* --- HEADER / STICKY NAV --- */
         header {
             position: sticky;
             top: 0;
@@ -212,7 +207,6 @@
             background-color: rgba(6, 157, 178, 0.04);
         }
 
-        /* Dropdown container */
         .nav-dropdown {
             position: relative;
             display: inline-block;
@@ -240,7 +234,6 @@
             padding: 20px 16px;
             z-index: 1001;
             border: 1px solid var(--border-light);
-            display: none;
             grid-template-columns: 1fr 1fr;
             gap: 0 16px;
         }
@@ -285,7 +278,6 @@
             color: var(--accent-teal);
         }
 
-        /* --- HAMBURGER MENU BUTTON --- */
         .hamburger-btn {
             display: none;
             background: none;
@@ -315,7 +307,6 @@
             transform: rotate(-45deg) translate(6px, -6px);
         }
 
-        /* --- MOBILE NAV OVERLAY --- */
         .mobile-nav-overlay {
             display: none;
             position: fixed;
@@ -387,7 +378,6 @@
             font-size: 0.9rem;
         }
 
-        /* --- HERO --- */
         .hero-section {
             background-color: #fafcfd;
             color: var(--text-light);
@@ -471,7 +461,6 @@
             padding: 0 10px;
         }
 
-        /* --- QUICK STATS GRID --- */
         .quick-stats-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -496,7 +485,6 @@
         .stat-box h3 { font-size: 1.05rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 6px; }
         .stat-box p { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; line-height: 1.5; }
 
-        /* --- SERVICES BLUEPRINT GRID --- */
         .services-blueprint-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -520,7 +508,6 @@
         .service-blueprint-card h3 { font-size: 1.1rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; letter-spacing: -0.3px; }
         .service-blueprint-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; font-weight: 400; }
 
-        /* --- GRAPHIC DESIGN / VIDEO EDITING / DATA SERVICES GRIDS --- */
         .graphic-design-grid, .video-editing-grid, .data-services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -565,7 +552,6 @@
             padding: 0 10px;
         }
 
-        /* --- CORE PILLARS --- */
         .values-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -602,7 +588,6 @@
         }
         .value-card p { font-weight: 400; color: var(--text-muted); font-size: 0.9rem; }
 
-        /* --- WHY TRADITIONAL MARKETING FAILS --- */
         .about-agency .container { max-width: 850px; margin: 0 auto; text-align: center; }
         .about-agency h3 {
             font-size: clamp(1.3rem, 2.5vw, 1.6rem);
@@ -613,7 +598,6 @@
         }
         .about-agency p { color: var(--text-muted); font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-weight: 400; }
 
-        /* --- PROCESS TABS --- */
         .tabs-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
         .tabs-wrapper { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; align-items: start; }
         .tab-list div {
@@ -645,7 +629,6 @@
         .tab-content-panel h3 { font-size: 1.3rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
         .tab-content-panel p { font-weight: 400; color: var(--text-muted); line-height: 1.7; }
 
-        /* --- PRICING --- */
         .pricing-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
         .pricing-grid {
             display: grid;
@@ -695,7 +678,6 @@
         }
         .price-card .btn { text-align: center; width: 100%; }
 
-        /* --- FLOWCHART --- */
         .flowchart-section { background-color: var(--bg-light); border-top: 1px solid var(--border-light); }
         .flowchart-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
         .flow-step {
@@ -712,7 +694,6 @@
         .flow-step h4 { font-weight: 700; color: var(--accent-teal); margin-bottom: 6px; font-size: 0.95rem; }
         .flow-step p { color: var(--text-muted); font-size: 0.85rem; }
 
-        /* --- FAQ ACCORDION --- */
         .faq-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
         .faq-container { max-width: 850px; margin: 0 auto; }
         .accordion-item {
@@ -750,7 +731,51 @@
         .accordion-content p { padding: 12px 0 16px; }
         .accordion-item.active .accordion-icon { transform: rotate(45deg); }
 
-        /* --- FOOTER --- */
+        .contact-form-section {
+            background-color: #f8fbfc;
+            border-top: 1px solid var(--border-light);
+        }
+        .contact-form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px 35px;
+            border-radius: 8px;
+            box-shadow: 0 12px 30px rgba(4, 23, 56, 0.06);
+            border: 1px solid var(--border-light);
+        }
+        .form-group { margin-bottom: 22px; }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 0.9rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--border-light);
+            border-radius: 5px;
+            font-family: var(--font-main);
+            font-size: 0.9rem;
+            transition: border-color 0.3s;
+            background: #fdfdfd;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-teal);
+            box-shadow: 0 0 0 3px rgba(6, 157, 178, 0.1);
+        }
+        .form-submit-btn { width: 100%; padding: 15px; font-size: 1rem; cursor: pointer; }
+        .form-message { text-align: center; margin-top: 15px; font-weight: 600; font-size: 0.9rem; display: none; }
+        .form-message.success { color: #069db2; display: block; }
+        .form-message.error { color: #e74c3c; display: block; }
+
         footer {
             background-color: var(--primary-blue);
             color: #a3b8cc;
@@ -764,13 +789,7 @@
         .footer-col p { color: #a3b8cc !important; font-weight: 400; line-height: 1.7; font-size: 0.85rem; }
         .footer-col ul { list-style: none; }
         .footer-col ul li { margin-bottom: 7px; }
-        .footer-col ul li a {
-            color: #a3b8cc;
-            text-decoration: none;
-            transition: color 0.2s;
-            font-weight: 400;
-            font-size: 0.85rem;
-        }
+        .footer-col ul li a { color: #a3b8cc; text-decoration: none; transition: color 0.2s; font-weight: 400; font-size: 0.85rem; }
         .footer-col ul li a:hover { color: var(--accent-teal); }
         .footer-brand-name { font-weight: 800; font-size: 1.3rem; color: #ffffff; }
         .footer-brand-name span { color: var(--accent-teal); }
@@ -785,7 +804,6 @@
         }
         .footer-bottom p { color: #71899e !important; font-weight: 400; }
 
-        /* ========== RESPONSIVE BREAKPOINTS ========== */
         @media (max-width: 1024px) {
             .container { padding: 45px 0; }
             .quick-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
@@ -811,22 +829,8 @@
             .container { padding: 38px 0; width: 94%; }
             .tabs-wrapper { grid-template-columns: 1fr; gap: 18px; }
             .tab-list { display: flex; flex-wrap: wrap; gap: 6px; }
-            .tab-list div {
-                flex: 1 1 auto;
-                min-width: 120px;
-                text-align: center;
-                border-left: none;
-                border-bottom: 3px solid var(--border-light);
-                padding: 10px 12px;
-                font-size: 0.82rem;
-                border-radius: 4px 4px 0 0;
-                margin-bottom: 0;
-            }
-            .tab-list div.active {
-                border-left-color: transparent;
-                border-bottom-color: var(--accent-teal);
-                padding-left: 12px;
-            }
+            .tab-list div { flex: 1 1 auto; min-width: 120px; text-align: center; border-left: none; border-bottom: 3px solid var(--border-light); padding: 10px 12px; font-size: 0.82rem; border-radius: 4px 4px 0 0; margin-bottom: 0; }
+            .tab-list div.active { border-left-color: transparent; border-bottom-color: var(--accent-teal); padding-left: 12px; }
             .hero-content h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
             .section-title { margin-bottom: 30px; }
             .tab-content-panel { padding: 24px; }
@@ -834,12 +838,7 @@
             .price { font-size: 1.6rem; }
             .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
             .footer-col:first-child { grid-column: 1 / -1; }
-            .hero-graph-decoration.graph-top-right { width: 160px; height: 100px; opacity: 0.06; top: 3%; right: 0; }
-            .hero-graph-decoration.graph-bottom-left { width: 140px; height: 90px; opacity: 0.06; bottom: 4%; left: 0; }
-            .hero-graph-decoration.graph-mid-right { display: none; }
-            .hero-accent-shape.shape-1 { width: 90px; height: 90px; top: -20px; right: -20px; opacity: 0.04; }
-            .hero-accent-shape.shape-2 { width: 60px; height: 60px; opacity: 0.03; }
-            .hero-accent-shape.shape-3 { display: none; }
+            .contact-form-wrapper { padding: 30px 20px; }
         }
 
         @media (max-width: 600px) {
@@ -847,24 +846,14 @@
             .pricing-grid { grid-template-columns: 1fr; gap: 14px; }
             .footer-grid { grid-template-columns: 1fr; gap: 22px; }
             .tab-list { flex-direction: column; }
-            .tab-list div {
-                text-align: left;
-                border-left: 3px solid var(--border-light);
-                border-bottom: none;
-                border-radius: 0 4px 4px 0;
-            }
-            .tab-list div.active {
-                border-left-color: var(--accent-teal);
-                border-bottom-color: transparent;
-                padding-left: 22px;
-            }
+            .tab-list div { text-align: left; border-left: 3px solid var(--border-light); border-bottom: none; border-radius: 0 4px 4px 0; }
+            .tab-list div.active { border-left-color: var(--accent-teal); border-bottom-color: transparent; padding-left: 22px; }
             header { padding: 8px 4%; }
             .logo img { max-height: 26px; }
             .hero-content h1 { font-size: 1.5rem; letter-spacing: -0.3px; }
             .hero-highlight::after { height: 2px; bottom: -2px; }
             .hero-subtitle { font-size: 0.9rem; margin-bottom: 22px; }
             .btn { padding: 12px 22px; font-size: 0.82rem; width: 100%; max-width: 320px; }
-            .hero-content .btn { max-width: 300px; }
             .stat-box { padding: 18px 14px; }
             .stat-box h3 { font-size: 0.95rem; }
             .stat-box p { font-size: 0.8rem; }
@@ -884,6 +873,7 @@
             .hero-accent-shape.shape-1, .hero-accent-shape.shape-3 { display: none; }
             .hero-accent-shape.shape-2 { width: 50px; height: 50px; bottom: 5%; left: 3%; opacity: 0.04; }
             .hero-bg-pattern { background-size: 22px 22px; opacity: 0.25; }
+            .contact-form-wrapper { padding: 25px 15px; }
         }
 
         @media (max-width: 400px) {
@@ -913,15 +903,12 @@
 </head>
 <body>
 
-    <!-- PAGE LOADER -->
     <div id="page-loader">
         <div class="loader-spinner"></div>
     </div>
 
-    <!-- MOBILE NAV OVERLAY -->
     <div class="mobile-nav-overlay" id="mobileOverlay"></div>
 
-    <!-- MOBILE NAV PANEL -->
     <div class="mobile-nav-panel" id="mobilePanel">
         <a href="#services">Services</a>
         <div class="mobile-service-links">
@@ -946,18 +933,16 @@
         <a href="#pillars">Pillars</a>
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
         <a href="#faqs">FAQs</a>
         <div class="mobile-cta">
             <a href="#pricing" class="btn">Free Consultation</a>
         </div>
     </div>
 
-    <!-- STICKY HEADER -->
     <header>
         <div class="logo">
-            <a href="#">
-                <img src="nextgenitboldlogo.png" alt="NextGenIT Logo">
-            </a>
+            <a href="#"><img src="nextgenitboldlogo.png" alt="NextGenIT Logo"></a>
         </div>
         <nav>
             <div class="nav-dropdown">
@@ -992,17 +977,15 @@
             <a href="#pillars">Pillars</a>
             <a href="#process">Process</a>
             <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
             <a href="#faqs">FAQs</a>
         </nav>
         <a href="#pricing" class="btn" style="padding: 10px 18px; font-size: 0.8rem;">Free Consultation</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
     </header>
 
-    <!-- HERO SECTION -->
     <section class="hero-section">
         <div class="hero-bg-pattern" aria-hidden="true"></div>
         <div class="hero-accent-shape shape-1" aria-hidden="true"></div>
@@ -1046,16 +1029,9 @@
             </svg>
         </div>
         <div class="container hero-content">
-            <h1 class="reveal">
-                Digital Marketing That Drives <br>
-                <span class="hero-highlight">Real Business Growth</span>
-            </h1>
-            <p class="reveal delay-1 hero-subtitle">
-                At NextGenIT, we construct performance-driven multi-channel digital systems engineered for one purpose: Dominance. We discard vanity metrics to scale your brand through hyper-tuned infrastructure, strategic organic positioning, and high-ROI transactional growth loops.
-            </p>
-            <div class="reveal delay-2" style="margin-bottom: 16px;">
-                <a href="#pricing" class="btn">Book Your Free Growth Strategy Session</a>
-            </div>
+            <h1 class="reveal">Digital Marketing That Drives <br><span class="hero-highlight">Real Business Growth</span></h1>
+            <p class="reveal delay-1 hero-subtitle">At NextGenIT, we construct performance-driven multi-channel digital systems engineered for one purpose: Dominance. We discard vanity metrics to scale your brand through hyper-tuned infrastructure, strategic organic positioning, and high-ROI transactional growth loops.</p>
+            <div class="reveal delay-2" style="margin-bottom: 16px;"><a href="#pricing" class="btn">Book Your Free Growth Strategy Session</a></div>
             <div class="quick-stats-grid">
                 <div class="stat-box reveal delay-1"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="30" height="21" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="8" width="22" height="13" rx="1" fill="#069db2" opacity="0.2"/><line x1="10" y1="14" x2="24" y2="14" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="18" x2="20" y2="18" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="22" x2="16" y2="22" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/></svg></span><h3>Web Development</h3><p>High-Performance, Neat Code Frameworks</p></div>
                 <div class="stat-box reveal delay-2"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="10" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="22.5" y1="22.5" x2="30" y2="30" stroke="#069db2" stroke-width="2.5" stroke-linecap="round"/><circle cx="15" cy="15" r="5" fill="#069db2" opacity="0.25"/></svg></span><h3>SEO Architecture</h3><p>Dominate Transactional Keywords Domestically & Globally</p></div>
@@ -1065,7 +1041,6 @@
         </div>
     </section>
 
-    <!-- SERVICES (Growth Blueprint) -->
     <section id="services" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
         <div class="container">
             <h2 class="section-title reveal">Our High-Performance <span>Growth Blueprint</span></h2>
@@ -1088,7 +1063,6 @@
         </div>
     </section>
 
-    <!-- GRAPHIC DESIGN SECTION -->
     <section id="graphic-design" class="flowchart-section" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
         <div class="container">
             <h2 class="section-title reveal">Precision <span>Graphic Design</span> for Bold Brands</h2>
@@ -1104,7 +1078,6 @@
         </div>
     </section>
 
-    <!-- VIDEO EDITING SECTION -->
     <section id="video-editing" style="background-color: var(--bg-dark); border-top: 1px solid var(--border-light);">
         <div class="container">
             <h2 class="section-title reveal">Cinematic <span>Video Editing</span> That Captivates</h2>
@@ -1123,7 +1096,6 @@
         </div>
     </section>
 
-    <!-- DATA SERVICES SECTION -->
     <section id="data-services" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
         <div class="container">
             <h2 class="section-title reveal">Precision <span>Data Services</span> for Intelligent Decisions</h2>
@@ -1142,17 +1114,57 @@
         </div>
     </section>
 
-    <!-- WHY TRADITIONAL MARKETING TACTICS FAIL -->
-    <section class="about-agency">
+    <section id="contact" class="contact-form-section">
         <div class="container">
-            <div class="reveal">
-                <h3>Why Traditional Marketing Tactics Fail</h3>
-                <p>Most agencies mask underperformance with superficial metrics like impressions and clicks. At NextGenIT, we engineer native, comprehensive digital landscapes. We eliminate systemic digital noise to establish lean, aggressive, and entirely results-oriented operational growth pipelines for your enterprise.</p>
+            <h2 class="section-title reveal">Get in <span>Touch</span></h2>
+            <p class="reveal delay-1 section-intro-text">Ready to dominate your market? Fill out the form below and one of our performance engineers will get back to you within hours.</p>
+            <div class="contact-form-wrapper reveal delay-2">
+                <form id="contactForm" action="https://formspree.io/f/meewlzby" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service">
+                            <option value="">-- Please Select --</option>
+                            <option>SEO</option>
+                            <option>AI SEO</option>
+                            <option>Local SEO</option>
+                            <option>PPC</option>
+                            <option>Social Media Marketing</option>
+                            <option>Web Design</option>
+                            <option>Graphic Design</option>
+                            <option>Video Editing</option>
+                            <option>Data Services</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project and goals..."></textarea>
+                    </div>
+                    <button type="submit" class="btn form-submit-btn">Send Message</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- CORE PILLARS -->
+    <section class="about-agency">
+        <div class="container">
+            <div class="reveal"><h3>Why Traditional Marketing Tactics Fail</h3><p>Most agencies mask underperformance with superficial metrics like impressions and clicks. At NextGenIT, we engineer native, comprehensive digital landscapes. We eliminate systemic digital noise to establish lean, aggressive, and entirely results-oriented operational growth pipelines for your enterprise.</p></div>
+        </div>
+    </section>
+
     <section id="pillars" class="pricing-section">
         <div class="container">
             <h2 class="section-title reveal">Our Core Pillars to <span>Maximize Market Dominance</span></h2>
@@ -1167,7 +1179,6 @@
         </div>
     </section>
 
-    <!-- HOW WE SCALE YOUR BUSINESS ECOSYSTEM (Process Tabs) -->
     <section id="process" class="tabs-section">
         <div class="container">
             <h2 class="section-title reveal">How We Scale Your <span>Business Ecosystem</span></h2>
@@ -1186,102 +1197,19 @@
         </div>
     </section>
 
-    <!-- PRICING -->
     <section class="pricing-section" id="pricing">
         <div class="container">
             <h2 class="section-title reveal">Ultra-Transparent <span>Performance Tiers</span></h2>
             <div class="pricing-grid">
-                <div class="price-card reveal delay-1">
-                    <h3>Bronze Launch</h3>
-                    <div class="price">$299<span>/mo</span></div>
-                    <ul class="price-features-list">
-                        <li>✔ Website SEO Audit</li>
-                        <li>✔ Basic Keyword Research (10 Keywords)</li>
-                        <li>✔ On-Page SEO Optimization (Up to 5 Pages)</li>
-                        <li>✔ Google Business Profile Setup/Optimization</li>
-                        <li>✔ Basic Technical SEO Fixes</li>
-                        <li>✔ Monthly Ranking Report</li>
-                        <li>✔ Google Analytics & Search Console Setup</li>
-                        <li>✔ Email Support</li>
-                    </ul>
-                    <a href="mailto:contact@nextgenit.com?subject=Bronze%20Launch%20Inquiry" class="btn">Get Started</a>
-                </div>
-                <div class="price-card reveal delay-2">
-                    <h3>Starter Growth</h3>
-                    <div class="price">$499<span>/mo</span></div>
-                    <ul class="price-features-list">
-                        <li>✔ Everything in Bronze Launch</li>
-                        <li>✔ Advanced Keyword Research (25 Keywords)</li>
-                        <li>✔ On-Page SEO Optimization (Up to 10 Pages)</li>
-                        <li>✔ Local SEO Optimization</li>
-                        <li>✔ Competitor Analysis</li>
-                        <li>✔ Content Optimization Recommendations</li>
-                        <li>✔ Citation Building & Local Listings</li>
-                        <li>✔ Monthly Performance Report</li>
-                        <li>✔ Priority Email Support</li>
-                    </ul>
-                    <a href="mailto:contact@nextgenit.com?subject=Starter%20Growth%20Inquiry" class="btn">Get Started</a>
-                </div>
-                <div class="price-card reveal delay-3">
-                    <h3>Silver Setup</h3>
-                    <div class="price">$1,499<span>/mo</span></div>
-                    <ul class="price-features-list">
-                        <li>✔ Everything in Starter Growth</li>
-                        <li>✔ Comprehensive SEO Strategy</li>
-                        <li>✔ On-Page SEO Optimization (Up to 25 Pages)</li>
-                        <li>✔ Technical SEO Audit & Implementation</li>
-                        <li>✔ Monthly Blog Content Optimization</li>
-                        <li>✔ Link Building Campaign</li>
-                        <li>✔ Conversion-Focused Landing Page Optimization</li>
-                        <li>✔ Google Business Profile Management</li>
-                        <li>✔ Advanced Analytics & Tracking Setup</li>
-                        <li>✔ Monthly Strategy Consultation</li>
-                    </ul>
-                    <a href="mailto:contact@nextgenit.com?subject=Silver%20Setup%20Inquiry" class="btn">Get Started</a>
-                </div>
-                <div class="price-card featured reveal delay-4">
-                    <div class="featured-badge">RECOMMENDED</div>
-                    <h3>Gold Domination</h3>
-                    <div class="price">$2,999<span>/mo</span></div>
-                    <ul class="price-features-list">
-                        <li>✔ Everything in Silver Setup</li>
-                        <li>✔ Custom SEO & Digital Marketing Framework</li>
-                        <li>✔ Advanced Multi-Location SEO (if applicable)</li>
-                        <li>✔ Aggressive Authority Link Building</li>
-                        <li>✔ Content Marketing Strategy & Execution</li>
-                        <li>✔ PPC Campaign Setup & Optimization</li>
-                        <li>✔ Conversion Rate Optimization (CRO)</li>
-                        <li>✔ Competitor Domination Analysis</li>
-                        <li>✔ Custom Dashboard & Reporting</li>
-                        <li>✔ Bi-Weekly Strategy Meetings</li>
-                        <li>✔ Dedicated Account Manager</li>
-                    </ul>
-                    <a href="mailto:contact@nextgenit.com?subject=Gold%20Domination%20Inquiry" class="btn">Get Started</a>
-                </div>
-                <div class="price-card reveal delay-1">
-                    <h3>Platinum Enterprise</h3>
-                    <div class="price">$4,999<span>/mo</span></div>
-                    <ul class="price-features-list">
-                        <li>✔ Everything in Gold Domination</li>
-                        <li>✔ Enterprise-Level SEO Management</li>
-                        <li>✔ Omnichannel Marketing Strategy</li>
-                        <li>✔ Advanced Marketing Automation</li>
-                        <li>✔ Custom Funnel Development & Optimization</li>
-                        <li>✔ Enterprise Technical SEO Solutions</li>
-                        <li>✔ Brand Reputation Monitoring & Management</li>
-                        <li>✔ Custom API & CRM Integrations</li>
-                        <li>✔ Advanced Attribution & Conversion Tracking</li>
-                        <li>✔ Unlimited Strategic Consulting</li>
-                        <li>✔ Dedicated Performance Team</li>
-                        <li>✔ Priority Support & Emergency Response</li>
-                    </ul>
-                    <a href="mailto:contact@nextgenit.com?subject=Platinum%20Enterprise%20Inquiry" class="btn">Get Started</a>
-                </div>
+                <div class="price-card reveal delay-1"><h3>Bronze Launch</h3><div class="price">$299<span>/mo</span></div><ul class="price-features-list"><li>✔ Website SEO Audit</li><li>✔ Basic Keyword Research (10 Keywords)</li><li>✔ On-Page SEO Optimization (Up to 5 Pages)</li><li>✔ Google Business Profile Setup/Optimization</li><li>✔ Basic Technical SEO Fixes</li><li>✔ Monthly Ranking Report</li><li>✔ Google Analytics & Search Console Setup</li><li>✔ Email Support</li></ul><a href="mailto:contact@nextgenit.com?subject=Bronze%20Launch%20Inquiry" class="btn">Get Started</a></div>
+                <div class="price-card reveal delay-2"><h3>Starter Growth</h3><div class="price">$499<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Bronze Launch</li><li>✔ Advanced Keyword Research (25 Keywords)</li><li>✔ On-Page SEO Optimization (Up to 10 Pages)</li><li>✔ Local SEO Optimization</li><li>✔ Competitor Analysis</li><li>✔ Content Optimization Recommendations</li><li>✔ Citation Building & Local Listings</li><li>✔ Monthly Performance Report</li><li>✔ Priority Email Support</li></ul><a href="mailto:contact@nextgenit.com?subject=Starter%20Growth%20Inquiry" class="btn">Get Started</a></div>
+                <div class="price-card reveal delay-3"><h3>Silver Setup</h3><div class="price">$1,499<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Starter Growth</li><li>✔ Comprehensive SEO Strategy</li><li>✔ On-Page SEO Optimization (Up to 25 Pages)</li><li>✔ Technical SEO Audit & Implementation</li><li>✔ Monthly Blog Content Optimization</li><li>✔ Link Building Campaign</li><li>✔ Conversion-Focused Landing Page Optimization</li><li>✔ Google Business Profile Management</li><li>✔ Advanced Analytics & Tracking Setup</li><li>✔ Monthly Strategy Consultation</li></ul><a href="mailto:contact@nextgenit.com?subject=Silver%20Setup%20Inquiry" class="btn">Get Started</a></div>
+                <div class="price-card featured reveal delay-4"><div class="featured-badge">RECOMMENDED</div><h3>Gold Domination</h3><div class="price">$2,999<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Silver Setup</li><li>✔ Custom SEO & Digital Marketing Framework</li><li>✔ Advanced Multi-Location SEO (if applicable)</li><li>✔ Aggressive Authority Link Building</li><li>✔ Content Marketing Strategy & Execution</li><li>✔ PPC Campaign Setup & Optimization</li><li>✔ Conversion Rate Optimization (CRO)</li><li>✔ Competitor Domination Analysis</li><li>✔ Custom Dashboard & Reporting</li><li>✔ Bi-Weekly Strategy Meetings</li><li>✔ Dedicated Account Manager</li></ul><a href="mailto:contact@nextgenit.com?subject=Gold%20Domination%20Inquiry" class="btn">Get Started</a></div>
+                <div class="price-card reveal delay-1"><h3>Platinum Enterprise</h3><div class="price">$4,999<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Gold Domination</li><li>✔ Enterprise-Level SEO Management</li><li>✔ Omnichannel Marketing Strategy</li><li>✔ Advanced Marketing Automation</li><li>✔ Custom Funnel Development & Optimization</li><li>✔ Enterprise Technical SEO Solutions</li><li>✔ Brand Reputation Monitoring & Management</li><li>✔ Custom API & CRM Integrations</li><li>✔ Advanced Attribution & Conversion Tracking</li><li>✔ Unlimited Strategic Consulting</li><li>✔ Dedicated Performance Team</li><li>✔ Priority Support & Emergency Response</li></ul><a href="mailto:contact@nextgenit.com?subject=Platinum%20Enterprise%20Inquiry" class="btn">Get Started</a></div>
             </div>
         </div>
     </section>
 
-    <!-- ONBOARDING FLOWCHART -->
     <section class="flowchart-section">
         <div class="container">
             <h2 class="section-title reveal">Our 4-Step <span>Onboarding Blueprint</span></h2>
@@ -1294,7 +1222,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
     <section class="faq-section" id="faqs">
         <div class="container faq-container">
             <h2 class="section-title reveal">Frequently Asked <span>Questions</span></h2>
@@ -1307,46 +1234,14 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="container footer-grid">
-            <div class="footer-col">
-                <h4 class="footer-brand-name">NextGen<span>IT</span></h4>
-                <p>Engineering custom native digital ecosystems built exclusively for market dominance. Stripping away operational vanity noise to scale measurable multi-channel enterprise acquisition systems.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Framework</h4>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#pillars">Core Pillars</a></li>
-                    <li><a href="#process">Scale Process</a></li>
-                    <li><a href="#pricing">Performance Tiers</a></li>
-                    <li><a href="#graphic-design">Graphic Design</a></li>
-                    <li><a href="#video-editing">Video Editing</a></li>
-                    <li><a href="#data-services">Data Services</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Core Solutions</h4>
-                <ul>
-                    <li><a href="#services">Search Engine Optimization</a></li>
-                    <li><a href="#services">AI Search Strategy</a></li>
-                    <li><a href="#services">Precision Paid PPC</a></li>
-                    <li><a href="#services">Conversion Engineering</a></li>
-                    <li><a href="#graphic-design">Visual Identity & Design</a></li>
-                    <li><a href="#video-editing">Cinematic Video Editing</a></li>
-                    <li><a href="#data-services">Data Processing & Analytics</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Partner</h4>
-                <p style="margin-bottom: 6px;">Direct Performance Engineering:</p>
-                <p><a href="mailto:nextgenit2030@gmail.com" class="footer-contact-email">nextgenit2030@gmail.com</a></p>
-            </div>
+            <div class="footer-col"><h4 class="footer-brand-name">NextGen<span>IT</span></h4><p>Engineering custom native digital ecosystems built exclusively for market dominance. Stripping away operational vanity noise to scale measurable multi-channel enterprise acquisition systems.</p></div>
+            <div class="footer-col"><h4>Framework</h4><ul><li><a href="#services">Services</a></li><li><a href="#pillars">Core Pillars</a></li><li><a href="#process">Scale Process</a></li><li><a href="#pricing">Performance Tiers</a></li><li><a href="#contact">Contact</a></li><li><a href="#graphic-design">Graphic Design</a></li><li><a href="#video-editing">Video Editing</a></li><li><a href="#data-services">Data Services</a></li></ul></div>
+            <div class="footer-col"><h4>Core Solutions</h4><ul><li><a href="#services">Search Engine Optimization</a></li><li><a href="#services">AI Search Strategy</a></li><li><a href="#services">Precision Paid PPC</a></li><li><a href="#services">Conversion Engineering</a></li><li><a href="#graphic-design">Visual Identity & Design</a></li><li><a href="#video-editing">Cinematic Video Editing</a></li><li><a href="#data-services">Data Processing & Analytics</a></li></ul></div>
+            <div class="footer-col"><h4>Contact Partner</h4><p style="margin-bottom: 6px;">Direct Performance Engineering:</p><p><a href="mailto:nextgenit2030@gmail.com" class="footer-contact-email">nextgenit2030@gmail.com</a></p></div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 NextGenIT. All Rights Engineered to Dominance. Crafted with Human-Designed Precision.</p>
-        </div>
+        <div class="footer-bottom"><p>&copy; 2026 NextGenIT. All Rights Engineered to Dominance. Crafted with Human-Designed Precision.</p></div>
     </footer>
 
     <script>
@@ -1409,6 +1304,41 @@
                     }
                 });
             });
+
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            if (contactForm) {
+                contactForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    formMessage.style.display = 'none';
+                    formMessage.classList.remove('success', 'error');
+                    const formData = new FormData(contactForm);
+                    try {
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Accept': 'application/json' }
+                        });
+                        if (response.ok) {
+                            formMessage.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon.';
+                            formMessage.classList.add('success');
+                            contactForm.reset();
+                        } else {
+                            const data = await response.json();
+                            if (data.errors) {
+                                formMessage.textContent = data.errors.map(error => error.message).join(', ');
+                            } else {
+                                formMessage.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+                            }
+                            formMessage.classList.add('error');
+                        }
+                    } catch (error) {
+                        formMessage.textContent = 'Network error. Please check your connection and try again.';
+                        formMessage.classList.add('error');
+                    }
+                    formMessage.style.display = 'block';
+                });
+            }
 
             const hamburgerBtn = document.getElementById('hamburgerBtn');
             const mobilePanel = document.getElementById('mobilePanel');
