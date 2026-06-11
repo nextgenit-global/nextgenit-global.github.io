@@ -92,12 +92,8 @@
             animation: spin 0.75s linear infinite;
         }
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* --- REVEAL ANIMATIONS --- */
@@ -111,18 +107,10 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .delay-1 {
-            transition-delay: 0.1s;
-        }
-        .delay-2 {
-            transition-delay: 0.2s;
-        }
-        .delay-3 {
-            transition-delay: 0.3s;
-        }
-        .delay-4 {
-            transition-delay: 0.4s;
-        }
+        .delay-1 { transition-delay: 0.1s; }
+        .delay-2 { transition-delay: 0.2s; }
+        .delay-3 { transition-delay: 0.3s; }
+        .delay-4 { transition-delay: 0.4s; }
 
         /* --- BUTTONS --- */
         .btn {
@@ -224,6 +212,79 @@
             background-color: rgba(6, 157, 178, 0.04);
         }
 
+        /* Dropdown container */
+        .nav-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .nav-dropdown > a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .nav-dropdown > a::after {
+            content: '▾';
+            font-size: 0.7rem;
+            margin-left: 2px;
+        }
+        .nav-dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ffffff;
+            width: 680px;
+            box-shadow: 0 12px 35px rgba(4, 23, 56, 0.15);
+            border-radius: 8px;
+            padding: 20px 16px;
+            z-index: 1001;
+            border: 1px solid var(--border-light);
+            display: none;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 16px;
+        }
+        .nav-dropdown:hover .nav-dropdown-content {
+            display: grid;
+        }
+        .nav-dropdown-content .dropdown-column {
+            display: flex;
+            flex-direction: column;
+        }
+        .nav-dropdown-content .dropdown-section-title {
+            font-weight: 700;
+            color: var(--accent-teal);
+            padding: 8px 14px 6px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            pointer-events: none;
+            border-bottom: 2px solid rgba(6, 157, 178, 0.15);
+            margin-bottom: 4px;
+        }
+        .nav-dropdown-content .dropdown-section-title:not(:first-child) {
+            margin-top: 10px;
+        }
+        .nav-dropdown-content a {
+            display: block;
+            padding: 9px 14px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--primary-blue);
+            text-decoration: none;
+            white-space: nowrap;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .nav-dropdown-content a:hover {
+            background-color: rgba(6, 157, 178, 0.06);
+            color: var(--accent-teal);
+        }
+        .nav-dropdown-content .dropdown-highlight {
+            font-weight: 700;
+            color: var(--accent-teal);
+        }
+
         /* --- HAMBURGER MENU BUTTON --- */
         .hamburger-btn {
             display: none;
@@ -314,6 +375,17 @@
             text-align: center;
             width: 100%;
         }
+        .mobile-service-links {
+            margin-left: 16px;
+            font-size: 0.9rem;
+            border-left: 2px solid var(--border-light);
+            padding-left: 12px;
+            margin-bottom: 8px;
+        }
+        .mobile-service-links a {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+        }
 
         /* --- HERO --- */
         .hero-section {
@@ -323,8 +395,6 @@
             position: relative;
             overflow: hidden;
         }
-
-        /* Subtle dot-grid background pattern */
         .hero-bg-pattern {
             position: absolute;
             top: 0;
@@ -337,34 +407,15 @@
             background-image: radial-gradient(circle, rgba(6, 157, 178, 0.18) 1px, transparent 1px);
             background-size: 28px 28px;
         }
-
-        /* Decorative graph SVG container */
         .hero-graph-decoration {
             position: absolute;
             pointer-events: none;
             z-index: 1;
             opacity: 0.10;
         }
-        .hero-graph-decoration.graph-top-right {
-            top: 8%;
-            right: 3%;
-            width: 320px;
-            height: 200px;
-        }
-        .hero-graph-decoration.graph-bottom-left {
-            bottom: 10%;
-            left: 2%;
-            width: 260px;
-            height: 160px;
-        }
-        .hero-graph-decoration.graph-mid-right {
-            top: 40%;
-            right: 1%;
-            width: 200px;
-            height: 280px;
-        }
-
-        /* Floating geometric accent shapes */
+        .hero-graph-decoration.graph-top-right { top: 8%; right: 3%; width: 320px; height: 200px; }
+        .hero-graph-decoration.graph-bottom-left { bottom: 10%; left: 2%; width: 260px; height: 160px; }
+        .hero-graph-decoration.graph-mid-right { top: 40%; right: 1%; width: 200px; height: 280px; }
         .hero-accent-shape {
             position: absolute;
             pointer-events: none;
@@ -373,30 +424,9 @@
             opacity: 0.06;
             background: var(--accent-teal);
         }
-        .hero-accent-shape.shape-1 {
-            width: 180px;
-            height: 180px;
-            top: -60px;
-            right: -50px;
-        }
-        .hero-accent-shape.shape-2 {
-            width: 100px;
-            height: 100px;
-            bottom: 10%;
-            left: 8%;
-            background: var(--primary-blue);
-            opacity: 0.04;
-            border-radius: 30%;
-        }
-        .hero-accent-shape.shape-3 {
-            width: 60px;
-            height: 60px;
-            top: 25%;
-            right: 18%;
-            opacity: 0.07;
-            border-radius: 20%;
-        }
-
+        .hero-accent-shape.shape-1 { width: 180px; height: 180px; top: -60px; right: -50px; }
+        .hero-accent-shape.shape-2 { width: 100px; height: 100px; bottom: 10%; left: 8%; background: var(--primary-blue); opacity: 0.04; border-radius: 30%; }
+        .hero-accent-shape.shape-3 { width: 60px; height: 60px; top: 25%; right: 18%; opacity: 0.07; border-radius: 20%; }
         .hero-section .container.hero-content {
             max-width: 1100px;
             margin: 0 auto;
@@ -419,7 +449,6 @@
             position: relative;
             font-weight: 800;
         }
-        /* Subtle underline flourish under the highlight */
         .hero-highlight::after {
             content: '';
             position: absolute;
@@ -462,30 +491,10 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(6, 157, 178, 0.08);
         }
-        .stat-icon {
-            display: block;
-            margin-bottom: 10px;
-            width: 34px;
-            height: 34px;
-            flex-shrink: 0;
-        }
-        .stat-icon svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-        .stat-box h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 6px;
-        }
-        .stat-box p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-weight: 400;
-            line-height: 1.5;
-        }
+        .stat-icon { display: block; margin-bottom: 10px; width: 34px; height: 34px; }
+        .stat-icon svg { width: 100%; height: 100%; display: block; }
+        .stat-box h3 { font-size: 1.05rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 6px; }
+        .stat-box p { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; line-height: 1.5; }
 
         /* --- SERVICES BLUEPRINT GRID --- */
         .services-blueprint-grid {
@@ -506,44 +515,19 @@
             box-shadow: 0 12px 30px rgba(4, 23, 56, 0.06);
             border-color: #e2ecf0;
         }
-        .card-icon-sm {
-            display: block;
-            width: 28px;
-            height: 28px;
-            margin-bottom: 10px;
-            flex-shrink: 0;
-        }
-        .card-icon-sm svg {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-        .service-blueprint-card h3 {
-            font-size: 1.1rem;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-            font-weight: 700;
-            letter-spacing: -0.3px;
-        }
-        .service-blueprint-card p {
-            color: var(--text-muted);
-            font-size: 0.88rem;
-            line-height: 1.6;
-            font-weight: 400;
-        }
+        .card-icon-sm { display: block; width: 28px; height: 28px; margin-bottom: 10px; }
+        .card-icon-sm svg { width: 100%; height: 100%; display: block; }
+        .service-blueprint-card h3 { font-size: 1.1rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; letter-spacing: -0.3px; }
+        .service-blueprint-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; font-weight: 400; }
 
         /* --- GRAPHIC DESIGN / VIDEO EDITING / DATA SERVICES GRIDS --- */
-        .graphic-design-grid,
-        .video-editing-grid,
-        .data-services-grid {
+        .graphic-design-grid, .video-editing-grid, .data-services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             margin-top: 30px;
         }
-        .design-card,
-        .video-card,
-        .data-card {
+        .design-card, .video-card, .data-card {
             background: var(--card-light);
             padding: 26px 22px;
             border-radius: 6px;
@@ -551,31 +535,23 @@
             text-align: center;
             transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s;
         }
-        .design-card:hover,
-        .video-card:hover,
-        .data-card:hover {
+        .design-card:hover, .video-card:hover, .data-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 15px 30px rgba(4, 23, 56, 0.08);
             border-color: var(--accent-teal);
         }
-        .design-card .card-icon-sm,
-        .video-card .card-icon-sm,
-        .data-card .card-icon-sm {
+        .design-card .card-icon-sm, .video-card .card-icon-sm, .data-card .card-icon-sm {
             margin: 0 auto 12px auto;
             width: 32px;
             height: 32px;
         }
-        .design-card h3,
-        .video-card h3,
-        .data-card h3 {
+        .design-card h3, .video-card h3, .data-card h3 {
             font-size: 1.2rem;
             color: var(--primary-blue);
             margin-bottom: 12px;
             font-weight: 700;
         }
-        .design-card p,
-        .video-card p,
-        .data-card p {
+        .design-card p, .video-card p, .data-card p {
             color: var(--text-muted);
             line-height: 1.6;
             font-size: 0.9rem;
@@ -624,18 +600,10 @@
             border-radius: 50%;
             flex-shrink: 0;
         }
-        .value-card p {
-            font-weight: 400;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
+        .value-card p { font-weight: 400; color: var(--text-muted); font-size: 0.9rem; }
 
         /* --- WHY TRADITIONAL MARKETING FAILS --- */
-        .about-agency .container {
-            max-width: 850px;
-            margin: 0 auto;
-            text-align: center;
-        }
+        .about-agency .container { max-width: 850px; margin: 0 auto; text-align: center; }
         .about-agency h3 {
             font-size: clamp(1.3rem, 2.5vw, 1.6rem);
             margin-bottom: 14px;
@@ -643,23 +611,11 @@
             font-weight: 700;
             color: var(--primary-blue);
         }
-        .about-agency p {
-            color: var(--text-muted);
-            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-            font-weight: 400;
-        }
+        .about-agency p { color: var(--text-muted); font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-weight: 400; }
 
         /* --- PROCESS TABS --- */
-        .tabs-section {
-            background-color: var(--bg-dark);
-            border-top: 1px solid var(--border-light);
-        }
-        .tabs-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 30px;
-            align-items: start;
-        }
+        .tabs-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
+        .tabs-wrapper { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; align-items: start; }
         .tab-list div {
             padding: 14px 18px;
             border-left: 3px solid var(--border-light);
@@ -686,26 +642,14 @@
             min-height: 200px;
             transition: opacity 0.2s ease, transform 0.2s ease;
         }
-        .tab-content-panel h3 {
-            font-size: 1.3rem;
-            color: var(--primary-blue);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .tab-content-panel p {
-            font-weight: 400;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
+        .tab-content-panel h3 { font-size: 1.3rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
+        .tab-content-panel p { font-weight: 400; color: var(--text-muted); line-height: 1.7; }
 
         /* --- PRICING --- */
-        .pricing-section {
-            background-color: var(--bg-dark);
-            border-top: 1px solid var(--border-light);
-        }
+        .pricing-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
         .pricing-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 22px;
         }
         .price-card {
@@ -722,9 +666,7 @@
             transform: translateY(-4px);
             box-shadow: 0 15px 30px rgba(4, 23, 56, 0.05);
         }
-        .price-card.featured {
-            border: 2px solid var(--accent-teal);
-        }
+        .price-card.featured { border: 2px solid var(--accent-teal); }
         .featured-badge {
             position: absolute;
             top: -14px;
@@ -738,28 +680,10 @@
             letter-spacing: 0.5px;
             white-space: nowrap;
         }
-        .price-card h3 {
-            color: var(--primary-blue);
-            font-size: 1.25rem;
-            margin-bottom: 8px;
-            font-weight: 800;
-        }
-        .price {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary-blue);
-            margin-bottom: 16px;
-        }
-        .price span {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            font-weight: 400;
-        }
-        .price-features-list {
-            list-style: none;
-            margin-bottom: 24px;
-            flex-grow: 1;
-        }
+        .price-card h3 { color: var(--primary-blue); font-size: 1.25rem; margin-bottom: 8px; font-weight: 800; }
+        .price { font-size: 2rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 16px; }
+        .price span { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; }
+        .price-features-list { list-style: none; margin-bottom: 24px; flex-grow: 1; }
         .price-features-list li {
             margin-bottom: 10px;
             font-size: 0.88rem;
@@ -769,21 +693,11 @@
             gap: 8px;
             font-weight: 400;
         }
-        .price-card .btn {
-            text-align: center;
-            width: 100%;
-        }
+        .price-card .btn { text-align: center; width: 100%; }
 
         /* --- FLOWCHART --- */
-        .flowchart-section {
-            background-color: var(--bg-light);
-            border-top: 1px solid var(--border-light);
-        }
-        .flowchart-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
-        }
+        .flowchart-section { background-color: var(--bg-light); border-top: 1px solid var(--border-light); }
+        .flowchart-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
         .flow-step {
             background: white;
             padding: 22px;
@@ -795,26 +709,12 @@
             transform: translateY(-4px);
             box-shadow: 0 10px 25px rgba(6, 157, 178, 0.05);
         }
-        .flow-step h4 {
-            font-weight: 700;
-            color: var(--accent-teal);
-            margin-bottom: 6px;
-            font-size: 0.95rem;
-        }
-        .flow-step p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
+        .flow-step h4 { font-weight: 700; color: var(--accent-teal); margin-bottom: 6px; font-size: 0.95rem; }
+        .flow-step p { color: var(--text-muted); font-size: 0.85rem; }
 
         /* --- FAQ ACCORDION --- */
-        .faq-section {
-            background-color: var(--bg-dark);
-            border-top: 1px solid var(--border-light);
-        }
-        .faq-container {
-            max-width: 850px;
-            margin: 0 auto;
-        }
+        .faq-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
+        .faq-container { max-width: 850px; margin: 0 auto; }
         .accordion-item {
             background: var(--card-dark);
             margin-bottom: 10px;
@@ -824,9 +724,7 @@
             overflow: hidden;
             transition: background-color 0.3s ease;
         }
-        .accordion-item:hover {
-            background-color: #f0f6f9;
-        }
+        .accordion-item:hover { background-color: #f0f6f9; }
         .accordion-title {
             display: flex;
             justify-content: space-between;
@@ -839,12 +737,7 @@
             font-size: 0.95rem;
             gap: 15px;
         }
-        .accordion-icon {
-            font-size: 1.3rem;
-            color: var(--accent-teal);
-            transition: transform 0.3s ease;
-            flex-shrink: 0;
-        }
+        .accordion-icon { font-size: 1.3rem; color: var(--accent-teal); transition: transform 0.3s ease; flex-shrink: 0; }
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -854,12 +747,8 @@
             font-size: 0.9rem;
             font-weight: 400;
         }
-        .accordion-content p {
-            padding: 12px 0 16px;
-        }
-        .accordion-item.active .accordion-icon {
-            transform: rotate(45deg);
-        }
+        .accordion-content p { padding: 12px 0 16px; }
+        .accordion-item.active .accordion-icon { transform: rotate(45deg); }
 
         /* --- FOOTER --- */
         footer {
@@ -869,32 +758,12 @@
             border-top: none;
             font-family: var(--font-main);
         }
-        footer .container {
-            padding: 50px 0 25px 0;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr repeat(3, 1fr);
-            gap: 30px;
-        }
-        .footer-col h4 {
-            color: #ffffff;
-            margin-bottom: 14px;
-            font-weight: 700;
-            font-size: 1rem;
-        }
-        .footer-col p {
-            color: #a3b8cc !important;
-            font-weight: 400;
-            line-height: 1.7;
-            font-size: 0.85rem;
-        }
-        .footer-col ul {
-            list-style: none;
-        }
-        .footer-col ul li {
-            margin-bottom: 7px;
-        }
+        footer .container { padding: 50px 0 25px 0; }
+        .footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 30px; }
+        .footer-col h4 { color: #ffffff; margin-bottom: 14px; font-weight: 700; font-size: 1rem; }
+        .footer-col p { color: #a3b8cc !important; font-weight: 400; line-height: 1.7; font-size: 0.85rem; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 7px; }
         .footer-col ul li a {
             color: #a3b8cc;
             text-decoration: none;
@@ -902,26 +771,11 @@
             font-weight: 400;
             font-size: 0.85rem;
         }
-        .footer-col ul li a:hover {
-            color: var(--accent-teal);
-        }
-        .footer-brand-name {
-            font-weight: 800;
-            font-size: 1.3rem;
-            color: #ffffff;
-        }
-        .footer-brand-name span {
-            color: var(--accent-teal);
-        }
-        .footer-contact-email {
-            color: var(--accent-teal);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        .footer-contact-email:hover {
-            text-decoration: underline;
-        }
+        .footer-col ul li a:hover { color: var(--accent-teal); }
+        .footer-brand-name { font-weight: 800; font-size: 1.3rem; color: #ffffff; }
+        .footer-brand-name span { color: var(--accent-teal); }
+        .footer-contact-email { color: var(--accent-teal); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+        .footer-contact-email:hover { text-decoration: underline; }
         .footer-bottom {
             text-align: center;
             padding-top: 35px;
@@ -929,104 +783,34 @@
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             font-size: 0.82rem;
         }
-        .footer-bottom p {
-            color: #71899e !important;
-            font-weight: 400;
-        }
+        .footer-bottom p { color: #71899e !important; font-weight: 400; }
 
         /* ========== RESPONSIVE BREAKPOINTS ========== */
-
-        /* Large tablets & small desktops (1024px and below) */
         @media (max-width: 1024px) {
-            .container {
-                padding: 45px 0;
-            }
-            .quick-stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 14px;
-            }
-            .services-blueprint-grid,
-            .graphic-design-grid,
-            .video-editing-grid,
-            .data-services-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-            }
-            .values-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-            }
-            .pricing-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-            .flowchart-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 16px;
-            }
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 28px;
-            }
-            .tabs-wrapper {
-                grid-template-columns: 1fr 1.5fr;
-                gap: 24px;
-            }
-            .hero-graph-decoration.graph-top-right {
-                width: 220px;
-                height: 140px;
-                top: 5%;
-                right: 1%;
-            }
-            .hero-graph-decoration.graph-bottom-left {
-                width: 180px;
-                height: 110px;
-                bottom: 6%;
-                left: 1%;
-            }
-            .hero-graph-decoration.graph-mid-right {
-                display: none;
-            }
-            .hero-accent-shape.shape-1 {
-                width: 120px;
-                height: 120px;
-                top: -30px;
-                right: -30px;
-            }
-            /* Show hamburger, hide desktop nav */
-            .hamburger-btn {
-                display: block;
-            }
-            nav {
-                display: none;
-            }
-            header>.btn {
-                display: none;
-            }
-            .mobile-nav-overlay {
-                display: block;
-            }
-            header {
-                justify-content: space-between;
-                padding: 10px 5%;
-            }
+            .container { padding: 45px 0; }
+            .quick-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+            .services-blueprint-grid, .graphic-design-grid, .video-editing-grid, .data-services-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+            .values-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+            .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+            .flowchart-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+            .tabs-wrapper { grid-template-columns: 1fr 1.5fr; gap: 24px; }
+            .nav-dropdown-content { width: 560px; }
+            .hero-graph-decoration.graph-top-right { width: 220px; height: 140px; top: 5%; right: 1%; }
+            .hero-graph-decoration.graph-bottom-left { width: 180px; height: 110px; bottom: 6%; left: 1%; }
+            .hero-graph-decoration.graph-mid-right { display: none; }
+            .hero-accent-shape.shape-1 { width: 120px; height: 120px; top: -30px; right: -30px; }
+            .hamburger-btn { display: block; }
+            nav { display: none; }
+            header>.btn { display: none; }
+            .mobile-nav-overlay { display: block; }
+            header { justify-content: space-between; padding: 10px 5%; }
         }
 
-        /* Tablets (768px and below) */
         @media (max-width: 768px) {
-            .container {
-                padding: 38px 0;
-                width: 94%;
-            }
-            .tabs-wrapper {
-                grid-template-columns: 1fr;
-                gap: 18px;
-            }
-            .tab-list {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 6px;
-            }
+            .container { padding: 38px 0; width: 94%; }
+            .tabs-wrapper { grid-template-columns: 1fr; gap: 18px; }
+            .tab-list { display: flex; flex-wrap: wrap; gap: 6px; }
             .tab-list div {
                 flex: 1 1 auto;
                 min-width: 120px;
@@ -1043,82 +827,26 @@
                 border-bottom-color: var(--accent-teal);
                 padding-left: 12px;
             }
-            .hero-content h1 {
-                font-size: clamp(1.5rem, 6vw, 2.2rem);
-            }
-            .section-title {
-                margin-bottom: 30px;
-            }
-            .tab-content-panel {
-                padding: 24px;
-            }
-            .price-card {
-                padding: 24px 18px;
-            }
-            .price {
-                font-size: 1.6rem;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-                gap: 24px;
-            }
-            .footer-col:first-child {
-                grid-column: 1 / -1;
-            }
-            .hero-graph-decoration.graph-top-right {
-                width: 160px;
-                height: 100px;
-                opacity: 0.06;
-                top: 3%;
-                right: 0;
-            }
-            .hero-graph-decoration.graph-bottom-left {
-                width: 140px;
-                height: 90px;
-                opacity: 0.06;
-                bottom: 4%;
-                left: 0;
-            }
-            .hero-graph-decoration.graph-mid-right {
-                display: none;
-            }
-            .hero-accent-shape.shape-1 {
-                width: 90px;
-                height: 90px;
-                top: -20px;
-                right: -20px;
-                opacity: 0.04;
-            }
-            .hero-accent-shape.shape-2 {
-                width: 60px;
-                height: 60px;
-                opacity: 0.03;
-            }
-            .hero-accent-shape.shape-3 {
-                display: none;
-            }
+            .hero-content h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
+            .section-title { margin-bottom: 30px; }
+            .tab-content-panel { padding: 24px; }
+            .price-card { padding: 24px 18px; }
+            .price { font-size: 1.6rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+            .footer-col:first-child { grid-column: 1 / -1; }
+            .hero-graph-decoration.graph-top-right { width: 160px; height: 100px; opacity: 0.06; top: 3%; right: 0; }
+            .hero-graph-decoration.graph-bottom-left { width: 140px; height: 90px; opacity: 0.06; bottom: 4%; left: 0; }
+            .hero-graph-decoration.graph-mid-right { display: none; }
+            .hero-accent-shape.shape-1 { width: 90px; height: 90px; top: -20px; right: -20px; opacity: 0.04; }
+            .hero-accent-shape.shape-2 { width: 60px; height: 60px; opacity: 0.03; }
+            .hero-accent-shape.shape-3 { display: none; }
         }
 
-        /* Large phones (480px and below) */
         @media (max-width: 600px) {
-            .quick-stats-grid,
-            .services-blueprint-grid,
-            .graphic-design-grid,
-            .video-editing-grid,
-            .data-services-grid,
-            .values-grid,
-            .pricing-grid,
-            .flowchart-grid {
-                grid-template-columns: 1fr;
-                gap: 14px;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 22px;
-            }
-            .tab-list {
-                flex-direction: column;
-            }
+            .quick-stats-grid, .services-blueprint-grid, .graphic-design-grid, .video-editing-grid, .data-services-grid, .values-grid, .flowchart-grid { grid-template-columns: 1fr; gap: 14px; }
+            .pricing-grid { grid-template-columns: 1fr; gap: 14px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 22px; }
+            .tab-list { flex-direction: column; }
             .tab-list div {
                 text-align: left;
                 border-left: 3px solid var(--border-light);
@@ -1130,190 +858,56 @@
                 border-bottom-color: transparent;
                 padding-left: 22px;
             }
-            header {
-                padding: 8px 4%;
-            }
-            .logo img {
-                max-height: 26px;
-            }
-            .hero-content h1 {
-                font-size: 1.5rem;
-                letter-spacing: -0.3px;
-            }
-            .hero-highlight::after {
-                height: 2px;
-                bottom: -2px;
-            }
-            .hero-subtitle {
-                font-size: 0.9rem;
-                margin-bottom: 22px;
-            }
-            .btn {
-                padding: 12px 22px;
-                font-size: 0.82rem;
-                width: 100%;
-                max-width: 320px;
-            }
-            .hero-content .btn {
-                max-width: 300px;
-            }
-            .stat-box {
-                padding: 18px 14px;
-            }
-            .stat-box h3 {
-                font-size: 0.95rem;
-            }
-            .stat-box p {
-                font-size: 0.8rem;
-            }
-            .stat-icon {
-                width: 28px;
-                height: 28px;
-                margin-bottom: 8px;
-            }
-            .service-blueprint-card,
-            .design-card,
-            .video-card,
-            .data-card,
-            .value-card,
-            .flow-step {
-                padding: 20px 16px;
-            }
-            .service-blueprint-card h3,
-            .design-card h3,
-            .video-card h3,
-            .data-card h3 {
-                font-size: 1.05rem;
-            }
-            .card-icon-sm {
-                width: 24px;
-                height: 24px;
-                margin-bottom: 8px;
-            }
-            .section-title {
-                font-size: 1.35rem;
-                margin-bottom: 24px;
-            }
-            .accordion-title {
-                padding: 14px 16px;
-                font-size: 0.88rem;
-            }
-            .accordion-content {
-                padding: 0 16px;
-                font-size: 0.84rem;
-            }
-            .price {
-                font-size: 1.5rem;
-            }
-            .price-card h3 {
-                font-size: 1.1rem;
-            }
-            .featured-badge {
-                font-size: 0.65rem;
-                padding: 3px 10px;
-                top: -12px;
-                right: 10px;
-            }
-            .tab-content-panel h3 {
-                font-size: 1.1rem;
-            }
-            .mobile-nav-panel {
-                width: 280px;
-                max-width: 80vw;
-                padding: 70px 20px 25px;
-            }
-            .hero-graph-decoration {
-                display: none;
-            }
-            .hero-accent-shape.shape-1,
-            .hero-accent-shape.shape-3 {
-                display: none;
-            }
-            .hero-accent-shape.shape-2 {
-                width: 50px;
-                height: 50px;
-                bottom: 5%;
-                left: 3%;
-                opacity: 0.04;
-            }
-            .hero-bg-pattern {
-                background-size: 22px 22px;
-                opacity: 0.25;
-            }
+            header { padding: 8px 4%; }
+            .logo img { max-height: 26px; }
+            .hero-content h1 { font-size: 1.5rem; letter-spacing: -0.3px; }
+            .hero-highlight::after { height: 2px; bottom: -2px; }
+            .hero-subtitle { font-size: 0.9rem; margin-bottom: 22px; }
+            .btn { padding: 12px 22px; font-size: 0.82rem; width: 100%; max-width: 320px; }
+            .hero-content .btn { max-width: 300px; }
+            .stat-box { padding: 18px 14px; }
+            .stat-box h3 { font-size: 0.95rem; }
+            .stat-box p { font-size: 0.8rem; }
+            .stat-icon { width: 28px; height: 28px; margin-bottom: 8px; }
+            .service-blueprint-card, .design-card, .video-card, .data-card, .value-card, .flow-step { padding: 20px 16px; }
+            .service-blueprint-card h3, .design-card h3, .video-card h3, .data-card h3 { font-size: 1.05rem; }
+            .card-icon-sm { width: 24px; height: 24px; margin-bottom: 8px; }
+            .section-title { font-size: 1.35rem; margin-bottom: 24px; }
+            .accordion-title { padding: 14px 16px; font-size: 0.88rem; }
+            .accordion-content { padding: 0 16px; font-size: 0.84rem; }
+            .price { font-size: 1.5rem; }
+            .price-card h3 { font-size: 1.1rem; }
+            .featured-badge { font-size: 0.65rem; padding: 3px 10px; top: -12px; right: 10px; }
+            .tab-content-panel h3 { font-size: 1.1rem; }
+            .mobile-nav-panel { width: 280px; max-width: 80vw; padding: 70px 20px 25px; }
+            .hero-graph-decoration { display: none; }
+            .hero-accent-shape.shape-1, .hero-accent-shape.shape-3 { display: none; }
+            .hero-accent-shape.shape-2 { width: 50px; height: 50px; bottom: 5%; left: 3%; opacity: 0.04; }
+            .hero-bg-pattern { background-size: 22px 22px; opacity: 0.25; }
         }
 
-        /* Small phones (400px and below) */
         @media (max-width: 400px) {
-            .hero-content h1 {
-                font-size: 1.3rem;
-            }
-            .hero-subtitle {
-                font-size: 0.82rem;
-            }
-            .btn {
-                font-size: 0.78rem;
-                padding: 10px 16px;
-            }
-            .section-title {
-                font-size: 1.2rem;
-            }
-            .container {
-                padding: 30px 0;
-                width: 95%;
-            }
-            .logo img {
-                max-height: 22px;
-            }
-            .hamburger-btn span {
-                width: 22px;
-                height: 2px;
-                margin: 5px 0;
-            }
-            .mobile-nav-panel a {
-                font-size: 0.9rem;
-                padding: 10px 12px;
-            }
-            .stat-icon {
-                width: 24px;
-                height: 24px;
-            }
-            .card-icon-sm {
-                width: 20px;
-                height: 20px;
-            }
-            .hero-bg-pattern {
-                background-size: 18px 18px;
-                opacity: 0.2;
-            }
+            .hero-content h1 { font-size: 1.3rem; }
+            .hero-subtitle { font-size: 0.82rem; }
+            .btn { font-size: 0.78rem; padding: 10px 16px; }
+            .section-title { font-size: 1.2rem; }
+            .container { padding: 30px 0; width: 95%; }
+            .logo img { max-height: 22px; }
+            .hamburger-btn span { width: 22px; height: 2px; margin: 5px 0; }
+            .mobile-nav-panel a { font-size: 0.9rem; padding: 10px 12px; }
+            .stat-icon { width: 24px; height: 24px; }
+            .card-icon-sm { width: 20px; height: 20px; }
+            .hero-bg-pattern { background-size: 18px 18px; opacity: 0.2; }
         }
 
-        /* Large desktops (1400px+) */
         @media (min-width: 1400px) {
-            .container {
-                max-width: 1300px;
-            }
-            .hero-content h1 {
-                font-size: 3.2rem;
-            }
-            .services-blueprint-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 28px;
-            }
-            .pricing-grid {
-                gap: 28px;
-            }
-            .hero-graph-decoration.graph-top-right {
-                width: 380px;
-                height: 240px;
-            }
-            .hero-graph-decoration.graph-bottom-left {
-                width: 300px;
-                height: 190px;
-            }
-            .hero-graph-decoration.graph-mid-right {
-                width: 240px;
-                height: 320px;
-            }
+            .container { max-width: 1300px; }
+            .hero-content h1 { font-size: 3.2rem; }
+            .services-blueprint-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+            .pricing-grid { grid-template-columns: repeat(5, 1fr); gap: 22px; }
+            .hero-graph-decoration.graph-top-right { width: 380px; height: 240px; }
+            .hero-graph-decoration.graph-bottom-left { width: 300px; height: 190px; }
+            .hero-graph-decoration.graph-mid-right { width: 240px; height: 320px; }
         }
     </style>
 </head>
@@ -1330,12 +924,28 @@
     <!-- MOBILE NAV PANEL -->
     <div class="mobile-nav-panel" id="mobilePanel">
         <a href="#services">Services</a>
+        <div class="mobile-service-links">
+            <a href="#service-seo">SEO</a>
+            <a href="#service-ai-seo">AI SEO</a>
+            <a href="#service-local-seo">Local SEO</a>
+            <a href="#service-maps-seo">Maps SEO</a>
+            <a href="#service-ppc">PPC</a>
+            <a href="#service-lsa">LSA</a>
+            <a href="#service-smm">SMM</a>
+            <a href="#service-sma">Social Ads</a>
+            <a href="#service-web-design">Web Design</a>
+            <a href="#service-link-building">Link Building</a>
+            <a href="#service-reddit-seo">Reddit SEO</a>
+            <a href="#service-cro">CRO</a>
+            <a href="#service-lead-tracking">Lead Tracking</a>
+            <a href="#service-retargeting">Retargeting</a>
+            <a href="#graphic-design" style="font-weight:700; color:var(--accent-teal);">Graphic Design</a>
+            <a href="#video-editing" style="font-weight:700; color:var(--accent-teal);">Video Editing</a>
+            <a href="#data-services" style="font-weight:700; color:var(--accent-teal);">Data Services</a>
+        </div>
         <a href="#pillars">Pillars</a>
         <a href="#process">Process</a>
         <a href="#pricing">Pricing</a>
-        <a href="#graphic-design">Graphic Design</a>
-        <a href="#video-editing">Video Editing</a>
-        <a href="#data-services">Data Services</a>
         <a href="#faqs">FAQs</a>
         <div class="mobile-cta">
             <a href="#pricing" class="btn">Free Consultation</a>
@@ -1350,13 +960,38 @@
             </a>
         </div>
         <nav>
-            <a href="#services">Services</a>
+            <div class="nav-dropdown">
+                <a href="#services">Services</a>
+                <div class="nav-dropdown-content">
+                    <div class="dropdown-column">
+                        <span class="dropdown-section-title">Digital Marketing</span>
+                        <a href="#service-seo">Search Engine Optimization</a>
+                        <a href="#service-ai-seo">AI SEO / Engine Optimization</a>
+                        <a href="#service-local-seo">Local SEO Management</a>
+                        <a href="#service-maps-seo">Google Maps Pack SEO</a>
+                        <a href="#service-ppc">Pay Per Click (PPC)</a>
+                        <a href="#service-lsa">Google Local Service Ads</a>
+                        <a href="#service-smm">Social Media Marketing</a>
+                    </div>
+                    <div class="dropdown-column">
+                        <span class="dropdown-section-title">More Services</span>
+                        <a href="#service-sma">Social Media Advertising</a>
+                        <a href="#service-web-design">Website Design Frameworks</a>
+                        <a href="#service-link-building">Strategic Link Building</a>
+                        <a href="#service-reddit-seo">Reddit SEO Strategy</a>
+                        <a href="#service-cro">Conversion Rate Optimization</a>
+                        <a href="#service-lead-tracking">Lead Analysis & Tracking</a>
+                        <a href="#service-retargeting">Hyper-Targeted Retargeting</a>
+                        <span class="dropdown-section-title">Creative & Data</span>
+                        <a href="#graphic-design" class="dropdown-highlight">Graphic Design</a>
+                        <a href="#video-editing" class="dropdown-highlight">Video Editing</a>
+                        <a href="#data-services" class="dropdown-highlight">Data Services</a>
+                    </div>
+                </div>
+            </div>
             <a href="#pillars">Pillars</a>
             <a href="#process">Process</a>
             <a href="#pricing">Pricing</a>
-            <a href="#graphic-design">Graphic Design</a>
-            <a href="#video-editing">Video Editing</a>
-            <a href="#data-services">Data Services</a>
             <a href="#faqs">FAQs</a>
         </nav>
         <a href="#pricing" class="btn" style="padding: 10px 18px; font-size: 0.8rem;">Free Consultation</a>
@@ -1369,27 +1004,18 @@
 
     <!-- HERO SECTION -->
     <section class="hero-section">
-        <!-- Subtle dot-grid background -->
         <div class="hero-bg-pattern" aria-hidden="true"></div>
-
-        <!-- Floating geometric accent shapes -->
         <div class="hero-accent-shape shape-1" aria-hidden="true"></div>
         <div class="hero-accent-shape shape-2" aria-hidden="true"></div>
         <div class="hero-accent-shape shape-3" aria-hidden="true"></div>
-
-        <!-- Decorative graph SVGs -->
         <div class="hero-graph-decoration graph-top-right" aria-hidden="true">
             <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <!-- Grid lines -->
                 <line x1="40" y1="160" x2="300" y2="160" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
                 <line x1="40" y1="120" x2="300" y2="120" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
                 <line x1="40" y1="80" x2="300" y2="80" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
                 <line x1="40" y1="40" x2="300" y2="40" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
-                <!-- Ascending line graph -->
                 <polyline points="50,155 100,130 150,105 200,70 250,45 290,25" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <!-- Area fill under line -->
                 <polygon points="50,155 100,130 150,105 200,70 250,45 290,25 290,165 50,165" fill="#069db2" opacity="0.15"/>
-                <!-- Data points -->
                 <circle cx="50" cy="155" r="5" fill="#069db2" opacity="0.7"/>
                 <circle cx="100" cy="130" r="5" fill="#069db2" opacity="0.7"/>
                 <circle cx="150" cy="105" r="5" fill="#069db2" opacity="0.7"/>
@@ -1398,24 +1024,19 @@
                 <circle cx="290" cy="25" r="5" fill="#069db2" opacity="0.7"/>
             </svg>
         </div>
-
         <div class="hero-graph-decoration graph-bottom-left" aria-hidden="true">
             <svg viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <!-- Mini bar chart -->
                 <rect x="20" y="90" width="28" height="50" rx="3" fill="#041738" opacity="0.3"/>
                 <rect x="58" y="60" width="28" height="80" rx="3" fill="#041738" opacity="0.4"/>
                 <rect x="96" y="35" width="28" height="105" rx="3" fill="#069db2" opacity="0.5"/>
                 <rect x="134" y="50" width="28" height="90" rx="3" fill="#041738" opacity="0.4"/>
                 <rect x="172" y="20" width="28" height="120" rx="3" fill="#069db2" opacity="0.55"/>
                 <rect x="210" y="42" width="28" height="98" rx="3" fill="#041738" opacity="0.35"/>
-                <!-- Baseline -->
                 <line x1="15" y1="140" x2="245" y2="140" stroke="#041738" stroke-width="1" opacity="0.3"/>
             </svg>
         </div>
-
         <div class="hero-graph-decoration graph-mid-right" aria-hidden="true">
             <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <!-- Circular progress indicators -->
                 <circle cx="100" cy="60" r="35" stroke="#069db2" stroke-width="3" fill="none" opacity="0.4" stroke-dasharray="180 40"/>
                 <circle cx="100" cy="60" r="18" fill="#069db2" opacity="0.2"/>
                 <circle cx="100" cy="155" r="30" stroke="#041738" stroke-width="3" fill="none" opacity="0.35" stroke-dasharray="150 38"/>
@@ -1424,7 +1045,6 @@
                 <circle cx="100" cy="240" r="10" fill="#069db2" opacity="0.18"/>
             </svg>
         </div>
-
         <div class="container hero-content">
             <h1 class="reveal">
                 Digital Marketing That Drives <br>
@@ -1436,63 +1056,11 @@
             <div class="reveal delay-2" style="margin-bottom: 16px;">
                 <a href="#pricing" class="btn">Book Your Free Growth Strategy Session</a>
             </div>
-
             <div class="quick-stats-grid">
-                <div class="stat-box reveal delay-1">
-                    <span class="stat-icon">
-                        <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="2" y="4" width="30" height="21" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/>
-                            <rect x="6" y="8" width="22" height="13" rx="1" fill="#069db2" opacity="0.2"/>
-                            <line x1="10" y1="14" x2="24" y2="14" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/>
-                            <line x1="10" y1="18" x2="20" y2="18" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/>
-                            <line x1="10" y1="22" x2="16" y2="22" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/>
-                        </svg>
-                    </span>
-                    <h3>Web Development</h3>
-                    <p>High-Performance, Neat Code Frameworks</p>
-                </div>
-                <div class="stat-box reveal delay-2">
-                    <span class="stat-icon">
-                        <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="15" cy="15" r="10" stroke="#069db2" stroke-width="2.2" fill="none"/>
-                            <line x1="22.5" y1="22.5" x2="30" y2="30" stroke="#069db2" stroke-width="2.5" stroke-linecap="round"/>
-                            <circle cx="15" cy="15" r="5" fill="#069db2" opacity="0.25"/>
-                        </svg>
-                    </span>
-                    <h3>SEO Architecture</h3>
-                    <p>Dominate Transactional Keywords Domestically & Globally</p>
-                </div>
-                <div class="stat-box reveal delay-3">
-                    <span class="stat-icon">
-                        <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="17" cy="17" r="13" stroke="#069db2" stroke-width="2.2" fill="none"/>
-                            <circle cx="17" cy="17" r="7" stroke="#069db2" stroke-width="2" fill="none"/>
-                            <circle cx="17" cy="17" r="2.5" fill="#069db2"/>
-                            <line x1="17" y1="4" x2="17" y2="10" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/>
-                            <line x1="17" y1="24" x2="17" y2="30" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/>
-                            <line x1="4" y1="17" x2="10" y2="17" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/>
-                            <line x1="24" y1="17" x2="30" y2="17" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/>
-                        </svg>
-                    </span>
-                    <h3>Paid Advertising</h3>
-                    <p>Aggressive, Precision-Targeted Scaling Solutions</p>
-                </div>
-                <div class="stat-box reveal delay-4">
-                    <span class="stat-icon">
-                        <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="4" y="6" width="26" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/>
-                            <circle cx="13" cy="17" r="4" fill="#069db2" opacity="0.3"/>
-                            <circle cx="21" cy="17" r="3" fill="#069db2" opacity="0.3"/>
-                            <line x1="16" y1="17" x2="19" y2="17" stroke="#069db2" stroke-width="2" stroke-linecap="round"/>
-                            <circle cx="17" cy="12" r="1.5" fill="#069db2" opacity="0.6"/>
-                            <circle cx="17" cy="22" r="1.5" fill="#069db2" opacity="0.6"/>
-                            <circle cx="12" cy="17" r="1.5" fill="#069db2" opacity="0.6"/>
-                            <circle cx="22" cy="17" r="1.5" fill="#069db2" opacity="0.6"/>
-                        </svg>
-                    </span>
-                    <h3>AISO / GEO Strategy</h3>
-                    <p>Engineered Optimization for Modern Generative AI Engines</p>
-                </div>
+                <div class="stat-box reveal delay-1"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="30" height="21" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="8" width="22" height="13" rx="1" fill="#069db2" opacity="0.2"/><line x1="10" y1="14" x2="24" y2="14" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="18" x2="20" y2="18" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="22" x2="16" y2="22" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/></svg></span><h3>Web Development</h3><p>High-Performance, Neat Code Frameworks</p></div>
+                <div class="stat-box reveal delay-2"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="10" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="22.5" y1="22.5" x2="30" y2="30" stroke="#069db2" stroke-width="2.5" stroke-linecap="round"/><circle cx="15" cy="15" r="5" fill="#069db2" opacity="0.25"/></svg></span><h3>SEO Architecture</h3><p>Dominate Transactional Keywords Domestically & Globally</p></div>
+                <div class="stat-box reveal delay-3"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17" cy="17" r="13" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="17" cy="17" r="7" stroke="#069db2" stroke-width="2" fill="none"/><circle cx="17" cy="17" r="2.5" fill="#069db2"/><line x1="17" y1="4" x2="17" y2="10" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><line x1="17" y1="24" x2="17" y2="30" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><line x1="4" y1="17" x2="10" y2="17" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="17" x2="30" y2="17" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Paid Advertising</h3><p>Aggressive, Precision-Targeted Scaling Solutions</p></div>
+                <div class="stat-box reveal delay-4"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="26" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="13" cy="17" r="4" fill="#069db2" opacity="0.3"/><circle cx="21" cy="17" r="3" fill="#069db2" opacity="0.3"/><line x1="16" y1="17" x2="19" y2="17" stroke="#069db2" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="12" r="1.5" fill="#069db2" opacity="0.6"/><circle cx="17" cy="22" r="1.5" fill="#069db2" opacity="0.6"/><circle cx="12" cy="17" r="1.5" fill="#069db2" opacity="0.6"/><circle cx="22" cy="17" r="1.5" fill="#069db2" opacity="0.6"/></svg></span><h3>AISO / GEO Strategy</h3><p>Engineered Optimization for Modern Generative AI Engines</p></div>
             </div>
         </div>
     </section>
@@ -1502,20 +1070,20 @@
         <div class="container">
             <h2 class="section-title reveal">Our High-Performance <span>Growth Blueprint</span></h2>
             <div class="services-blueprint-grid">
-                <div class="service-blueprint-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="10" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="4" fill="#069db2" opacity="0.3"/><polyline points="8,14 12,18 20,10" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Search Engine Optimization (SEO)</h3><p>Complete execution spanning deep technical SEO modifications, intentional on-page keyword structuring, off-page link building pipelines, customized service page creation, granular local city pages, high-value blog posts, and routine performance KPI analytics loops.</p></div>
-                <div class="service-blueprint-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="22" height="18" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="5" fill="#069db2" opacity="0.25"/><circle cx="14" cy="14" r="2" fill="#069db2"/><line x1="3" y1="22" x2="25" y2="22" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>AI SEO / Engine Optimization</h3><p>Modern architecture tuned exclusively to target visibility inside Google AI Overviews, ChatGPT, Claude, and Gemini engines. Strategically built using custom advanced schema markup schemas, natural language semantic optimization, n-gram modeling, and systematic co-occurrence context layouts.</p></div>
-                <div class="service-blueprint-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><path d="M14 6 L14 14 L20 18" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="3" fill="#069db2" opacity="0.3"/></svg></span><h3>Local SEO Management</h3><p>Establish structural hyper-local positioning with full Google Business Profile (GMB/GBP) optimization protocols, programmatic geo-tagged photographic uploads, unified external citation distribution loops across authoritative networks (Yelp, Angi, BrightLocal), and automated active review generation flows.</p></div>
-                <div class="service-blueprint-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="6" stroke="#069db2" stroke-width="1.5" fill="none"/><circle cx="14" cy="14" r="2.5" fill="#069db2"/><line x1="14" y1="8" x2="14" y2="11" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>Google Maps Pack SEO</h3><p>Hyper-targeted local signals designed exclusively to maximize raw visibility, spatial proximity weight, and search conversion parameters directly inside the competitive high-value local Google Maps 3-Pack layout.</p></div>
-                <div class="service-blueprint-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="24" height="16" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="6,13 12,18 22,8" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Pay Per Click Advertising (PPC)</h3><p>Aggressive high-intent transactional user acquisition engine running dedicated, hyper-segmented Google Ads and YouTube Ads networks. Maximized via custom category-specific conversion landing frameworks, continuous strict negative keyword optimization, and real-time behavioral A/B split-testing variant logic.</p></div>
-                <div class="service-blueprint-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><polygon points="14,7 20,20 8,20" stroke="#069db2" stroke-width="2" fill="#069db2" fill-opacity="0.2" stroke-linejoin="round"/><circle cx="14" cy="16" r="2.5" fill="#069db2"/></svg></span><h3>Google Local Service Ads (LSA)</h3><p>Comprehensive setup and real-time operational maintenance of direct Google Local Service Ads channels, ensuring seamless background clearance, active brand verification tracking, and continuous trust badge authority acceleration.</p></div>
-                <div class="service-blueprint-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="10" cy="14" r="3" fill="#069db2" opacity="0.3"/><circle cx="18" cy="14" r="2.5" fill="#069db2" opacity="0.3"/><line x1="12.5" y1="14" x2="16" y2="14" stroke="#069db2" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Social Media Marketing (SMM)</h3><p>High-affinity organic identity development and continuous native positioning workflows built precisely for custom operations across top-tier conversational platforms including Facebook and Instagram. Crafted to drive sustainable customer retention through audience community engagement protocols and deep behind-the-scenes brand documentation updates.</p></div>
-                <div class="service-blueprint-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="24" height="20" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="8" width="16" height="8" rx="2" fill="#069db2" opacity="0.25"/><circle cx="14" cy="12" r="2.5" fill="#069db2"/></svg></span><h3>Social Media Advertising</h3><p>Highly calculated performance advertising architecture utilizing granular geo-targeted audience parameters across Facebook and Instagram networks. Engineered through hyper-targeted demographic matrix segmentations, embedded low-friction direct lead generation forms, native server-to-server Conversions API configurations, and custom behavioral retargeting sequence flows.</p></div>
-                <div class="service-blueprint-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="24" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="7" width="16" height="10" rx="1.5" fill="#069db2" opacity="0.2"/><circle cx="14" cy="18" r="1.5" fill="#069db2"/></svg></span><h3>Website Design Frameworks</h3><p>Ultra-responsive, rapid, performance-tuned modular web layouts custom-constructed strictly by hand. Meticulously optimized to capture conversions with elite mobile loading infrastructure, fully native structural schema microdata, clear user calls-to-action (CTAs), and intuitive user-experience navigation layouts.</p></div>
-                <div class="service-blueprint-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="5" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="18" cy="18" r="5" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="13" y1="13" x2="15" y2="15" stroke="#069db2" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="10" r="2" fill="#069db2" opacity="0.4"/><circle cx="18" cy="18" r="2" fill="#069db2" opacity="0.4"/></svg></span><h3>Strategic Link Building</h3><p>Continuous authority development via contextual backlink extraction from authoritative niche digital publications and premium local directory hubs. Supported by human-crafted editorial guest posting sequences and advanced internal structural link equity architecture loops.</p></div>
-                <div class="service-blueprint-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="9" cy="12" r="3" fill="#069db2" opacity="0.3"/><circle cx="19" cy="16" r="2.5" fill="#069db2" opacity="0.3"/><line x1="11.5" y1="13" x2="17" y2="15.5" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Reddit SEO Strategy</h3><p>Isolate and control real organic brand visibility within relevant, high-intent thread discussions across specialized communities for industry-specific customer pain points, positioning your solutions naturally within high-traffic informational query pipelines.</p></div>
-                <div class="service-blueprint-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="7,17 11,20 21,9" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Conversion Rate Optimization (CRO)</h3><p>Continuous data-backed pipeline refinement using active visual testing patterns, interactive funnel tracking maps, structural intake booking path elimination sequences, and meticulous user call-to-action (CTA) text adjustments to convert static web visitors into bottom-line operations.</p></div>
-                <div class="service-blueprint-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="7,13 10,16 14,11 18,15 21,12" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="13" r="1.5" fill="#069db2"/><circle cx="14" cy="11" r="1.5" fill="#069db2"/><circle cx="21" cy="12" r="1.5" fill="#069db2"/></svg></span><h3>Lead Analysis & Automated Tracking</h3><p>Advanced algorithmic tracking pipelines designed to process every incoming inquiry natively, passing critical interaction history data straight into automated response workflows built exclusively to engage prospects within the vital 5-minute conversion response window.</p></div>
-                <div class="service-blueprint-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 22 L10 16 L15 19 L24 7" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="22" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="10" cy="16" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="15" cy="19" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="24" cy="7" r="2.5" fill="#069db2" opacity="0.5"/></svg></span><h3>Hyper-Targeted Retargeting Funnels</h3><p>Smart multi-tier remarketing loops engineered to follow up with high-intent drop-off web users across independent display networks, introducing custom contextual copy incentives based on exact visitor drop-off touchpoints.</p></div>
+                <div class="service-blueprint-card reveal delay-1" id="service-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="10" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="4" fill="#069db2" opacity="0.3"/><polyline points="8,14 12,18 20,10" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Search Engine Optimization (SEO)</h3><p>Complete execution spanning deep technical SEO modifications, intentional on-page keyword structuring, off-page link building pipelines, customized service page creation, granular local city pages, high-value blog posts, and routine performance KPI analytics loops.</p></div>
+                <div class="service-blueprint-card reveal delay-2" id="service-ai-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="22" height="18" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="5" fill="#069db2" opacity="0.25"/><circle cx="14" cy="14" r="2" fill="#069db2"/><line x1="3" y1="22" x2="25" y2="22" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>AI SEO / Engine Optimization</h3><p>Modern architecture tuned exclusively to target visibility inside Google AI Overviews, ChatGPT, Claude, and Gemini engines. Strategically built using custom advanced schema markup schemas, natural language semantic optimization, n-gram modeling, and systematic co-occurrence context layouts.</p></div>
+                <div class="service-blueprint-card reveal delay-3" id="service-local-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><path d="M14 6 L14 14 L20 18" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="3" fill="#069db2" opacity="0.3"/></svg></span><h3>Local SEO Management</h3><p>Establish structural hyper-local positioning with full Google Business Profile (GMB/GBP) optimization protocols, programmatic geo-tagged photographic uploads, unified external citation distribution loops across authoritative networks (Yelp, Angi, BrightLocal), and automated active review generation flows.</p></div>
+                <div class="service-blueprint-card reveal delay-1" id="service-maps-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="6" stroke="#069db2" stroke-width="1.5" fill="none"/><circle cx="14" cy="14" r="2.5" fill="#069db2"/><line x1="14" y1="8" x2="14" y2="11" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>Google Maps Pack SEO</h3><p>Hyper-targeted local signals designed exclusively to maximize raw visibility, spatial proximity weight, and search conversion parameters directly inside the competitive high-value local Google Maps 3-Pack layout.</p></div>
+                <div class="service-blueprint-card reveal delay-2" id="service-ppc"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="24" height="16" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="6,13 12,18 22,8" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Pay Per Click Advertising (PPC)</h3><p>Aggressive high-intent transactional user acquisition engine running dedicated, hyper-segmented Google Ads and YouTube Ads networks. Maximized via custom category-specific conversion landing frameworks, continuous strict negative keyword optimization, and real-time behavioral A/B split-testing variant logic.</p></div>
+                <div class="service-blueprint-card reveal delay-3" id="service-lsa"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><polygon points="14,7 20,20 8,20" stroke="#069db2" stroke-width="2" fill="#069db2" fill-opacity="0.2" stroke-linejoin="round"/><circle cx="14" cy="16" r="2.5" fill="#069db2"/></svg></span><h3>Google Local Service Ads (LSA)</h3><p>Comprehensive setup and real-time operational maintenance of direct Google Local Service Ads channels, ensuring seamless background clearance, active brand verification tracking, and continuous trust badge authority acceleration.</p></div>
+                <div class="service-blueprint-card reveal delay-1" id="service-smm"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="10" cy="14" r="3" fill="#069db2" opacity="0.3"/><circle cx="18" cy="14" r="2.5" fill="#069db2" opacity="0.3"/><line x1="12.5" y1="14" x2="16" y2="14" stroke="#069db2" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Social Media Marketing (SMM)</h3><p>High-affinity organic identity development and continuous native positioning workflows built precisely for custom operations across top-tier conversational platforms including Facebook and Instagram. Crafted to drive sustainable customer retention through audience community engagement protocols and deep behind-the-scenes brand documentation updates.</p></div>
+                <div class="service-blueprint-card reveal delay-2" id="service-sma"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="24" height="20" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="8" width="16" height="8" rx="2" fill="#069db2" opacity="0.25"/><circle cx="14" cy="12" r="2.5" fill="#069db2"/></svg></span><h3>Social Media Advertising</h3><p>Highly calculated performance advertising architecture utilizing granular geo-targeted audience parameters across Facebook and Instagram networks. Engineered through hyper-targeted demographic matrix segmentations, embedded low-friction direct lead generation forms, native server-to-server Conversions API configurations, and custom behavioral retargeting sequence flows.</p></div>
+                <div class="service-blueprint-card reveal delay-3" id="service-web-design"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="24" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="7" width="16" height="10" rx="1.5" fill="#069db2" opacity="0.2"/><circle cx="14" cy="18" r="1.5" fill="#069db2"/></svg></span><h3>Website Design Frameworks</h3><p>Ultra-responsive, rapid, performance-tuned modular web layouts custom-constructed strictly by hand. Meticulously optimized to capture conversions with elite mobile loading infrastructure, fully native structural schema microdata, clear user calls-to-action (CTAs), and intuitive user-experience navigation layouts.</p></div>
+                <div class="service-blueprint-card reveal delay-1" id="service-link-building"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="5" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="18" cy="18" r="5" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="13" y1="13" x2="15" y2="15" stroke="#069db2" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="10" r="2" fill="#069db2" opacity="0.4"/><circle cx="18" cy="18" r="2" fill="#069db2" opacity="0.4"/></svg></span><h3>Strategic Link Building</h3><p>Continuous authority development via contextual backlink extraction from authoritative niche digital publications and premium local directory hubs. Supported by human-crafted editorial guest posting sequences and advanced internal structural link equity architecture loops.</p></div>
+                <div class="service-blueprint-card reveal delay-2" id="service-reddit-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="9" cy="12" r="3" fill="#069db2" opacity="0.3"/><circle cx="19" cy="16" r="2.5" fill="#069db2" opacity="0.3"/><line x1="11.5" y1="13" x2="17" y2="15.5" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Reddit SEO Strategy</h3><p>Isolate and control real organic brand visibility within relevant, high-intent thread discussions across specialized communities for industry-specific customer pain points, positioning your solutions naturally within high-traffic informational query pipelines.</p></div>
+                <div class="service-blueprint-card reveal delay-3" id="service-cro"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="7,17 11,20 21,9" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Conversion Rate Optimization (CRO)</h3><p>Continuous data-backed pipeline refinement using active visual testing patterns, interactive funnel tracking maps, structural intake booking path elimination sequences, and meticulous user call-to-action (CTA) text adjustments to convert static web visitors into bottom-line operations.</p></div>
+                <div class="service-blueprint-card reveal delay-1" id="service-lead-tracking"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="7,13 10,16 14,11 18,15 21,12" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="13" r="1.5" fill="#069db2"/><circle cx="14" cy="11" r="1.5" fill="#069db2"/><circle cx="21" cy="12" r="1.5" fill="#069db2"/></svg></span><h3>Lead Analysis & Automated Tracking</h3><p>Advanced algorithmic tracking pipelines designed to process every incoming inquiry natively, passing critical interaction history data straight into automated response workflows built exclusively to engage prospects within the vital 5-minute conversion response window.</p></div>
+                <div class="service-blueprint-card reveal delay-2" id="service-retargeting"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 22 L10 16 L15 19 L24 7" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="22" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="10" cy="16" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="15" cy="19" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="24" cy="7" r="2.5" fill="#069db2" opacity="0.5"/></svg></span><h3>Hyper-Targeted Retargeting Funnels</h3><p>Smart multi-tier remarketing loops engineered to follow up with high-intent drop-off web users across independent display networks, introducing custom contextual copy incentives based on exact visitor drop-off touchpoints.</p></div>
             </div>
         </div>
     </section>
@@ -1624,36 +1192,88 @@
             <h2 class="section-title reveal">Ultra-Transparent <span>Performance Tiers</span></h2>
             <div class="pricing-grid">
                 <div class="price-card reveal delay-1">
+                    <h3>Bronze Launch</h3>
+                    <div class="price">$299<span>/mo</span></div>
+                    <ul class="price-features-list">
+                        <li>✔ Website SEO Audit</li>
+                        <li>✔ Basic Keyword Research (10 Keywords)</li>
+                        <li>✔ On-Page SEO Optimization (Up to 5 Pages)</li>
+                        <li>✔ Google Business Profile Setup/Optimization</li>
+                        <li>✔ Basic Technical SEO Fixes</li>
+                        <li>✔ Monthly Ranking Report</li>
+                        <li>✔ Google Analytics & Search Console Setup</li>
+                        <li>✔ Email Support</li>
+                    </ul>
+                    <a href="mailto:contact@nextgenit.com?subject=Bronze%20Launch%20Inquiry" class="btn">Get Started</a>
+                </div>
+                <div class="price-card reveal delay-2">
+                    <h3>Starter Growth</h3>
+                    <div class="price">$499<span>/mo</span></div>
+                    <ul class="price-features-list">
+                        <li>✔ Everything in Bronze Launch</li>
+                        <li>✔ Advanced Keyword Research (25 Keywords)</li>
+                        <li>✔ On-Page SEO Optimization (Up to 10 Pages)</li>
+                        <li>✔ Local SEO Optimization</li>
+                        <li>✔ Competitor Analysis</li>
+                        <li>✔ Content Optimization Recommendations</li>
+                        <li>✔ Citation Building & Local Listings</li>
+                        <li>✔ Monthly Performance Report</li>
+                        <li>✔ Priority Email Support</li>
+                    </ul>
+                    <a href="mailto:contact@nextgenit.com?subject=Starter%20Growth%20Inquiry" class="btn">Get Started</a>
+                </div>
+                <div class="price-card reveal delay-3">
                     <h3>Silver Setup</h3>
                     <div class="price">$1,499<span>/mo</span></div>
                     <ul class="price-features-list">
-                        <li>✔ Core Organic Search Optimization</li>
-                        <li>✔ Responsive High-Speed Landing Layout</li>
-                        <li>✔ Local Visibility Mapping & Optimization</li>
-                        <li>✔ Standard Data Tracking & Monthly Analytics</li>
+                        <li>✔ Everything in Starter Growth</li>
+                        <li>✔ Comprehensive SEO Strategy</li>
+                        <li>✔ On-Page SEO Optimization (Up to 25 Pages)</li>
+                        <li>✔ Technical SEO Audit & Implementation</li>
+                        <li>✔ Monthly Blog Content Optimization</li>
+                        <li>✔ Link Building Campaign</li>
+                        <li>✔ Conversion-Focused Landing Page Optimization</li>
+                        <li>✔ Google Business Profile Management</li>
+                        <li>✔ Advanced Analytics & Tracking Setup</li>
+                        <li>✔ Monthly Strategy Consultation</li>
                     </ul>
                     <a href="mailto:contact@nextgenit.com?subject=Silver%20Setup%20Inquiry" class="btn">Get Started</a>
                 </div>
-                <div class="price-card featured reveal delay-2">
+                <div class="price-card featured reveal delay-4">
                     <div class="featured-badge">RECOMMENDED</div>
                     <h3>Gold Domination</h3>
                     <div class="price">$2,999<span>/mo</span></div>
                     <ul class="price-features-list">
-                        <li>✔ Comprehensive Custom Web & SEO Framework</li>
-                        <li>✔ High-ROI Paid Advertisement Architecture</li>
-                        <li>✔ Advanced Aggressive Multi-Channel Strategy</li>
-                        <li>✔ Dynamic Event Mapping & Conversion Tracking</li>
+                        <li>✔ Everything in Silver Setup</li>
+                        <li>✔ Custom SEO & Digital Marketing Framework</li>
+                        <li>✔ Advanced Multi-Location SEO (if applicable)</li>
+                        <li>✔ Aggressive Authority Link Building</li>
+                        <li>✔ Content Marketing Strategy & Execution</li>
+                        <li>✔ PPC Campaign Setup & Optimization</li>
+                        <li>✔ Conversion Rate Optimization (CRO)</li>
+                        <li>✔ Competitor Domination Analysis</li>
+                        <li>✔ Custom Dashboard & Reporting</li>
+                        <li>✔ Bi-Weekly Strategy Meetings</li>
+                        <li>✔ Dedicated Account Manager</li>
                     </ul>
                     <a href="mailto:contact@nextgenit.com?subject=Gold%20Domination%20Inquiry" class="btn">Get Started</a>
                 </div>
-                <div class="price-card reveal delay-3">
+                <div class="price-card reveal delay-1">
                     <h3>Platinum Enterprise</h3>
                     <div class="price">$4,999<span>/mo</span></div>
                     <ul class="price-features-list">
-                        <li>✔ Omnichannel Cross-Platform Funnel Engineering</li>
-                        <li>✔ Advanced Brand Preservation Systems</li>
-                        <li>✔ Automated Custom Application Integrations</li>
-                        <li>✔ On-Demand Access to Performance Engineers</li>
+                        <li>✔ Everything in Gold Domination</li>
+                        <li>✔ Enterprise-Level SEO Management</li>
+                        <li>✔ Omnichannel Marketing Strategy</li>
+                        <li>✔ Advanced Marketing Automation</li>
+                        <li>✔ Custom Funnel Development & Optimization</li>
+                        <li>✔ Enterprise Technical SEO Solutions</li>
+                        <li>✔ Brand Reputation Monitoring & Management</li>
+                        <li>✔ Custom API & CRM Integrations</li>
+                        <li>✔ Advanced Attribution & Conversion Tracking</li>
+                        <li>✔ Unlimited Strategic Consulting</li>
+                        <li>✔ Dedicated Performance Team</li>
+                        <li>✔ Priority Support & Emergency Response</li>
                     </ul>
                     <a href="mailto:contact@nextgenit.com?subject=Platinum%20Enterprise%20Inquiry" class="btn">Get Started</a>
                 </div>
@@ -1666,22 +1286,10 @@
         <div class="container">
             <h2 class="section-title reveal">Our 4-Step <span>Onboarding Blueprint</span></h2>
             <div class="flowchart-grid">
-                <div class="flow-step reveal delay-1">
-                    <h4>01 / Strategy Alignment</h4>
-                    <p>We deeply evaluate structural market parameters to calculate exact deployment budgets balancing your transactional model metrics perfectly.</p>
-                </div>
-                <div class="flow-step reveal delay-2">
-                    <h4>02 / Architecture Lock</h4>
-                    <p>We codify campaign performance targets, strip core design noise, and refine UI elements to clear a frictionless conversion path.</p>
-                </div>
-                <div class="flow-step reveal delay-3">
-                    <h4>03 / Integration Launch</h4>
-                    <p>Our agile pipeline brings lightweight code configurations, secure server configurations, and customized assets completely live.</p>
-                </div>
-                <div class="flow-step reveal delay-4">
-                    <h4>04 / Continuous Optimization</h4>
-                    <p>We systematically monitor traffic streams, prune inefficient variables, and steadily minimize your acquisition overhead costs.</p>
-                </div>
+                <div class="flow-step reveal delay-1"><h4>01 / Strategy Alignment</h4><p>We deeply evaluate structural market parameters to calculate exact deployment budgets balancing your transactional model metrics perfectly.</p></div>
+                <div class="flow-step reveal delay-2"><h4>02 / Architecture Lock</h4><p>We codify campaign performance targets, strip core design noise, and refine UI elements to clear a frictionless conversion path.</p></div>
+                <div class="flow-step reveal delay-3"><h4>03 / Integration Launch</h4><p>Our agile pipeline brings lightweight code configurations, secure server configurations, and customized assets completely live.</p></div>
+                <div class="flow-step reveal delay-4"><h4>04 / Continuous Optimization</h4><p>We systematically monitor traffic streams, prune inefficient variables, and steadily minimize your acquisition overhead costs.</p></div>
             </div>
         </div>
     </section>
@@ -1690,30 +1298,12 @@
     <section class="faq-section" id="faqs">
         <div class="container faq-container">
             <h2 class="section-title reveal">Frequently Asked <span>Questions</span></h2>
-            <div class="accordion-item reveal delay-1">
-                <div class="accordion-title">How do you track true campaign ROI? <span class="accordion-icon">+</span></div>
-                <div class="accordion-content"><p>We bypass shallow stats by deploying end-to-end event mapping tokens. This tracks every customer inquiry from their first search touchpoint down to completed transactional checkouts.</p></div>
-            </div>
-            <div class="accordion-item reveal delay-1">
-                <div class="accordion-title">What digital channels do your frameworks include? <span class="accordion-icon">+</span></div>
-                <div class="accordion-content"><p>NextGenIT builds systems spanning organic search visibility (SEO), custom high-performance web development, high-intent paid ad solutions, social media channels, and tailored branding architectures.</p></div>
-            </div>
-            <div class="accordion-item reveal delay-2">
-                <div class="accordion-title">Are your growth strategies contract-independent? <span class="accordion-icon">+</span></div>
-                <div class="accordion-content"><p>Yes. We function as high-performance architectural partners. Our frameworks are built to produce measurable traction quickly, keeping partnerships entirely performance-driven.</p></div>
-            </div>
-            <div class="accordion-item reveal delay-2">
-                <div class="accordion-title">What is your design philosophy regarding AI generation vs. human precision? <span class="accordion-icon">+</span></div>
-                <div class="accordion-content"><p>We completely reject messy, automated, template-based layouts. Every element we construct is custom engineered by hand using minimalist, neat visual principles to ensure elite user experiences that establish trust and command market respect.</p></div>
-            </div>
-            <div class="accordion-item reveal delay-2">
-                <div class="accordion-title">Do you offer standalone graphic design, video editing, or data packages? <span class="accordion-icon">+</span></div>
-                <div class="accordion-content"><p>Absolutely. Whether you need a full brand identity, cinematic video editing, or high-volume data processing, our creative and data services can be purchased independently or as part of a full growth bundle.</p></div>
-            </div>
-            <div class="accordion-item reveal delay-2">
-                <div class="accordion-title">What data security measures do you take? <span class="accordion-icon">+</span></div>
-                <div class="accordion-content"><p>We follow industry best practices: encrypted transfers, NDAs for all team members, secure cloud environments, and optional on‑premise processing for sensitive projects.</p></div>
-            </div>
+            <div class="accordion-item reveal delay-1"><div class="accordion-title">How do you track true campaign ROI? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>We bypass shallow stats by deploying end-to-end event mapping tokens. This tracks every customer inquiry from their first search touchpoint down to completed transactional checkouts.</p></div></div>
+            <div class="accordion-item reveal delay-1"><div class="accordion-title">What digital channels do your frameworks include? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>NextGenIT builds systems spanning organic search visibility (SEO), custom high-performance web development, high-intent paid ad solutions, social media channels, and tailored branding architectures.</p></div></div>
+            <div class="accordion-item reveal delay-2"><div class="accordion-title">Are your growth strategies contract-independent? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>Yes. We function as high-performance architectural partners. Our frameworks are built to produce measurable traction quickly, keeping partnerships entirely performance-driven.</p></div></div>
+            <div class="accordion-item reveal delay-2"><div class="accordion-title">What is your design philosophy regarding AI generation vs. human precision? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>We completely reject messy, automated, template-based layouts. Every element we construct is custom engineered by hand using minimalist, neat visual principles to ensure elite user experiences that establish trust and command market respect.</p></div></div>
+            <div class="accordion-item reveal delay-2"><div class="accordion-title">Do you offer standalone graphic design, video editing, or data packages? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>Absolutely. Whether you need a full brand identity, cinematic video editing, or high-volume data processing, our creative and data services can be purchased independently or as part of a full growth bundle.</p></div></div>
+            <div class="accordion-item reveal delay-2"><div class="accordion-title">What data security measures do you take? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>We follow industry best practices: encrypted transfers, NDAs for all team members, secure cloud environments, and optional on‑premise processing for sensitive projects.</p></div></div>
         </div>
     </section>
 
@@ -1761,23 +1351,17 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // --- PAGE LOADER ---
             const loader = document.getElementById('page-loader');
             if (loader) {
                 const hideLoader = () => {
                     loader.classList.add('loaded');
-                    setTimeout(() => {
-                        loader.style.display = 'none';
-                    }, 400);
+                    setTimeout(() => { loader.style.display = 'none'; }, 400);
                 };
                 window.addEventListener('load', hideLoader);
-                // Fallback: hide after 2.5 seconds max
                 setTimeout(hideLoader, 2500);
             }
 
-            // --- SCROLL REVEAL ---
             const revealElements = document.querySelectorAll('.reveal');
-            const observerOptions = { root: null, threshold: 0.06, rootMargin: '0px 0px -30px 0px' };
             const revealObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1785,19 +1369,14 @@
                         revealObserver.unobserve(entry.target);
                     }
                 });
-            }, observerOptions);
+            }, { root: null, threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
             revealElements.forEach(el => revealObserver.observe(el));
 
-            // --- PROCESS TABS ---
             const processData = [
-                { title: "Phase 1: Market Footprint Audit",
-                    text: "We map out competitive digital layout footprints, audit organic search authority parameters, isolate conversion funnel leaks, and formulate exact technical benchmarks engineered for growth." },
-                { title: "Phase 2: High-Intent Capture Setup",
-                    text: "We construct precision architecture models across target search terms, build semantic keyword landscapes, deploy clean tracking schema marks, and launch high-intent transactional visibility loops." },
-                { title: "Phase 3: Conversion Landing Engine",
-                    text: "Our visual engineers craft custom high-speed landing configurations. We clean code frameworks, establish lightning fast loading protocols, build explicit CTAs, and eradicate drop-off structural layers." },
-                { title: "Phase 4: Predictable Revenue Scale",
-                    text: "We open programmatic ad bidding parameters, optimize allocation pipelines across high-performing cross-channel loops, prune metrics continuously, and amplify customer intake velocity." }
+                { title: "Phase 1: Market Footprint Audit", text: "We map out competitive digital layout footprints, audit organic search authority parameters, isolate conversion funnel leaks, and formulate exact technical benchmarks engineered for growth." },
+                { title: "Phase 2: High-Intent Capture Setup", text: "We construct precision architecture models across target search terms, build semantic keyword landscapes, deploy clean tracking schema marks, and launch high-intent transactional visibility loops." },
+                { title: "Phase 3: Conversion Landing Engine", text: "Our visual engineers craft custom high-speed landing configurations. We clean code frameworks, establish lightning fast loading protocols, build explicit CTAs, and eradicate drop-off structural layers." },
+                { title: "Phase 4: Predictable Revenue Scale", text: "We open programmatic ad bidding parameters, optimize allocation pipelines across high-performing cross-channel loops, prune metrics continuously, and amplify customer intake velocity." }
             ];
             const tabElements = document.querySelectorAll('.tab-list div');
             const panelContainer = document.getElementById('dynamic-tab-panel');
@@ -1809,10 +1388,8 @@
                         const dataId = parseInt(tab.getAttribute('data-id'), 10);
                         panelContainer.style.opacity = '0';
                         panelContainer.style.transform = 'translateY(10px)';
-                        panelContainer.style.transition = 'opacity 0.2s ease, transform 0.2s ease';
                         setTimeout(() => {
-                            panelContainer.innerHTML =
-                                `<h3>${processData[dataId].title}</h3><p>${processData[dataId].text}</p>`;
+                            panelContainer.innerHTML = `<h3>${processData[dataId].title}</h3><p>${processData[dataId].text}</p>`;
                             panelContainer.style.opacity = '1';
                             panelContainer.style.transform = 'translateY(0)';
                         }, 200);
@@ -1820,19 +1397,12 @@
                 });
             }
 
-            // --- FAQ ACCORDION ---
             const accordionItems = document.querySelectorAll('.accordion-item');
             accordionItems.forEach(item => {
                 item.addEventListener('click', () => {
                     const content = item.querySelector('.accordion-content');
                     const isActive = item.classList.contains('active');
-                    // Close all
-                    accordionItems.forEach(other => {
-                        other.classList.remove('active');
-                        const otherContent = other.querySelector('.accordion-content');
-                        if (otherContent) otherContent.style.maxHeight = null;
-                    });
-                    // Open clicked (if it wasn't already active)
+                    accordionItems.forEach(other => { other.classList.remove('active'); other.querySelector('.accordion-content').style.maxHeight = null; });
                     if (!isActive) {
                         item.classList.add('active');
                         if (content) content.style.maxHeight = content.scrollHeight + "px";
@@ -1840,12 +1410,10 @@
                 });
             });
 
-            // --- HAMBURGER MENU ---
             const hamburgerBtn = document.getElementById('hamburgerBtn');
             const mobilePanel = document.getElementById('mobilePanel');
             const mobileOverlay = document.getElementById('mobileOverlay');
             const mobileNavLinks = mobilePanel.querySelectorAll('a');
-
             const openMobileNav = () => {
                 hamburgerBtn.classList.add('active');
                 mobilePanel.classList.add('active');
@@ -1858,34 +1426,18 @@
                 mobileOverlay.classList.remove('active');
                 document.body.style.overflow = '';
             };
-
             hamburgerBtn.addEventListener('click', () => {
-                if (hamburgerBtn.classList.contains('active')) {
-                    closeMobileNav();
-                } else {
-                    openMobileNav();
-                }
+                hamburgerBtn.classList.contains('active') ? closeMobileNav() : openMobileNav();
             });
             mobileOverlay.addEventListener('click', closeMobileNav);
             mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => {
-                    // Close nav shortly after click for smooth transition
-                    setTimeout(closeMobileNav, 150);
-                });
+                link.addEventListener('click', () => setTimeout(closeMobileNav, 150));
             });
-
-            // Close mobile nav on Escape key
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && hamburgerBtn.classList.contains('active')) {
-                    closeMobileNav();
-                }
+                if (e.key === 'Escape' && hamburgerBtn.classList.contains('active')) closeMobileNav();
             });
-
-            // Close mobile nav on window resize (if desktop nav becomes visible)
             window.addEventListener('resize', () => {
-                if (window.innerWidth > 1024 && hamburgerBtn.classList.contains('active')) {
-                    closeMobileNav();
-                }
+                if (window.innerWidth > 1024 && hamburgerBtn.classList.contains('active')) closeMobileNav();
             });
         });
     </script>
