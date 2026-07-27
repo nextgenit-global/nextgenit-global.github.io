@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextGenIT | Premium Digital Marketing & Growth Agency</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextGenIT | Digital Growth &amp; IT Infrastructure – Nepal &amp; Global</title>
     <style>
+        /* ── root ── */
         :root {
             --primary-blue: #041738;
             --accent-teal: #069db2;
@@ -16,13 +17,15 @@
             --card-dark: #f8fbfc;
             --card-light: #ffffff;
             --border-light: #eef3f6;
-            --font-main: 'Nexa', 'Sofia Pro', 'Codec Pro', 'Montserrat', 'Poppins', 'Segoe UI', system-ui, sans-serif;
+            --font-main: 'Nexa', 'Sofia Pro', 'Codec Pro', 'Montserrat', 'Poppins', 'Segoe UI', system-ui,
+                sans-serif;
             --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
             --shadow-sm: 0 4px 6px rgba(6, 157, 178, 0.08);
             --shadow-md: 0 10px 25px rgba(4, 23, 56, 0.06);
             --shadow-lg: 0 15px 35px rgba(4, 23, 56, 0.1);
         }
 
+        /* ── reset ── */
         *,
         *::before,
         *::after {
@@ -30,14 +33,11 @@
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
-            scroll-behavior: smooth;
             font-size: 16px;
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
         }
-
         body {
             font-family: var(--font-main);
             background-color: var(--bg-light);
@@ -49,20 +49,19 @@
             -moz-osx-font-smoothing: grayscale;
             min-height: 100vh;
         }
-
         .container {
             width: 92%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 60px 0;
         }
-
         img {
             max-width: 100%;
             height: auto;
             display: block;
         }
 
+        /* ── loader ── */
         #page-loader {
             position: fixed;
             top: 0;
@@ -91,10 +90,15 @@
             animation: spin 0.75s linear infinite;
         }
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
+        /* ── reveal ── */
         .reveal {
             opacity: 0;
             transform: translateY(24px);
@@ -105,11 +109,20 @@
             opacity: 1;
             transform: translateY(0);
         }
-        .delay-1 { transition-delay: 0.1s; }
-        .delay-2 { transition-delay: 0.2s; }
-        .delay-3 { transition-delay: 0.3s; }
-        .delay-4 { transition-delay: 0.4s; }
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
 
+        /* ── btn ── */
         .btn {
             display: inline-block;
             background-color: var(--accent-teal);
@@ -154,7 +167,24 @@
         .section-title span {
             color: var(--accent-teal);
         }
+        .geo-badge {
+            display: inline-block;
+            background-color: var(--accent-teal);
+            color: #fff;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 10px;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+        .geo-badge.nepal-only {
+            background-color: #e67e22;
+        }
 
+        /* ── header ── */
         header {
             position: sticky;
             top: 0;
@@ -211,12 +241,12 @@
             position: relative;
             display: inline-block;
         }
-        .nav-dropdown > a {
+        .nav-dropdown>a {
             display: flex;
             align-items: center;
             gap: 4px;
         }
-        .nav-dropdown > a::after {
+        .nav-dropdown>a::after {
             content: '▾';
             font-size: 0.7rem;
             margin-left: 2px;
@@ -228,13 +258,13 @@
             left: 50%;
             transform: translateX(-50%);
             background-color: #ffffff;
-            width: 680px;
+            width: 780px;
             box-shadow: 0 12px 35px rgba(4, 23, 56, 0.15);
             border-radius: 8px;
             padding: 20px 16px;
             z-index: 1001;
             border: 1px solid var(--border-light);
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 0 16px;
         }
         .nav-dropdown:hover .nav-dropdown-content {
@@ -378,6 +408,7 @@
             font-size: 0.9rem;
         }
 
+        /* ── hero ── */
         .hero-section {
             background-color: #fafcfd;
             color: var(--text-light);
@@ -403,9 +434,24 @@
             z-index: 1;
             opacity: 0.10;
         }
-        .hero-graph-decoration.graph-top-right { top: 8%; right: 3%; width: 320px; height: 200px; }
-        .hero-graph-decoration.graph-bottom-left { bottom: 10%; left: 2%; width: 260px; height: 160px; }
-        .hero-graph-decoration.graph-mid-right { top: 40%; right: 1%; width: 200px; height: 280px; }
+        .hero-graph-decoration.graph-top-right {
+            top: 8%;
+            right: 3%;
+            width: 320px;
+            height: 200px;
+        }
+        .hero-graph-decoration.graph-bottom-left {
+            bottom: 10%;
+            left: 2%;
+            width: 260px;
+            height: 160px;
+        }
+        .hero-graph-decoration.graph-mid-right {
+            top: 40%;
+            right: 1%;
+            width: 200px;
+            height: 280px;
+        }
         .hero-accent-shape {
             position: absolute;
             pointer-events: none;
@@ -414,9 +460,29 @@
             opacity: 0.06;
             background: var(--accent-teal);
         }
-        .hero-accent-shape.shape-1 { width: 180px; height: 180px; top: -60px; right: -50px; }
-        .hero-accent-shape.shape-2 { width: 100px; height: 100px; bottom: 10%; left: 8%; background: var(--primary-blue); opacity: 0.04; border-radius: 30%; }
-        .hero-accent-shape.shape-3 { width: 60px; height: 60px; top: 25%; right: 18%; opacity: 0.07; border-radius: 20%; }
+        .hero-accent-shape.shape-1 {
+            width: 180px;
+            height: 180px;
+            top: -60px;
+            right: -50px;
+        }
+        .hero-accent-shape.shape-2 {
+            width: 100px;
+            height: 100px;
+            bottom: 10%;
+            left: 8%;
+            background: var(--primary-blue);
+            opacity: 0.04;
+            border-radius: 30%;
+        }
+        .hero-accent-shape.shape-3 {
+            width: 60px;
+            height: 60px;
+            top: 25%;
+            right: 18%;
+            opacity: 0.07;
+            border-radius: 20%;
+        }
         .hero-section .container.hero-content {
             max-width: 1100px;
             margin: 0 auto;
@@ -480,11 +546,31 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px rgba(6, 157, 178, 0.08);
         }
-        .stat-icon { display: block; margin-bottom: 10px; width: 34px; height: 34px; }
-        .stat-icon svg { width: 100%; height: 100%; display: block; }
-        .stat-box h3 { font-size: 1.05rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 6px; }
-        .stat-box p { color: var(--text-muted); font-size: 0.85rem; font-weight: 400; line-height: 1.5; }
+        .stat-icon {
+            display: block;
+            margin-bottom: 10px;
+            width: 34px;
+            height: 34px;
+        }
+        .stat-icon svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .stat-box h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+        }
+        .stat-box p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
 
+        /* ── services blueprint ── */
         .services-blueprint-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -503,18 +589,45 @@
             box-shadow: 0 12px 30px rgba(4, 23, 56, 0.06);
             border-color: #e2ecf0;
         }
-        .card-icon-sm { display: block; width: 28px; height: 28px; margin-bottom: 10px; }
-        .card-icon-sm svg { width: 100%; height: 100%; display: block; }
-        .service-blueprint-card h3 { font-size: 1.1rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; letter-spacing: -0.3px; }
-        .service-blueprint-card p { color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; font-weight: 400; }
+        .card-icon-sm {
+            display: block;
+            width: 28px;
+            height: 28px;
+            margin-bottom: 10px;
+        }
+        .card-icon-sm svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        .service-blueprint-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+        }
+        .service-blueprint-card p {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
 
-        .graphic-design-grid, .video-editing-grid, .data-services-grid {
+        /* ── graphic design, video, data, hardware ── */
+        .graphic-design-grid,
+        .video-editing-grid,
+        .data-services-grid,
+        .hardware-services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
             margin-top: 30px;
         }
-        .design-card, .video-card, .data-card {
+        .design-card,
+        .video-card,
+        .data-card,
+        .hardware-card {
             background: var(--card-light);
             padding: 26px 22px;
             border-radius: 6px;
@@ -522,23 +635,35 @@
             text-align: center;
             transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s;
         }
-        .design-card:hover, .video-card:hover, .data-card:hover {
+        .design-card:hover,
+        .video-card:hover,
+        .data-card:hover,
+        .hardware-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 15px 30px rgba(4, 23, 56, 0.08);
             border-color: var(--accent-teal);
         }
-        .design-card .card-icon-sm, .video-card .card-icon-sm, .data-card .card-icon-sm {
+        .design-card .card-icon-sm,
+        .video-card .card-icon-sm,
+        .data-card .card-icon-sm,
+        .hardware-card .card-icon-sm {
             margin: 0 auto 12px auto;
             width: 32px;
             height: 32px;
         }
-        .design-card h3, .video-card h3, .data-card h3 {
+        .design-card h3,
+        .video-card h3,
+        .data-card h3,
+        .hardware-card h3 {
             font-size: 1.2rem;
             color: var(--primary-blue);
             margin-bottom: 12px;
             font-weight: 700;
         }
-        .design-card p, .video-card p, .data-card p {
+        .design-card p,
+        .video-card p,
+        .data-card p,
+        .hardware-card p {
             color: var(--text-muted);
             line-height: 1.6;
             font-size: 0.9rem;
@@ -552,6 +677,7 @@
             padding: 0 10px;
         }
 
+        /* ── values ── */
         .values-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -586,9 +712,18 @@
             border-radius: 50%;
             flex-shrink: 0;
         }
-        .value-card p { font-weight: 400; color: var(--text-muted); font-size: 0.9rem; }
+        .value-card p {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
 
-        .about-agency .container { max-width: 850px; margin: 0 auto; text-align: center; }
+        /* ── about ── */
+        .about-agency .container {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
         .about-agency h3 {
             font-size: clamp(1.3rem, 2.5vw, 1.6rem);
             margin-bottom: 14px;
@@ -596,10 +731,23 @@
             font-weight: 700;
             color: var(--primary-blue);
         }
-        .about-agency p { color: var(--text-muted); font-size: clamp(0.95rem, 1.5vw, 1.1rem); font-weight: 400; }
+        .about-agency p {
+            color: var(--text-muted);
+            font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            font-weight: 400;
+        }
 
-        .tabs-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
-        .tabs-wrapper { display: grid; grid-template-columns: 1fr 2fr; gap: 30px; align-items: start; }
+        /* ── tabs ── */
+        .tabs-section {
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-light);
+        }
+        .tabs-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            align-items: start;
+        }
         .tab-list div {
             padding: 14px 18px;
             border-left: 3px solid var(--border-light);
@@ -626,10 +774,23 @@
             min-height: 200px;
             transition: opacity 0.2s ease, transform 0.2s ease;
         }
-        .tab-content-panel h3 { font-size: 1.3rem; color: var(--primary-blue); margin-bottom: 10px; font-weight: 700; }
-        .tab-content-panel p { font-weight: 400; color: var(--text-muted); line-height: 1.7; }
+        .tab-content-panel h3 {
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        .tab-content-panel p {
+            font-weight: 400;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
 
-        .pricing-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
+        /* ── pricing ── */
+        .pricing-section {
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-light);
+        }
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -649,7 +810,9 @@
             transform: translateY(-4px);
             box-shadow: 0 15px 30px rgba(4, 23, 56, 0.05);
         }
-        .price-card.featured { border: 2px solid var(--accent-teal); }
+        .price-card.featured {
+            border: 2px solid var(--accent-teal);
+        }
         .featured-badge {
             position: absolute;
             top: -14px;
@@ -663,10 +826,28 @@
             letter-spacing: 0.5px;
             white-space: nowrap;
         }
-        .price-card h3 { color: var(--primary-blue); font-size: 1.25rem; margin-bottom: 8px; font-weight: 800; }
-        .price { font-size: 2rem; font-weight: 800; color: var(--primary-blue); margin-bottom: 16px; }
-        .price span { font-size: 0.9rem; color: var(--text-muted); font-weight: 400; }
-        .price-features-list { list-style: none; margin-bottom: 24px; flex-grow: 1; }
+        .price-card h3 {
+            color: var(--primary-blue);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            font-weight: 800;
+        }
+        .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 16px;
+        }
+        .price span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+        .price-features-list {
+            list-style: none;
+            margin-bottom: 24px;
+            flex-grow: 1;
+        }
         .price-features-list li {
             margin-bottom: 10px;
             font-size: 0.88rem;
@@ -676,10 +857,21 @@
             gap: 8px;
             font-weight: 400;
         }
-        .price-card .btn { text-align: center; width: 100%; }
+        .price-card .btn {
+            text-align: center;
+            width: 100%;
+        }
 
-        .flowchart-section { background-color: var(--bg-light); border-top: 1px solid var(--border-light); }
-        .flowchart-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        /* ── flowchart ── */
+        .flowchart-section {
+            background-color: var(--bg-light);
+            border-top: 1px solid var(--border-light);
+        }
+        .flowchart-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
         .flow-step {
             background: white;
             padding: 22px;
@@ -691,11 +883,26 @@
             transform: translateY(-4px);
             box-shadow: 0 10px 25px rgba(6, 157, 178, 0.05);
         }
-        .flow-step h4 { font-weight: 700; color: var(--accent-teal); margin-bottom: 6px; font-size: 0.95rem; }
-        .flow-step p { color: var(--text-muted); font-size: 0.85rem; }
+        .flow-step h4 {
+            font-weight: 700;
+            color: var(--accent-teal);
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+        .flow-step p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
 
-        .faq-section { background-color: var(--bg-dark); border-top: 1px solid var(--border-light); }
-        .faq-container { max-width: 850px; margin: 0 auto; }
+        /* ── faq ── */
+        .faq-section {
+            background-color: var(--bg-dark);
+            border-top: 1px solid var(--border-light);
+        }
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
         .accordion-item {
             background: var(--card-dark);
             margin-bottom: 10px;
@@ -705,7 +912,9 @@
             overflow: hidden;
             transition: background-color 0.3s ease;
         }
-        .accordion-item:hover { background-color: #f0f6f9; }
+        .accordion-item:hover {
+            background-color: #f0f6f9;
+        }
         .accordion-title {
             display: flex;
             justify-content: space-between;
@@ -718,7 +927,12 @@
             font-size: 0.95rem;
             gap: 15px;
         }
-        .accordion-icon { font-size: 1.3rem; color: var(--accent-teal); transition: transform 0.3s ease; flex-shrink: 0; }
+        .accordion-icon {
+            font-size: 1.3rem;
+            color: var(--accent-teal);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
         .accordion-content {
             max-height: 0;
             overflow: hidden;
@@ -728,9 +942,14 @@
             font-size: 0.9rem;
             font-weight: 400;
         }
-        .accordion-content p { padding: 12px 0 16px; }
-        .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+        .accordion-content p {
+            padding: 12px 0 16px;
+        }
+        .accordion-item.active .accordion-icon {
+            transform: rotate(45deg);
+        }
 
+        /* ── contact ── */
         .contact-form-section {
             background-color: #f8fbfc;
             border-top: 1px solid var(--border-light);
@@ -744,7 +963,9 @@
             box-shadow: 0 12px 30px rgba(4, 23, 56, 0.06);
             border: 1px solid var(--border-light);
         }
-        .form-group { margin-bottom: 22px; }
+        .form-group {
+            margin-bottom: 22px;
+        }
         .form-group label {
             display: block;
             margin-bottom: 8px;
@@ -771,11 +992,29 @@
             border-color: var(--accent-teal);
             box-shadow: 0 0 0 3px rgba(6, 157, 178, 0.1);
         }
-        .form-submit-btn { width: 100%; padding: 15px; font-size: 1rem; cursor: pointer; }
-        .form-message { text-align: center; margin-top: 15px; font-weight: 600; font-size: 0.9rem; display: none; }
-        .form-message.success { color: #069db2; display: block; }
-        .form-message.error { color: #e74c3c; display: block; }
+        .form-submit-btn {
+            width: 100%;
+            padding: 15px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .form-message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .form-message.success {
+            color: #069db2;
+            display: block;
+        }
+        .form-message.error {
+            color: #e74c3c;
+            display: block;
+        }
 
+        /* ── map ── */
         .map-section {
             background-color: var(--bg-dark);
             border-top: 1px solid var(--border-light);
@@ -787,6 +1026,7 @@
             box-shadow: var(--shadow-md);
         }
 
+        /* ── footer ── */
         footer {
             background-color: var(--primary-blue);
             color: #a3b8cc;
@@ -794,18 +1034,59 @@
             border-top: none;
             font-family: var(--font-main);
         }
-        footer .container { padding: 50px 0 25px 0; }
-        .footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 30px; }
-        .footer-col h4 { color: #ffffff; margin-bottom: 14px; font-weight: 700; font-size: 1rem; }
-        .footer-col p { color: #a3b8cc !important; font-weight: 400; line-height: 1.7; font-size: 0.85rem; }
-        .footer-col ul { list-style: none; }
-        .footer-col ul li { margin-bottom: 7px; }
-        .footer-col ul li a { color: #a3b8cc; text-decoration: none; transition: color 0.2s; font-weight: 400; font-size: 0.85rem; }
-        .footer-col ul li a:hover { color: var(--accent-teal); }
-        .footer-brand-name { font-weight: 800; font-size: 1.3rem; color: #ffffff; }
-        .footer-brand-name span { color: var(--accent-teal); }
-        .footer-contact-email { color: var(--accent-teal); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
-        .footer-contact-email:hover { text-decoration: underline; }
+        footer .container {
+            padding: 50px 0 25px 0;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 30px;
+        }
+        .footer-col h4 {
+            color: #ffffff;
+            margin-bottom: 14px;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .footer-col p {
+            color: #a3b8cc !important;
+            font-weight: 400;
+            line-height: 1.7;
+            font-size: 0.85rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col ul li {
+            margin-bottom: 7px;
+        }
+        .footer-col ul li a {
+            color: #a3b8cc;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-weight: 400;
+            font-size: 0.85rem;
+        }
+        .footer-col ul li a:hover {
+            color: var(--accent-teal);
+        }
+        .footer-brand-name {
+            font-weight: 800;
+            font-size: 1.3rem;
+            color: #ffffff;
+        }
+        .footer-brand-name span {
+            color: var(--accent-teal);
+        }
+        .footer-contact-email {
+            color: var(--accent-teal);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .footer-contact-email:hover {
+            text-decoration: underline;
+        }
         .footer-bottom {
             text-align: center;
             padding-top: 35px;
@@ -813,113 +1094,379 @@
             border-top: 1px solid rgba(255, 255, 255, 0.08);
             font-size: 0.82rem;
         }
-        .footer-bottom p { color: #71899e !important; font-weight: 400; }
-
-        @media (max-width: 1024px) {
-            .container { padding: 45px 0; }
-            .quick-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-            .services-blueprint-grid, .graphic-design-grid, .video-editing-grid, .data-services-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-            .values-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
-            .pricing-grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-            .flowchart-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-            .tabs-wrapper { grid-template-columns: 1fr 1.5fr; gap: 24px; }
-            .nav-dropdown-content { width: 560px; }
-            .hero-graph-decoration.graph-top-right { width: 220px; height: 140px; top: 5%; right: 1%; }
-            .hero-graph-decoration.graph-bottom-left { width: 180px; height: 110px; bottom: 6%; left: 1%; }
-            .hero-graph-decoration.graph-mid-right { display: none; }
-            .hero-accent-shape.shape-1 { width: 120px; height: 120px; top: -30px; right: -30px; }
-            .hamburger-btn { display: block; }
-            nav { display: none; }
-            header>.btn { display: none; }
-            .mobile-nav-overlay { display: block; }
-            header { justify-content: space-between; padding: 10px 5%; }
+        .footer-bottom p {
+            color: #71899e !important;
+            font-weight: 400;
         }
 
-        @media (max-width: 768px) {
-            .container { padding: 38px 0; width: 94%; }
-            .tabs-wrapper { grid-template-columns: 1fr; gap: 18px; }
-            .tab-list { display: flex; flex-wrap: wrap; gap: 6px; }
-            .tab-list div { flex: 1 1 auto; min-width: 120px; text-align: center; border-left: none; border-bottom: 3px solid var(--border-light); padding: 10px 12px; font-size: 0.82rem; border-radius: 4px 4px 0 0; margin-bottom: 0; }
-            .tab-list div.active { border-left-color: transparent; border-bottom-color: var(--accent-teal); padding-left: 12px; }
-            .hero-content h1 { font-size: clamp(1.5rem, 6vw, 2.2rem); }
-            .section-title { margin-bottom: 30px; }
-            .tab-content-panel { padding: 24px; }
-            .price-card { padding: 24px 18px; }
-            .price { font-size: 1.6rem; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
-            .footer-col:first-child { grid-column: 1 / -1; }
-            .contact-form-wrapper { padding: 30px 20px; }
+        /* ── responsive ── */
+        @media (max-width:1024px) {
+            .container {
+                padding: 45px 0;
+            }
+            .quick-stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+            .services-blueprint-grid,
+            .graphic-design-grid,
+            .video-editing-grid,
+            .data-services-grid,
+            .hardware-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 18px;
+            }
+            .pricing-grid {
+                grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            }
+            .flowchart-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 28px;
+            }
+            .tabs-wrapper {
+                grid-template-columns: 1fr 1.5fr;
+                gap: 24px;
+            }
+            .nav-dropdown-content {
+                width: 560px;
+            }
+            .hero-graph-decoration.graph-top-right {
+                width: 220px;
+                height: 140px;
+                top: 5%;
+                right: 1%;
+            }
+            .hero-graph-decoration.graph-bottom-left {
+                width: 180px;
+                height: 110px;
+                bottom: 6%;
+                left: 1%;
+            }
+            .hero-graph-decoration.graph-mid-right {
+                display: none;
+            }
+            .hero-accent-shape.shape-1 {
+                width: 120px;
+                height: 120px;
+                top: -30px;
+                right: -30px;
+            }
+            .hamburger-btn {
+                display: block;
+            }
+            nav {
+                display: none;
+            }
+            header>.btn {
+                display: none;
+            }
+            .mobile-nav-overlay {
+                display: block;
+            }
+            header {
+                justify-content: space-between;
+                padding: 10px 5%;
+            }
         }
 
-        @media (max-width: 600px) {
-            .quick-stats-grid, .services-blueprint-grid, .graphic-design-grid, .video-editing-grid, .data-services-grid, .values-grid, .flowchart-grid { grid-template-columns: 1fr; gap: 14px; }
-            .pricing-grid { grid-template-columns: 1fr; gap: 14px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 22px; }
-            .tab-list { flex-direction: column; }
-            .tab-list div { text-align: left; border-left: 3px solid var(--border-light); border-bottom: none; border-radius: 0 4px 4px 0; }
-            .tab-list div.active { border-left-color: var(--accent-teal); border-bottom-color: transparent; padding-left: 22px; }
-            header { padding: 8px 4%; }
-            .logo img { max-height: 26px; }
-            .hero-content h1 { font-size: 1.5rem; letter-spacing: -0.3px; }
-            .hero-highlight::after { height: 2px; bottom: -2px; }
-            .hero-subtitle { font-size: 0.9rem; margin-bottom: 22px; }
-            .btn { padding: 12px 22px; font-size: 0.82rem; width: 100%; max-width: 320px; }
-            .stat-box { padding: 18px 14px; }
-            .stat-box h3 { font-size: 0.95rem; }
-            .stat-box p { font-size: 0.8rem; }
-            .stat-icon { width: 28px; height: 28px; margin-bottom: 8px; }
-            .service-blueprint-card, .design-card, .video-card, .data-card, .value-card, .flow-step { padding: 20px 16px; }
-            .service-blueprint-card h3, .design-card h3, .video-card h3, .data-card h3 { font-size: 1.05rem; }
-            .card-icon-sm { width: 24px; height: 24px; margin-bottom: 8px; }
-            .section-title { font-size: 1.35rem; margin-bottom: 24px; }
-            .accordion-title { padding: 14px 16px; font-size: 0.88rem; }
-            .accordion-content { padding: 0 16px; font-size: 0.84rem; }
-            .price { font-size: 1.5rem; }
-            .price-card h3 { font-size: 1.1rem; }
-            .featured-badge { font-size: 0.65rem; padding: 3px 10px; top: -12px; right: 10px; }
-            .tab-content-panel h3 { font-size: 1.1rem; }
-            .mobile-nav-panel { width: 280px; max-width: 80vw; padding: 70px 20px 25px; }
-            .hero-graph-decoration { display: none; }
-            .hero-accent-shape.shape-1, .hero-accent-shape.shape-3 { display: none; }
-            .hero-accent-shape.shape-2 { width: 50px; height: 50px; bottom: 5%; left: 3%; opacity: 0.04; }
-            .hero-bg-pattern { background-size: 22px 22px; opacity: 0.25; }
-            .contact-form-wrapper { padding: 25px 15px; }
+        @media (max-width:768px) {
+            .container {
+                padding: 38px 0;
+                width: 94%;
+            }
+            .tabs-wrapper {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .tab-list {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+            .tab-list div {
+                flex: 1 1 auto;
+                min-width: 120px;
+                text-align: center;
+                border-left: none;
+                border-bottom: 3px solid var(--border-light);
+                padding: 10px 12px;
+                font-size: 0.82rem;
+                border-radius: 4px 4px 0 0;
+                margin-bottom: 0;
+            }
+            .tab-list div.active {
+                border-left-color: transparent;
+                border-bottom-color: var(--accent-teal);
+                padding-left: 12px;
+            }
+            .hero-content h1 {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+            .section-title {
+                margin-bottom: 30px;
+            }
+            .tab-content-panel {
+                padding: 24px;
+            }
+            .price-card {
+                padding: 24px 18px;
+            }
+            .price {
+                font-size: 1.6rem;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            .footer-col:first-child {
+                grid-column: 1 / -1;
+            }
+            .contact-form-wrapper {
+                padding: 30px 20px;
+            }
         }
 
-        @media (max-width: 400px) {
-            .hero-content h1 { font-size: 1.3rem; }
-            .hero-subtitle { font-size: 0.82rem; }
-            .btn { font-size: 0.78rem; padding: 10px 16px; }
-            .section-title { font-size: 1.2rem; }
-            .container { padding: 30px 0; width: 95%; }
-            .logo img { max-height: 22px; }
-            .hamburger-btn span { width: 22px; height: 2px; margin: 5px 0; }
-            .mobile-nav-panel a { font-size: 0.9rem; padding: 10px 12px; }
-            .stat-icon { width: 24px; height: 24px; }
-            .card-icon-sm { width: 20px; height: 20px; }
-            .hero-bg-pattern { background-size: 18px 18px; opacity: 0.2; }
+        @media (max-width:600px) {
+            .quick-stats-grid,
+            .services-blueprint-grid,
+            .graphic-design-grid,
+            .video-editing-grid,
+            .data-services-grid,
+            .hardware-services-grid,
+            .values-grid,
+            .flowchart-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+            .tab-list {
+                flex-direction: column;
+            }
+            .tab-list div {
+                text-align: left;
+                border-left: 3px solid var(--border-light);
+                border-bottom: none;
+                border-radius: 0 4px 4px 0;
+            }
+            .tab-list div.active {
+                border-left-color: var(--accent-teal);
+                border-bottom-color: transparent;
+                padding-left: 22px;
+            }
+            header {
+                padding: 8px 4%;
+            }
+            .logo img {
+                max-height: 26px;
+            }
+            .hero-content h1 {
+                font-size: 1.5rem;
+                letter-spacing: -0.3px;
+            }
+            .hero-highlight::after {
+                height: 2px;
+                bottom: -2px;
+            }
+            .hero-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 22px;
+            }
+            .btn {
+                padding: 12px 22px;
+                font-size: 0.82rem;
+                width: 100%;
+                max-width: 320px;
+            }
+            .stat-box {
+                padding: 18px 14px;
+            }
+            .stat-box h3 {
+                font-size: 0.95rem;
+            }
+            .stat-box p {
+                font-size: 0.8rem;
+            }
+            .stat-icon {
+                width: 28px;
+                height: 28px;
+                margin-bottom: 8px;
+            }
+            .service-blueprint-card,
+            .design-card,
+            .video-card,
+            .data-card,
+            .hardware-card,
+            .value-card,
+            .flow-step {
+                padding: 20px 16px;
+            }
+            .service-blueprint-card h3,
+            .design-card h3,
+            .video-card h3,
+            .data-card h3,
+            .hardware-card h3 {
+                font-size: 1.05rem;
+            }
+            .card-icon-sm {
+                width: 24px;
+                height: 24px;
+                margin-bottom: 8px;
+            }
+            .section-title {
+                font-size: 1.35rem;
+                margin-bottom: 24px;
+            }
+            .accordion-title {
+                padding: 14px 16px;
+                font-size: 0.88rem;
+            }
+            .accordion-content {
+                padding: 0 16px;
+                font-size: 0.84rem;
+            }
+            .price {
+                font-size: 1.5rem;
+            }
+            .price-card h3 {
+                font-size: 1.1rem;
+            }
+            .featured-badge {
+                font-size: 0.65rem;
+                padding: 3px 10px;
+                top: -12px;
+                right: 10px;
+            }
+            .tab-content-panel h3 {
+                font-size: 1.1rem;
+            }
+            .mobile-nav-panel {
+                width: 280px;
+                max-width: 80vw;
+                padding: 70px 20px 25px;
+            }
+            .hero-graph-decoration {
+                display: none;
+            }
+            .hero-accent-shape.shape-1,
+            .hero-accent-shape.shape-3 {
+                display: none;
+            }
+            .hero-accent-shape.shape-2 {
+                width: 50px;
+                height: 50px;
+                bottom: 5%;
+                left: 3%;
+                opacity: 0.04;
+            }
+            .hero-bg-pattern {
+                background-size: 22px 22px;
+                opacity: 0.25;
+            }
+            .contact-form-wrapper {
+                padding: 25px 15px;
+            }
         }
 
-        @media (min-width: 1400px) {
-            .container { max-width: 1300px; }
-            .hero-content h1 { font-size: 3.2rem; }
-            .services-blueprint-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
-            .pricing-grid { grid-template-columns: repeat(5, 1fr); gap: 22px; }
-            .hero-graph-decoration.graph-top-right { width: 380px; height: 240px; }
-            .hero-graph-decoration.graph-bottom-left { width: 300px; height: 190px; }
-            .hero-graph-decoration.graph-mid-right { width: 240px; height: 320px; }
+        @media (max-width:400px) {
+            .hero-content h1 {
+                font-size: 1.3rem;
+            }
+            .hero-subtitle {
+                font-size: 0.82rem;
+            }
+            .btn {
+                font-size: 0.78rem;
+                padding: 10px 16px;
+            }
+            .section-title {
+                font-size: 1.2rem;
+            }
+            .container {
+                padding: 30px 0;
+                width: 95%;
+            }
+            .logo img {
+                max-height: 22px;
+            }
+            .hamburger-btn span {
+                width: 22px;
+                height: 2px;
+                margin: 5px 0;
+            }
+            .mobile-nav-panel a {
+                font-size: 0.9rem;
+                padding: 10px 12px;
+            }
+            .stat-icon {
+                width: 24px;
+                height: 24px;
+            }
+            .card-icon-sm {
+                width: 20px;
+                height: 20px;
+            }
+            .hero-bg-pattern {
+                background-size: 18px 18px;
+                opacity: 0.2;
+            }
+        }
+
+        @media (min-width:1400px) {
+            .container {
+                max-width: 1300px;
+            }
+            .hero-content h1 {
+                font-size: 3.2rem;
+            }
+            .services-blueprint-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 28px;
+            }
+            .pricing-grid {
+                grid-template-columns: repeat(5, 1fr);
+                gap: 22px;
+            }
+            .hero-graph-decoration.graph-top-right {
+                width: 380px;
+                height: 240px;
+            }
+            .hero-graph-decoration.graph-bottom-left {
+                width: 300px;
+                height: 190px;
+            }
+            .hero-graph-decoration.graph-mid-right {
+                width: 240px;
+                height: 320px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- ─── LOADER ─── -->
     <div id="page-loader">
         <div class="loader-spinner"></div>
     </div>
 
+    <!-- ─── MOBILE OVERLAY ─── -->
     <div class="mobile-nav-overlay" id="mobileOverlay"></div>
-    
+
+    <!-- ─── MOBILE PANEL ─── -->
     <div class="mobile-nav-panel" id="mobilePanel">
         <a href="#services">Services</a>
         <div class="mobile-service-links">
@@ -940,6 +1487,9 @@
             <a href="#graphic-design" style="font-weight:700; color:var(--accent-teal);">Graphic Design</a>
             <a href="#video-editing" style="font-weight:700; color:var(--accent-teal);">Video Editing</a>
             <a href="#data-services" style="font-weight:700; color:var(--accent-teal);">Data Services</a>
+            <a href="#hardware-services" style="font-weight:700; color:var(--accent-teal);">Hardware &amp; Networking
+                <span style="font-size:0.7rem; background:#e67e22; color:#fff; padding:1px 6px; border-radius:10px;">Nepal
+                    only</span></a>
         </div>
         <a href="#pillars">Pillars</a>
         <a href="#process">Process</a>
@@ -952,16 +1502,18 @@
         </div>
     </div>
 
+    <!-- ─── HEADER ─── -->
     <header>
         <div class="logo">
-            <a href="#"><img src="nextgenitboldlogo.png" alt="NextGenIT Logo"></a>
+            <a href="#"><img src="nextgenitboldlogo.png" alt="NextGenIT Logo" /></a>
         </div>
         <nav>
             <div class="nav-dropdown">
                 <a href="#services">Services</a>
                 <div class="nav-dropdown-content">
                     <div class="dropdown-column">
-                        <span class="dropdown-section-title">Digital Marketing</span>
+                        <span class="dropdown-section-title">Digital Marketing <span
+                                style="font-size:0.6rem; font-weight:400; color:#041738;">(Global &amp; Nepal)</span></span>
                         <a href="#service-seo">Search Engine Optimization</a>
                         <a href="#service-ai-seo">AI SEO / Engine Optimization</a>
                         <a href="#service-local-seo">Local SEO Management</a>
@@ -971,18 +1523,30 @@
                         <a href="#service-smm">Social Media Marketing</a>
                     </div>
                     <div class="dropdown-column">
-                        <span class="dropdown-section-title">More Services</span>
+                        <span class="dropdown-section-title">More Services <span
+                                style="font-size:0.6rem; font-weight:400; color:#041738;">(Global &amp; Nepal)</span></span>
                         <a href="#service-sma">Social Media Advertising</a>
                         <a href="#service-web-design">Website Design Frameworks</a>
                         <a href="#service-link-building">Strategic Link Building</a>
                         <a href="#service-reddit-seo">Reddit SEO Strategy</a>
                         <a href="#service-cro">Conversion Rate Optimization</a>
-                        <a href="#service-lead-tracking">Lead Analysis & Tracking</a>
+                        <a href="#service-lead-tracking">Lead Analysis &amp; Tracking</a>
                         <a href="#service-retargeting">Hyper-Targeted Retargeting</a>
-                        <span class="dropdown-section-title">Creative & Data</span>
+                        <span class="dropdown-section-title">Creative &amp; Data</span>
                         <a href="#graphic-design" class="dropdown-highlight">Graphic Design</a>
                         <a href="#video-editing" class="dropdown-highlight">Video Editing</a>
                         <a href="#data-services" class="dropdown-highlight">Data Services</a>
+                    </div>
+                    <div class="dropdown-column">
+                        <span class="dropdown-section-title">Hardware &amp; CCTV <span
+                                style="font-size:0.6rem; font-weight:400; color:#e67e22;">(Nepal only)</span></span>
+                        <a href="#hardware-services">Computer Hardware</a>
+                        <a href="#hardware-services">Networking Solutions</a>
+                        <a href="#hardware-services">CCTV Installation</a>
+                        <a href="#hardware-services">Maintenance &amp; Support</a>
+                        <a href="#hardware-services">Structured Cabling</a>
+                        <a href="#hardware-services">NVR &amp; IP Cameras</a>
+                        <a href="#hardware-services">Access Control Systems</a>
                     </div>
                 </div>
             </div>
@@ -993,12 +1557,13 @@
             <a href="#location">Location</a>
             <a href="#faqs">FAQs</a>
         </nav>
-        <a href="#pricing" class="btn" style="padding: 10px 18px; font-size: 0.8rem;">Free Consultation</a>
+        <a href="#pricing" class="btn" style="padding:10px 18px; font-size:0.8rem;">Free Consultation</a>
         <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
             <span></span><span></span><span></span>
         </button>
     </header>
 
+    <!-- ─── HERO ─── -->
     <section class="hero-section">
         <div class="hero-bg-pattern" aria-hidden="true"></div>
         <div class="hero-accent-shape shape-1" aria-hidden="true"></div>
@@ -1006,395 +1571,920 @@
         <div class="hero-accent-shape shape-3" aria-hidden="true"></div>
         <div class="hero-graph-decoration graph-top-right" aria-hidden="true">
             <svg viewBox="0 0 320 200" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <line x1="40" y1="160" x2="300" y2="160" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
-                <line x1="40" y1="120" x2="300" y2="120" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
-                <line x1="40" y1="80" x2="300" y2="80" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
-                <line x1="40" y1="40" x2="300" y2="40" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6" opacity="0.5"/>
-                <polyline points="50,155 100,130 150,105 200,70 250,45 290,25" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-                <polygon points="50,155 100,130 150,105 200,70 250,45 290,25 290,165 50,165" fill="#069db2" opacity="0.15"/>
-                <circle cx="50" cy="155" r="5" fill="#069db2" opacity="0.7"/>
-                <circle cx="100" cy="130" r="5" fill="#069db2" opacity="0.7"/>
-                <circle cx="150" cy="105" r="5" fill="#069db2" opacity="0.7"/>
-                <circle cx="200" cy="70" r="5" fill="#069db2" opacity="0.7"/>
-                <circle cx="250" cy="45" r="5" fill="#069db2" opacity="0.7"/>
-                <circle cx="290" cy="25" r="5" fill="#069db2" opacity="0.7"/>
+                <line x1="40" y1="160" x2="300" y2="160" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6"
+                opacity="0.5" />
+                <line x1="40" y1="120" x2="300" y2="120" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6"
+                opacity="0.5" />
+                <line x1="40" y1="80" x2="300" y2="80" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6"
+                opacity="0.5" />
+                <line x1="40" y1="40" x2="300" y2="40" stroke="#069db2" stroke-width="0.8" stroke-dasharray="4 6"
+                opacity="0.5" />
+                <polyline points="50,155 100,130 150,105 200,70 250,45 290,25" stroke="#069db2" stroke-width="2.5"
+                fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                <polygon points="50,155 100,130 150,105 200,70 250,45 290,25 290,165 50,165" fill="#069db2" opacity="0.15" />
+                <circle cx="50" cy="155" r="5" fill="#069db2" opacity="0.7" />
+                <circle cx="100" cy="130" r="5" fill="#069db2" opacity="0.7" />
+                <circle cx="150" cy="105" r="5" fill="#069db2" opacity="0.7" />
+                <circle cx="200" cy="70" r="5" fill="#069db2" opacity="0.7" />
+                <circle cx="250" cy="45" r="5" fill="#069db2" opacity="0.7" />
+                <circle cx="290" cy="25" r="5" fill="#069db2" opacity="0.7" />
             </svg>
         </div>
         <div class="hero-graph-decoration graph-bottom-left" aria-hidden="true">
             <svg viewBox="0 0 260 160" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <rect x="20" y="90" width="28" height="50" rx="3" fill="#041738" opacity="0.3"/>
-                <rect x="58" y="60" width="28" height="80" rx="3" fill="#041738" opacity="0.4"/>
-                <rect x="96" y="35" width="28" height="105" rx="3" fill="#069db2" opacity="0.5"/>
-                <rect x="134" y="50" width="28" height="90" rx="3" fill="#041738" opacity="0.4"/>
-                <rect x="172" y="20" width="28" height="120" rx="3" fill="#069db2" opacity="0.55"/>
-                <rect x="210" y="42" width="28" height="98" rx="3" fill="#041738" opacity="0.35"/>
-                <line x1="15" y1="140" x2="245" y2="140" stroke="#041738" stroke-width="1" opacity="0.3"/>
+                <rect x="20" y="90" width="28" height="50" rx="3" fill="#041738" opacity="0.3" />
+                <rect x="58" y="60" width="28" height="80" rx="3" fill="#041738" opacity="0.4" />
+                <rect x="96" y="35" width="28" height="105" rx="3" fill="#069db2" opacity="0.5" />
+                <rect x="134" y="50" width="28" height="90" rx="3" fill="#041738" opacity="0.4" />
+                <rect x="172" y="20" width="28" height="120" rx="3" fill="#069db2" opacity="0.55" />
+                <rect x="210" y="42" width="28" height="98" rx="3" fill="#041738" opacity="0.35" />
+                <line x1="15" y1="140" x2="245" y2="140" stroke="#041738" stroke-width="1" opacity="0.3" />
             </svg>
         </div>
         <div class="hero-graph-decoration graph-mid-right" aria-hidden="true">
             <svg viewBox="0 0 200 280" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                <circle cx="100" cy="60" r="35" stroke="#069db2" stroke-width="3" fill="none" opacity="0.4" stroke-dasharray="180 40"/>
-                <circle cx="100" cy="60" r="18" fill="#069db2" opacity="0.2"/>
-                <circle cx="100" cy="155" r="30" stroke="#041738" stroke-width="3" fill="none" opacity="0.35" stroke-dasharray="150 38"/>
-                <circle cx="100" cy="155" r="14" fill="#041738" opacity="0.15"/>
-                <circle cx="100" cy="240" r="25" stroke="#069db2" stroke-width="3" fill="none" opacity="0.3" stroke-dasharray="120 37"/>
-                <circle cx="100" cy="240" r="10" fill="#069db2" opacity="0.18"/>
+                <circle cx="100" cy="60" r="35" stroke="#069db2" stroke-width="3" fill="none" opacity="0.4"
+                stroke-dasharray="180 40" />
+                <circle cx="100" cy="60" r="18" fill="#069db2" opacity="0.2" />
+                <circle cx="100" cy="155" r="30" stroke="#041738" stroke-width="3" fill="none" opacity="0.35"
+                stroke-dasharray="150 38" />
+                <circle cx="100" cy="155" r="14" fill="#041738" opacity="0.15" />
+                <circle cx="100" cy="240" r="25" stroke="#069db2" stroke-width="3" fill="none" opacity="0.3"
+                stroke-dasharray="120 37" />
+                <circle cx="100" cy="240" r="10" fill="#069db2" opacity="0.18" />
             </svg>
         </div>
         <div class="container hero-content">
-            <h1 class="reveal">Digital Marketing That Drives <br><span class="hero-highlight">Real Business Growth</span></h1>
-            <p class="reveal delay-1 hero-subtitle">At NextGenIT, we construct performance-driven multi-channel digital systems engineered for one purpose: Dominance. We discard vanity metrics to scale your brand through hyper-tuned infrastructure, strategic organic positioning, and high-ROI transactional growth loops.</p>
-            <div class="reveal delay-2" style="margin-bottom: 16px;"><a href="#pricing" class="btn">Book Your Free Growth Strategy Session</a></div>
+            <h1 class="reveal">Global Digital Growth &amp; <br /><span class="hero-highlight">Nepal's IT
+                Infrastructure</span></h1>
+            <p class="reveal delay-1 hero-subtitle">NextGenIT delivers performance-driven digital marketing, web
+                development, and creative services worldwide — plus enterprise-grade hardware, networking, and CCTV
+            solutions exclusively for Nepal. One partner, two powerful capabilities.</p>
+            <div class="reveal delay-2" style="margin-bottom:16px;"><a href="#pricing" class="btn">Book Your Free
+            Consultation</a></div>
             <div class="quick-stats-grid">
-                <div class="stat-box reveal delay-1"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="30" height="21" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="8" width="22" height="13" rx="1" fill="#069db2" opacity="0.2"/><line x1="10" y1="14" x2="24" y2="14" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="18" x2="20" y2="18" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="22" x2="16" y2="22" stroke="#069db2" stroke-width="1.6" stroke-linecap="round"/></svg></span><h3>Web Development</h3><p>High-Performance, Neat Code Frameworks</p></div>
-                <div class="stat-box reveal delay-2"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="10" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="22.5" y1="22.5" x2="30" y2="30" stroke="#069db2" stroke-width="2.5" stroke-linecap="round"/><circle cx="15" cy="15" r="5" fill="#069db2" opacity="0.25"/></svg></span><h3>SEO Architecture</h3><p>Dominate Transactional Keywords Domestically & Globally</p></div>
-                <div class="stat-box reveal delay-3"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17" cy="17" r="13" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="17" cy="17" r="7" stroke="#069db2" stroke-width="2" fill="none"/><circle cx="17" cy="17" r="2.5" fill="#069db2"/><line x1="17" y1="4" x2="17" y2="10" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><line x1="17" y1="24" x2="17" y2="30" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><line x1="4" y1="17" x2="10" y2="17" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><line x1="24" y1="17" x2="30" y2="17" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Paid Advertising</h3><p>Aggressive, Precision-Targeted Scaling Solutions</p></div>
-                <div class="stat-box reveal delay-4"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="26" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="13" cy="17" r="4" fill="#069db2" opacity="0.3"/><circle cx="21" cy="17" r="3" fill="#069db2" opacity="0.3"/><line x1="16" y1="17" x2="19" y2="17" stroke="#069db2" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="12" r="1.5" fill="#069db2" opacity="0.6"/><circle cx="17" cy="22" r="1.5" fill="#069db2" opacity="0.6"/><circle cx="12" cy="17" r="1.5" fill="#069db2" opacity="0.6"/><circle cx="22" cy="17" r="1.5" fill="#069db2" opacity="0.6"/></svg></span><h3>AISO / GEO Strategy</h3><p>Engineered Optimization for Modern Generative AI Engines</p></div>
-            </div>
-        </div>
-    </section>
+                <div class="stat-box reveal delay-1"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none"
+                    xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="30" height="21" rx="3"
+                    stroke="#069db2" stroke-width="2.2" fill="none" /><rect x="6" y="8" width="22" height="13" rx="1"
+                    fill="#069db2" opacity="0.2" /><line x1="10" y1="14" x2="24" y2="14" stroke="#069db2"
+                    stroke-width="1.6" stroke-linecap="round" /><line x1="10" y1="18" x2="20" y2="18" stroke="#069db2"
+                    stroke-width="1.6" stroke-linecap="round" /><line x1="10" y1="22" x2="16" y2="22" stroke="#069db2"
+                stroke-width="1.6" stroke-linecap="round" /></svg></span><h3>Web Development</h3><p>High‑performance, clean
+            code — for Nepal &amp; the world</p></div>
+            <div class="stat-box reveal delay-2"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none"
+                xmlns="http://www.w3.org/2000/svg"><circle cx="15" cy="15" r="10" stroke="#069db2" stroke-width="2.2"
+                fill="none" /><line x1="22.5" y1="22.5" x2="30" y2="30" stroke="#069db2" stroke-width="2.5"
+                stroke-linecap="round" /><circle cx="15" cy="15" r="5" fill="#069db2"
+            opacity="0.25" /></svg></span><h3>SEO &amp; Digital Marketing</h3><p>Dominate search globally &amp; locally —
+        worldwide reach</p></div>
+        <div class="stat-box reveal delay-3"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none"
+            xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="26" height="22" rx="4" stroke="#069db2"
+            stroke-width="2.2" fill="none" /><circle cx="13" cy="17" r="4" fill="#069db2" opacity="0.3" /><circle
+            cx="21" cy="17" r="3" fill="#069db2" opacity="0.3" /><line x1="16" y1="17" x2="19" y2="17" stroke="#069db2"
+        stroke-width="2" stroke-linecap="round" /></svg></span><h3>Creative &amp; Data</h3><p>Design, video, analytics —
+    available everywhere</p></div>
+    <div class="stat-box reveal delay-4"><span class="stat-icon"><svg viewBox="0 0 34 34" fill="none"
+        xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="28" height="20" rx="3" stroke="#069db2"
+        stroke-width="2.2" fill="none" /><circle cx="17" cy="17" r="5" stroke="#069db2" stroke-width="1.8"
+        fill="none" /><circle cx="17" cy="17" r="2" fill="#069db2" /></svg></span><h3>Hardware &amp; CCTV</h3><p>Nepal‑only:
+    maintenance, networking, surveillance</p></div>
+</div>
+</div>
+</section>
 
-    <section id="services" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
-        <div class="container">
-            <h2 class="section-title reveal">Our High-Performance <span>Growth Blueprint</span></h2>
-            <div class="services-blueprint-grid">
-                <div class="service-blueprint-card reveal delay-1" id="service-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="10" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="4" fill="#069db2" opacity="0.3"/><polyline points="8,14 12,18 20,10" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Search Engine Optimization (SEO)</h3><p>Complete execution spanning deep technical SEO modifications, intentional on-page keyword structuring, off-page link building pipelines, customized service page creation, granular local city pages, high-value blog posts, and routine performance KPI analytics loops.</p></div>
-                <div class="service-blueprint-card reveal delay-2" id="service-ai-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="22" height="18" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="5" fill="#069db2" opacity="0.25"/><circle cx="14" cy="14" r="2" fill="#069db2"/><line x1="3" y1="22" x2="25" y2="22" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>AI SEO / Engine Optimization</h3><p>Modern architecture tuned exclusively to target visibility inside Google AI Overviews, ChatGPT, Claude, and Gemini engines. Strategically built using custom advanced schema markup schemas, natural language semantic optimization, n-gram modeling, and systematic co-occurrence context layouts.</p></div>
-                <div class="service-blueprint-card reveal delay-3" id="service-local-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><path d="M14 6 L14 14 L20 18" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="3" fill="#069db2" opacity="0.3"/></svg></span><h3>Local SEO Management</h3><p>Establish structural hyper-local positioning with full Google Business Profile (GMB/GBP) optimization protocols, programmatic geo-tagged photographic uploads, unified external citation distribution loops across authoritative networks (Yelp, Angi, BrightLocal), and automated active review generation flows.</p></div>
-                <div class="service-blueprint-card reveal delay-1" id="service-maps-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="6" stroke="#069db2" stroke-width="1.5" fill="none"/><circle cx="14" cy="14" r="2.5" fill="#069db2"/><line x1="14" y1="8" x2="14" y2="11" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>Google Maps Pack SEO</h3><p>Hyper-targeted local signals designed exclusively to maximize raw visibility, spatial proximity weight, and search conversion parameters directly inside the competitive high-value local Google Maps 3-Pack layout.</p></div>
-                <div class="service-blueprint-card reveal delay-2" id="service-ppc"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="24" height="16" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="6,13 12,18 22,8" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Pay Per Click Advertising (PPC)</h3><p>Aggressive high-intent transactional user acquisition engine running dedicated, hyper-segmented Google Ads and YouTube Ads networks. Maximized via custom category-specific conversion landing frameworks, continuous strict negative keyword optimization, and real-time behavioral A/B split-testing variant logic.</p></div>
-                <div class="service-blueprint-card reveal delay-3" id="service-lsa"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><polygon points="14,7 20,20 8,20" stroke="#069db2" stroke-width="2" fill="#069db2" fill-opacity="0.2" stroke-linejoin="round"/><circle cx="14" cy="16" r="2.5" fill="#069db2"/></svg></span><h3>Google Local Service Ads (LSA)</h3><p>Comprehensive setup and real-time operational maintenance of direct Google Local Service Ads channels, ensuring seamless background clearance, active brand verification tracking, and continuous trust badge authority acceleration.</p></div>
-                <div class="service-blueprint-card reveal delay-1" id="service-smm"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="10" cy="14" r="3" fill="#069db2" opacity="0.3"/><circle cx="18" cy="14" r="2.5" fill="#069db2" opacity="0.3"/><line x1="12.5" y1="14" x2="16" y2="14" stroke="#069db2" stroke-width="2" stroke-linecap="round"/></svg></span><h3>Social Media Marketing (SMM)</h3><p>High-affinity organic identity development and continuous native positioning workflows built precisely for custom operations across top-tier conversational platforms including Facebook and Instagram. Crafted to drive sustainable customer retention through audience community engagement protocols and deep behind-the-scenes brand documentation updates.</p></div>
-                <div class="service-blueprint-card reveal delay-2" id="service-sma"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="24" height="20" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="8" width="16" height="8" rx="2" fill="#069db2" opacity="0.25"/><circle cx="14" cy="12" r="2.5" fill="#069db2"/></svg></span><h3>Social Media Advertising</h3><p>Highly calculated performance advertising architecture utilizing granular geo-targeted audience parameters across Facebook and Instagram networks. Engineered through hyper-targeted demographic matrix segmentations, embedded low-friction direct lead generation forms, native server-to-server Conversions API configurations, and custom behavioral retargeting sequence flows.</p></div>
-                <div class="service-blueprint-card reveal delay-3" id="service-web-design"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="24" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="7" width="16" height="10" rx="1.5" fill="#069db2" opacity="0.2"/><circle cx="14" cy="18" r="1.5" fill="#069db2"/></svg></span><h3>Website Design Frameworks</h3><p>Ultra-responsive, rapid, performance-tuned modular web layouts custom-constructed strictly by hand. Meticulously optimized to capture conversions with elite mobile loading infrastructure, fully native structural schema microdata, clear user calls-to-action (CTAs), and intuitive user-experience navigation layouts.</p></div>
-                <div class="service-blueprint-card reveal delay-1" id="service-link-building"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="5" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="18" cy="18" r="5" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="13" y1="13" x2="15" y2="15" stroke="#069db2" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="10" r="2" fill="#069db2" opacity="0.4"/><circle cx="18" cy="18" r="2" fill="#069db2" opacity="0.4"/></svg></span><h3>Strategic Link Building</h3><p>Continuous authority development via contextual backlink extraction from authoritative niche digital publications and premium local directory hubs. Supported by human-crafted editorial guest posting sequences and advanced internal structural link equity architecture loops.</p></div>
-                <div class="service-blueprint-card reveal delay-2" id="service-reddit-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="9" cy="12" r="3" fill="#069db2" opacity="0.3"/><circle cx="19" cy="16" r="2.5" fill="#069db2" opacity="0.3"/><line x1="11.5" y1="13" x2="17" y2="15.5" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Reddit SEO Strategy</h3><p>Isolate and control real organic brand visibility within relevant, high-intent thread discussions across specialized communities for industry-specific customer pain points, positioning your solutions naturally within high-traffic informational query pipelines.</p></div>
-                <div class="service-blueprint-card reveal delay-3" id="service-cro"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="7,17 11,20 21,9" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Conversion Rate Optimization (CRO)</h3><p>Continuous data-backed pipeline refinement using active visual testing patterns, interactive funnel tracking maps, structural intake booking path elimination sequences, and meticulous user call-to-action (CTA) text adjustments to convert static web visitors into bottom-line operations.</p></div>
-                <div class="service-blueprint-card reveal delay-1" id="service-lead-tracking"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="7,13 10,16 14,11 18,15 21,12" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="13" r="1.5" fill="#069db2"/><circle cx="14" cy="11" r="1.5" fill="#069db2"/><circle cx="21" cy="12" r="1.5" fill="#069db2"/></svg></span><h3>Lead Analysis & Automated Tracking</h3><p>Advanced algorithmic tracking pipelines designed to process every incoming inquiry natively, passing critical interaction history data straight into automated response workflows built exclusively to engage prospects within the vital 5-minute conversion response window.</p></div>
-                <div class="service-blueprint-card reveal delay-2" id="service-retargeting"><span class="card-icon-sm"><svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 22 L10 16 L15 19 L24 7" stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="4" cy="22" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="10" cy="16" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="15" cy="19" r="2.5" fill="#069db2" opacity="0.5"/><circle cx="24" cy="7" r="2.5" fill="#069db2" opacity="0.5"/></svg></span><h3>Hyper-Targeted Retargeting Funnels</h3><p>Smart multi-tier remarketing loops engineered to follow up with high-intent drop-off web users across independent display networks, introducing custom contextual copy incentives based on exact visitor drop-off touchpoints.</p></div>
-            </div>
-        </div>
-    </section>
+<!-- ─── SERVICES BLUEPRINT (Global) ─── -->
+<section id="services" style="background-color:var(--bg-light); border-top:1px solid var(--border-light);">
+    <div class="container">
+        <h2 class="section-title reveal">Our High-Performance <span>Growth Blueprint</span> <span class="geo-badge">Global
+        &amp; Nepal</span></h2>
+        <div class="services-blueprint-grid">
+            <div class="service-blueprint-card reveal delay-1" id="service-seo"><span class="card-icon-sm"><svg
+                viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="10"
+                stroke="#069db2" stroke-width="2.2" fill="none" /><circle cx="14" cy="14" r="4" fill="#069db2"
+                opacity="0.3" /><polyline points="8,14 12,18 20,10" stroke="#069db2" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round" /></svg></span><h3>Search Engine Optimization (SEO)</h3><p>Complete
+            execution spanning deep technical SEO, on‑page keyword structuring, off‑page link building, custom service pages,
+        local city pages, high‑value blog posts, and routine KPI analytics — for any market.</p></div>
+        <div class="service-blueprint-card reveal delay-2" id="service-ai-seo"><span class="card-icon-sm"><svg
+            viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="22" height="18"
+            rx="3" stroke="#069db2" stroke-width="2.2" fill="none" /><circle cx="14" cy="14" r="5" fill="#069db2"
+            opacity="0.25" /><circle cx="14" cy="14" r="2" fill="#069db2" /><line x1="3" y1="22" x2="25" y2="22"
+        stroke="#069db2" stroke-width="1.5" stroke-linecap="round" /></svg></span><h3>AI SEO / Engine Optimization</h3><p>Modern
+        architecture tuned for visibility inside Google AI Overviews, ChatGPT, Claude, and Gemini. Built with advanced
+    schema, semantic optimization, n‑gram modeling, and co‑occurrence context — worldwide.</p></div>
+    <div class="service-blueprint-card reveal delay-3" id="service-local-seo"><span class="card-icon-sm"><svg
+        viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11"
+        stroke="#069db2" stroke-width="2.2" fill="none" /><path d="M14 6 L14 14 L20 18" stroke="#069db2" stroke-width="2"
+        fill="none" stroke-linecap="round" stroke-linejoin="round" /><circle cx="14" cy="14" r="3" fill="#069db2"
+    opacity="0.3" /></svg></span><h3>Local SEO Management</h3><p>Hyper‑local positioning with Google Business Profile
+optimization, geo‑tagged photos, citation distribution across Yelp, Angi, BrightLocal, and automated review generation —
+for any region.</p></div>
+<div class="service-blueprint-card reveal delay-1" id="service-maps-seo"><span class="card-icon-sm"><svg viewBox="0 0 28 28"
+    fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="14" cy="14" r="6" stroke="#069db2" stroke-width="1.5"
+    fill="none" /><circle cx="14" cy="14" r="2.5" fill="#069db2" /><line x1="14" y1="8" x2="14" y2="11" stroke="#069db2"
+stroke-width="1.5" stroke-linecap="round" /></svg></span><h3>Google Maps Pack SEO</h3><p>Maximise visibility, proximity
+weight, and conversion parameters inside the Google Maps 3‑Pack — applicable globally.</p></div>
+<div class="service-blueprint-card reveal delay-2" id="service-ppc"><span class="card-icon-sm"><svg viewBox="0 0 28 28"
+    fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="24" height="16" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><polyline points="6,13 12,18 22,8" stroke="#069db2" stroke-width="2.5" fill="none"
+stroke-linecap="round" stroke-linejoin="round" /></svg></span><h3>Pay Per Click Advertising (PPC)</h3><p>Aggressive
+high‑intent acquisition via Google Ads and YouTube. Custom conversion landings, negative keyword optimisation, and
+real‑time A/B testing — for any country.</p></div>
+<div class="service-blueprint-card reveal delay-3" id="service-lsa"><span class="card-icon-sm"><svg viewBox="0 0 28 28"
+    fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2" stroke-width="2.2"
+    fill="none" /><polygon points="14,7 20,20 8,20" stroke="#069db2" stroke-width="2" fill="#069db2" fill-opacity="0.2"
+stroke-linejoin="round" /><circle cx="14" cy="16" r="2.5" fill="#069db2" /></svg></span><h3>Google Local Service Ads
+(LSA)</h3><p>Setup and maintenance of LSA channels, background clearance, brand verification, and trust badge acceleration
+— available where LSA operates.</p></div>
+<div class="service-blueprint-card reveal delay-1" id="service-smm"><span class="card-icon-sm"><svg viewBox="0 0 28 28"
+    fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="4" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="10" cy="14" r="3" fill="#069db2" opacity="0.3" /><circle cx="18"
+    cy="14" r="2.5" fill="#069db2" opacity="0.3" /><line x1="12.5" y1="14" x2="16" y2="14" stroke="#069db2"
+stroke-width="2" stroke-linecap="round" /></svg></span><h3>Social Media Marketing (SMM)</h3><p>Organic identity
+development and native positioning on Facebook, Instagram, and more. Community engagement and behind‑the‑scenes content —
+worldwide.</p></div>
+<div class="service-blueprint-card reveal delay-2" id="service-sma"><span class="card-icon-sm"><svg viewBox="0 0 28 28"
+    fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="24" height="20" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><rect x="6" y="8" width="16" height="8" rx="2" fill="#069db2"
+    opacity="0.25" /><circle cx="14" cy="12" r="2.5"
+fill="#069db2" /></svg></span><h3>Social Media Advertising</h3><p>Geo‑targeted ads on Facebook and Instagram. Demographic
+matrix segmentation, lead forms, Conversions API, and behavioral retargeting — global.</p></div>
+<div class="service-blueprint-card reveal delay-3" id="service-web-design"><span class="card-icon-sm"><svg
+    viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="3" width="24" height="22" rx="3"
+    stroke="#069db2" stroke-width="2.2" fill="none" /><rect x="6" y="7" width="16" height="10" rx="1.5" fill="#069db2"
+    opacity="0.2" /><circle cx="14" cy="18" r="1.5"
+fill="#069db2" /></svg></span><h3>Website Design Frameworks</h3><p>Ultra‑responsive, hand‑coded modular layouts. Optimised
+for conversions with mobile‑first infrastructure, schema microdata, and intuitive UX — for any market.</p></div>
+<div class="service-blueprint-card reveal delay-1" id="service-link-building"><span class="card-icon-sm"><svg
+    viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="5" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="18" cy="18" r="5" stroke="#069db2" stroke-width="2.2"
+    fill="none" /><line x1="13" y1="13" x2="15" y2="15" stroke="#069db2" stroke-width="2"
+    stroke-linecap="round" /><circle cx="10" cy="10" r="2" fill="#069db2" opacity="0.4" /><circle cx="18" cy="18" r="2"
+fill="#069db2" opacity="0.4" /></svg></span><h3>Strategic Link Building</h3><p>Authority development via contextual
+backlinks from niche publications and local directories. Editorial guest posting and internal link equity — worldwide.</p>
+</div>
+<div class="service-blueprint-card reveal delay-2" id="service-reddit-seo"><span class="card-icon-sm"><svg
+    viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="14" cy="14" r="11" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="9" cy="12" r="3" fill="#069db2" opacity="0.3" /><circle cx="19"
+    cy="16" r="2.5" fill="#069db2" opacity="0.3" /><line x1="11.5" y1="13" x2="17" y2="15.5" stroke="#069db2"
+stroke-width="1.8" stroke-linecap="round" /></svg></span><h3>Reddit SEO Strategy</h3><p>Organic visibility within
+high‑intent Reddit discussions. Position your solutions naturally in specialised communities — global reach.</p></div>
+<div class="service-blueprint-card reveal delay-3" id="service-cro"><span class="card-icon-sm"><svg viewBox="0 0 28 28"
+    fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="22" height="22" rx="4" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><polyline points="7,17 11,20 21,9" stroke="#069db2" stroke-width="2.5" fill="none"
+stroke-linecap="round" stroke-linejoin="round" /></svg></span><h3>Conversion Rate Optimization (CRO)</h3><p>Data‑backed
+funnel refinement via A/B testing, tracking maps, and CTA adjustments to convert visitors into customers — for any
+audience.</p></div>
+<div class="service-blueprint-card reveal delay-1" id="service-lead-tracking"><span class="card-icon-sm"><svg
+    viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="22" height="18" rx="3"
+    stroke="#069db2" stroke-width="2.2" fill="none" /><polyline points="7,13 10,16 14,11 18,15 21,12" stroke="#069db2"
+    stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" /><circle cx="7" cy="13" r="1.5"
+    fill="#069db2" /><circle cx="14" cy="11" r="1.5" fill="#069db2" /><circle cx="21" cy="12" r="1.5"
+fill="#069db2" /></svg></span><h3>Lead Analysis &amp; Automated Tracking</h3><p>Algorithmic tracking pipelines that process
+inquiries and pass data to automated workflows — engage prospects within the 5‑minute window, anywhere.</p></div>
+<div class="service-blueprint-card reveal delay-2" id="service-retargeting"><span class="card-icon-sm"><svg
+    viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 22 L10 16 L15 19 L24 7"
+    stroke="#069db2" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" /><circle cx="4"
+    cy="22" r="2.5" fill="#069db2" opacity="0.5" /><circle cx="10" cy="16" r="2.5" fill="#069db2"
+    opacity="0.5" /><circle cx="15" cy="19" r="2.5" fill="#069db2" opacity="0.5" /><circle cx="24" cy="7" r="2.5"
+fill="#069db2" opacity="0.5" /></svg></span><h3>Hyper-Targeted Retargeting Funnels</h3><p>Multi‑tier remarketing loops that
+follow drop‑off users across display networks with contextual copy — effective globally.</p></div>
+</div>
+</div>
+</section>
 
-    <section id="graphic-design" class="flowchart-section" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
-        <div class="container">
-            <h2 class="section-title reveal">Precision <span>Graphic Design</span> for Bold Brands</h2>
-            <p class="reveal delay-1 section-intro-text">We don't just design — we engineer visual identities that command attention, build trust, and convert. Every pixel is human-crafted, never templated.</p>
-            <div class="graphic-design-grid">
-                <div class="design-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="26" height="26" rx="5" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="16" cy="14" r="6" stroke="#069db2" stroke-width="1.8" fill="none"/><circle cx="16" cy="14" r="2.5" fill="#069db2"/><path d="M10 25 L16 19 L22 25" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Brand Identity</h3><p>Complete visual language systems: logos, color palettes, typography, and brand guidelines that make your business unforgettable.</p></div>
-                <div class="design-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="5" y="9" width="10" height="14" rx="2" fill="#069db2" opacity="0.2"/><rect x="18" y="9" width="9" height="6" rx="2" fill="#069db2" opacity="0.2"/><rect x="18" y="17" width="9" height="6" rx="2" fill="#069db2" opacity="0.2"/></svg></span><h3>UI/UX Design</h3><p>User‑centric interfaces for web and mobile. Wireframes, high‑fidelity prototypes, and micro‑interactions that drive engagement.</p></div>
-                <div class="design-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="26" height="28" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="8" y="7" width="16" height="12" rx="1.5" fill="#069db2" opacity="0.2"/><line x1="10" y1="23" x2="22" y2="23" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><line x1="10" y1="26" x2="18" y2="26" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Print & Collateral</h3><p>Brochures, business cards, packaging, and outdoor media — premium print design that translates digital excellence into the physical world.</p></div>
-                <div class="design-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="11" cy="15" r="4" fill="#069db2" opacity="0.3"/><circle cx="21" cy="15" r="3.5" fill="#069db2" opacity="0.3"/><line x1="14.5" y1="15" x2="18" y2="15" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/></svg></span><h3>Social Media Graphics</h3><p>Scroll‑stopping visuals for Instagram, LinkedIn, Facebook, and more. Consistent, on‑brand assets engineered for high engagement.</p></div>
-                <div class="design-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#069db2" stroke-width="2.2" fill="none"/><polygon points="13,10 13,22 23,16" fill="#069db2" opacity="0.5" stroke="#069db2" stroke-width="1.5" stroke-linejoin="round"/></svg></span><h3>Motion Graphics</h3><p>Animated logos, explainer videos, and dynamic ads that tell your story with movement and captivate your audience.</p></div>
-                <div class="design-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="7" y="9" width="18" height="14" rx="1.5" fill="#069db2" opacity="0.2"/><polyline points="7,16 13,19 18,14 25,22" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Presentation Design</h3><p>Pitch decks and internal presentations that are visually powerful, clear, and persuasive — designed to win deals.</p></div>
-            </div>
-        </div>
-    </section>
+<!-- ─── GRAPHIC DESIGN (Global) ─── -->
+<section id="graphic-design" class="flowchart-section"
+style="background-color:var(--bg-light); border-top:1px solid var(--border-light);">
+<div class="container">
+    <h2 class="section-title reveal">Precision <span>Graphic Design</span> for Bold Brands <span
+    class="geo-badge">Global</span></h2>
+    <p class="reveal delay-1 section-intro-text">We don't just design — we engineer visual identities that command
+        attention, build trust, and convert. Every pixel is human‑crafted, never templated.</p>
+        <div class="graphic-design-grid">
+            <div class="design-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="26" height="26" rx="5" stroke="#069db2"
+                stroke-width="2.2" fill="none" /><circle cx="16" cy="14" r="6" stroke="#069db2" stroke-width="1.8"
+                fill="none" /><circle cx="16" cy="14" r="2.5" fill="#069db2" /><path d="M10 25 L16 19 L22 25" stroke="#069db2"
+            stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" /></svg></span><h3>Brand Identity</h3>
+            <p>Complete visual language systems: logos, color palettes, typography, and brand guidelines that make your
+            business unforgettable.</p></div>
+            <div class="design-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2"
+                stroke-width="2.2" fill="none" /><rect x="5" y="9" width="10" height="14" rx="2" fill="#069db2"
+                opacity="0.2" /><rect x="18" y="9" width="9" height="6" rx="2" fill="#069db2" opacity="0.2" /><rect x="18"
+            y="17" width="9" height="6" rx="2" fill="#069db2" opacity="0.2" /></svg></span><h3>UI/UX Design</h3><p>User‑centric
+            interfaces for web and mobile. Wireframes, high‑fidelity prototypes, and micro‑interactions that drive
+        engagement.</p></div>
+        <div class="design-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg"><rect x="3" y="2" width="26" height="28" rx="3" stroke="#069db2"
+            stroke-width="2.2" fill="none" /><rect x="8" y="7" width="16" height="12" rx="1.5" fill="#069db2"
+            opacity="0.2" /><line x1="10" y1="23" x2="22" y2="23" stroke="#069db2" stroke-width="1.8"
+            stroke-linecap="round" /><line x1="10" y1="26" x2="18" y2="26" stroke="#069db2" stroke-width="1.8"
+        stroke-linecap="round" /></svg></span><h3>Print &amp; Collateral</h3><p>Brochures, business cards, packaging, and
+    outdoor media — premium print design that translates digital excellence into the physical world.</p></div>
+    <div class="design-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="4" stroke="#069db2"
+        stroke-width="2.2" fill="none" /><circle cx="11" cy="15" r="4" fill="#069db2" opacity="0.3" /><circle cx="21"
+        cy="15" r="3.5" fill="#069db2" opacity="0.3" /><line x1="14.5" y1="15" x2="18" y2="15" stroke="#069db2"
+    stroke-width="1.8" stroke-linecap="round" /></svg></span><h3>Social Media Graphics</h3><p>Scroll‑stopping visuals for
+Instagram, LinkedIn, Facebook, and more. Consistent, on‑brand assets engineered for high engagement.</p></div>
+<div class="design-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#069db2" stroke-width="2.2"
+    fill="none" /><polygon points="13,10 13,22 23,16" fill="#069db2" opacity="0.5" stroke="#069db2" stroke-width="1.5"
+stroke-linejoin="round" /></svg></span><h3>Motion Graphics</h3><p>Animated logos, explainer videos, and dynamic ads that
+tell your story with movement and captivate your audience.</p></div>
+<div class="design-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><rect x="7" y="9" width="18" height="14" rx="1.5" fill="#069db2"
+    opacity="0.2" /><polyline points="7,16 13,19 18,14 25,22" stroke="#069db2" stroke-width="2" fill="none"
+stroke-linecap="round" stroke-linejoin="round" /></svg></span><h3>Presentation Design</h3><p>Pitch decks and internal
+presentations that are visually powerful, clear, and persuasive — designed to win deals.</p></div>
+</div>
+</div>
+</section>
 
-    <section id="video-editing" style="background-color: var(--bg-dark); border-top: 1px solid var(--border-light);">
-        <div class="container">
-            <h2 class="section-title reveal">Cinematic <span>Video Editing</span> That Captivates</h2>
-            <p class="reveal delay-1 section-intro-text">From raw footage to polished masterpieces — our editing suite transforms your vision into high-impact visual stories that drive engagement, retention, and conversions.</p>
+<!-- ─── VIDEO EDITING (Global) ─── -->
+<section id="video-editing" style="background-color:var(--bg-dark); border-top:1px solid var(--border-light);">
+    <div class="container">
+        <h2 class="section-title reveal">Cinematic <span>Video Editing</span> That Captivates <span
+        class="geo-badge">Global</span></h2>
+        <p class="reveal delay-1 section-intro-text">From raw footage to polished masterpieces — our editing suite
+            transforms your vision into high‑impact visual stories that drive engagement, retention, and conversions.</p>
             <div class="video-editing-grid">
-                <div class="video-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="28" height="20" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polygon points="12,10 12,22 22,16" fill="#069db2" opacity="0.4" stroke="#069db2" stroke-width="1.5" stroke-linejoin="round"/></svg></span><h3>Corporate & Brand Films</h3><p>Professional storytelling for your brand — testimonial videos, company culture films, and executive interviews that humanize your business and build trust.</p></div>
-                <div class="video-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="6" y="2" width="20" height="28" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="10" y="7" width="12" height="18" rx="1.5" fill="#069db2" opacity="0.2"/></svg></span><h3>Social Media Shorts</h3><p>Vertical, fast‑paced edits optimized for TikTok, Instagram Reels, YouTube Shorts. Captioning, transitions, and hooks engineered for virality.</p></div>
-                <div class="video-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="6" y="9" width="20" height="10" rx="1.5" fill="#069db2" opacity="0.2"/><circle cx="16" cy="20" r="3" fill="#069db2" opacity="0.4"/></svg></span><h3>Commercial & Ad Editing</h3><p>High-retention cuts for YouTube pre-roll, Facebook Ads, and connected TV. A/B tested pacing, sound design, and call‑to‑action integration.</p></div>
-                <div class="video-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="16" cy="16" r="5" stroke="#069db2" stroke-width="1.8" fill="none"/><circle cx="16" cy="16" r="2" fill="#069db2"/><line x1="16" y1="11" x2="16" y2="13" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>Event & Webinar Recording</h3><p>Multi‑camera synchronization, keynote highlights, audience reaction inserts, and post‑event trailers that maximize replay value.</p></div>
-                <div class="video-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="12" cy="14" r="4" fill="#069db2" opacity="0.25"/><rect x="18" y="10" width="8" height="8" rx="2" fill="#069db2" opacity="0.2"/><line x1="15" y1="14" x2="18" y2="14" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>Product Demos & Explainer Videos</h3><p>Clear, engaging walkthroughs with motion graphics, screen capture polish, and narrative voiceover — perfect for landing pages and sales decks.</p></div>
-                <div class="video-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="16" cy="16" r="5" fill="#069db2" opacity="0.3"/><circle cx="10" cy="12" r="2" fill="#069db2" opacity="0.5"/><circle cx="22" cy="18" r="1.8" fill="#069db2" opacity="0.5"/><circle cx="19" cy="10" r="1.5" fill="#069db2" opacity="0.4"/></svg></span><h3>Color Grading & Audio Sweetening</h3><p>Professional DaVinci Resolve color grading, noise reduction, EQ balancing, and immersive sound design to give every frame a premium finish.</p></div>
-                <div class="video-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="28" height="24" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="8" y1="10" x2="24" y2="10" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="15" x2="20" y2="15" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="20" x2="22" y2="20" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/><circle cx="26" cy="20" r="3" fill="#069db2" opacity="0.3"/></svg></span><h3>Documentary & Long-Form Editing</h3><p>Narrative arc construction, B‑roll integration, archival media restoration, and pacing that keeps viewers engaged for 10, 20, or 60 minutes.</p></div>
-                <div class="video-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="26" height="26" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="14" r="5" fill="#069db2" opacity="0.25"/><polygon points="24,14 20,10 20,18" fill="#069db2" opacity="0.5"/></svg></span><h3>Animation & Motion Graphics</h3><p>Custom 2D/3D animated elements, kinetic typography, lower thirds, and logo stings that elevate any video production.</p></div>
-                <div class="video-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polygon points="13,10 13,21 21,15.5" fill="#069db2" opacity="0.4" stroke="#069db2" stroke-width="1.5" stroke-linejoin="round"/><rect x="6" y="25" width="20" height="3" rx="1.5" fill="#069db2" opacity="0.25"/></svg></span><h3>YouTube Channel Management</h3><p>End‑to‑end editing, thumbnail design, chapters, cards, and SEO‑friendly descriptions to grow your channel organically.</p></div>
-            </div>
-        </div>
-    </section>
+                <div class="video-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg"><rect x="2" y="6" width="28" height="20" rx="3" stroke="#069db2"
+                    stroke-width="2.2" fill="none" /><polygon points="12,10 12,22 22,16" fill="#069db2" opacity="0.4"
+                stroke="#069db2" stroke-width="1.5" stroke-linejoin="round" /></svg></span><h3>Corporate &amp; Brand Films</h3>
+                <p>Professional storytelling for your brand — testimonial videos, company culture films, and executive interviews
+                that humanize your business and build trust.</p></div>
+                <div class="video-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg"><rect x="6" y="2" width="20" height="28" rx="3" stroke="#069db2"
+                    stroke-width="2.2" fill="none" /><rect x="10" y="7" width="12" height="18" rx="1.5" fill="#069db2"
+                opacity="0.2" /></svg></span><h3>Social Media Shorts</h3><p>Vertical, fast‑paced edits optimized for TikTok,
+            Instagram Reels, YouTube Shorts. Captioning, transitions, and hooks engineered for virality.</p></div>
+            <div class="video-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2"
+                stroke-width="2.2" fill="none" /><rect x="6" y="9" width="20" height="10" rx="1.5" fill="#069db2"
+                opacity="0.2" /><circle cx="16" cy="20" r="3" fill="#069db2"
+            opacity="0.4" /></svg></span><h3>Commercial &amp; Ad Editing</h3><p>High‑retention cuts for YouTube pre‑roll,
+        Facebook Ads, and connected TV. A/B tested pacing, sound design, and call‑to‑action integration.</p></div>
+        <div class="video-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2"
+            stroke-width="2.2" fill="none" /><circle cx="16" cy="16" r="5" stroke="#069db2" stroke-width="1.8"
+            fill="none" /><circle cx="16" cy="16" r="2" fill="#069db2" /><line x1="16" y1="11" x2="16" y2="13"
+        stroke="#069db2" stroke-width="1.5" stroke-linecap="round" /></svg></span><h3>Event &amp; Webinar Recording</h3>
+        <p>Multi‑camera synchronization, keynote highlights, audience reaction inserts, and post‑event trailers that
+        maximize replay value.</p></div>
+        <div class="video-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2"
+            stroke-width="2.2" fill="none" /><circle cx="12" cy="14" r="4" fill="#069db2" opacity="0.25" /><rect x="18"
+            y="10" width="8" height="8" rx="2" fill="#069db2" opacity="0.2" /><line x1="15" y1="14" x2="18" y2="14"
+        stroke="#069db2" stroke-width="1.5" stroke-linecap="round" /></svg></span><h3>Product Demos &amp; Explainer
+    Videos</h3><p>Clear, engaging walkthroughs with motion graphics, screen capture polish, and narrative voiceover — perfect
+for landing pages and sales decks.</p></div>
+<div class="video-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="12" stroke="#069db2" stroke-width="2.2"
+    fill="none" /><circle cx="16" cy="16" r="5" fill="#069db2" opacity="0.3" /><circle cx="10" cy="12" r="2"
+    fill="#069db2" opacity="0.5" /><circle cx="22" cy="18" r="1.8" fill="#069db2" opacity="0.5" /><circle cx="19"
+cy="10" r="1.5" fill="#069db2" opacity="0.4" /></svg></span><h3>Color Grading &amp; Audio Sweetening</h3><p>Professional
+DaVinci Resolve color grading, noise reduction, EQ balancing, and immersive sound design to give every frame a premium
+finish.</p></div>
+<div class="video-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="28" height="24" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><line x1="8" y1="10" x2="24" y2="10" stroke="#069db2" stroke-width="1.5"
+    stroke-linecap="round" /><line x1="8" y1="15" x2="20" y2="15" stroke="#069db2" stroke-width="1.5"
+    stroke-linecap="round" /><line x1="8" y1="20" x2="22" y2="20" stroke="#069db2" stroke-width="1.5"
+stroke-linecap="round" /><circle cx="26" cy="20" r="3" fill="#069db2"
+opacity="0.3" /></svg></span><h3>Documentary &amp; Long-Form Editing</h3><p>Narrative arc construction, B‑roll integration,
+archival media restoration, and pacing that keeps viewers engaged for 10, 20, or 60 minutes.</p></div>
+<div class="video-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="26" height="26" rx="4" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="14" cy="14" r="5" fill="#069db2" opacity="0.25" /><polygon
+points="24,14 20,10 20,18" fill="#069db2" opacity="0.5" /></svg></span><h3>Animation &amp; Motion Graphics</h3><p>Custom
+2D/3D animated elements, kinetic typography, lower thirds, and logo stings that elevate any video production.</p></div>
+<div class="video-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="2" y="5" width="28" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><polygon points="13,10 13,21 21,15.5" fill="#069db2" opacity="0.4"
+    stroke="#069db2" stroke-width="1.5" stroke-linejoin="round" /><rect x="6" y="25" width="20" height="3" rx="1.5"
+fill="#069db2" opacity="0.25" /></svg></span><h3>YouTube Channel Management</h3><p>End‑to‑end editing, thumbnail design,
+chapters, cards, and SEO‑friendly descriptions to grow your channel organically.</p></div>
+</div>
+</div>
+</section>
 
-    <section id="data-services" style="background-color: var(--bg-light); border-top: 1px solid var(--border-light);">
-        <div class="container">
-            <h2 class="section-title reveal">Precision <span>Data Services</span> for Intelligent Decisions</h2>
-            <p class="reveal delay-1 section-intro-text">From data entry to advanced analytics — we transform raw information into actionable intelligence that fuels your business growth.</p>
-            <div class="data-services-grid">
-                <div class="data-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="26" height="26" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><line x1="8" y1="9" x2="24" y2="9" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="14" x2="20" y2="14" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="19" x2="22" y2="19" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="24" x2="16" y2="24" stroke="#069db2" stroke-width="1.5" stroke-linecap="round"/></svg></span><h3>Data Entry & Processing</h3><p>High‑accuracy manual & automated data entry, document digitization, image to text conversion, and CRM data cleansing with 99.9% quality assurance.</p></div>
-                <div class="data-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="12" cy="12" r="3" fill="#069db2" opacity="0.3"/><circle cx="20" cy="18" r="3" fill="#069db2" opacity="0.3"/><line x1="14" y1="14" x2="18" y2="16" stroke="#069db2" stroke-width="1.8" stroke-linecap="round"/><circle cx="24" cy="8" r="2" fill="#069db2" opacity="0.25"/></svg></span><h3>Data Mining & Scraping</h3><p>Extract structured data from websites, PDFs, and legacy systems. Custom scripts for lead generation, market research, and competitor monitoring.</p></div>
-                <div class="data-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><polyline points="7,18 12,22 17,14 22,19 27,10" stroke="#069db2" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="18" r="1.5" fill="#069db2"/><circle cx="17" cy="14" r="1.5" fill="#069db2"/><circle cx="27" cy="10" r="1.5" fill="#069db2"/></svg></span><h3>Data Cleansing & Deduplication</h3><p>Remove inconsistencies, fix formatting errors, merge duplicate records, and standardize datasets for reliable reporting and analysis.</p></div>
-                <div class="data-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="7" y="10" width="18" height="12" rx="2" fill="#069db2" opacity="0.2"/><polyline points="10,16 14,19 18,14 23,20" stroke="#069db2" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h3>Data Analytics & Visualization</h3><p>Turn spreadsheets into dashboards. Using Power BI, Tableau, and Looker — we uncover trends, KPIs, and insights that drive strategic decisions.</p></div>
-                <div class="data-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="14" cy="16" r="6" stroke="#069db2" stroke-width="1.8" fill="none"/><circle cx="14" cy="16" r="2.5" fill="#069db2"/><circle cx="22" cy="12" r="3" fill="#069db2" opacity="0.2"/></svg></span><h3>Database Management</h3><p>Design, optimization, and maintenance of MySQL, PostgreSQL, MongoDB. Ensure data integrity, backup strategies, and query performance tuning.</p></div>
-                <div class="data-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="4" stroke="#069db2" stroke-width="2.2" fill="none"/><circle cx="16" cy="16" r="6" fill="#069db2" opacity="0.2"/><circle cx="11" cy="13" r="1.8" fill="#069db2"/><circle cx="19" cy="11" r="1.8" fill="#069db2"/><circle cx="16" cy="20" r="1.8" fill="#069db2"/><line x1="12" y1="14" x2="15" y2="19" stroke="#069db2" stroke-width="1.2" stroke-linecap="round"/><line x1="18" y1="12" x2="16" y2="18" stroke="#069db2" stroke-width="1.2" stroke-linecap="round"/></svg></span><h3>AI Training Data Preparation</h3><p>Annotation, labeling, and structuring of datasets for machine learning models. Image bounding boxes, text classification, and audio transcription.</p></div>
-                <div class="data-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="7" y="9" width="8" height="6" rx="1.5" fill="#069db2" opacity="0.2"/><rect x="17" y="9" width="8" height="6" rx="1.5" fill="#069db2" opacity="0.2"/><rect x="7" y="17" width="8" height="6" rx="1.5" fill="#069db2" opacity="0.2"/><rect x="17" y="17" width="8" height="6" rx="1.5" fill="#069db2" opacity="0.2"/></svg></span><h3>E‑commerce Product Data Services</h3><p>Product listing enrichment, category mapping, inventory synchronization, and marketplace‑ready feeds for Amazon, Shopify, WooCommerce.</p></div>
-                <div class="data-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><rect x="8" y="10" width="16" height="12" rx="2" fill="#069db2" opacity="0.15"/><text x="16" y="19" text-anchor="middle" font-size="8" fill="#069db2" font-weight="700" font-family="sans-serif">OCR</text></svg></span><h3>OCR & Intelligent Document Processing</h3><p>Convert scanned invoices, receipts, and forms into searchable, editable data using advanced OCR with AI‑based field extraction.</p></div>
-                <div class="data-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2" stroke-width="2.2" fill="none"/><path d="M10 18 L16 12 L22 18" stroke="#069db2" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M16 12 L16 24" stroke="#069db2" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></span><h3>Data Migration & Integration</h3><p>Smooth transfer between CRMs, ERPs, or cloud platforms (Salesforce, HubSpot, Zoho). API integrations and ETL pipelines with zero downtime.</p></div>
-            </div>
+<!-- ─── DATA SERVICES (Global) ─── -->
+<section id="data-services" style="background-color:var(--bg-light); border-top:1px solid var(--border-light);">
+    <div class="container">
+        <h2 class="section-title reveal">Precision <span>Data Services</span> for Intelligent Decisions <span
+        class="geo-badge">Global</span></h2>
+        <p class="reveal delay-1 section-intro-text">From data entry to advanced analytics — we transform raw information
+        into actionable intelligence that fuels your business growth.</p>
+        <div class="data-services-grid">
+            <div class="data-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="26" height="26" rx="3" stroke="#069db2"
+                stroke-width="2.2" fill="none" /><line x1="8" y1="9" x2="24" y2="9" stroke="#069db2" stroke-width="1.5"
+                stroke-linecap="round" /><line x1="8" y1="14" x2="20" y2="14" stroke="#069db2" stroke-width="1.5"
+                stroke-linecap="round" /><line x1="8" y1="19" x2="22" y2="19" stroke="#069db2" stroke-width="1.5"
+                stroke-linecap="round" /><line x1="8" y1="24" x2="16" y2="24" stroke="#069db2" stroke-width="1.5"
+            stroke-linecap="round" /></svg></span><h3>Data Entry &amp; Processing</h3><p>High‑accuracy manual &amp; automated data
+            entry, document digitization, image to text conversion, and CRM data cleansing with 99.9% quality assurance.</p>
         </div>
-    </section>
+        <div class="data-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2"
+            stroke-width="2.2" fill="none" /><circle cx="12" cy="12" r="3" fill="#069db2" opacity="0.3" /><circle cx="20"
+            cy="18" r="3" fill="#069db2" opacity="0.3" /><line x1="14" y1="14" x2="18" y2="16" stroke="#069db2"
+            stroke-width="1.8" stroke-linecap="round" /><circle cx="24" cy="8" r="2" fill="#069db2"
+        opacity="0.25" /></svg></span><h3>Data Mining &amp; Scraping</h3><p>Extract structured data from websites, PDFs, and
+    legacy systems. Custom scripts for lead generation, market research, and competitor monitoring.</p></div>
+    <div class="data-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="3" stroke="#069db2"
+        stroke-width="2.2" fill="none" /><polyline points="7,18 12,22 17,14 22,19 27,10" stroke="#069db2" stroke-width="2.2"
+        fill="none" stroke-linecap="round" stroke-linejoin="round" /><circle cx="7" cy="18" r="1.5"
+        fill="#069db2" /><circle cx="17" cy="14" r="1.5" fill="#069db2" /><circle cx="27" cy="10" r="1.5"
+    fill="#069db2" /></svg></span><h3>Data Cleansing &amp; Deduplication</h3><p>Remove inconsistencies, fix formatting
+errors, merge duplicate records, and standardize datasets for reliable reporting and analysis.</p></div>
+<div class="data-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><rect x="7" y="10" width="18" height="12" rx="2" fill="#069db2"
+    opacity="0.2" /><polyline points="10,16 14,19 18,14 23,20" stroke="#069db2" stroke-width="2" fill="none"
+stroke-linecap="round" stroke-linejoin="round" /></svg></span><h3>Data Analytics &amp; Visualization</h3><p>Turn
+spreadsheets into dashboards. Using Power BI, Tableau, and Looker — we uncover trends, KPIs, and insights that drive
+strategic decisions.</p></div>
+<div class="data-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="14" cy="16" r="6" stroke="#069db2" stroke-width="1.8"
+    fill="none" /><circle cx="14" cy="16" r="2.5" fill="#069db2" /><circle cx="22" cy="12" r="3" fill="#069db2"
+opacity="0.2" /></svg></span><h3>Database Management</h3><p>Design, optimization, and maintenance of MySQL, PostgreSQL,
+MongoDB. Ensure data integrity, backup strategies, and query performance tuning.</p></div>
+<div class="data-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="4" width="26" height="24" rx="4" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="16" cy="16" r="6" fill="#069db2" opacity="0.2" /><circle cx="11"
+    cy="13" r="1.8" fill="#069db2" /><circle cx="19" cy="11" r="1.8" fill="#069db2" /><circle cx="16" cy="20" r="1.8"
+    fill="#069db2" /><line x1="12" y1="14" x2="15" y2="19" stroke="#069db2" stroke-width="1.2"
+    stroke-linecap="round" /><line x1="18" y1="12" x2="16" y2="18" stroke="#069db2" stroke-width="1.2"
+stroke-linecap="round" /></svg></span><h3>AI Training Data Preparation</h3><p>Annotation, labeling, and structuring of
+datasets for machine learning models. Image bounding boxes, text classification, and audio transcription.</p></div>
+<div class="data-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><rect x="7" y="9" width="8" height="6" rx="1.5" fill="#069db2"
+    opacity="0.2" /><rect x="17" y="9" width="8" height="6" rx="1.5" fill="#069db2" opacity="0.2" /><rect x="7" y="17"
+    width="8" height="6" rx="1.5" fill="#069db2" opacity="0.2" /><rect x="17" y="17" width="8" height="6" rx="1.5"
+fill="#069db2" opacity="0.2" /></svg></span><h3>E‑commerce Product Data Services</h3><p>Product listing enrichment,
+category mapping, inventory synchronization, and marketplace‑ready feeds for Amazon, Shopify, WooCommerce.</p></div>
+<div class="data-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><rect x="8" y="10" width="16" height="12" rx="2" fill="#069db2"
+    opacity="0.15" /><text x="16" y="19" text-anchor="middle" font-size="8" fill="#069db2" font-weight="700"
+font-family="sans-serif">OCR</text></svg></span><h3>OCR &amp; Intelligent Document Processing</h3><p>Convert scanned
+invoices, receipts, and forms into searchable, editable data using advanced OCR with AI‑based field extraction.</p></div>
+<div class="data-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><path d="M10 18 L16 12 L22 18" stroke="#069db2" stroke-width="2.2" fill="none"
+    stroke-linecap="round" stroke-linejoin="round" /><path d="M16 12 L16 24" stroke="#069db2" stroke-width="2.2"
+fill="none" stroke-linecap="round" /></svg></span><h3>Data Migration &amp; Integration</h3><p>Smooth transfer between CRMs,
+ERPs, or cloud platforms (Salesforce, HubSpot, Zoho). API integrations and ETL pipelines with zero downtime.</p></div>
+</div>
+</div>
+</section>
 
-    <section id="contact" class="contact-form-section">
-        <div class="container">
-            <h2 class="section-title reveal">Get in <span>Touch</span></h2>
-            <p class="reveal delay-1 section-intro-text">Ready to dominate your market? Fill out the form below and one of our performance engineers will get back to you within hours.</p>
-            <div class="contact-form-wrapper reveal delay-2">
-                <form id="contactForm" action="https://formspree.io/f/meewlzby" method="POST">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Interest</label>
-                        <select id="service" name="service">
-                            <option value="">-- Please Select --</option>
-                            <option>SEO</option>
-                            <option>AI SEO</option>
-                            <option>Local SEO</option>
-                            <option>PPC</option>
-                            <option>Social Media Marketing</option>
-                            <option>Web Design</option>
-                            <option>Graphic Design</option>
-                            <option>Video Editing</option>
-                            <option>Data Services</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project and goals..."></textarea>
-                    </div>
-                    <button type="submit" class="btn form-submit-btn">Send Message</button>
-                    <div id="formMessage" class="form-message"></div>
-                </form>
-            </div>
-        </div>
-    </section>
+<!-- ─── HARDWARE, NETWORKING & CCTV — NEPAL ONLY ─── -->
+<section id="hardware-services" style="background-color:var(--bg-dark); border-top:1px solid var(--border-light);">
+    <div class="container">
+        <h2 class="section-title reveal">Hardware, Networking &amp; <span>CCTV Solutions</span> <span
+            class="geo-badge nepal-only">🇳🇵 Nepal only</span></h2>
+            <p class="reveal delay-1 section-intro-text"><strong>Exclusively for Nepal</strong> — reliable, enterprise‑grade
+                infrastructure services. From computer hardware maintenance in Kathmandu to structured cabling in Pokhara and CCTV
+                surveillance across all provinces, we keep your operations running securely.</p>
+                <div class="hardware-services-grid">
+                    <div class="hardware-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                        xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="24" height="24" rx="4" stroke="#069db2"
+                        stroke-width="2.2" fill="none" /><rect x="8" y="8" width="16" height="16" rx="2" fill="#069db2"
+                        opacity="0.15" /><circle cx="16" cy="16" r="4" stroke="#069db2" stroke-width="1.8"
+                        fill="none" /><circle cx="16" cy="16" r="1.8"
+                    fill="#069db2" /></svg></span><h3>Computer Hardware Maintenance</h3><p>Comprehensive diagnostics, repair, and
+                    preventive maintenance for desktops, laptops, servers, and peripherals. On‑site support in Kathmandu Valley and
+                remote assistance nationwide.</p></div>
+                <div class="hardware-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="10" r="4" stroke="#069db2" stroke-width="2.2"
+                    fill="none" /><circle cx="8" cy="22" r="4" stroke="#069db2" stroke-width="2.2" fill="none" /><circle cx="24"
+                    cy="22" r="4" stroke="#069db2" stroke-width="2.2" fill="none" /><line x1="16" y1="14" x2="16" y2="18"
+                    stroke="#069db2" stroke-width="1.8" stroke-linecap="round" /><line x1="12" y1="18" x2="8" y2="18"
+                    stroke="#069db2" stroke-width="1.8" stroke-linecap="round" /><line x1="20" y1="18" x2="24" y2="18"
+                stroke="#069db2" stroke-width="1.8" stroke-linecap="round" /></svg></span><h3>Network Design &amp; Deployment</h3>
+                <p>End‑to‑end network architecture — LAN, WAN, VLAN, VPN, and wireless solutions. Scalable, secure, and optimised
+            for Nepali businesses.</p></div>
+            <div class="hardware-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="26" height="18" rx="3" stroke="#069db2"
+                stroke-width="2.2" fill="none" /><circle cx="16" cy="16" r="5" stroke="#069db2" stroke-width="1.8"
+                fill="none" /><circle cx="16" cy="16" r="2" fill="#069db2" /><line x1="16" y1="11" x2="16" y2="13"
+            stroke="#069db2" stroke-width="1.5" stroke-linecap="round" /></svg></span><h3>CCTV Installation &amp; Monitoring</h3>
+            <p>Professional deployment of IP and analogue CCTV systems across Nepal. Camera placement, NVR/DVR setup, remote
+                viewing, and 24/7 monitoring for homes, offices, and industrial sites.</p></div>
+                <div class="hardware-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                    xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5" width="24" height="22" rx="3" stroke="#069db2"
+                    stroke-width="2.2" fill="none" /><rect x="8" y="9" width="16" height="14" rx="2" fill="#069db2"
+                    opacity="0.15" /><line x1="12" y1="13" x2="20" y2="13" stroke="#069db2" stroke-width="1.5"
+                    stroke-linecap="round" /><line x1="12" y1="17" x2="18" y2="17" stroke="#069db2" stroke-width="1.5"
+                    stroke-linecap="round" /><line x1="12" y1="21" x2="16" y2="21" stroke="#069db2" stroke-width="1.5"
+                stroke-linecap="round" /></svg></span><h3>Structured Cabling &amp; Infrastructure</h3><p>Cat6/6A/7 cabling, fibre
+                optic installations, patch panels, and server rack organisation. Clean, labelled, and future‑proofed infrastructure
+            for Nepali enterprises.</p></div>
+            <div class="hardware-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg"><rect x="4" y="6" width="24" height="20" rx="3" stroke="#069db2"
+                stroke-width="2.2" fill="none" /><rect x="8" y="10" width="16" height="12" rx="2" fill="#069db2"
+                opacity="0.15" /><circle cx="16" cy="16" r="3" stroke="#069db2" stroke-width="1.8" fill="none" /><circle
+            cx="16" cy="16" r="1.5" fill="#069db2" /></svg></span><h3>NVR &amp; IP Camera Systems</h3><p>High‑definition IP
+        camera deployment with Network Video Recorders. Remote access, motion detection, and intelligent event triggers —
+    available across Nepal.</p></div>
+    <div class="hardware-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+        xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="4" stroke="#069db2"
+        stroke-width="2.2" fill="none" /><circle cx="12" cy="16" r="4" stroke="#069db2" stroke-width="1.8"
+        fill="none" /><circle cx="12" cy="16" r="1.8" fill="#069db2" /><circle cx="22" cy="12" r="3" stroke="#069db2"
+        stroke-width="1.8" fill="none" /><circle cx="22" cy="12" r="1.5" fill="#069db2" /><circle cx="22" cy="22" r="2.8"
+    stroke="#069db2" stroke-width="1.8" fill="none" /><circle cx="22" cy="22" r="1.4"
+fill="#069db2" /></svg></span><h3>Access Control Systems</h3><p>Biometric, RFID, and keypad access control installation.
+Integration with CCTV and alarm systems for complete security coverage across Nepal.</p></div>
+<div class="hardware-card reveal delay-1"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><polyline points="9,16 13,20 23,10" stroke="#069db2" stroke-width="2.5" fill="none"
+stroke-linecap="round" stroke-linejoin="round" /></svg></span><h3>IT Support &amp; Managed Services</h3><p>On‑demand and
+retainer‑based IT support across Nepal. Helpdesk, system updates, malware protection, and proactive network health
+monitoring.</p></div>
+<div class="hardware-card reveal delay-2"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="4" y="4" width="24" height="24" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><path d="M10 18 L14 22 L22 12" stroke="#069db2" stroke-width="2.2" fill="none"
+    stroke-linecap="round" stroke-linejoin="round" /><circle cx="12" cy="14" r="2" fill="#069db2"
+    opacity="0.3" /><circle cx="20" cy="18" r="1.8" fill="#069db2"
+opacity="0.3" /></svg></span><h3>Security &amp; Fire Alarm Integration</h3><p>Integrated security solutions combining
+burglar alarms, fire detection, and CCTV into a single unified command platform for Nepali businesses.</p></div>
+<div class="hardware-card reveal delay-3"><span class="card-icon-sm"><svg viewBox="0 0 32 32" fill="none"
+    xmlns="http://www.w3.org/2000/svg"><rect x="3" y="5" width="26" height="22" rx="3" stroke="#069db2"
+    stroke-width="2.2" fill="none" /><circle cx="12" cy="15" r="4" stroke="#069db2" stroke-width="1.8"
+    fill="none" /><circle cx="12" cy="15" r="1.8" fill="#069db2" /><circle cx="22" cy="11" r="3" stroke="#069db2"
+    stroke-width="1.8" fill="none" /><circle cx="22" cy="11" r="1.5" fill="#069db2" /><circle cx="22" cy="21" r="2.8"
+    stroke="#069db2" stroke-width="1.8" fill="none" /><circle cx="22" cy="21" r="1.4" fill="#069db2" /><rect x="10" y="25"
+width="12" height="3" rx="1.5" fill="#069db2" opacity="0.2" /></svg></span><h3>Smart Home &amp; Building Automation</h3>
+<p>IoT‑enabled automation for lighting, HVAC, security, and energy management. Centralised control via mobile or web
+dashboards — available in Nepal.</p></div>
+</div>
+</div>
+</section>
 
-    <section id="location" class="map-section">
-        <div class="container">
-            <h2 class="section-title reveal">Our <span>Location</span></h2>
-            <p class="reveal delay-1 section-intro-text">Visit us at Godawari, Lalitpur, Kitini Height. We are ready to elevate your digital presence.</p>
-            <div class="map-wrapper reveal delay-2" style="width:100%; height:450px;">
-                <iframe src="https://maps.google.com/maps?q=Godawari+Lalitpur+Kitini+Height&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <section class="about-agency">
-        <div class="container">
-            <div class="reveal"><h3>Why Traditional Marketing Tactics Fail</h3><p>Most agencies mask underperformance with superficial metrics like impressions and clicks. At NextGenIT, we engineer native, comprehensive digital landscapes. We eliminate systemic digital noise to establish lean, aggressive, and entirely results-oriented operational growth pipelines for your enterprise.</p></div>
-        </div>
-    </section>
-
-    <section id="pillars" class="pricing-section">
-        <div class="container">
-            <h2 class="section-title reveal">Our Core Pillars to <span>Maximize Market Dominance</span></h2>
-            <div class="values-grid">
-                <div class="value-card reveal delay-1"><h4>100% Measurable ROI</h4><p>Every campaign variable and deployment budget is explicitly linked to absolute bottom-line revenue goals and custom client data dashboards.</p></div>
-                <div class="value-card reveal delay-2"><h4>Human-Designed Precision</h4><p>Meticulously curated, minimalist interface designs crafted by specialized visual architects rather than lazy, automated generative templates.</p></div>
-                <div class="value-card reveal delay-3"><h4>High-Intent Focus</h4><p>We deliberately bypass vague attention metrics to isolate and capture users positioned perfectly within direct transactional and purchase-ready layers.</p></div>
-                <div class="value-card reveal delay-1"><h4>Full Stack Capability</h4><p>Seamless execution running from custom, lightweight server-side code development up to aggressive multi-channel lead acquisition operations.</p></div>
-                <div class="value-card reveal delay-2"><h4>Agile Deployments</h4><p>Rapid, continuous iteration pipelines ensuring your campaign structural components adapt faster than your market competitors can react.</p></div>
-                <div class="value-card reveal delay-3"><h4>Transparent Growth</h4><p>Zero communication barriers. We run side-by-side with your organization as a dedicated, hyper-focused technical performance partner.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="process" class="tabs-section">
-        <div class="container">
-            <h2 class="section-title reveal">How We Scale Your <span>Business Ecosystem</span></h2>
-            <div class="tabs-wrapper reveal">
-                <div class="tab-list">
-                    <div class="active" data-id="0">Phase 1: Market Footprint Audit</div>
-                    <div data-id="1">Phase 2: High-Intent Capture Setup</div>
-                    <div data-id="2">Phase 3: Conversion Landing Engine</div>
-                    <div data-id="3">Phase 4: Predictable Revenue Scale</div>
+<!-- ─── CONTACT ─── -->
+<section id="contact" class="contact-form-section">
+    <div class="container">
+        <h2 class="section-title reveal">Get in <span>Touch</span></h2>
+        <p class="reveal delay-1 section-intro-text">Ready to dominate your market? Fill out the form below and one of our
+        performance engineers will get back to you within hours.</p>
+        <div class="contact-form-wrapper reveal delay-2">
+            <form id="contactForm" action="https://formspree.io/f/meewlzby" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required placeholder="John Doe" />
                 </div>
-                <div class="tab-content-panel" id="dynamic-tab-panel">
-                    <h3>Phase 1: Market Footprint Audit</h3>
-                    <p>We map out competitive digital layout footprints, audit organic search authority parameters, isolate conversion funnel leaks, and formulate exact technical benchmarks engineered for growth.</p>
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required placeholder="john@example.com" />
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+977 9800000000" />
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interest</label>
+                    <select id="service" name="service">
+                        <option value="">-- Please Select --</option>
+                        <option>SEO</option>
+                        <option>AI SEO</option>
+                        <option>Local SEO</option>
+                        <option>PPC</option>
+                        <option>Social Media Marketing</option>
+                        <option>Web Design</option>
+                        <option>Graphic Design</option>
+                        <option>Video Editing</option>
+                        <option>Data Services</option>
+                        <option>Hardware &amp; Networking (Nepal only)</option>
+                        <option>CCTV Installation (Nepal only)</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required
+                placeholder="Tell us about your project and goals..."></textarea>
+            </div>
+            <button type="submit" class="btn form-submit-btn">Send Message</button>
+            <div id="formMessage" class="form-message"></div>
+        </form>
+    </div>
+</div>
+</section>
+
+<!-- ─── MAP ─── -->
+<section id="location" class="map-section">
+    <div class="container">
+        <h2 class="section-title reveal">Our <span>Location</span></h2>
+        <p class="reveal delay-1 section-intro-text">Visit us at Godawari, Lalitpur, Kitini Height, Nepal. We serve clients
+        across all seven provinces for hardware needs and globally for digital services.</p>
+        <div class="map-wrapper reveal delay-2" style="width:100%; height:450px;">
+            <iframe
+            src="https://maps.google.com/maps?q=Godawari+Lalitpur+Kitini+Height&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section class="about-agency">
+    <div class="container">
+        <div class="reveal"><h3>Why Traditional Marketing &amp; IT Support Fall Short</h3><p>Most agencies mask
+            underperformance with superficial metrics. At NextGenIT, we engineer native, comprehensive digital landscapes and
+            robust IT infrastructure. We eliminate systemic digital noise to establish lean, aggressive, and entirely
+        results‑oriented operational growth pipelines — whether you're in Kathmandu or anywhere else in the world.</p></div>
+    </div>
+</section>
+
+<!-- ─── PILLARS ─── -->
+<section id="pillars" class="pricing-section">
+    <div class="container">
+        <h2 class="section-title reveal">Our Core Pillars to <span>Maximize Market Dominance</span></h2>
+        <div class="values-grid">
+            <div class="value-card reveal delay-1"><h4>100% Measurable ROI</h4><p>Every campaign variable and deployment
+            budget is explicitly linked to absolute bottom‑line revenue goals and custom client data dashboards.</p></div>
+            <div class="value-card reveal delay-2"><h4>Human‑Designed Precision</h4><p>Meticulously curated, minimalist
+            interface designs crafted by specialized visual architects rather than lazy, automated generative templates.</p>
+        </div>
+        <div class="value-card reveal delay-3"><h4>High‑Intent Focus</h4><p>We deliberately bypass vague attention metrics
+        to isolate and capture users positioned perfectly within direct transactional and purchase‑ready layers.</p></div>
+        <div class="value-card reveal delay-1"><h4>Full Stack Capability</h4><p>Seamless execution running from custom,
+        lightweight server‑side code development up to aggressive multi‑channel lead acquisition operations.</p></div>
+        <div class="value-card reveal delay-2"><h4>Agile Deployments</h4><p>Rapid, continuous iteration pipelines ensuring
+        your campaign structural components adapt faster than your market competitors can react.</p></div>
+        <div class="value-card reveal delay-3"><h4>Transparent Growth</h4><p>Zero communication barriers. We run
+        side‑by‑side with your organization as a dedicated, hyper‑focused technical performance partner.</p></div>
+    </div>
+</div>
+</section>
+
+<!-- ─── PROCESS TABS ─── -->
+<section id="process" class="tabs-section">
+    <div class="container">
+        <h2 class="section-title reveal">How We Scale Your <span>Business Ecosystem</span></h2>
+        <div class="tabs-wrapper reveal">
+            <div class="tab-list">
+                <div class="active" data-id="0">Phase 1: Market Footprint Audit</div>
+                <div data-id="1">Phase 2: High‑Intent Capture Setup</div>
+                <div data-id="2">Phase 3: Conversion Landing Engine</div>
+                <div data-id="3">Phase 4: Predictable Revenue Scale</div>
+            </div>
+            <div class="tab-content-panel" id="dynamic-tab-panel">
+                <h3>Phase 1: Market Footprint Audit</h3>
+                <p>We map out competitive digital layout footprints, audit organic search authority parameters, isolate
+                    conversion funnel leaks, and formulate exact technical benchmarks engineered for growth.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ─── PRICING ─── -->
     <section class="pricing-section" id="pricing">
         <div class="container">
-            <h2 class="section-title reveal">Ultra-Transparent <span>Performance Tiers</span></h2>
+            <h2 class="section-title reveal">Ultra‑Transparent <span>Performance Tiers</span></h2>
             <div class="pricing-grid">
-                <div class="price-card reveal delay-1"><h3>Bronze Launch</h3><div class="price">$299<span>/mo</span></div><ul class="price-features-list"><li>✔ Website SEO Audit</li><li>✔ Basic Keyword Research (10 Keywords)</li><li>✔ On-Page SEO Optimization (Up to 5 Pages)</li><li>✔ Google Business Profile Setup/Optimization</li><li>✔ Basic Technical SEO Fixes</li><li>✔ Monthly Ranking Report</li><li>✔ Google Analytics & Search Console Setup</li><li>✔ Email Support</li></ul><a href="mailto:contact@nextgenit.com?subject=Bronze%20Launch%20Inquiry" class="btn">Get Started</a></div>
-                <div class="price-card reveal delay-2"><h3>Starter Growth</h3><div class="price">$499<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Bronze Launch</li><li>✔ Advanced Keyword Research (25 Keywords)</li><li>✔ On-Page SEO Optimization (Up to 10 Pages)</li><li>✔ Local SEO Optimization</li><li>✔ Competitor Analysis</li><li>✔ Content Optimization Recommendations</li><li>✔ Citation Building & Local Listings</li><li>✔ Monthly Performance Report</li><li>✔ Priority Email Support</li></ul><a href="mailto:contact@nextgenit.com?subject=Starter%20Growth%20Inquiry" class="btn">Get Started</a></div>
-                <div class="price-card reveal delay-3"><h3>Silver Setup</h3><div class="price">$1,499<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Starter Growth</li><li>✔ Comprehensive SEO Strategy</li><li>✔ On-Page SEO Optimization (Up to 25 Pages)</li><li>✔ Technical SEO Audit & Implementation</li><li>✔ Monthly Blog Content Optimization</li><li>✔ Link Building Campaign</li><li>✔ Conversion-Focused Landing Page Optimization</li><li>✔ Google Business Profile Management</li><li>✔ Advanced Analytics & Tracking Setup</li><li>✔ Monthly Strategy Consultation</li></ul><a href="mailto:contact@nextgenit.com?subject=Silver%20Setup%20Inquiry" class="btn">Get Started</a></div>
-                <div class="price-card featured reveal delay-4"><div class="featured-badge">RECOMMENDED</div><h3>Gold Domination</h3><div class="price">$2,999<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Silver Setup</li><li>✔ Custom SEO & Digital Marketing Framework</li><li>✔ Advanced Multi-Location SEO (if applicable)</li><li>✔ Aggressive Authority Link Building</li><li>✔ Content Marketing Strategy & Execution</li><li>✔ PPC Campaign Setup & Optimization</li><li>✔ Conversion Rate Optimization (CRO)</li><li>✔ Competitor Domination Analysis</li><li>✔ Custom Dashboard & Reporting</li><li>✔ Bi-Weekly Strategy Meetings</li><li>✔ Dedicated Account Manager</li></ul><a href="mailto:contact@nextgenit.com?subject=Gold%20Domination%20Inquiry" class="btn">Get Started</a></div>
-                <div class="price-card reveal delay-1"><h3>Platinum Enterprise</h3><div class="price">$4,999<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything in Gold Domination</li><li>✔ Enterprise-Level SEO Management</li><li>✔ Omnichannel Marketing Strategy</li><li>✔ Advanced Marketing Automation</li><li>✔ Custom Funnel Development & Optimization</li><li>✔ Enterprise Technical SEO Solutions</li><li>✔ Brand Reputation Monitoring & Management</li><li>✔ Custom API & CRM Integrations</li><li>✔ Advanced Attribution & Conversion Tracking</li><li>✔ Unlimited Strategic Consulting</li><li>✔ Dedicated Performance Team</li><li>✔ Priority Support & Emergency Response</li></ul><a href="mailto:contact@nextgenit.com?subject=Platinum%20Enterprise%20Inquiry" class="btn">Get Started</a></div>
-            </div>
-        </div>
-    </section>
+                <div class="price-card reveal delay-1"><h3>Bronze Launch</h3><div class="price">$299<span>/mo</span></div><ul
+                    class="price-features-list"><li>✔ Website SEO Audit</li><li>✔ Basic Keyword Research (10 Keywords)</li><li>✔
+                        On‑Page SEO Optimization (Up to 5 Pages)</li><li>✔ Google Business Profile Setup/Optimization</li><li>✔
+                            Basic Technical SEO Fixes</li><li>✔ Monthly Ranking Report</li><li>✔ Google Analytics &amp; Search Console
+                        Setup</li><li>✔ Email Support</li></ul><a
+                        href="mailto:contact@nextgenit.com?subject=Bronze%20Launch%20Inquiry" class="btn">Get Started</a></div>
+                        <div class="price-card reveal delay-2"><h3>Starter Growth</h3><div class="price">$499<span>/mo</span></div><ul
+                            class="price-features-list"><li>✔ Everything in Bronze Launch</li><li>✔ Advanced Keyword Research (25
+                                Keywords)</li><li>✔ On‑Page SEO Optimization (Up to 10 Pages)</li><li>✔ Local SEO Optimization</li><li>✔
+                                    Competitor Analysis</li><li>✔ Content Optimization Recommendations</li><li>✔ Citation Building &amp; Local
+                                Listings</li><li>✔ Monthly Performance Report</li><li>✔ Priority Email Support</li></ul><a
+                                href="mailto:contact@nextgenit.com?subject=Starter%20Growth%20Inquiry" class="btn">Get Started</a></div>
+                                <div class="price-card reveal delay-3"><h3>Silver Setup</h3><div class="price">$1,499<span>/mo</span></div><ul
+                                    class="price-features-list"><li>✔ Everything in Starter Growth</li><li>✔ Comprehensive SEO Strategy</li><li>✔
+                                        On‑Page SEO Optimization (Up to 25 Pages)</li><li>✔ Technical SEO Audit &amp; Implementation</li><li>✔
+                                            Monthly Blog Content Optimization</li><li>✔ Link Building Campaign</li><li>✔ Conversion‑Focused Landing Page
+                                            Optimization</li><li>✔ Google Business Profile Management</li><li>✔ Advanced Analytics &amp; Tracking
+                                        Setup</li><li>✔ Monthly Strategy Consultation</li></ul><a
+                                        href="mailto:contact@nextgenit.com?subject=Silver%20Setup%20Inquiry" class="btn">Get Started</a></div>
+                                        <div class="price-card featured reveal delay-4"><div class="featured-badge">RECOMMENDED</div><h3>Gold
+                                            Domination</h3><div class="price">$2,999<span>/mo</span></div><ul class="price-features-list"><li>✔ Everything
+                                                in Silver Setup</li><li>✔ Custom SEO &amp; Digital Marketing Framework</li><li>✔ Advanced Multi‑Location SEO
+                                                    (if applicable)</li><li>✔ Aggressive Authority Link Building</li><li>✔ Content Marketing Strategy &amp;
+                                                Execution</li><li>✔ PPC Campaign Setup &amp; Optimization</li><li>✔ Conversion Rate Optimization
+                                                    (CRO)</li><li>✔ Competitor Domination Analysis</li><li>✔ Custom Dashboard &amp; Reporting</li><li>✔
+                                                Bi‑Weekly Strategy Meetings</li><li>✔ Dedicated Account Manager</li></ul><a
+                                                href="mailto:contact@nextgenit.com?subject=Gold%20Domination%20Inquiry" class="btn">Get Started</a></div>
+                                                <div class="price-card reveal delay-1"><h3>Platinum Enterprise</h3><div class="price">$4,999<span>/mo</span>
+                                                </div><ul class="price-features-list"><li>✔ Everything in Gold Domination</li><li>✔ Enterprise‑Level SEO
+                                                    Management</li><li>✔ Omnichannel Marketing Strategy</li><li>✔ Advanced Marketing Automation</li><li>✔
+                                                        Custom Funnel Development &amp; Optimization</li><li>✔ Enterprise Technical SEO Solutions</li><li>✔ Brand
+                                                            Reputation Monitoring &amp; Management</li><li>✔ Custom API &amp; CRM Integrations</li><li>✔ Advanced
+                                                                Attribution &amp; Conversion Tracking</li><li>✔ Unlimited Strategic Consulting</li><li>✔ Dedicated
+                                                            Performance Team</li><li>✔ Priority Support &amp; Emergency Response</li></ul><a
+                                                            href="mailto:contact@nextgenit.com?subject=Platinum%20Enterprise%20Inquiry" class="btn">Get
+                                                        Started</a></div>
+                                                    </div>
+                                                    <p style="text-align:center; margin-top:30px; color:var(--text-muted); font-size:0.9rem;">Hardware, networking,
+                                                        and CCTV services are quoted separately based on scope. <a href="#contact"
+                                                        style="color:var(--accent-teal); font-weight:600;">Request a site survey</a> for a custom quote (Nepal
+                                                    only).</p>
+                                                </div>
+                                            </section>
 
-    <section class="flowchart-section">
-        <div class="container">
-            <h2 class="section-title reveal">Our 4-Step <span>Onboarding Blueprint</span></h2>
-            <div class="flowchart-grid">
-                <div class="flow-step reveal delay-1"><h4>01 / Strategy Alignment</h4><p>We deeply evaluate structural market parameters to calculate exact deployment budgets balancing your transactional model metrics perfectly.</p></div>
-                <div class="flow-step reveal delay-2"><h4>02 / Architecture Lock</h4><p>We codify campaign performance targets, strip core design noise, and refine UI elements to clear a frictionless conversion path.</p></div>
-                <div class="flow-step reveal delay-3"><h4>03 / Integration Launch</h4><p>Our agile pipeline brings lightweight code configurations, secure server configurations, and customized assets completely live.</p></div>
-                <div class="flow-step reveal delay-4"><h4>04 / Continuous Optimization</h4><p>We systematically monitor traffic streams, prune inefficient variables, and steadily minimize your acquisition overhead costs.</p></div>
-            </div>
-        </div>
-    </section>
+                                            <!-- ─── FLOWCHART ─── -->
+                                            <section class="flowchart-section">
+                                                <div class="container">
+                                                    <h2 class="section-title reveal">Our 4‑Step <span>Onboarding Blueprint</span></h2>
+                                                    <div class="flowchart-grid">
+                                                        <div class="flow-step reveal delay-1"><h4>01 / Strategy Alignment</h4><p>We deeply evaluate structural market
+                                                            parameters to calculate exact deployment budgets balancing your transactional model metrics perfectly.</p>
+                                                        </div>
+                                                        <div class="flow-step reveal delay-2"><h4>02 / Architecture Lock</h4><p>We codify campaign performance targets, strip
+                                                            core design noise, and refine UI elements to clear a frictionless conversion path.</p></div>
+                                                            <div class="flow-step reveal delay-3"><h4>03 / Integration Launch</h4><p>Our agile pipeline brings lightweight code
+                                                                configurations, secure server configurations, and customized assets completely live.</p></div>
+                                                                <div class="flow-step reveal delay-4"><h4>04 / Continuous Optimization</h4><p>We systematically monitor traffic streams,
+                                                                prune inefficient variables, and steadily minimize your acquisition overhead costs.</p></div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
 
-    <section class="faq-section" id="faqs">
-        <div class="container faq-container">
-            <h2 class="section-title reveal">Frequently Asked <span>Questions</span></h2>
-            <div class="accordion-item reveal delay-1"><div class="accordion-title">How do you track true campaign ROI? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>We bypass shallow stats by deploying end-to-end event mapping tokens. This tracks every customer inquiry from their first search touchpoint down to completed transactional checkouts.</p></div></div>
-            <div class="accordion-item reveal delay-1"><div class="accordion-title">What digital channels do your frameworks include? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>NextGenIT builds systems spanning organic search visibility (SEO), custom high-performance web development, high-intent paid ad solutions, social media channels, and tailored branding architectures.</p></div></div>
-            <div class="accordion-item reveal delay-2"><div class="accordion-title">Are your growth strategies contract-independent? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>Yes. We function as high-performance architectural partners. Our frameworks are built to produce measurable traction quickly, keeping partnerships entirely performance-driven.</p></div></div>
-            <div class="accordion-item reveal delay-2"><div class="accordion-title">What is your design philosophy regarding AI generation vs. human precision? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>We completely reject messy, automated, template-based layouts. Every element we construct is custom engineered by hand using minimalist, neat visual principles to ensure elite user experiences that establish trust and command market respect.</p></div></div>
-            <div class="accordion-item reveal delay-2"><div class="accordion-title">Do you offer standalone graphic design, video editing, or data packages? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>Absolutely. Whether you need a full brand identity, cinematic video editing, or high-volume data processing, our creative and data services can be purchased independently or as part of a full growth bundle.</p></div></div>
-            <div class="accordion-item reveal delay-2"><div class="accordion-title">What data security measures do you take? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>We follow industry best practices: encrypted transfers, NDAs for all team members, secure cloud environments, and optional on‑premise processing for sensitive projects.</p></div></div>
-        </div>
-    </section>
+                                                    <!-- ─── FAQ ─── -->
+                                                    <section class="faq-section" id="faqs">
+                                                        <div class="container faq-container">
+                                                            <h2 class="section-title reveal">Frequently Asked <span>Questions</span></h2>
+                                                            <div class="accordion-item reveal delay-1"><div class="accordion-title">How do you track true campaign ROI? <span
+                                                            class="accordion-icon">+</span></div><div class="accordion-content"><p>We bypass shallow stats by deploying
+                                                            end‑to‑end event mapping tokens. This tracks every customer inquiry from their first search touchpoint down to
+                                                        completed transactional checkouts.</p></div></div>
+                                                        <div class="accordion-item reveal delay-1"><div class="accordion-title">What digital channels do your frameworks
+                                                            include? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>NextGenIT builds systems
+                                                            spanning organic search visibility (SEO), custom high‑performance web development, high‑intent paid ad solutions,
+                                                        social media channels, and tailored branding architectures.</p></div></div>
+                                                        <div class="accordion-item reveal delay-2"><div class="accordion-title">Are your growth strategies
+                                                            contract‑independent? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>Yes. We
+                                                            function as high‑performance architectural partners. Our frameworks are built to produce measurable traction
+                                                        quickly, keeping partnerships entirely performance‑driven.</p></div></div>
+                                                        <div class="accordion-item reveal delay-2"><div class="accordion-title">What is your design philosophy regarding AI
+                                                            generation vs. human precision? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>We
+                                                            completely reject messy, automated, template‑based layouts. Every element we construct is custom engineered by hand
+                                                            using minimalist, neat visual principles to ensure elite user experiences that establish trust and command market
+                                                        respect.</p></div></div>
+                                                        <div class="accordion-item reveal delay-2"><div class="accordion-title">Do you offer standalone graphic design, video
+                                                            editing, or data packages? <span class="accordion-icon">+</span></div><div class="accordion-content">
+                                                            <p>Absolutely. Whether you need a full brand identity, cinematic video editing, or high‑volume data processing, our
+                                                            creative and data services can be purchased independently or as part of a full growth bundle.</p></div></div>
+                                                            <div class="accordion-item reveal delay-2"><div class="accordion-title">What data security measures do you take? <span
+                                                            class="accordion-icon">+</span></div><div class="accordion-content"><p>We follow industry best practices: encrypted
+                                                            transfers, NDAs for all team members, secure cloud environments, and optional on‑premise processing for sensitive
+                                                        projects.</p></div></div>
+                                                        <div class="accordion-item reveal delay-2"><div class="accordion-title">Do you provide hardware, networking, and CCTV
+                                                            services outside Nepal? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>No, these
+                                                            services are exclusively for Nepal. Our digital marketing, design, development, video, and data services are
+                                                        available worldwide.</p></div></div>
+                                                        <div class="accordion-item reveal delay-2"><div class="accordion-title">What is the typical turnaround time for CCTV
+                                                            installation in Nepal? <span class="accordion-icon">+</span></div><div class="accordion-content"><p>For standard
+                                                            residential and small office setups, we complete installation within 1–2 days. Larger commercial and industrial
+                                                        projects are scoped individually, with timelines communicated upfront.</p></div></div>
+                                                    </div>
+                                                </section>
 
-    <footer>
-        <div class="container footer-grid">
-            <div class="footer-col"><div class="logo">
-            <a href="#"><img src="nextgenitboldlogoforfooter.png" alt="NextGenIT Logo"></a>
-        </div><p>Engineering custom native digital ecosystems built exclusively for market dominance. Stripping away operational vanity noise to scale measurable multi-channel enterprise acquisition systems.</p></div>
-            <div class="footer-col"><h4>Framework</h4><ul><li><a href="#services">Services</a></li><li><a href="#pillars">Core Pillars</a></li><li><a href="#process">Scale Process</a></li><li><a href="#pricing">Performance Tiers</a></li><li><a href="#contact">Contact</a></li><li><a href="#location">Location</a></li><li><a href="#graphic-design">Graphic Design</a></li><li><a href="#video-editing">Video Editing</a></li><li><a href="#data-services">Data Services</a></li></ul></div>
-            <div class="footer-col"><h4>Core Solutions</h4><ul><li><a href="#services">Search Engine Optimization</a></li><li><a href="#services">AI Search Strategy</a></li><li><a href="#services">Precision Paid PPC</a></li><li><a href="#services">Conversion Engineering</a></li><li><a href="#graphic-design">Visual Identity & Design</a></li><li><a href="#video-editing">Cinematic Video Editing</a></li><li><a href="#data-services">Data Processing & Analytics</a></li></ul></div>
-            <div class="footer-col"><h4>Contact Partner</h4><p style="margin-bottom: 6px;">Direct Performance Engineering:</p><p><a href="mailto:nextgenit2030@gmail.com" class="footer-contact-email">nextgenit2030@gmail.com</a></p></div>
-        </div>
-        <div class="footer-bottom"><p>&copy; 2026 NextGenIT. All Rights Engineered to Dominance. Crafted with Human-Designed Precision.</p></div>
-    </footer>
+                                                <!-- ─── FOOTER ─── -->
+                                                <footer>
+                                                    <div class="container footer-grid">
+                                                        <div class="footer-col">
+                                                            <div class="logo">
+                                                                <a href="#"><img src="nextgenitboldlogoforfooter.png" alt="NextGenIT Logo" /></a>
+                                                            </div>
+                                                            <p>Engineering custom native digital ecosystems and robust IT infrastructure. Digital services available worldwide;
+                                                            hardware, networking, and CCTV exclusively in Nepal. Stripping away operational vanity noise to scale measurable
+                                                        multi‑channel enterprise acquisition systems.</p>
+                                                    </div>
+                                                    <div class="footer-col"><h4>Framework</h4><ul><li><a href="#services">Services</a></li><li><a
+                                                        href="#pillars">Core Pillars</a></li><li><a href="#process">Scale Process</a></li><li><a
+                                                            href="#pricing">Performance Tiers</a></li><li><a href="#contact">Contact</a></li><li><a
+                                                                href="#location">Location</a></li><li><a href="#graphic-design">Graphic Design</a></li><li><a
+                                                                    href="#video-editing">Video Editing</a></li><li><a href="#data-services">Data Services</a></li><li><a
+                                                                    href="#hardware-services">Hardware &amp; Networking </a></li></ul></div>
+                                                                    <div class="footer-col"><h4>Core Solutions</h4><ul><li><a href="#services">Search Engine Optimization</a></li><li><a
+                                                                        href="#services">AI Search Strategy</a></li><li><a href="#services">Precision Paid PPC</a></li><li><a
+                                                                            href="#services">Conversion Engineering</a></li><li><a href="#graphic-design">Visual Identity &amp;
+                                                                                Design</a></li><li><a href="#video-editing">Cinematic Video Editing</a></li><li><a
+                                                                                    href="#data-services">Data Processing &amp; Analytics</a></li><li><a href="#hardware-services">CCTV &amp;
+                                                                                Network Solutions </a></li></ul></div>
+                                                                                <div class="footer-col"><h4>Contact Partner</h4><p style="margin-bottom:6px;">Direct Performance
+                                                                                    Engineering:</p><p><a href="mailto:nextgenit2030@gmail.com"
+                                                                                    class="footer-contact-email">nextgenit2030@gmail.com</a></p><p style="margin-top:10px; font-size:0.82rem;">📍
+                                                                                Godawari, Lalitpur, Kitini Height, Nepal</p><p style="font-size:0.82rem; margin-top:6px;">📞 +977
+                                                                            9800000000</p></div>
+                                                                        </div>
+                                                                        <div class="footer-bottom"><p>&copy; 2026 NextGenIT. All Rights Engineered to Dominance. Crafted with Human‑Designed
+                                                                        Precision.</p></div>
+                                                                    </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const loader = document.getElementById('page-loader');
-            if (loader) {
-                const hideLoader = () => {
-                    loader.classList.add('loaded');
-                    setTimeout(() => { loader.style.display = 'none'; }, 400);
-                };
-                window.addEventListener('load', hideLoader);
-                setTimeout(hideLoader, 2500);
-            }
+                                                                    <!-- ─── SCRIPTS ─── -->
+                                                                    <script>
+                                                                        document.addEventListener('DOMContentLoaded', () => {
+                                                                            // ── SCROLL POSITION PRESERVATION ON REFRESH ──
+                                                                            // Save scroll position before page unload
+                                                                            window.addEventListener('beforeunload', () => {
+                                                                                sessionStorage.setItem('scrollPos', window.scrollY);
+                                                                            });
 
-            const revealElements = document.querySelectorAll('.reveal');
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('reveal-visible');
-                        revealObserver.unobserve(entry.target);
-                    }
-                });
-            }, { root: null, threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
-            revealElements.forEach(el => revealObserver.observe(el));
+                                                                            // Restore scroll position after page loads
+                                                                            const savedScrollPos = sessionStorage.getItem('scrollPos');
+                                                                            if (savedScrollPos !== null) {
+                                                                                // Use requestAnimationFrame to ensure DOM is fully rendered
+                                                                                requestAnimationFrame(() => {
+                                                                                    requestAnimationFrame(() => {
+                                                                                        window.scrollTo(0, parseInt(savedScrollPos, 10));
+                                                                                        sessionStorage.removeItem('scrollPos');
+                                                                                    });
+                                                                                });
+                                                                            }
 
-            const processData = [
-                { title: "Phase 1: Market Footprint Audit", text: "We map out competitive digital layout footprints, audit organic search authority parameters, isolate conversion funnel leaks, and formulate exact technical benchmarks engineered for growth." },
-                { title: "Phase 2: High-Intent Capture Setup", text: "We construct precision architecture models across target search terms, build semantic keyword landscapes, deploy clean tracking schema marks, and launch high-intent transactional visibility loops." },
-                { title: "Phase 3: Conversion Landing Engine", text: "Our visual engineers craft custom high-speed landing configurations. We clean code frameworks, establish lightning fast loading protocols, build explicit CTAs, and eradicate drop-off structural layers." },
-                { title: "Phase 4: Predictable Revenue Scale", text: "We open programmatic ad bidding parameters, optimize allocation pipelines across high-performing cross-channel loops, prune metrics continuously, and amplify customer intake velocity." }
-            ];
-            const tabElements = document.querySelectorAll('.tab-list div');
-            const panelContainer = document.getElementById('dynamic-tab-panel');
-            if (panelContainer) {
-                tabElements.forEach(tab => {
-                    tab.addEventListener('click', () => {
-                        tabElements.forEach(t => t.classList.remove('active'));
-                        tab.classList.add('active');
-                        const dataId = parseInt(tab.getAttribute('data-id'), 10);
-                        panelContainer.style.opacity = '0';
-                        panelContainer.style.transform = 'translateY(10px)';
-                        setTimeout(() => {
-                            panelContainer.innerHTML = `<h3>${processData[dataId].title}</h3><p>${processData[dataId].text}</p>`;
-                            panelContainer.style.opacity = '1';
-                            panelContainer.style.transform = 'translateY(0)';
-                        }, 200);
-                    });
-                });
-            }
+                                                                            // ── loader ──
+                                                                            const loader = document.getElementById('page-loader');
+                                                                            if (loader) {
+                                                                                const hideLoader = () => {
+                                                                                    loader.classList.add('loaded');
+                                                                                    setTimeout(() => { loader.style.display = 'none'; }, 400);
+                                                                                };
+                                                                                window.addEventListener('load', hideLoader);
+                                                                                // Fallback: hide loader after 2.5 seconds if load event hasn't fired
+                                                                                setTimeout(hideLoader, 2500);
+                                                                            }
 
-            const accordionItems = document.querySelectorAll('.accordion-item');
-            accordionItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const content = item.querySelector('.accordion-content');
-                    const isActive = item.classList.contains('active');
-                    accordionItems.forEach(other => { other.classList.remove('active'); other.querySelector('.accordion-content').style.maxHeight = null; });
-                    if (!isActive) {
-                        item.classList.add('active');
-                        if (content) content.style.maxHeight = content.scrollHeight + "px";
-                    }
-                });
-            });
+                                                                            // ── smooth scroll for anchor links (since we removed scroll-behavior from html) ──
+                                                                            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                                                                anchor.addEventListener('click', function (e) {
+                                                                                    const href = this.getAttribute('href');
+                                                                                    if (href === '#') return; // skip empty hash links
+                                                                                    e.preventDefault();
+                                                                                    const target = document.querySelector(href);
+                                                                                    if (target) {
+                                                                                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                                                                        // Update URL hash without jumping
+                                                                                        if (history.pushState) {
+                                                                                            history.pushState(null, null, href);
+                                                                                        }
+                                                                                    }
+                                                                                });
+                                                                            });
 
-            const contactForm = document.getElementById('contactForm');
-            const formMessage = document.getElementById('formMessage');
-            if (contactForm) {
-                contactForm.addEventListener('submit', async (e) => {
-                    e.preventDefault();
-                    formMessage.style.display = 'none';
-                    formMessage.classList.remove('success', 'error');
-                    const formData = new FormData(contactForm);
-                    try {
-                        const response = await fetch(contactForm.action, {
-                            method: 'POST',
-                            body: formData,
-                            headers: { 'Accept': 'application/json' }
-                        });
-                        if (response.ok) {
-                            formMessage.textContent = 'Thank you! Your message has been sent. We\'ll get back to you soon.';
-                            formMessage.classList.add('success');
-                            contactForm.reset();
-                        } else {
-                            const data = await response.json();
-                            if (data.errors) {
-                                formMessage.textContent = data.errors.map(error => error.message).join(', ');
-                            } else {
-                                formMessage.textContent = 'Oops! There was a problem submitting your form. Please try again.';
-                            }
-                            formMessage.classList.add('error');
-                        }
-                    } catch (error) {
-                        formMessage.textContent = 'Network error. Please check your connection and try again.';
-                        formMessage.classList.add('error');
-                    }
-                    formMessage.style.display = 'block';
-                });
-            }
+                                                                            // ── reveal ──
+                                                                            const revealElements = document.querySelectorAll('.reveal');
+                                                                            const revealObserver = new IntersectionObserver((entries) => {
+                                                                                entries.forEach(entry => {
+                                                                                    if (entry.isIntersecting) {
+                                                                                        entry.target.classList.add('reveal-visible');
+                                                                                        revealObserver.unobserve(entry.target);
+                                                                                    }
+                                                                                });
+                                                                            }, { root: null, threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
+                                                                            revealElements.forEach(el => revealObserver.observe(el));
 
-            const hamburgerBtn = document.getElementById('hamburgerBtn');
-            const mobilePanel = document.getElementById('mobilePanel');
-            const mobileOverlay = document.getElementById('mobileOverlay');
-            const mobileNavLinks = mobilePanel.querySelectorAll('a');
-            const openMobileNav = () => {
-                hamburgerBtn.classList.add('active');
-                mobilePanel.classList.add('active');
-                mobileOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            };
-            const closeMobileNav = () => {
-                hamburgerBtn.classList.remove('active');
-                mobilePanel.classList.remove('active');
-                mobileOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            };
-            hamburgerBtn.addEventListener('click', () => {
-                hamburgerBtn.classList.contains('active') ? closeMobileNav() : openMobileNav();
-            });
-            mobileOverlay.addEventListener('click', closeMobileNav);
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', () => setTimeout(closeMobileNav, 150));
-            });
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && hamburgerBtn.classList.contains('active')) closeMobileNav();
-            });
-            window.addEventListener('resize', () => {
-                if (window.innerWidth > 1024 && hamburgerBtn.classList.contains('active')) closeMobileNav();
-            });
-        });
-    </script>
-</body>
-</html>
+                                                                            // ── tabs ──
+                                                                            const processData = [
+                                                                                {
+                                                                                    title: "Phase 1: Market Footprint Audit",
+                                                                                    text: "We map out competitive digital layout footprints, audit organic search authority parameters, isolate conversion funnel leaks, and formulate exact technical benchmarks engineered for growth."
+                                                                                },
+                                                                                {
+                                                                                    title: "Phase 2: High-Intent Capture Setup",
+                                                                                    text: "We construct precision architecture models across target search terms, build semantic keyword landscapes, deploy clean tracking schema marks, and launch high-intent transactional visibility loops."
+                                                                                },
+                                                                                {
+                                                                                    title: "Phase 3: Conversion Landing Engine",
+                                                                                    text: "Our visual engineers craft custom high-speed landing configurations. We clean code frameworks, establish lightning fast loading protocols, build explicit CTAs, and eradicate drop-off structural layers."
+                                                                                },
+                                                                                {
+                                                                                    title: "Phase 4: Predictable Revenue Scale",
+                                                                                    text: "We open programmatic ad bidding parameters, optimize allocation pipelines across high-performing cross-channel loops, prune metrics continuously, and amplify customer intake velocity."
+                                                                                }
+                                                                            ];
+                                                                            const tabElements = document.querySelectorAll('.tab-list div');
+                                                                            const panelContainer = document.getElementById('dynamic-tab-panel');
+                                                                            if (panelContainer) {
+                                                                                tabElements.forEach(tab => {
+                                                                                    tab.addEventListener('click', () => {
+                                                                                        tabElements.forEach(t => t.classList.remove('active'));
+                                                                                        tab.classList.add('active');
+                                                                                        const dataId = parseInt(tab.getAttribute('data-id'), 10);
+                                                                                        panelContainer.style.opacity = '0';
+                                                                                        panelContainer.style.transform = 'translateY(10px)';
+                                                                                        setTimeout(() => {
+                                                                                            panelContainer.innerHTML =
+                                                                                                `<h3>${processData[dataId].title}</h3><p>${processData[dataId].text}</p>`;
+                                                                                            panelContainer.style.opacity = '1';
+                                                                                            panelContainer.style.transform = 'translateY(0)';
+                                                                                        }, 200);
+                                                                                    });
+                                                                                });
+                                                                            }
+
+                                                                            // ── accordion ──
+                                                                            const accordionItems = document.querySelectorAll('.accordion-item');
+                                                                            accordionItems.forEach(item => {
+                                                                                item.addEventListener('click', () => {
+                                                                                    const content = item.querySelector('.accordion-content');
+                                                                                    const isActive = item.classList.contains('active');
+                                                                                    accordionItems.forEach(other => {
+                                                                                        other.classList.remove('active');
+                                                                                        other.querySelector('.accordion-content').style.maxHeight =
+                                                                                            null;
+                                                                                    });
+                                                                                    if (!isActive) {
+                                                                                        item.classList.add('active');
+                                                                                        if (content) content.style.maxHeight = content
+                                                                                            .scrollHeight + "px";
+                                                                                    }
+                                                                                });
+                                                                            });
+
+                                                                            // ── contact form ──
+                                                                            const contactForm = document.getElementById('contactForm');
+                                                                            const formMessage = document.getElementById('formMessage');
+                                                                            if (contactForm) {
+                                                                                contactForm.addEventListener('submit', async (e) => {
+                                                                                    e.preventDefault();
+                                                                                    formMessage.style.display = 'none';
+                                                                                    formMessage.classList.remove('success', 'error');
+                                                                                    const formData = new FormData(contactForm);
+                                                                                    try {
+                                                                                        const response = await fetch(contactForm.action, {
+                                                                                            method: 'POST',
+                                                                                            body: formData,
+                                                                                            headers: { 'Accept': 'application/json' }
+                                                                                        });
+                                                                                        if (response.ok) {
+                                                                                            formMessage.textContent =
+                                                                                                'Thank you! Your message has been sent. We\'ll get back to you soon.';
+                                                                                            formMessage.classList.add('success');
+                                                                                            contactForm.reset();
+                                                                                        } else {
+                                                                                            const data = await response.json();
+                                                                                            if (data.errors) {
+                                                                                                formMessage.textContent = data.errors.map(
+                                                                                                    error => error.message).join(', ');
+                                                                                            } else {
+                                                                                                formMessage.textContent =
+                                                                                                    'Oops! There was a problem submitting your form. Please try again.';
+                                                                                            }
+                                                                                            formMessage.classList.add('error');
+                                                                                        }
+                                                                                    } catch (error) {
+                                                                                        formMessage.textContent =
+                                                                                            'Network error. Please check your connection and try again.';
+                                                                                        formMessage.classList.add('error');
+                                                                                    }
+                                                                                    formMessage.style.display = 'block';
+                                                                                });
+                                                                            }
+
+                                                                            // ── mobile nav ──
+                                                                            const hamburgerBtn = document.getElementById('hamburgerBtn');
+                                                                            const mobilePanel = document.getElementById('mobilePanel');
+                                                                            const mobileOverlay = document.getElementById('mobileOverlay');
+                                                                            const mobileNavLinks = mobilePanel.querySelectorAll('a');
+                                                                            const openMobileNav = () => {
+                                                                                hamburgerBtn.classList.add('active');
+                                                                                mobilePanel.classList.add('active');
+                                                                                mobileOverlay.classList.add('active');
+                                                                                document.body.style.overflow = 'hidden';
+                                                                            };
+                                                                            const closeMobileNav = () => {
+                                                                                hamburgerBtn.classList.remove('active');
+                                                                                mobilePanel.classList.remove('active');
+                                                                                mobileOverlay.classList.remove('active');
+                                                                                document.body.style.overflow = '';
+                                                                            };
+                                                                            hamburgerBtn.addEventListener('click', () => {
+                                                                                hamburgerBtn.classList.contains('active') ? closeMobileNav() :
+                                                                                    openMobileNav();
+                                                                            });
+                                                                            mobileOverlay.addEventListener('click', closeMobileNav);
+                                                                            mobileNavLinks.forEach(link => {
+                                                                                link.addEventListener('click', () => setTimeout(closeMobileNav,
+                                                                                    150));
+                                                                            });
+                                                                            document.addEventListener('keydown', (e) => {
+                                                                                if (e.key === 'Escape' && hamburgerBtn.classList.contains(
+                                                                                    'active')) closeMobileNav();
+                                                                            });
+                                                                            window.addEventListener('resize', () => {
+                                                                                if (window.innerWidth > 1024 && hamburgerBtn.classList.contains(
+                                                                                    'active')) closeMobileNav();
+                                                                            });
+                                                                        });
+                                                                    </script>
+
+                                                                </body>
+                                                                </html>
