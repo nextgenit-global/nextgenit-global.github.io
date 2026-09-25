@@ -58,6 +58,13 @@
             display: block;
         }
 
+        /* ── FIX: Ensure all clickable elements are always clickable ── */
+        a, button, input, select, textarea, .btn {
+            pointer-events: auto !important;
+            position: relative;
+            z-index: 2;
+        }
+
         /* ── loader ── */
         #page-loader {
             position: fixed;
@@ -128,6 +135,7 @@
             font-family: var(--font-main);
             white-space: nowrap;
             text-align: center;
+            z-index: 5;
         }
         .btn:hover {
             background-color: var(--primary-blue);
@@ -322,6 +330,9 @@
             transform: rotate(-45deg) translate(6px, -6px);
         }
 
+        /* ══════════════════════════════════════════
+           FIX: MOBILE NAV OVERLAY & PANEL
+           ══════════════════════════════════════════ */
         .mobile-nav-overlay {
             display: none;
             position: fixed;
@@ -332,10 +343,12 @@
             background-color: rgba(4, 23, 56, 0.5);
             z-index: 998;
             opacity: 0;
+            pointer-events: none; /* FIX: Prevents overlay from blocking clicks when closed */
             transition: opacity 0.3s ease;
         }
         .mobile-nav-overlay.active {
             opacity: 1;
+            pointer-events: auto; /* FIX: Only captures clicks when menu is open */
         }
         .mobile-nav-panel {
             position: fixed;
@@ -353,9 +366,11 @@
             display: flex;
             flex-direction: column;
             gap: 6px;
+            pointer-events: none; /* FIX: Panel doesn't block clicks when off-screen */
         }
         .mobile-nav-panel.active {
             right: 0;
+            pointer-events: auto; /* FIX: Panel becomes interactive when open */
         }
         .mobile-nav-panel a {
             display: block;
@@ -367,6 +382,7 @@
             border-radius: 6px;
             transition: all 0.2s ease;
             font-family: var(--font-main);
+            pointer-events: auto;
         }
         .mobile-nav-panel a:hover,
         .mobile-nav-panel a:active {
@@ -969,6 +985,9 @@
             font-size: 0.9rem;
             transition: border-color 0.3s;
             background: #fdfdfd;
+            pointer-events: auto;
+            position: relative;
+            z-index: 5;
         }
         .form-group input:focus,
         .form-group select:focus,
@@ -1051,6 +1070,9 @@
             transition: color 0.2s;
             font-weight: 400;
             font-size: 0.85rem;
+            pointer-events: auto;
+            position: relative;
+            z-index: 5;
         }
         .footer-col ul li a:hover {
             color: var(--accent-teal);
@@ -1068,6 +1090,9 @@
             text-decoration: none;
             font-weight: 600;
             font-size: 0.9rem;
+            pointer-events: auto;
+            position: relative;
+            z-index: 5;
         }
         .footer-contact-email:hover {
             text-decoration: underline;
